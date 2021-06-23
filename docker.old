@@ -3,7 +3,7 @@ services:
     web:
         build: .
         ports:
-            - "8000:80"
+            - "80:80"
         volumes:
             - ./:/var/www/html/
         links:
@@ -15,15 +15,15 @@ services:
         ports:
             - "3306:3306"
         environment:
-            MYSQL_DATABASE: "${MYSQL_DATABASE}"
-            MYSQL_USER: "${MYSQL_USER}"
-            MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
-            MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+            MYSQL_DATABASE: "id8872570_icnt"
+            MYSQL_USER: "id8872570_cordeiro"
+            MYSQL_PASSWORD: "@C0rdeiro"
+            MYSQL_ROOT_PASSWORD: "R0dC0rd"
+        command: --default-authentication-plugin=mysql_native_password --init-file /docker-entrypoint-initdb.d/db.sql 
         volumes:
             - ./database:/docker-entrypoint-initdb.d
             - ./database/config:/etc/mysql/conf.d
             - persistent:/var/lib/mysql
-        command: --init-file /docker-entrypoint-initdb.d/db.sql --default-authentication-plugin=mysql_native_password 
         networks:
             - default
             
@@ -34,9 +34,9 @@ services:
         ports:
             - 8001:80
         environment:
-            MYSQL_DATABASE: "${MYSQL_DATABASE}"
-            MYSQL_USER: "${MYSQL_USER}"
-            MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
-            MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+            MYSQL_DATABASE: "id8872570_icnt"
+            MYSQL_USER: "id8872570_cordeiro"
+            MYSQL_PASSWORD: "@C0rdeiro"
+            MYSQL_ROOT_PASSWORD: "R0dC0rd"
 volumes:
     persistent:

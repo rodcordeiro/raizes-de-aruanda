@@ -1,6 +1,7 @@
 <?php
-$db= mysqli_connect('localhost', 'id8872570_cordeiro', '@C0rdeiro', 'id8872570_icnt');
+$db= mysqli_connect(getenv("CONN_URI"), getenv("ICNT_MYSQL_USER"), getenv("ICNT_MYSQL_PASSWORD"), getenv("ICNT_MYSQL_DATABASE"));
 mysqli_set_charset($db,"utf8");
+
 $orixas = mysqli_query($db, "select linha from linha where categoria like 'orixa' order by linha asc;");
 $guia = mysqli_query($db, "select linha from linha where categoria like 'guia' order by linha asc;");
 $outros = mysqli_query($db, "select linha from linha where categoria like 'outros' order by linha asc;");

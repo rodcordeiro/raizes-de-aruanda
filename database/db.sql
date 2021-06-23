@@ -4,6 +4,12 @@
 -- ------------------------------------------------------
 -- Server version	5.7.30-0ubuntu0.18.04.1
 
+create database if not exists id8872570_icnt;
+use id8872570_icnt;
+
+CREATE USER 'id8872570_cordeiro'@'localhost' IDENTIFIED BY '@C0rdeiro';
+GRANT ALL PRIVILEGES ON id8872570_icnt.* TO 'id8872570_cordeiro'@'localhost';
+
 DROP TABLE IF EXISTS `linha`;
 CREATE TABLE `linha` (
   `id` int(2) NOT NULL AUTO_INCREMENT,
