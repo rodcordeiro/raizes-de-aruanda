@@ -1,116 +1,87 @@
-<?php
-date_default_timezone_set('America/Sao_Paulo');
-$db= mysqli_connect(getenv("CONN_URI"), getenv("ICNT_MYSQL_USER"), getenv("ICNT_MYSQL_PASSWORD"), getenv("ICNT_MYSQL_DATABASE"));
-mysqli_set_charset($db,"utf8");
-
-$orixas = mysqli_query($db, "select linha from linha where categoria like 'orixa' order by linha asc;");
-echo "Orixas".$orixas;
-$guia = mysqli_query($db, "select linha from linha where categoria like 'guia' order by linha asc;");
-$outros = mysqli_query($db, "select linha from linha where categoria like 'outros' order by linha asc;");
-
-if(isset($_GET['buscar'])){
-	$buscar = $_GET['buscar'];
-	$pontos = mysqli_query($db, "SELECT * FROM pontos where linha = '$buscar' order by ritmo asc");
-if(isset($_GET['show'])){
-	$busca = $_GET['show'];
-}else{
-	$busca = $buscar;
-};} else{
-	$busca = "";
-};
-
-?>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-	<title>Pontos de umbanda | Raízes de Aruanda</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-	<!-- assets/favicon -->
-	<link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192"  href="assets/favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/assets/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/assets/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/assets/favicon-16x16.png">
-	<link rel="manifest" href="assets/favicon/manifest.json">
-	<meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
-
-	<!-- LINKS -->
-	<link rel="stylesheet" type="text/css" href="assets/css/dev.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/print.css" media="print">
-	<style type="text/css">
+    <?php
+        date_default_timezone_set('America/Sao_Paulo');
+        include_once './components/metadata/header.php';
+        include_once './db/db.class.php';
+        include_once './controllers/linhas.controller.php';
+        include_once './controllers/pontos.controller.php';
+        $db = new DBClass();
+        $connection = $db->getConnection();
+        $Linhas = new Linhas($connection);
+        $Pontos = new Pontos($connection);
+        $categorias = $Linhas->getCategories();
+        if(isset($_GET['buscar'])){
+            $buscar = $_GET['buscar'];
+            $pontos = $Pontos->filter($buscar);
+        if(isset($_GET['show'])){
+            $busca = $_GET['show'];
+        }else{
+            $busca = $buscar;
+        };} else{
+            $busca = "";
+        };
+        
+    ?>
+    <style type="text/css">
 	<?php if(isset($_GET['buscar'])){
-		echo	"
-		#apresentacao{
-		display: none;
-	}
-		#pontos{
-	display: block;
-}";} else {
-	echo "
-		#apresentacao{
-	display: block;
-}
-		#pontos{
-display: none;
-}";
-}
+        echo "
+            #apresentacao{
+                display: none;
+            }
+            #pontos{
+                display: block;
+            }";
+        } else {
+            echo "
+            #apresentacao{
+                display: block;
+            }
+            #pontos{
+                display: none;
+            }";
+        }
 
-?>
+    ?>
 </style>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="./assets/js/main.js"></script>
 </head>
 <body>
 	<div id="conteudo">
-		<div id="header">
-			<div id="head"><img src="assets/logo.png">
-				<span>Instituto Cultural Nação Tambor</span>
-			</div>
-		</div>
-		<aside>
+		<header id="header">
+            <img src="assets/logo.png">
+            <span>Instituto Cultural Nação Tambor</span>
+            <div class="mobile-menu" onClick="handleMobileMenu()">
+                <i data-feather="menu"></i>
+            </div>
+		</header>
+		<aside class='hide'>
 			<nav>
 				<ul>
-					<li id="orixa_title">
-						Orixás
-					</li>
-					<li id="orixa_lista">
-						<ul>
-							<?php while ($row = mysqli_fetch_array($orixas)) { ?>
-							<a href="index.php?buscar=<?php echo $row['linha']; ?>"><li><?php echo $row['linha']; ?></li></a>
-						<?php } ?>
-						</ul>
-					</li>
-					<li id="linha_title">
-						Linhas
+                    <?php
+                    foreach($categorias as $categoria){
+                    ?>
+                    <li id="linha_title">
+					<?php echo $categoria; ?>
 					</li>
 					<li id="linha_lista">
 						<ul>
-								<?php while ($row = mysqli_fetch_array($guia)) { ?>
-							<a href="index.php?buscar=<?php echo $row['linha']; ?>"><li><?php echo $row['linha']; ?></li></a>
-					<?php } ?>
+						<?php
+                         $linhas = $Linhas->filter($categoria);
+                         foreach($linhas as $linha){
+                        ?>
 
+                          <a href="index.php?buscar=<?php echo $linha['linha']; ?>"><li><?php echo $linha['linha']; ?></li></a>
+                          <?php
+                         }
+                        ?>
 						</ul>
 					</li>
-					<li id="linha_title">
-						Outros
-					</li>
-					<li id="linha_lista">
-						<ul>
-								<?php while ($row = mysqli_fetch_array($outros)) { ?>
-							<a href="index.php?buscar=<?php echo $row['linha']; ?>"><li><?php echo $row['linha']; ?></li></a>
-					<?php } ?>
-
-						</ul>
-					</li>
+                    <?php
+                         }
+                        ?>
 				</ul>
 			</nav>
 		</aside>
@@ -123,20 +94,23 @@ display: none;
 		<div id="busca">
 			<h1><?php echo $busca; ?></h1>
 			<div id="pontos">
-				<?php $i=1; while ($row = mysqli_fetch_array($pontos)) { ?>
-					<div id="ponto">
-						<h4><span><?php echo $i;?></span>| <?php echo $row['ritmo'];?></h4>
+				<?php 
+                    $i=1; 
+                    foreach($pontos as $ponto) { ?>
+                    <div id="ponto">
+						<h4><span><?php echo $i;?></span>| <?php echo $ponto['ritmo'];?></h4>
 						<pre>
-<?php echo $row['ponto'];?>
+<?php echo $ponto['ponto'];?>
 						</pre>
-						<?php if (preg_match("/.mp3/", $row['audio_link']) || preg_match("/.mp4/", $row['audio_link']) || preg_match("/.m4a/", $row['audio_link']) || preg_match("/.ogg/", $row['audio_link']) || preg_match("/.wma/", $row['audio_link'])){
+						<?php if (preg_match("/.mp3/", $ponto['audio_link']) || preg_match("/.mp4/", $ponto['audio_link']) || preg_match("/.m4a/", $ponto['audio_link']) || preg_match("/.ogg/", $ponto['audio_link']) || preg_match("/.wma/", $ponto['audio_link'])){
 							echo '
 								<audio controls>
-									<source src="pontos/'.$row['audio_link'].'" type="audio/mp3">
+									<source src="pontos/'.$ponto['audio_link'].'" type="audio/mp3">
 								</audio>
 							';} ?>
 							<hr>
 						</div>
+					
 					<?php $i++; } ?>
 
 				</div>
@@ -144,5 +118,9 @@ display: none;
 		</div>
 
 	</div>
+
+    <script>
+      feather.replace()
+    </script>
 </body>
 </html>
