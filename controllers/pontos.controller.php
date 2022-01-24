@@ -1,16 +1,9 @@
 <?php
 class Pontos{
     private $connection;
+
     private $table_name = 'pontos';
 
-    // `id` int(10) NOT NULL AUTO_INCREMENT,
-    // `ritmo` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
-    // `ponto` mediumtext COLLATE utf8_unicode_ci,
-    // `linha` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-    // `tipo` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-    // `audio_link` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-    // `title` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  
     public $id;
     public $ritmo;
     public $ponto;
@@ -38,52 +31,57 @@ class Pontos{
         return $stmt;
     }
     public function list(){
-        $query = "SELECT * FROM `" . $this->table_name . "`;";
+        $query = "SELECT * FROM `" . $this->table_name . "` ORDER BY ritmo ASC;";
         $stmt = $this->connection->prepare($query);
 
         $stmt->execute();
-        $count = $stmt->rowCount();
         
-        $linhas = array();
+        $pontos = array();
         
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
           extract($row);
           $p = array(
-            "id" => $id,
-            "categoria" => $categoria,
-            "linha" => $linha
+            "id"=>$id,
+            "ritmo"=>$ritmo,
+            "ponto"=>$ponto,
+            "linha"=>$linha,
+            "tipo"=>$tipo,
+            "audio_link"=>$audio_link,
+            "title"=>$title
           );
-          array_push($linhas,$p);
+          array_push($pontos,$p);
         }
-        return $linhas;
+        return $pontos;
     }
     
-    public function filter($type){
-        $query = "SELECT * FROM `" . $this->table_name . "` WHERE categoria = '". $type ."';";
+    public function filter($linha){
+        $query = "SELECT * FROM `" . $this->table_name . "` WHERE linha = '". $linha ."' ORDER BY ritmo ASC;";
         $stmt = $this->connection->prepare($query);
 
-        $stmt->execute();
-        $count = $stmt->rowCount();
         
-        $linhas = array();
+        $stmt->execute();
+        
+        $pontos = array();
         
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-            extract($row);
+          extract($row);
           $p = array(
-            "id" => $id,
-            "categoria" => $categoria,
-            "linha" => $linha
+            "id"=>$id,
+            "ritmo"=>$ritmo,
+            "ponto"=>$ponto,
+            "linha"=>$linha,
+            "tipo"=>$tipo,
+            "audio_link"=>$audio_link,
+            "title"=>$title
           );
-          array_push($linhas,$p);
+          array_push($pontos,$p);
         }
-        return $linhas;
+        return $pontos;
     }
     
     //U
     public function update(){}
     //D
     public function delete(){}
-
 }
-
 ?>

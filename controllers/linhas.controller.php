@@ -12,7 +12,7 @@ class Linhas{
         $this->connection = $connection;
     }
 
-    //C
+    
     public function create(){
         $query = "INSERT INTO `" . $this->table_name . "`(categoria, linha) VALUES ('". $this->categoria ."','".$this->linha."')";
         $stmt = $this->connection->prepare($query);
@@ -24,7 +24,7 @@ class Linhas{
         return $stmt;
     }
     public function list(){
-        $query = "SELECT * FROM `" . $this->table_name . "`;";
+        $query = "SELECT * FROM `" . $this->table_name . "` order by linha asc;";
         $stmt = $this->connection->prepare($query);
 
         $stmt->execute();
@@ -45,7 +45,7 @@ class Linhas{
     }
     
     public function filter($type){
-        $query = "SELECT * FROM `" . $this->table_name . "` WHERE categoria = '". $type ."';";
+        $query = "SELECT * FROM `" . $this->table_name . "` WHERE categoria = '". $type ."' order by linha asc;";
         $stmt = $this->connection->prepare($query);
 
         $stmt->execute();
