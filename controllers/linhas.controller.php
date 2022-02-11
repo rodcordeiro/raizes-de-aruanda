@@ -1,7 +1,7 @@
 <?php
 class Linhas{
     private $connection;
-    private $table_name = 'linha';
+    private $table_name = 'icnt_linha';
 
     public $id;
     public $categoria;

@@ -2,7 +2,7 @@
 class Pontos{
     private $connection;
 
-    private $table_name = 'pontos';
+    private $table_name = 'icnt_pontos';
 
     public $id;
     public $ritmo;
