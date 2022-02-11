@@ -15,7 +15,7 @@ $ponto = mysqli_real_escape_string($db, $_POST['ponto']);
 $extensao= strtolower(substr($_FILES['audio']['name'], -4));
 $newname = md5(time()).$extensao;
 // $uploaddir = '/storage/ssd5/570/8872570/public_html/pontos/';
-$uploaddir = './pontos/';
+$uploaddir = '../pontos/';
 $uploadfile = $uploaddir . $newname;
 move_uploaded_file($_FILES['audio']['tmp_name'], $uploadfile);
 if ($_FILES['audio'] != ""){
@@ -32,7 +32,7 @@ header('location:form.php');
 if (isset($_FILES['new_audio'])) {
 	$extensao= strtolower(substr($_FILES['new_audio']['name'], -4));
 	$newname = md5(time()).$extensao;
-	$uploaddir = '/storage/ssd5/570/8872570/public_html/pontos/';
+	$uploaddir = '../pontos/';
 	$uploadfile = $uploaddir . $newname;
 	move_uploaded_file($_FILES['audio']['tmp_name'], $uploadfile);
 	$id = $_GET['id'];
