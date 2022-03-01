@@ -8,7 +8,7 @@ try
   echo "execution: {$execution}";
   print_r($execution);
   echo "<br/><br/>SQL script executed!";
-}x
+}
 catch(PDOException $e)
 {
     echo $e->getMessage();
