@@ -11,25 +11,6 @@
   align-items: center;
   gap: 10px;
 }
-.container .data {
-  display: flex;height: 60%;
-  padding: 5px 10px;
-  gap: 5px;
-}
-
-.container .data table {
-  width: 80%;
-  overflow-y: scroll;
-}
-
-table,
-tr,
-th,
-td {
-  border-collapse: collapse;
-  border: 1px solid;
-  padding: 2px 5px;
-}
 
 .container form {
   display: flex;
@@ -37,6 +18,8 @@ td {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 5px;
+  background-color: aliceblue;
 }
 .container form select {
   padding: 10px 15px;
@@ -48,23 +31,19 @@ td {
 .container form input[type="text"] {
   padding: 5px 10px;
 }
+.container form textarea {
+  padding: 5px 10px;
+  width: 380px;
+  height: 150px;
+}
 .container form input[type="submit"] {
   background-color: #39f;
   border: none;
   outline: none;
   padding: 5px 20px;
-  width: 100%;
+  width: auto;
+  font-size: 28px;
   color: white;
   font-weight: lighter;
-  font-family: "Courier New", Courier, monospace;
-}
-.delete-button {
-  background-color: red;
-  border: none;
-  outline: none;
-  padding: 5px 20px;
-  width: 60%;
-  color: white;
-  font-weight: bold;
   font-family: "Courier New", Courier, monospace;
 }

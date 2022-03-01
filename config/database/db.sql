@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `icnt_pontos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `icnt_users` (
-  `id` int(10) NOT NULL,
+  `id` int(10) AUTO_INCREMENT NOT NULL,
   `username` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
   `admin` int(11) DEFAULT 0
@@ -100,7 +100,7 @@ VALUES ('Ijexá'),
        ('Rufar');
 
 INSERT INTO `icnt_users` (`username`, `password`, `admin`) 
-VALUES      ('admin', 'admin', 1);
+VALUES      ('admin', '21232f297a57a5a743894a0e4a801fc3', 1);
 
 INSERT INTO `icnt_pontos` ( `ritmo`, `ponto`, `linha`, `tipo`, `audio_link`, `title`) VALUES
 (1, 'Colhe amendoim, milho e coco\r\nManda preparar o axoxô\r\nArco e flecha em punho, é só bravura\r\nPlanta, roça, agricultura\r\nIansã, Ogum, Agué e Oxalá\r\nBrinca, ginga, corre, reza e cura\r\nPressa o passo, criatura\r\nA mãe-mata céu e ouro chama\r\n\r\nJeje, Ketu e Angola vem te ver\r\nDesfilar teu abebê\r\nVer teu lume, sol e bronze de urucum\r\nDespe o véu, derrama realeza\r\nTece, cresce com riqueza\r\nÊ Logun, Logun!\r\n\r\nCamarão, cebola, azeite e ovo\r\nTempera o feijão do omolocum\r\nLava a alma, sal, mel e candura\r\nLaroiê, dendê, doçura\r\nAjunsum, Bessém, Sobô, Iemanjá\r\nNanã nina flor de formosura\r\nBenze e brinda com fartura\r\nA mãe-água céu e ouro canta\r\n\r\nTodo encanto canta, é só beleza\r\nOuro, amor, azul-turquesa\r\nÉ de sonhos, caçador e pescador\r\nValha-me, perfuma e me arrebata\r\nPelas cascatas e matas\r\nÊ Logun, Logun arô!\r\n\r\nLossi, Lossi!\r\nDança, filho de Tobossi!\r\nOlha quanta flor eu trouxe\r\nPra embalar teu Ijexá!\r\nFará, Logun!\r\nCaça, filho de Otulu!\r\nPai maior, que é Olorum\r\nTrouxe axé pro teu ofá!\r\n', 4, 'Chamada', NULL, NULL),

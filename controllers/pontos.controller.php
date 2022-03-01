@@ -21,7 +21,7 @@ class Pontos{
 
     //C
     public function create(){
-        $query = "INSERT INTO `" . $this->table_name . "`(categoria, linha) VALUES ('". $this->categoria ."','".$this->linha."')";
+        $query = "INSERT INTO `" . $this->table_name . "`(ritmo, ponto, linha, tipo, audio_link, title) VALUES ('".$this->ritmo."', '".$this->ponto."', '".$this->linha."', '".$this->tipo."', '".$this->audio_link."', '".$this->title."');";
         $stmt = $this->connection->prepare($query);
         try{
             $stmt->execute();
