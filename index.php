@@ -51,8 +51,8 @@
 <body>
 	<div id="conteudo">
 		<header id="header">
-            <img src="assets/logo.png">
-            <span>Instituto Cultural Nação Tambor</span>
+            <!-- <img src="assets/logo.png"> -->
+            <span>Pontos de Umbanda</span>
             <div class="mobile-menu" onClick="handleMobileMenu()">
                 <i data-feather="menu"></i>
             </div>
@@ -69,7 +69,7 @@
 					<li id="linha_lista">
 						<ul>
 						<?php
-                         $linhas = $Linhas->filter($categoria);
+                         $linhas = $Linhas->filterByCategory($categoria);
                          foreach($linhas as $linha){
                         ?>
 
@@ -88,7 +88,7 @@
 		<div id="apresentacao">
 			<h1>Apresentação</h1>
 			<p>
-				Pontos de Umbanda cantados pelo ogã e babalaorixá Ricardo Barba, professor do Instituto Cultural Nação Tambor e presidente da Curimba Nação Tambor.
+				Pontos de Umbanda utilizados durante as giras pela curimba do terreiro Raízes de Aruanda, bem como para o compartilhamento de conhecimentos.
 			</p>
 		</div>
 		<div id="busca">

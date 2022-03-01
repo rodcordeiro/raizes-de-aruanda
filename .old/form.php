@@ -2,9 +2,9 @@
 date_default_timezone_set('America/Sao_Paulo');
 $db= mysqli_connect(getenv("CONN_URI"), getenv("ICNT_MYSQL_USER"), getenv("ICNT_MYSQL_PASSWORD"), getenv("ICNT_MYSQL_DATABASE"));
 mysqli_set_charset($db,"utf8");
-$orixas = mysqli_query($db, "select linha from linha where categoria like 'orixa' order by linha asc;");
-$guia = mysqli_query($db, "select linha from linha where categoria like 'guia' order by linha asc;");
-$outros = mysqli_query($db, "select linha from linha where categoria like 'outros' order by linha asc;");
+$orixas = mysqli_query($db, "select linha from icnt_linha where categoria like '1' order by linha asc;");
+$guia = mysqli_query($db, "select linha from icnt_linha where categoria like '2' order by linha asc;");
+$outros = mysqli_query($db, "select linha from icnt_linha where categoria like '3' order by linha asc;");
 //Variáveis
 if (isset($_POST['Salvar'])) {
 $linha = mysqli_real_escape_string($db,$_POST['linha']);
@@ -15,7 +15,7 @@ $ponto = mysqli_real_escape_string($db, $_POST['ponto']);
 $extensao= strtolower(substr($_FILES['audio']['name'], -4));
 $newname = md5(time()).$extensao;
 // $uploaddir = '/storage/ssd5/570/8872570/public_html/pontos/';
-$uploaddir = './pontos/';
+$uploaddir = '../pontos/';
 $uploadfile = $uploaddir . $newname;
 move_uploaded_file($_FILES['audio']['tmp_name'], $uploadfile);
 if ($_FILES['audio'] != ""){
@@ -25,18 +25,18 @@ if ($_FILES['audio'] != ""){
     $audio = "null";
     $title = "null";
 };
-mysqli_query($db, "INSERT INTO pontos (ritmo, ponto, linha, tipo, audio_link, title) VALUES ('$ritmo', '$ponto', '$linha', '$tipo', '$audio', '$title')");
+mysqli_query($db, "INSERT INTO icnt_pontos (ritmo, ponto, linha, tipo, audio_link, title) VALUES ('$ritmo', '$ponto', '$linha', '$tipo', '$audio', '$title')");
 header('location:form.php');
 }
 
 if (isset($_FILES['new_audio'])) {
 	$extensao= strtolower(substr($_FILES['new_audio']['name'], -4));
 	$newname = md5(time()).$extensao;
-	$uploaddir = '/storage/ssd5/570/8872570/public_html/pontos/';
+	$uploaddir = '../pontos/';
 	$uploadfile = $uploaddir . $newname;
 	move_uploaded_file($_FILES['audio']['tmp_name'], $uploadfile);
 	$id = $_GET['id'];
-	mysqli_query($db, "UPDATE pontos SET audio_link = '$newname' WHERE id = $id");
+	mysqli_query($db, "UPDATE icnt_pontos SET audio_link = '$newname' WHERE id = $id");
 	header('location:form.php');
 }
 ?>

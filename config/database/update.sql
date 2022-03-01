@@ -1,13 +1,3 @@
--- drop database id8872570_icnt;
-create database if not exists id8872570_icnt;
-
-use id8872570_icnt;
-
--- CREATE USER 'id8872570_cordeiro'@'localhost' IDENTIFIED BY '@C0rdeiro';
-GRANT ALL PRIVILEGES ON id8872570_icnt.* TO 'id8872570_cordeiro'@'localhost';
-
--- --------------------------------------------------------
-
 --
 -- Estrutura das tabelas `linha`
 --
@@ -49,6 +39,9 @@ CREATE TABLE `icnt_users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
+-- --------------------------
+-- INSERTS
+--
 
 INSERT INTO `icnt_categoria_linha` (`categoria`) 
 VALUES ('orixa'),

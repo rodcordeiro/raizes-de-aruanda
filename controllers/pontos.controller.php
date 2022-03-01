@@ -55,7 +55,23 @@ class Pontos{
     }
     
     public function filter($linha){
-        $query = "SELECT * FROM `" . $this->table_name . "` WHERE linha = '". $linha ."' ORDER BY ritmo ASC;";
+        $query = "SELECT
+        IP.id,
+        IP.ponto,
+        IP.tipo,
+        IP.audio_link,
+        IP.title,
+        IR.ritmo
+    FROM
+        `icnt_pontos` IP
+    JOIN `icnt_linha` IL ON
+        IP.linha = IL.id
+    JOIN `icnt_ritmos` IR ON
+        IR.id = IP.ritmo
+    WHERE
+        IL.linha LIKE '".$linha."'
+    ORDER BY
+        IL.linha ASC;";
         $stmt = $this->connection->prepare($query);
 
         

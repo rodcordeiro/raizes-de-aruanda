@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.button {
+  padding: 10px 15px;
+  font-size: 20px;
+  line-height: 20px;
+  cursor: pointer;
+  background-color: aquamarine;
+  border-radius: 5px;
+  color: #181818;
+}
+.button:hover{
+    background-color: turquoise;
+}

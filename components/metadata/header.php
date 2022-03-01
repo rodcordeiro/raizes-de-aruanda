@@ -21,6 +21,6 @@
 	<meta name="msapplication-TileImage" content="./assets/favicon/ms-icon-144x144.png">
 
 	<!-- LINKS -->
-	<link rel="stylesheet" type="text/css" href="./assets/css/dev-mob.css">
-	<link rel="stylesheet" type="text/css" href="./assets/css/dev.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/mobile.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/main.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/print.css" media="print">

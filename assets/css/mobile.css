@@ -22,9 +22,12 @@
     flex: 1;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
   }
-
+  #header i{
+    position: relative;
+    top: 30px;
+  }
   #header > img {
     height: 30px;
     width: 30px;

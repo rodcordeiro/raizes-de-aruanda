@@ -1,4 +1,5 @@
 <?php
+
 $timeout = 14400; // Tempo da sessao em segundos
 // Verifica se existe o parametro timeout, ou seja, se a sessão foi iniciada
 if(isset($_SESSION['timeout'])) {
@@ -16,17 +17,43 @@ if(isset($_SESSION['timeout'])) {
 	$_SESSION['timeout'] = time();
 }
 
+
+
 class User{
     private $connection;
-    private $table_name = 'icnt_user';
+    private $table_name = 'icnt_users';
     public $id;
-    public $categoria;
-    public $linha;
+    public $username;
+    public $pwd;
+
 
     public function __construct($connection){
         $this->connection = $connection;
     }
 
+    public function isAuthenticated(){
+        if(!isset($_SESSION['user'])){
+            header("location: ./login");
+        }
+    }
+    public function login(){
+        $sql = "SELECT * FROM ".$this->table_name." WHERE username='".$this->username."' and password = '".$this->password."';";
+        $stmt = $this->connection->prepare($sql);
+
+        $stmt->execute();
+        $data = '';
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+            if($row){
+                extract($row);
+                $_SESSION['uid'] = $id;
+                $_SESSION['user'] = $username;
+                $data = true;
+            } else {
+                $data ='Falha no login';
+            }
+        }
+        return $data;
+    }
 
 }
 ?>
