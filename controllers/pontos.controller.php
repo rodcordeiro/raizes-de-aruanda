@@ -32,20 +32,20 @@ class Pontos{
     }
     public function list(){
         $query = "SELECT
-        IP.id,
-        IP.ponto,
-        IP.tipo,
-        IP.audio_link,
-        IP.title,
-        IR.ritmo
-    FROM
-        `icnt_pontos` IP
-    JOIN `icnt_linha` IL ON
-        IP.linha = IL.id
-    JOIN `icnt_ritmos` IR ON
-        IR.id = IP.ritmo
-    ORDER BY
-        IP.ritmo ASC;";
+                IP.id,
+                IP.ponto,
+                IP.tipo,
+                IP.audio_link,
+                IP.title,
+                IR.ritmo
+            FROM
+                `icnt_pontos` IP
+            JOIN `icnt_linha` IL ON
+                IP.linha = IL.id
+            JOIN `icnt_ritmos` IR ON
+                IR.id = IP.ritmo
+            ORDER BY
+                IP.ritmo ASC;";
         $stmt = $this->connection->prepare($query);
 
         $stmt->execute();
@@ -70,22 +70,22 @@ class Pontos{
     
     public function filter($linha){
         $query = "SELECT
-        IP.id,
-        IP.ponto,
-        IP.tipo,
-        IP.audio_link,
-        IP.title,
-        IR.ritmo
-    FROM
-        `icnt_pontos` IP
-    JOIN `icnt_linha` IL ON
-        IP.linha = IL.id
-    JOIN `icnt_ritmos` IR ON
-        IR.id = IP.ritmo
-    WHERE
-        IL.linha LIKE '".$linha."'
-    ORDER BY
-        IR.ritmo ASC;";
+                IP.id,
+                IP.ponto,
+                IP.tipo,
+                IP.audio_link,
+                IP.title,
+                IR.ritmo
+            FROM
+                `icnt_pontos` IP
+            JOIN `icnt_linha` IL ON
+                IP.linha = IL.id
+            JOIN `icnt_ritmos` IR ON
+                IR.id = IP.ritmo
+            WHERE
+                IL.linha LIKE '".$linha."'
+            ORDER BY
+                IR.ritmo ASC;";
         $stmt = $this->connection->prepare($query);
 
         
@@ -113,5 +113,39 @@ class Pontos{
     public function update(){}
     //D
     public function delete(){}
+    public function listRythms(){
+        $query = "SELECT
+            IR.id,
+            IR.ritmo
+        FROM
+            `icnt_ritmos` IR 
+        ORDER BY
+            IR.id ASC;";
+
+        $stmt = $this->connection->prepare($query);
+        $stmt->execute();
+        
+        $ritmos = array();
+        
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+          extract($row);
+          $p = array(
+            "id"=>$id,
+            "ritmo"=>$ritmo
+          );
+          array_push($ritmos,$p);
+        }
+        return $ritmos;   
+    }
+    public function saveRythm(){
+        $query = "INSERT INTO `icnt_ritmos`(ritmo) VALUES ('". $this->ritmo ."');";
+        $stmt = $this->connection->prepare($query);
+        try{
+            $stmt->execute();
+        }catch(PDOException $exception){
+            echo "Error: " . $exception->getMessage();
+        }
+        return $stmt;
+    }
 }
 ?>

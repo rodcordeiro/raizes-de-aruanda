@@ -39,17 +39,18 @@ class User{
     public function login(){
         $sql = "SELECT * FROM ".$this->table_name." WHERE username='".$this->username."' and password = '".$this->password."';";
         $stmt = $this->connection->prepare($sql);
-
+        echo $sql;
         $stmt->execute();
         $data = '';
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
             if($row){
+                echo $row;
                 extract($row);
                 $_SESSION['uid'] = $id;
                 $_SESSION['user'] = $username;
                 $data = true;
             } else {
-                $data ='Falha no login';
+                $data = false;
             }
         }
         return $data;

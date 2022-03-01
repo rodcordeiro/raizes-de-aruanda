@@ -6,20 +6,9 @@
   height: 100vh;
   width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
-}
-.container .data {
-  display: flex;height: 60%;
-  padding: 5px 10px;
-  gap: 5px;
-}
-
-.container .data table {
-  width: 80%;
-  overflow-y: scroll;
 }
 
 table,
@@ -37,13 +26,6 @@ td {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.container form select {
-  padding: 10px 15px;
-  font-size: 20px;
-}
-.container form select option {
-  font-size: 14px;
 }
 .container form input[type="text"] {
   padding: 5px 10px;

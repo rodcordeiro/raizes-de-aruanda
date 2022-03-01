@@ -26,16 +26,16 @@ class Linhas{
     }
     public function list(){
         $query = "SELECT
-        IL.id,
-        IL.linha,
-        CL.categoria,
-        CL.id AS id_categoria
-    FROM
-        `icnt_linha` IL
-    JOIN `icnt_categoria_linha` CL ON
-        CL.id = IL.categoria
-    ORDER BY
-        IL.linha ASC;";
+                IL.id,
+                IL.linha,
+                CL.categoria,
+                CL.id AS id_categoria
+            FROM
+                `icnt_linha` IL
+            JOIN `icnt_categoria_linha` CL ON
+                CL.id = IL.categoria
+            ORDER BY
+                IL.linha ASC;";
         $stmt = $this->connection->prepare($query);
 
         $stmt->execute();
@@ -44,7 +44,6 @@ class Linhas{
         $linhas = array();
         
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-          print_r($row);
           extract($row);
 
           $p = array(
@@ -60,18 +59,18 @@ class Linhas{
     
     public function filterByCategory($type){
         $query = "SELECT
-        IL.id,
-        IL.linha,
-        CL.categoria,
-        CL.id AS id_categoria
-    FROM
-        `icnt_linha` IL
-    JOIN `icnt_categoria_linha` CL ON
-        CL.id = IL.categoria
-    WHERE
-        CL.categoria LIKE '".$type."'
-    ORDER BY
-        IL.linha ASC;";
+                IL.id,
+                IL.linha,
+                CL.categoria,
+                CL.id AS id_categoria
+            FROM
+                `icnt_linha` IL
+            JOIN `icnt_categoria_linha` CL ON
+                CL.id = IL.categoria
+            WHERE
+                CL.categoria LIKE '".$type."'
+            ORDER BY
+                IL.linha ASC;";
         $stmt = $this->connection->prepare($query);
 
         $stmt->execute();

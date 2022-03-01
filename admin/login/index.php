@@ -14,6 +14,7 @@ if(isset($_POST['login'])){
     $session->username = $uid;
     $session->password = $pswd;
     $login = $session->login();
+    echo "login->{$login}";
     if($login){
         header('location: ../');
     }
