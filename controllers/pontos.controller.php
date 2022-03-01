@@ -2,7 +2,7 @@
 class Pontos{
     private $connection;
 
-    private $table_name = 'pontos';
+    private $table_name = 'icnt_pontos';
 
     public $id;
     public $ritmo;
@@ -31,7 +31,21 @@ class Pontos{
         return $stmt;
     }
     public function list(){
-        $query = "SELECT * FROM `" . $this->table_name . "` ORDER BY ritmo ASC;";
+        $query = "SELECT
+        IP.id,
+        IP.ponto,
+        IP.tipo,
+        IP.audio_link,
+        IP.title,
+        IR.ritmo
+    FROM
+        `icnt_pontos` IP
+    JOIN `icnt_linha` IL ON
+        IP.linha = IL.id
+    JOIN `icnt_ritmos` IR ON
+        IR.id = IP.ritmo
+    ORDER BY
+        IP.ritmo ASC;";
         $stmt = $this->connection->prepare($query);
 
         $stmt->execute();
@@ -71,7 +85,7 @@ class Pontos{
     WHERE
         IL.linha LIKE '".$linha."'
     ORDER BY
-        IL.linha ASC;";
+        IP.ritmo ASC;";
         $stmt = $this->connection->prepare($query);
 
         
