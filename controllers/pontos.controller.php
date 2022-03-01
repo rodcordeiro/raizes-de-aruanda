@@ -85,7 +85,7 @@ class Pontos{
     WHERE
         IL.linha LIKE '".$linha."'
     ORDER BY
-        IP.ritmo ASC;";
+        IR.ritmo ASC;";
         $stmt = $this->connection->prepare($query);
 
         
