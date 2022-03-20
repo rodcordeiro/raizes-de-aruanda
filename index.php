@@ -51,7 +51,7 @@
 <body>
 	<div id="conteudo">
 		<header id="header">
-            <!-- <img src="assets/logo.png"> -->
+            <img src="HTTPS://rodcordeiro.github.io/shares/favicons/favicon-raizes/android-icon-192x192.png">
             <span>Pontos de Umbanda</span>
             <div class="mobile-menu" onClick="handleMobileMenu()">
                 <i data-feather="menu"></i>
