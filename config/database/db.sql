@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `icnt_pontos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `icnt_users` (
-  `id` int(10) AUTO_INCREMENT NOT NULL,
+  `id` int(10) PRIMARY KEY AUTO_INCREMENT NOT NULL,
   `username` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
   `admin` int(11) DEFAULT 0
