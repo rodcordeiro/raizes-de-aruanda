@@ -22,7 +22,9 @@ if (isset($_POST['Salvar'])) {
     $tipo =  $_POST['tipo'];
     $ritmo =  $_POST['ritmo'];
     $ponto =  $_POST['ponto'];
-    
+    if (!$ponto){
+        echo "Você deve informar não passou nenhum ponto."        
+    }
     $extensao= strtolower(substr($_FILES['audio']['name'], -4));
     $newname = md5(time()).$extensao;
     $uploaddir = '../../pontos/';
