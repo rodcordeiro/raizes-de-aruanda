@@ -1,5 +1,4 @@
 <?php
-include_once '../utils/functions.php';
 
 $timeout = 14400; // Tempo da sessao em segundos
 // Verifica se existe o parametro timeout, ou seja, se a sessão foi iniciada
@@ -28,6 +27,15 @@ class User
     public $username;
     public $pwd;
 
+    private function redirect($url)
+    {
+        if (headers_sent()) {
+            die('<script type="text/javascript">window.location=\'' . $url . '\';</script>');
+        } else {
+            header('Location: ' . $url);
+            die();
+        }
+    }
 
     public function __construct($connection)
     {
@@ -37,7 +45,7 @@ class User
     public function isAuthenticated()
     {
         if (!isset($_SESSION['user'])) {
-            redirect('http://rodrigocordeiro.com.br/Umbanda/admin/login');
+            $this->redirect('http://rodrigocordeiro.com.br/Umbanda/admin/login');
         }
     }
     public function login()
@@ -51,7 +59,7 @@ class User
                 extract($row);
                 $_SESSION['uid'] = $id;
                 $_SESSION['user'] = $username;
-                redirect('http://rodrigocordeiro.com.br/Umbanda/admin/');
+                $this->redirect('http://rodrigocordeiro.com.br/Umbanda/admin/');
             }
         }
     }
