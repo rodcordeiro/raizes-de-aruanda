@@ -1,4 +1,5 @@
 <?php
+include_once '../utils/functions.php';
 
 $timeout = 14400; // Tempo da sessao em segundos
 // Verifica se existe o parametro timeout, ou seja, se a sessão foi iniciada
@@ -36,7 +37,7 @@ class User
     public function isAuthenticated()
     {
         if (!isset($_SESSION['user'])) {
-            header("location: ./login");
+            redirect('http://rodrigocordeiro.com.br/Umbanda/admin/login');
         }
     }
     public function login()
@@ -47,11 +48,10 @@ class User
         $data = '';
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             if ($row) {
-                echo $row;
                 extract($row);
                 $_SESSION['uid'] = $id;
                 $_SESSION['user'] = $username;
-                header('location: ../');
+                redirect('http://rodrigocordeiro.com.br/Umbanda/admin/');
             }
         }
     }

@@ -10,7 +10,6 @@ if (isset($_POST['login'])) {
     $uid = preg_replace('/[^[:alnum:]_]/', '', $_POST['user']);
     $senha = $_POST['password'];
     $pswd = md5($senha);
-
     $session->username = $uid;
     $session->password = $pswd;
     $login = $session->login();
