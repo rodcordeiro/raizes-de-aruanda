@@ -3,8 +3,34 @@ on:
     branches: 'main'
 name: Publish Website
 jobs:
+ValidateActor:
+    runs-on: ubuntu-latest
+    outputs:
+      ACTOR: ${{ steps.actor.outputs.ACTOR }}
+    steps:
+      - id: actor
+        run: |
+          if [[ ${{ github.actor }} != *"[bot]" ]];then
+              echo "::set-output name=ACTOR::true" 
+          else
+              echo "::set-output name=ACTOR::false" 
+          fi
+  ValidateRepo:
+    name: Validate repository
+    runs-on: ubuntu-latest
+    outputs:
+      REPO: ${{ steps.repo.outputs.REPO }}
+    steps:
+      - id: repo
+        run: |
+          if [[ ${{ github.repository_owner }} == "darthC0de" ]];then
+              echo "::set-output name=REPO::true"
+          else
+              echo "::set-output name=REPO::false"
+          fi
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
+    if: ${{needs.ValidateActor.outputs.ACTOR}} == true
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3.0.2
