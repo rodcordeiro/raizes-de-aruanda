@@ -1,6 +1,6 @@
 on:
   push:
-    branches: 'main'
+    branches: 'develop'
 name: Publish Website
 jobs:
   FTP-Deploy-Action:
@@ -16,4 +16,4 @@ jobs:
         server: files.000webhost.com
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: public_html/Umbanda/
+        server-dir: public_html/umbanda.dev/
