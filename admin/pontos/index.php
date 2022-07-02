@@ -22,36 +22,39 @@ if (isset($_POST['Salvar'])) {
     $tipo =  $_POST['tipo'];
     $ritmo =  $_POST['ritmo'];
     $ponto =  $_POST['ponto'];
-    
-    $extensao= strtolower(substr($_FILES['audio']['name'], -4));
-    $newname = md5(time()).$extensao;
-    $uploaddir = '../../pontos/';
-    $uploadfile = $uploaddir . $newname;
-    $moving=move_uploaded_file($_FILES['audio']['tmp_name'], $uploadfile);
-    if ($_FILES['audio'] != ""){
-        $audio = $newname;
-        $title = "Ponto de $linha - ".$_FILES['audio']['name'];
+    if (!$ponto) {
+        echo "Você deve informar não passou nenhum ponto.";
     } else {
-        $audio = "null";
-        $title = "null";
-    };
+        $extensao = strtolower(substr($_FILES['audio']['name'], -4));
+        $newname = md5(time()) . $extensao;
+        $uploaddir = '../../pontos/';
+        $uploadfile = $uploaddir . $newname;
+        $moving = move_uploaded_file($_FILES['audio']['tmp_name'], $uploadfile);
+        if ($_FILES['audio'] != "") {
+            $audio = $newname;
+            $title = "Ponto de $linha - " . $_FILES['audio']['name'];
+        } else {
+            $audio = "null";
+            $title = "null";
+        };
 
-    $Pontos->linha = $linha;
-    $Pontos->tipo = $tipo;
-    $Pontos->ritmo = $ritmo;
-    $Pontos->ponto = $ponto;
-    $Pontos->audio_link = $audio;
-    $Pontos->title = $title;
-    
-    $newPonto = $Pontos->create();
-    
+        $Pontos->linha = $linha;
+        $Pontos->tipo = $tipo;
+        $Pontos->ritmo = $ritmo;
+        $Pontos->ponto = $ponto;
+        $Pontos->audio_link = $audio;
+        $Pontos->title = $title;
+
+        $newPonto = $Pontos->create();
+    }
 }
-    
+
 
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -59,53 +62,58 @@ if (isset($_POST['Salvar'])) {
     <link rel="stylesheet" href="styles.css">
     <title>Pontos</title>
 </head>
+
 <body>
     <div class="container">
-			<form action="index.php" method="post" enctype="multipart/form-data">
-				<div><select name="linha" id="linha">
-					
-					<?php foreach($linhas as $linha){
-                        ?>
+        <form action="index.php" method="post" enctype="multipart/form-data">
+            <div><select name="linha" id="linha">
+
+                    <?php foreach ($linhas as $linha) {
+                    ?>
                         <option value="<?php echo $linha['id']; ?>"><?php echo $linha['linha']; ?></optionb>
                         <?php } ?>
-				</select>
-				<select name="tipo" id="tipo">
-					<option>Chamada</option>
-					<option>Sustentação</option>
-					<option>Subida</option>
-				</select>
-				<select name="ritmo" id="ritmo">
-					
-					<?php foreach($ritmos as $ritmo){
+                </select>
+                <select name="tipo" id="tipo">
+                    <option>Chamada</option>
+                    <option>Sustentação</option>
+                    <option>Subida</option>
+                </select>
+                <select name="ritmo" id="ritmo">
+
+                    <?php foreach ($ritmos as $ritmo) {
                         print_r($ritmo['id']);
-                        ?>
+                    ?>
                         <option value="<?php echo $ritmo['id']; ?>"><?php echo $ritmo['ritmo']; ?></option>
-                        <?php } ?>
-				</select></div>
-				<fieldset>
-					<legend>Ponto:</legend>
-					<textarea name="ponto" id="ponto"></textarea>
-				</fieldset><br>
-				<input type="file" name="audio"><br>
-				<input type="submit" name="Salvar">
-			</form>
+                    <?php } ?>
+                </select>
+            </div>
+            <fieldset>
+                <legend>Ponto:</legend>
+                <textarea name="ponto" id="ponto"></textarea>
+            </fieldset><br>
+            <input type="file" name="audio"><br>
+            <input type="submit" name="Salvar">
+        </form>
 
     </div>
 </body>
+
 </html>
 <!-- <body>
     <div class="container">
     <form action="./index.php" method="post" id="selectLine">
         <select name="filter" id="filter" onChange="submitForm()">
-            <?php foreach($linhas as $linha){?>
-                <option <?php if(isset($_GET['filter']) && $_GET['filter'] == $linha['linha']){ echo "selected";}?> value="<?php echo $linha['linha']; ?>"><?php echo $linha['linha']; ?></option>
-            <?php }?>
+            <?php foreach ($linhas as $linha) { ?>
+                <option <?php if (isset($_GET['filter']) && $_GET['filter'] == $linha['linha']) {
+                            echo "selected";
+                        } ?> value="<?php echo $linha['linha']; ?>"><?php echo $linha['linha']; ?></option>
+            <?php } ?>
 
         </select>
     </form>
     <div class="data"><?php
-    if(isset($_GET['filter'])){
-    ?>
+                        if (isset($_GET['filter'])) {
+                        ?>
     <table>
             <theader>
                 <tr>
@@ -114,18 +122,18 @@ if (isset($_POST['Salvar'])) {
                 </tr>
             </theader>
             <tbody>
-            <?php 
-                    if($pontos){
-                        foreach($pontos as $ponto){
-                            ?>
+            <?php
+                            if ($pontos) {
+                                foreach ($pontos as $ponto) {
+            ?>
                             <tr onClick="selectForChange(<?php echo $ponto['id']; ?>,'<?php echo $ponto['ponto']; ?>')">
                                 <td><?php echo $ponto['id']; ?></td>
                                 <td><pre><?php echo $ponto['ponto']; ?></pre></td>
                             </tr>
                             <?php
-                        }
-                    }             
-                ?>
+                                }
+                            }
+                            ?>
             </tbody>
         </table>
         <form method="post" action="./index.php">

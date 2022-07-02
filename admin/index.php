@@ -8,10 +8,11 @@ $session = new User($conn);
 
 $session->isAuthenticated();
 
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,17 +21,16 @@ $session->isAuthenticated();
     <link rel="stylesheet" href="./styles.css">
     <script src="./main.js"></script>
 </head>
+
 <body>
     <div class="container">
-    <div class="button" onClick="reload('./linhas')">
+        <div class="button" onClick="reload('./linhas')">
             Gerenciar Linhas
         </div>
         <div class="button" onClick="reload('./ritmos')">
             Gerenciar Ritmos
         </div>
-        <div class="button"
-        onClick="reload('./pontos')"
-        >
+        <div class="button" onClick="reload('./pontos')">
             Gerenciar Pontos
         </div>
         <div class="button" onClick="reload('./users')">
@@ -38,4 +38,5 @@ $session->isAuthenticated();
         </div>
     </div>
 </body>
+
 </html>
