@@ -1,25 +1,11 @@
 on:
   pull_request:
-     branches:    
-        - 'main'
+    branches:
+      - "main"
 name: Publish Website
 jobs:
   ValidateActor:
-      runs-on: ubuntu-latest
-      outputs:
-        ACTOR: ${{ steps.actor.outputs.ACTOR }}
-      steps:
-        - run: echo "PR pipeline validation!"
-        - id: actor
-          run: |
-            if [[ ${{ github.head_ref }} == "develop" ]];then
-                echo "::set-output name=ACTOR::true" 
-            else
-                echo "::set-output name=ACTOR::false" 
-            fi
-  FTP-Deploy-Action:
-      name: FTP-Deploy-Action
-      if: ${{needs.ValidateActor.outputs.ACTOR}} == true
-      runs-on: ubuntu-latest
-      steps:
-        - run: echo "PR pipeline validated!"
+    if: github.head_ref == 'develop'
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "PR pipeline validated!"
