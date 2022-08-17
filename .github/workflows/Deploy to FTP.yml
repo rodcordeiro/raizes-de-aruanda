@@ -13,7 +13,7 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
-        server: files.000webhost.com
+        server: rodrigocordeiro.com.br
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD }}
         server-dir: public_html/raizes/
