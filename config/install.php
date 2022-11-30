@@ -3,7 +3,7 @@ try
 {
   $dbclass = new DBClass(); 
   $connection = $dbclass->getConnection();
-  $sql = file_get_contents("database/update.sql"); 
+  $sql = file_get_contents("database/db.sql"); 
   $execution = $connection->exec($sql);
   echo "execution: {$execution}";
   print_r($execution);
