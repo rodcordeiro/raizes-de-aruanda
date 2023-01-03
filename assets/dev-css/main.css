@@ -1,0 +1,39 @@
+:root {
+  --primary-color: #7b1506;
+  --primary-contrast-color: #f4f4f4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#content {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  background-color: blue;
+  grid-template-areas:
+    "nav content"
+    "footer content";
+  grid-template-columns: 15% auto;
+  /* gap: 5px; */
+  grid-template-rows: auto 50px;
+}
+#content aside {
+  background-color: green;
+  grid-area: nav;
+  height: 100%;
+}
+#content aside nav {
+  height: 100%;
+  background-color: var(--primary-color);
+}
+#content p {
+  grid-area: footer;
+  height: auto;
+
+  background-color: yellow;
+  font-size: 16px;
+}
