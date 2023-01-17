@@ -122,6 +122,34 @@ class Linhas{
         }
         return $linhas;
     }
+    public function getById($id){
+        $query = "SELECT
+                        IL.id,
+                        IL.linha,
+                        CL.categoria,
+                        CL.id AS id_categoria
+                    FROM
+                        `icnt_linha` IL
+                    JOIN `icnt_categoria_linha` CL ON
+                        CL.id = IL.categoria
+                    WHERE
+                        IL.id = ".$id."
+                    ORDER BY
+                        IL.linha ASC;";
+        $stmt = $this->connection->prepare($query);
+
+        $stmt->execute();
+        $count = $stmt->rowCount();
+        
+        $linhas = array();
+        
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+            extract($row);
+          
+            array_push($linhas,$row);
+        }
+        return $linhas[0];
+    }
     
     //U
     public function update(){}
@@ -129,5 +157,3 @@ class Linhas{
     public function delete(){}
 
 }
-
-?>

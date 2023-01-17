@@ -83,7 +83,7 @@ class Pontos{
             JOIN `icnt_ritmos` IR ON
                 IR.id = IP.ritmo
             WHERE
-                IL.linha LIKE '".$linha."'
+                IL.id = ".$linha."
             ORDER BY
                 IR.ritmo ASC;";
         $stmt = $this->connection->prepare($query);

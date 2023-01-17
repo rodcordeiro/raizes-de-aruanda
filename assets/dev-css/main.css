@@ -1,3 +1,10 @@
+/* 
+ font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Roboto Slab', serif;
+*/
+
 :root {
   --primary-color: #7b1506;
   --primary-contrast-color: #f4f4f4;
@@ -6,34 +13,204 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
+  /* outline: 1px solid red; */
 }
 
-#content {
+#container {
   height: 100vh;
   width: 100vw;
   display: grid;
-  background-color: blue;
   grid-template-areas:
     "nav content"
     "footer content";
-  grid-template-columns: 15% auto;
-  /* gap: 5px; */
-  grid-template-rows: auto 50px;
+  grid-template-columns: 360px auto;
+  grid-template-rows: 95vh 5vh;
 }
-#content aside {
-  background-color: green;
+.hidden {
+  display: none !important;
+  transition: display 0.5s ease-in-out;
+}
+
+#container #mobileHeader {
+  display:none;
+}
+/* NAVBAR and Footer */
+#container aside {
+  height: 100%;
   grid-area: nav;
-  height: 100%;
-}
-#content aside nav {
-  height: 100%;
   background-color: var(--primary-color);
 }
-#content p {
-  grid-area: footer;
-  height: auto;
-
-  background-color: yellow;
-  font-size: 16px;
+#container aside nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /* spa */
 }
+
+#container aside nav .logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+  margin-top: 65px;
+}
+#container aside nav ul {
+  width: 261px;
+  max-height: 349px;
+  margin-top: 45px;
+  list-style: none;
+  overflow-x: hidden; */
+  overflow-y: scroll;
+}
+
+#container aside nav ul li.category {
+  font-family: "Roboto Condensed", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 48px;
+  color: #f4f4f4;
+
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+#container aside nav ul li.category svg {
+  margin-right: 10px;
+}
+
+#container aside nav ul li.item {
+  font-family: "Roboto Slab", serif;
+  margin-left: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 34px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  color: #D9D9D9;
+
+}
+
+#container aside nav ul li.item a:visited,
+#container aside nav ul li.item a:hover,
+#container aside nav ul li.item a:active,
+#container aside nav ul li.item a {
+  text-decoration: none;
+  color: #D9D9D9;
+}
+#container aside nav ul li.item.active a,
+#container aside nav ul li.item.active {
+  text-decoration: underline;
+  color: #fff;
+}
+#container aside nav ul li.item a:hover {
+  color: #fff;
+}
+
+#container aside .footer {
+  grid-area: footer;
+  height: 5vh;
+  background-color: var(--primary-color);
+  font-size: 12px;
+  color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#container aside .footer a {
+  text-decoration: none;
+  color: #0cf;
+}
+
+/* Content */
+#content{
+  grid-area: content;
+  overflow:hidden;
+}
+#content .presentation{
+  display:flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+}
+#content .presentation h1{
+  height: auto;
+  width: 65%;
+  
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  text-align: center;
+  color: #000000;
+}
+#content .pontos{
+  display:flex;
+  flex-direction:column;
+  justify-content: flex-start;
+  align-items: stretch;
+  height: 90%;
+  width: 100%;
+  /* margin-top: 40px;
+  margin-left: 40px; */
+
+  overflow:hidden;
+  overflow-y: scroll;
+
+}
+
+#content .pontos h1{
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 42px;
+  color: #181818;
+  padding: 10px 20px;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+#content article.ponto{
+margin-bottom: 25px;
+margin-left: 40px;
+width: 80%;
+}
+
+#content article.ponto p{
+  margin-top: 10px;
+  font-family: 'Roboto Mono', monospace;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  
+  color: #666666;
+  
+}
+#content article.ponto p span{
+  color: #999999;
+}
+#content article.ponto .lyric{
+  padding: 10px 0px;
+  font-family: 'Roboto Mono', monospace;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+
+  color: #181818;
+}
+
+@import url("./mobile.css")
