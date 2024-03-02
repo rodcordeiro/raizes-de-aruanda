@@ -11,7 +11,7 @@ jobs:
       with:
         fetch-depth: 2
     - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: files.000webhost.com
         username: ${{ secrets.FTP_USER }}
