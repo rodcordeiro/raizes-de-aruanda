@@ -1,18 +1,22 @@
 ---
 name: Bug report
 about: Create a report to help us improve
-title: "[Bug]: "
+title: '[Bug]: '
 labels: bug
 assignees: 'rodcordeiro'
 ---
+
 ## Descrição
-<!-- 
+
+<!--
  Dê maiores detalhes sobre o bug, sobre o que aconteceu e o que estava fazendo quando ocorreu.
 -->
- Permite adicionar o ponto em branco, sem nenhuma informação
+
+Permite adicionar o ponto em branco, sem nenhuma informação
 
 ## Reprodução do erro
-<!-- 
+
+<!--
 Quais os passos para reproduzir o erro? Por favor informe-os conforme abaixo:
 1. Go to '...'
 2. Click on '....'
@@ -21,5 +25,5 @@ Quais os passos para reproduzir o erro? Por favor informe-os conforme abaixo:
  -->
 
 ## Screenshots
-Se possível, adicione screenshots referentes ao erro.
 
+Se possível, adicione screenshots referentes ao erro.
