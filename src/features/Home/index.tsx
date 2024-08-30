@@ -1,7 +1,10 @@
 export const Home = () => {
 	return (
-		<div>
-			<h1>Home</h1>
+		<div className="flex w-screen h-screen justify-center items-center ">
+			<h1 className="w-2/3">
+				Pontos de Umbanda utilizados durante as giras pela curimba do terreiro
+				Raízes de Aruanda, bem como para o compartilhamento de conhecimentos.
+			</h1>
 		</div>
 	);
 };
