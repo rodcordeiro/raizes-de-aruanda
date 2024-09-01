@@ -1,12 +1,12 @@
-import ComposeProviders from './hooks/composeProviders';
+import { Providers } from './hooks';
 import { RouterProvider } from 'react-router-dom';
 import { router } from './routes';
 
 function App() {
 	return (
-		<ComposeProviders with={[]}>
+		<Providers>
 			<RouterProvider router={router} />
-		</ComposeProviders>
+		</Providers>
 	);
 }
 

@@ -15,6 +15,14 @@ const router = createBrowserRouter([
 					return { Component: Home };
 				},
 			},
+			{
+				path: '/linha/:id',
+				async lazy() {
+					// Multiple routes in lazy file
+					let { Linha } = await import('../features/Linha');
+					return { Component: Linha };
+				},
+			},
 		],
 	},
 ]);
