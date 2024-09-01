@@ -1,6 +1,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import { Header } from '@/components/layout/Header';
+import { Sidebar } from '../Sidebar';
 
 export const BaseLayout = ({}: React.PropsWithChildren) => {
 	const [sidebarVisible, setSidebarVisible] = React.useState<boolean>(false);
@@ -9,7 +10,7 @@ export const BaseLayout = ({}: React.PropsWithChildren) => {
 		<div>
 			<Header toggleSidebar={toggleSidebar} />
 			<main>
-				{sidebarVisible && <aside>oi</aside>}
+				{sidebarVisible && <Sidebar />}
 				<Outlet />
 			</main>
 		</div>
