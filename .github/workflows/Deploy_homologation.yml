@@ -1,7 +1,7 @@
 on:
   push:
     branches: 'develop'
-name: Publish Website
+name: Publish Website Homol
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
@@ -30,5 +30,5 @@ jobs:
           server: ftp.rodrigocordeiro.com.br
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist
+          local-dir: ./dist/
           server-dir: public_html/umbanda.dev/
