@@ -1,4 +1,5 @@
 import { api } from '@/libs/api';
+import { AxiosError } from 'axios';
 import React from 'react';
 
 interface LinhasContextProps {
@@ -18,11 +19,11 @@ export const LinhasHook = ({ children }: React.PropsWithChildren) => {
 			.then((res) =>
 				setLinhas(res.data.sort((a, b) => (a.nome < b.nome ? -1 : 1))),
 			)
-			.catch((err) => alert((err as Error).message));
+			.catch((err) => alert((err as AxiosError).cause));
 		api
 			.get<Categoria[]>('/api/v1/categories')
 			.then((res) => setCategorias(res.data))
-			.catch((err) => alert((err as Error).message));
+			.catch((err) => alert((err as AxiosError).status));
 	}, []);
 
 	return (
