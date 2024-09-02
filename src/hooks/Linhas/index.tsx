@@ -17,10 +17,12 @@ export const LinhasHook = ({ children }: React.PropsWithChildren) => {
 			.get<Linha[]>('/api/v1/lines')
 			.then((res) =>
 				setLinhas(res.data.sort((a, b) => (a.nome < b.nome ? -1 : 1))),
-			);
+			)
+			.catch((err) => alert((err as Error).message));
 		api
 			.get<Categoria[]>('/api/v1/categories')
-			.then((res) => setCategorias(res.data));
+			.then((res) => setCategorias(res.data))
+			.catch((err) => alert((err as Error).message));
 	}, []);
 
 	return (
