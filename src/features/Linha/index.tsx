@@ -50,7 +50,7 @@ export const Linha = () => {
 							return <p>{line}</p>;
 						})}
 					{ponto.audio_url && (
-						<audio src={ponto.audio_url} controls crossOrigin="anonymous" className='my-4'/>
+						<audio src={ponto.audio_url} controls className="my-4" />
 					)}
 				</div>
 			))}

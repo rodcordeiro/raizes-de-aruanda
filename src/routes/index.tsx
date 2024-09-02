@@ -3,19 +3,19 @@ import { BaseLayout } from '../components/layout/base';
 
 const router = createBrowserRouter([
 	{
-		path: '/',
+		path: import.meta.env.VITE_FOLDER,
 		element: <BaseLayout />,
 		// errorElement: <ErrorPage />,
 		children: [
 			{
-				path: '/',
+				path: import.meta.env.VITE_FOLDER,
 				async lazy() {
 					let { Home } = await import('../features/Home');
 					return { Component: Home };
 				},
 			},
 			{
-				path: '/linha/:id',
+				path: `${import.meta.env.VITE_FOLDER}linha/:id`,
 				async lazy() {
 					let { Linha } = await import('../features/Linha');
 					return { Component: Linha };

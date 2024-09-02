@@ -15,7 +15,10 @@ export function Sidebar() {
 								{linhas
 									?.filter((l) => l.categoria.id === category.id)
 									.map((linha) => (
-										<a href={`/linha/${linha.id}`} className="text-gray-200">
+										<a
+											href={`${import.meta.env.VITE_FOLDER}linha/${linha.id}`}
+											className="text-gray-200"
+										>
 											{linha.nome}
 										</a>
 									))}
