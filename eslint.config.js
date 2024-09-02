@@ -20,6 +20,7 @@ export default [
 					destructuredArrayIgnorePattern: '^_',
 				},
 			],
+			'react/react-in-jsx-scope': 'off',
 		},
 	},
 ];

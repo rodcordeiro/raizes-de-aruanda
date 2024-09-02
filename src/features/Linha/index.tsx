@@ -21,7 +21,7 @@ export const Linha = () => {
 				Pontos de {pontos[0].linha.nome}
 			</h1>
 			{pontos.map((ponto, idx) => (
-				<div className="flex flex-col px-6 py-4">
+				<div className="flex flex-col px-6 py-4" key={`ponto_${ponto.id}`}>
 					<hr className="mb-2" />
 					<h2 className="py-2 font-medium">
 						{idx + 1} | {ponto.ritmo.nome}
@@ -29,13 +29,13 @@ export const Linha = () => {
 					{ponto.letra
 						.replace(/\r\n\r\n/, 'BREAK_LINE_KEY')
 						.split('\r\n')
-						.map((line) => {
+						.map((line, idx) => {
 							if (line.includes('BREAK_LINE_KEY')) {
 								return line
 									.split('BREAK_LINE_KEY')
 									.map((paragraph, idx, arr) => {
 										return (
-											<p>
+											<p key={`paragraph_${idx}`}>
 												{paragraph}
 												{idx !== arr.length - 1 && (
 													<>
@@ -47,7 +47,7 @@ export const Linha = () => {
 										);
 									});
 							}
-							return <p>{line}</p>;
+							return <p key={`line_idx_${idx}`}>{line}</p>;
 						})}
 					{ponto.audio_url && (
 						<audio src={ponto.audio_url} controls className="my-4" />

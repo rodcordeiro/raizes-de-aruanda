@@ -9,13 +9,14 @@ export function Sidebar() {
 			{linhas && (
 				<div>
 					{categorias.map((category) => (
-						<div className="mb-2">
+						<div className="mb-2" key={`categoria_${category.id}`}>
 							<h2 className="text-white font-medium">{category.nome}</h2>
 							<div className="flex flex-col pl-4">
 								{linhas
 									?.filter((l) => l.categoria.id === category.id)
 									.map((linha) => (
 										<a
+											key={`linha_${linha.id}`}
 											href={`${import.meta.env.VITE_FOLDER}linha/${linha.id}`}
 											className="text-gray-200"
 										>

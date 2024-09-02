@@ -10,14 +10,14 @@ const router = createBrowserRouter([
 			{
 				path: import.meta.env.VITE_FOLDER,
 				async lazy() {
-					let { Home } = await import('../features/Home');
+					const { Home } = await import('../features/Home');
 					return { Component: Home };
 				},
 			},
 			{
 				path: `${import.meta.env.VITE_FOLDER}linha/:id`,
 				async lazy() {
-					let { Linha } = await import('../features/Linha');
+					const { Linha } = await import('../features/Linha');
 					return { Component: Linha };
 				},
 			},
