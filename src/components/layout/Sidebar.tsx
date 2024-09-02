@@ -1,3 +1,5 @@
+import { Home } from 'react-feather';
+
 import { useLinhas } from '@/hooks/Linhas';
 
 export function Sidebar() {
@@ -22,6 +24,10 @@ export function Sidebar() {
 					))}
 				</div>
 			)}
+			<a href={`/admin`} className="text-gray-200 my-4 flex justify-center items-center gap-2">
+				<Home size={16}/>
+				Admin
+			</a>
 		</aside>
 	);
 }

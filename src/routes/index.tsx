@@ -10,7 +10,6 @@ const router = createBrowserRouter([
 			{
 				path: '/',
 				async lazy() {
-					// Multiple routes in lazy file
 					let { Home } = await import('../features/Home');
 					return { Component: Home };
 				},
@@ -18,12 +17,19 @@ const router = createBrowserRouter([
 			{
 				path: '/linha/:id',
 				async lazy() {
-					// Multiple routes in lazy file
 					let { Linha } = await import('../features/Linha');
 					return { Component: Linha };
 				},
 			},
 		],
+	},
+	{
+		path: '/admin',
+		element: (
+			<main>
+				<h1>Ainda não implementado</h1>
+			</main>
+		),
 	},
 ]);
 export { router };
