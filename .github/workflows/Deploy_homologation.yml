@@ -1,7 +1,12 @@
 on:
   push:
     branches: 'develop'
+
 name: Publish Website Homol
+
+env:
+  NODE_ENV: development
+
 jobs:
   FTP-Deploy-Action:
     name: Deploy to ftp

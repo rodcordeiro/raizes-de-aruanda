@@ -24,7 +24,7 @@ const router = createBrowserRouter([
 		],
 	},
 	{
-		path: '/admin',
+		path: `${import.meta.env.VITE_FOLDER}admin`,
 		element: (
 			<main>
 				<h1>Ainda não implementado</h1>
