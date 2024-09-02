@@ -4,7 +4,7 @@ on:
 name: Publish Website Homol
 jobs:
   FTP-Deploy-Action:
-    name: FTP-Deploy-Action
+    name: Deploy to ftp
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3.0.2
@@ -31,4 +31,4 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
-          server-dir: public_html/umbanda.dev/
+          server-dir: ./umbanda.dev/
