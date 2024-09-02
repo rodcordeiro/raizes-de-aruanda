@@ -19,11 +19,11 @@ export const LinhasHook = ({ children }: React.PropsWithChildren) => {
 			.then((res) =>
 				setLinhas(res.data.sort((a, b) => (a.nome < b.nome ? -1 : 1))),
 			)
-			.catch((err) => alert((err as AxiosError).cause));
+			.catch((err) => alert((err as AxiosError).response?.status));
 		api
 			.get<Categoria[]>('/api/v1/categories')
 			.then((res) => setCategorias(res.data))
-			.catch((err) => alert((err as AxiosError).status));
+			.catch((err) => alert((err as AxiosError).message));
 	}, []);
 
 	return (
