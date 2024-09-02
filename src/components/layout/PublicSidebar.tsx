@@ -24,8 +24,11 @@ export function Sidebar() {
 					))}
 				</div>
 			)}
-			<a href={`/admin`} className="text-gray-200 my-4 flex justify-center items-center gap-2">
-				<Home size={16}/>
+			<a
+				href={`/admin`}
+				className="text-gray-200 my-4 flex justify-center items-center gap-2"
+			>
+				<Home size={16} />
 				Admin
 			</a>
 		</aside>

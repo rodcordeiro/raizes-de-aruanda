@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import { Header } from '@/components/layout/Header';
-import { Sidebar } from '../Sidebar';
+import { Sidebar } from '../PublicSidebar';
 
 export const BaseLayout = ({}: React.PropsWithChildren) => {
 	const [sidebarVisible, setSidebarVisible] = React.useState<boolean>(false);
