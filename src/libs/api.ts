@@ -5,6 +5,9 @@ export const api = axios.create({
 	headers: {
 		'Content-Type': 'application/json',
 	},
+	httpsAgent: {
+		rejectUnauthorized: false,
+	},
 });
 
 api.interceptors.request.use((req) => {
