@@ -98,7 +98,7 @@
                     $i=1; 
                     foreach($pontos as $ponto) { ?>
                     <div id="ponto">
-						<h4><span><?php echo $i;?></span>| <?php echo $ponto['ritmo'];?></h4>
+						<h4 id="<?php echo $ponto['id'];?>"><span><?php echo $i;?></span>| <?php echo $ponto['ritmo'];?></h4>
 						<pre>
 <?php echo $ponto['ponto'];?>
 						</pre>
