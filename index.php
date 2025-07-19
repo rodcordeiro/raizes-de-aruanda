@@ -99,9 +99,9 @@
                     foreach($pontos as $ponto) { ?>
                     <div id="ponto">
 						<h4 id="<?php echo $ponto['id'];?>"><span><?php echo $i;?></span>| <?php echo $ponto['ritmo'];?>
-<?php if ($ponto['tipo'] === 'subida'): ?>
-            <span> (Subida)</span>
-        <?php endif; ?
+<?php if (strcasecmp($ponto['tipo'], 'subida') === 0): ?>
+    <span> (Subida)</span>
+<?php endif; ?>
 </h4>
 						<pre>
 <?php echo $ponto['ponto'];?>
