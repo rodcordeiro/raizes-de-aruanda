@@ -106,6 +106,22 @@
 						<pre>
 <?php echo $ponto['ponto'];?>
 						</pre>
+						<?php 
+						// Se for link do tipo youtu.be/xxxxxxx
+						if (preg_match("#youtu\.be/([a-zA-Z0-9_-]+)#i", $ponto['audio_link'], $matches)): 
+						    $videoId = $matches[1];
+						?>
+						    <iframe 
+						        width="560" 
+						        height="315" 
+						        src="https://www.youtube.com/embed/<?php echo $videoId; ?>" 
+						        title="YouTube video player" 
+						        frameborder="0" 
+						        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+						        referrerpolicy="strict-origin-when-cross-origin" 
+						        allowfullscreen
+						    ></iframe>
+						<?php endif; ?>
 						<?php if (preg_match("/.mp3/", $ponto['audio_link']) || preg_match("/.mp4/", $ponto['audio_link']) || preg_match("/.m4a/", $ponto['audio_link']) || preg_match("/.ogg/", $ponto['audio_link']) || preg_match("/.wma/", $ponto['audio_link'])){
 							echo '
 								<audio controls>
