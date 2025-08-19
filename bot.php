@@ -9,6 +9,9 @@ $username = getenv('ICNT_MYSQL_USER');
 $password = getenv('ICNT_MYSQL_PASSWORD');
 $database = getenv('ICNT_MYSQL_DATABASE');
 
+// URL do seu webhook do Discord
+$discordWebhook = getenv('DISCORD_WEBHOOK');
+
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$database;charset=utf8", $username, $password);
@@ -66,7 +69,25 @@ $stmt->execute($linhas);
 $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if ($result) {
-    echo json_encode(["mensagem" => $result["ponto"]], JSON_UNESCAPED_UNICODE);
+    $mensagem = $result["ponto"];
+
+    // Envia para Discord
+    $payload = json_encode([
+        "content" => $mensagem
+    ], JSON_UNESCAPED_UNICODE);
+
+    $ch = curl_init($discordWebhook);
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        'Content-Type: application/json',
+        'Content-Length: ' . strlen($payload)
+    ]);
+    $response = curl_exec($ch);
+    curl_close($ch);
+
+    echo json_encode(["mensagem" => $mensagem], JSON_UNESCAPED_UNICODE);
 } else {
     echo json_encode(["mensagem" => "Nenhum ponto encontrado para as linhas fornecidas"]);
 }
