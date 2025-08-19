@@ -14,7 +14,7 @@ $discordWebhook = getenv('DISCORD_WEBHOOK');
 
 
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$database;charset=utf8", $username, $password);
+    $pdo = new PDO("mysql:host=$host;dbname=$db_name;charset=utf8", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch(PDOException $e){
     echo json_encode(["mensagem" => "Erro de conexão: " . $e->getMessage()]);
@@ -22,13 +22,14 @@ try {
 }
 
 // Captura parâmetro ?linha=8,25,...
-if (!isset($_GET['linha']) || empty($_GET['linha'])) {
-    echo json_encode(["mensagem" => "Parâmetro 'linha' é obrigatório"]);
-    exit;
-}
+$linhas = [];
+$where = "";
 
-$linhas = explode(",", $_GET['linha']);
-$placeholders = implode(",", array_fill(0, count($linhas), "?"));
+if (isset($_GET['linha']) && !empty($_GET['linha'])) {
+    $linhas = explode(",", $_GET['linha']);
+    $placeholders = implode(",", array_fill(0, count($linhas), "?"));
+    $where = "WHERE a.linha IN ($placeholders)";
+}
 
 $query = "
     SELECT
@@ -58,13 +59,19 @@ $query = "
     FROM tb_pontos a
     JOIN tb_linhas b ON a.linha = b.id
     JOIN tb_ritmos c ON a.ritmo = c.id
-    WHERE a.linha IN ($placeholders)
+    $where
     ORDER BY RAND()
     LIMIT 1
 ";
 
 $stmt = $pdo->prepare($query);
-$stmt->execute($linhas);
+
+// Se houver linhas, passa como parâmetros, senão executa sem WHERE
+if (!empty($linhas)) {
+    $stmt->execute($linhas);
+} else {
+    $stmt->execute();
+}
 
 $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -89,5 +96,5 @@ if ($result) {
 
     echo json_encode(["mensagem" => $mensagem], JSON_UNESCAPED_UNICODE);
 } else {
-    echo json_encode(["mensagem" => "Nenhum ponto encontrado para as linhas fornecidas"]);
+    echo json_encode(["mensagem" => "Nenhum ponto encontrado"]);
 }
