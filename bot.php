@@ -12,9 +12,8 @@ $database = getenv('ICNT_MYSQL_DATABASE');
 // URL do seu webhook do Discord
 $discordWebhook = getenv('DISCORD_WEBHOOK');
 
-
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$db_name;charset=utf8", $username, $password);
+    $pdo = new PDO("mysql:host=$host;dbname=$database;charset=utf8", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch(PDOException $e){
     echo json_encode(["mensagem" => "Erro de conexão: " . $e->getMessage()]);
@@ -65,12 +64,16 @@ $query = "
 ";
 
 $stmt = $pdo->prepare($query);
-
-// Se houver linhas, passa como parâmetros, senão executa sem WHERE
-if (!empty($linhas)) {
-    $stmt->execute($linhas);
-} else {
-    $stmt->execute();
+try { 
+    // Se houver linhas, passa como parâmetros, senão executa sem WHERE
+    if (!empty($linhas)) {
+        $stmt->execute($linhas);
+    } else {
+        $stmt->execute();
+    }
+} catch(PDOException $e){
+    echo json_encode(["mensagem" => "Erro de conexão: " . $e->getMessage()]);
+    exit;
 }
 
 $result = $stmt->fetch(PDO::FETCH_ASSOC);
