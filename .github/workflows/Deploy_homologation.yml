@@ -30,7 +30,7 @@ jobs:
         run: pnpm run build -m development
 
       - name: FTP-Deploy-Action
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ftp.rodrigocordeiro.com.br
           username: ${{ secrets.FTP_USER }}
