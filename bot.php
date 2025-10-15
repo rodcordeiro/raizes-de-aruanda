@@ -51,7 +51,7 @@ $query = "
         '\n\nMais pontos de ',
         b.nome,
         ' no https://raizes.rodrigocordeiro.com.br/index.php?buscar=',
-        b.nome,
+        REPLACE(b.nome, ' ', '%20'),
         '#',
         a.id
       ) AS ponto
