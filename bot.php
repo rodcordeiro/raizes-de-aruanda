@@ -1,39 +1,70 @@
 <?php
-// bot.php
+declare(strict_types=1);
+
 date_default_timezone_set('America/Sao_Paulo');
 header('Content-Type: application/json; charset=utf-8');
 
-// Configurações do banco (ajuste conforme seu ambiente)
-$host = getenv('CONN_URI');
-$username = getenv('ICNT_MYSQL_USER');
-$password = getenv('ICNT_MYSQL_PASSWORD');
-$database = getenv('ICNT_MYSQL_DATABASE');
-
-// URL do seu webhook do Discord
-$discordWebhook = getenv('DISCORD_WEBHOOK');
-
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$database;charset=utf8", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch(PDOException $e){
-    echo json_encode(["mensagem" => "Erro de conexão: " . $e->getMessage()]);
+function json_out(array $data, int $statusCode = 200): void {
+    http_response_code($statusCode);
+    echo json_encode($data, JSON_UNESCAPED_UNICODE);
     exit;
 }
 
-// Captura parâmetro ?linha=8,25,...
-$linhas = [];
-$where = "";
+function saudacao_por_hora(?DateTimeInterface $now = null): string {
+    $now ??= new DateTimeImmutable('now', new DateTimeZone('America/Sao_Paulo'));
+    $h = (int)$now->format('G'); // 0-23
+    if ($h >= 5 && $h < 12) return 'Bom dia';
+    if ($h >= 12 && $h < 18) return 'Boa tarde';
+    return 'Boa noite';
+}
 
-if (isset($_GET['linha']) && !empty($_GET['linha'])) {
-    $linhas = explode(",", $_GET['linha']);
-    $placeholders = implode(",", array_fill(0, count($linhas), "?"));
-    $where = "WHERE a.linha IN ($placeholders)";
+$host     = getenv('CONN_URI') ?: '';
+$username = getenv('ICNT_MYSQL_USER') ?: '';
+$password = getenv('ICNT_MYSQL_PASSWORD') ?: '';
+$database = getenv('ICNT_MYSQL_DATABASE') ?: '';
+$discordWebhook = getenv('DISCORD_WEBHOOK') ?: '';
+
+if ($host === '' || $username === '' || $database === '' || $discordWebhook === '') {
+    json_out(["mensagem" => "Variáveis de ambiente obrigatórias não configuradas."], 500);
+}
+
+try {
+    $dsn = "mysql:host={$host};dbname={$database};charset=utf8mb4";
+    $pdo = new PDO($dsn, $username, $password, [
+        PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+        PDO::ATTR_EMULATE_PREPARES   => false,
+    ]);
+} catch (PDOException $e) {
+    json_out(["mensagem" => "Erro de conexão com o banco."], 500);
+}
+
+// ?linha=8,25,...
+$linhas = [];
+$where  = "";
+$params = [
+    ':saudacao' => saudacao_por_hora(),
+];
+
+if (isset($_GET['linha']) && trim((string)$_GET['linha']) !== '') {
+    $raw = array_map('trim', explode(',', (string)$_GET['linha']));
+    $linhas = array_values(array_unique(array_filter($raw, fn($v) => ctype_digit($v) && (int)$v > 0)));
+
+    if (!empty($linhas)) {
+        $in = [];
+        foreach ($linhas as $i => $linhaId) {
+            $key = ":l{$i}";
+            $in[] = $key;
+            $params[$key] = (int)$linhaId;
+        }
+        $where = "WHERE a.linha IN (" . implode(',', $in) . ")";
+    }
 }
 
 $query = "
     SELECT
       CONCAT(
-        'Bom dia gente, benção pais, mães e mais velhos e que Logun Edé e Exu nos abençoem e bora de ponto. Ponto de ',
+        :saudacao, ' gente, benção pais, mães e mais velhos e que Logun Edé e Exu nos abençoem e bora de ponto. Ponto de ',
         CASE
           WHEN a.tipo LIKE '%subida%' THEN 'subida de '
           ELSE ''
@@ -46,10 +77,7 @@ $query = "
         '*.\n\n```\n',
         a.letra,
         '\n```\n',
-        CASE
-          WHEN a.audio_url IS NOT NULL THEN a.audio_url
-          ELSE ''
-        END,
+        COALESCE(a.audio_url, ''),
         '\n\nMais pontos de ',
         b.nome,
         ' no https://raizes.rodrigocordeiro.com.br/index.php?buscar=',
@@ -65,41 +93,48 @@ $query = "
     LIMIT 1
 ";
 
-$stmt = $pdo->prepare($query);
-try { 
-    // Se houver linhas, passa como parâmetros, senão executa sem WHERE
-    if (!empty($linhas)) {
-        $stmt->execute($linhas);
-    } else {
-        $stmt->execute();
-    }
-} catch(PDOException $e){
-    echo json_encode(["mensagem" => "Erro de conexão: " . $e->getMessage()]);
-    exit;
+try {
+    $stmt = $pdo->prepare($query);
+    $stmt->execute($params);
+    $result = $stmt->fetch();
+} catch (PDOException $e) {
+    // Para depurar rápido sem vazar detalhes em produção:
+    // json_out(["mensagem"=>"Erro ao consultar pontos.", "detalhe"=>$e->getMessage()], 500);
+    json_out(["mensagem" => "Erro ao consultar pontos."], 500);
 }
 
-$result = $stmt->fetch(PDO::FETCH_ASSOC);
+if (!$result || empty($result['ponto'])) {
+    json_out(["mensagem" => "Nenhum ponto encontrado"], 404);
+}
 
-if ($result) {
-    $mensagem = $result["ponto"];
+$mensagem = $result['ponto'];
 
-    // Envia para Discord
-    $payload = json_encode([
-        "content" => $mensagem
-    ], JSON_UNESCAPED_UNICODE);
+$payload = json_encode(["content" => $mensagem], JSON_UNESCAPED_UNICODE);
 
-    $ch = curl_init($discordWebhook);
-    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+$ch = curl_init($discordWebhook);
+curl_setopt_array($ch, [
+    CURLOPT_CUSTOMREQUEST  => "POST",
+    CURLOPT_POSTFIELDS     => $payload,
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_HTTPHEADER     => [
         'Content-Type: application/json',
-        'Content-Length: ' . strlen($payload)
-    ]);
-    $response = curl_exec($ch);
-    curl_close($ch);
+        'Content-Length: ' . strlen($payload),
+    ],
+    CURLOPT_TIMEOUT        => 15,
+]);
 
-    echo json_encode(["mensagem" => $mensagem], JSON_UNESCAPED_UNICODE);
-} else {
-    echo json_encode(["mensagem" => "Nenhum ponto encontrado"]);
+$response  = curl_exec($ch);
+$curlError = curl_error($ch);
+$httpCode  = (int)curl_getinfo($ch, CURLINFO_HTTP_CODE);
+curl_close($ch);
+
+if ($response === false || $httpCode < 200 || $httpCode >= 300) {
+    json_out([
+        "mensagem" => "Falha ao enviar mensagem ao Discord.",
+        "httpCode" => $httpCode,
+        "erro"     => $curlError ?: null,
+        "resposta" => $response ?: null,
+    ], 502);
 }
+
+json_out(["mensagem" => $mensagem]);
