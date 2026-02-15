@@ -41,7 +41,9 @@ $query = "
         b.nome,
         ', no ritmo ',
         c.nome,
-        '.\n\n```\n',
+        '. *',
+        b.saudacao,
+        '*.\n\n```\n',
         a.letra,
         '\n```\n',
         CASE
