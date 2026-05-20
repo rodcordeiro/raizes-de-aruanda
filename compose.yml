@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: .
+    container_name: raizes-de-aruanda-app
+    ports:
+      - "${APP_PORT:-8080}:80"
+    env_file:
+      - .env
+    volumes:
+      - ./:/var/www/html
+    restart: unless-stopped

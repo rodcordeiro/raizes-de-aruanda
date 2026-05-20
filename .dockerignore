@@ -1,0 +1,5 @@
+.git
+.github
+.old
+.env
+docker-compose.yml
