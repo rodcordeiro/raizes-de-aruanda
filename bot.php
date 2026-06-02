@@ -1,16 +1,19 @@
 <?php
+
 declare(strict_types=1);
 
 date_default_timezone_set('America/Sao_Paulo');
 header('Content-Type: application/json; charset=utf-8');
 
-function json_out(array $data, int $statusCode = 200): void {
+function json_out(array $data, int $statusCode = 200): void
+{
     http_response_code($statusCode);
     echo json_encode($data, JSON_UNESCAPED_UNICODE);
     exit;
 }
 
-function saudacao_por_hora(?DateTimeInterface $now = null): string {
+function saudacao_por_hora(?DateTimeInterface $now = null): string
+{
     $now ??= new DateTimeImmutable('now', new DateTimeZone('America/Sao_Paulo'));
     $h = (int)$now->format('G'); // 0-23
     if ($h >= 5 && $h < 12) return 'Bom dia';

@@ -45,12 +45,13 @@ class User
     public function isAuthenticated()
     {
         if (!isset($_SESSION['user'])) {
-            $this->redirect('http://rodrigocordeiro.com.br/Umbanda/admin/login');
+            $this->redirect('http://raizes.rodrigocordeiro.com.br/admin/login');
         }
     }
+
     public function login()
     {
-        $sql = "SELECT * FROM " . $this->table_name . " WHERE username='" . $this->username . "' and password = '" . $this->password . "';";
+        $sql = "SELECT * FROM " . $this->table_name . " WHERE username='" . $this->username . "' and password = '" . $this->pwd . "';";
         $stmt = $this->connection->prepare($sql);
         $stmt->execute();
         $data = '';
@@ -59,7 +60,7 @@ class User
                 extract($row);
                 $_SESSION['uid'] = $id;
                 $_SESSION['user'] = $username;
-                $this->redirect('http://rodrigocordeiro.com.br/Umbanda/admin/');
+                $this->redirect('http://raizes.rodrigocordeiro.com.br/admin/');
             }
         }
     }

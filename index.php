@@ -12,9 +12,15 @@
         $Linhas = new Linhas($connection);
         $Pontos = new Pontos($connection);
         $categorias = $Linhas->getCategories();
+        $canalYoutube = '';
         if(isset($_GET['buscar'])){
             $buscar = $_GET['buscar'];
             $pontos = $Pontos->filter($buscar);
+            $linhaData = $Linhas->findByName($buscar);
+          
+            if ($linhaData && !empty($linhaData['canal_youtube'])) {
+                $canalYoutube = $linhaData['canal_youtube'];
+            }
         if(isset($_GET['show'])){
             $busca = $_GET['show'];
         }else{
@@ -92,7 +98,15 @@
 			</p>
 		</div>
 		<div id="busca">
-			<h1><?php echo $busca; ?></h1>
+            <h1>
+                <?php if (!empty($canalYoutube)) { ?>
+                    <a href="<?php echo htmlspecialchars($canalYoutube, ENT_QUOTES, 'UTF-8'); ?>" target="_blank" rel="noopener noreferrer">
+                        <?php echo htmlspecialchars($busca, ENT_QUOTES, 'UTF-8'); ?>
+                    </a>
+                <?php } else { ?>
+                    <?php echo htmlspecialchars($busca, ENT_QUOTES, 'UTF-8'); ?>
+                <?php } ?>
+            </h1>
 			<div id="pontos">
 				<?php 
                     $i=1; 

@@ -11,11 +11,12 @@ if (isset($_POST['login'])) {
     $senha = $_POST['password'];
     $pswd = md5($senha);
     $session->username = $uid;
-    $session->password = $pswd;
+    $session->pwd = $pswd;
     $login = $session->login();
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
