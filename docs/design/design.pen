@@ -1,0 +1,1759 @@
+{
+  "version": "2.17",
+  "children": [
+    {
+      "type": "rectangle",
+      "id": "jbSbM",
+      "x": 0,
+      "y": 0,
+      "name": "home_web",
+      "fill": {
+        "type": "image",
+        "enabled": true,
+        "url": "home_web.png",
+        "mode": "fill"
+      },
+      "width": 1881,
+      "height": 900
+    },
+    {
+      "type": "rectangle",
+      "id": "fJrwe",
+      "x": 0,
+      "y": 966,
+      "name": "visualizacao-de-linha-com-e-sem-video-yt",
+      "fill": {
+        "type": "image",
+        "enabled": true,
+        "url": "visualizacao-de-linha-com-e-sem-video-yt.png",
+        "mode": "fill"
+      },
+      "width": 1873,
+      "height": 891
+    },
+    {
+      "type": "rectangle",
+      "id": "xm6Uj",
+      "x": 31,
+      "y": -1265,
+      "name": "home_mobile_menu_fechado",
+      "fill": {
+        "type": "image",
+        "enabled": true,
+        "url": "home_mobile_menu_fechado.png",
+        "mode": "fill"
+      },
+      "width": 401,
+      "height": 616
+    },
+    {
+      "type": "rectangle",
+      "id": "r5h0lk",
+      "x": 528,
+      "y": -1265,
+      "name": "home_mobile_menu_aberto",
+      "fill": {
+        "type": "image",
+        "enabled": true,
+        "url": "home_mobile_menu_aberto.png",
+        "mode": "fill"
+      },
+      "width": 388,
+      "height": 711
+    },
+    {
+      "type": "rectangle",
+      "id": "tDEkg",
+      "x": 1025,
+      "y": -1265,
+      "name": "visualizacao-mobile-de-linha-com-e-sem-video-yt",
+      "fill": {
+        "type": "image",
+        "enabled": true,
+        "url": "visualizacao-mobile-de-linha-com-e-sem-video-yt.png",
+        "mode": "fill"
+      },
+      "width": 392,
+      "height": 776
+    },
+    {
+      "type": "text",
+      "id": "v1SectionLabel",
+      "x": 31,
+      "y": -1340,
+      "name": "v1_label",
+      "fill": "#4A4A4A",
+      "content": "v1 — baseline atual (screenshots)",
+      "fontFamily": "Source Sans 3",
+      "fontSize": 28,
+      "fontWeight": "700"
+    },
+    {
+      "type": "text",
+      "id": "v2SectionLabel",
+      "x": 1600,
+      "y": -1340,
+      "name": "v2_label",
+      "fill": "#7B1506",
+      "content": "v2 — mobile-first (leitura em movimento)",
+      "fontFamily": "Source Sans 3",
+      "fontSize": 28,
+      "fontWeight": "700"
+    },
+    {
+      "type": "frame",
+      "id": "homeMobileV2",
+      "x": 1600,
+      "y": -1265,
+      "name": "home_mobile_v2",
+      "clip": true,
+      "width": 390,
+      "height": 844,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "hm-header",
+          "name": "header",
+          "width": "fill_container",
+          "height": 60,
+          "fill": "#7B1506",
+          "padding": [
+            0,
+            12
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "ellipse",
+              "id": "hm-logo",
+              "fill": "#F4F4F4",
+              "width": 40,
+              "height": 40
+            },
+            {
+              "type": "frame",
+              "id": "hm-menu-btn",
+              "width": 44,
+              "height": 44,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "hm-menu-icon",
+                  "width": 24,
+                  "height": 24,
+                  "icon": "menu",
+                  "library": "feather",
+                  "fill": "#F4F4F4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "hm-main",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            24,
+            16,
+            16,
+            16
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "hm-h1",
+              "fill": "#111111",
+              "content": "Apresentação",
+              "fontFamily": "Source Sans 3",
+              "fontSize": 24,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "hm-p",
+              "fill": "#111111",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Pontos de Umbanda utilizados durante as giras pela curimba do terreiro Raízes de Aruanda, bem como para o compartilhamento de conhecimentos.",
+              "lineHeight": 1.6,
+              "fontFamily": "Source Sans 3",
+              "fontSize": 19,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "menuMobileV2",
+      "name": "menu_mobile_v2",
+      "x": 2050,
+      "y": -1265,
+      "width": 390,
+      "height": 844,
+      "fill": "#FFFFFF",
+      "clip": true,
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "mm-base",
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "layout": "vertical",
+          "fill": "#FFFFFF",
+          "children": [
+            {
+              "type": "frame",
+              "id": "mm-header",
+              "name": "header",
+              "width": "fill_container",
+              "height": 60,
+              "layout": "horizontal",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "padding": [
+                0,
+                12
+              ],
+              "fill": "#7B1506",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "mm-logo",
+                  "width": 40,
+                  "height": 40,
+                  "fill": "#F4F4F4"
+                },
+                {
+                  "type": "frame",
+                  "id": "mm-menu-btn",
+                  "width": 44,
+                  "height": 44,
+                  "layout": "horizontal",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "mm-menu-icon",
+                      "library": "feather",
+                      "icon": "menu",
+                      "width": 24,
+                      "height": 24,
+                      "fill": "#F4F4F4"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "mm-main",
+              "width": "fill_container",
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "padding": [
+                24,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "mm-h1",
+                  "content": "Apresentação",
+                  "textGrowth": "auto",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 24,
+                  "fontWeight": "700",
+                  "fill": "#111111"
+                },
+                {
+                  "type": "text",
+                  "id": "mm-p",
+                  "content": "Pontos de Umbanda utilizados durante as giras pela curimba do terreiro Raízes de Aruanda, bem como para o compartilhamento de conhecimentos.",
+                  "textGrowth": "fixed-width",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 19,
+                  "fontWeight": "400",
+                  "fill": "#111111",
+                  "lineHeight": 1.6,
+                  "width": "fill_container"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "mm-scrim",
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "fill": "#00000073"
+        },
+        {
+          "type": "frame",
+          "id": "mm-sheet",
+          "x": 0,
+          "y": 164,
+          "width": 390,
+          "height": 680,
+          "layout": "vertical",
+          "fill": "#FFFFFF",
+          "cornerRadius": 16,
+          "clip": true,
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "offset": {
+              "x": 0,
+              "y": -4
+            },
+            "blur": 24,
+            "spread": 0,
+            "color": "#00000033"
+          },
+          "children": [
+            {
+              "type": "frame",
+              "id": "mm-handle-row",
+              "width": "fill_container",
+              "height": 20,
+              "layout": "horizontal",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "mm-handle",
+                  "width": 36,
+                  "height": 4,
+                  "cornerRadius": 2,
+                  "fill": "#D0D0D0"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "mm-sheet-header",
+              "width": "fill_container",
+              "height": 52,
+              "layout": "horizontal",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "padding": [
+                0,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "mm-sheet-title",
+                  "content": "Linhas",
+                  "textGrowth": "auto",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 18,
+                  "fontWeight": "700",
+                  "fill": "#111111"
+                },
+                {
+                  "type": "frame",
+                  "id": "mm-close-btn",
+                  "width": 44,
+                  "height": 44,
+                  "layout": "horizontal",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "mm-close-icon",
+                      "library": "feather",
+                      "icon": "x",
+                      "width": 20,
+                      "height": 20,
+                      "fill": "#111111"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "mm-filter-wrap",
+              "width": "fill_container",
+              "height": 56,
+              "layout": "vertical",
+              "padding": [
+                0,
+                16,
+                12,
+                16
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "mm-filter",
+                  "width": "fill_container",
+                  "height": 44,
+                  "layout": "horizontal",
+                  "alignItems": "center",
+                  "padding": [
+                    0,
+                    12
+                  ],
+                  "cornerRadius": 8,
+                  "fill": "#FFFFFF",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#E0E0E0"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "mm-filter-text",
+                      "content": "Buscar linha…",
+                      "textGrowth": "auto",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 16,
+                      "fontWeight": "400",
+                      "fill": "#4A4A4A"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "mm-list",
+              "width": "fill_container",
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 4,
+              "padding": [
+                4,
+                16,
+                16,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "mm-cat-orixa",
+                  "content": "ORIXÁ",
+                  "textGrowth": "auto",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 13,
+                  "fontWeight": "700",
+                  "fill": "#7B1506",
+                  "letterSpacing": 0.6
+                },
+                {
+                  "type": "frame",
+                  "id": "mm-ayra",
+                  "width": "fill_container",
+                  "height": 44,
+                  "layout": "horizontal",
+                  "alignItems": "center",
+                  "gap": 8,
+                  "fill": "#FFFFFF",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "mm-ayra-accent",
+                      "width": 3,
+                      "height": 44,
+                      "fill": "#00000000"
+                    },
+                    {
+                      "type": "text",
+                      "id": "mm-ayra-label",
+                      "content": "Ayrá",
+                      "textGrowth": "auto",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "400",
+                      "fill": "#111111"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mm-iansa",
+                  "width": "fill_container",
+                  "height": 44,
+                  "layout": "horizontal",
+                  "alignItems": "center",
+                  "gap": 8,
+                  "fill": "#F3E8E6",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "mm-iansa-accent",
+                      "width": 3,
+                      "height": 44,
+                      "fill": "#7B1506"
+                    },
+                    {
+                      "type": "text",
+                      "id": "mm-iansa-label",
+                      "content": "Iansã",
+                      "textGrowth": "auto",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "600",
+                      "fill": "#7B1506"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mm-iroko",
+                  "width": "fill_container",
+                  "height": 44,
+                  "layout": "horizontal",
+                  "alignItems": "center",
+                  "gap": 8,
+                  "fill": "#FFFFFF",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "mm-iroko-accent",
+                      "width": 3,
+                      "height": 44,
+                      "fill": "#00000000"
+                    },
+                    {
+                      "type": "text",
+                      "id": "mm-iroko-label",
+                      "content": "Iroko",
+                      "textGrowth": "auto",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "400",
+                      "fill": "#111111"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mm-logun",
+                  "width": "fill_container",
+                  "height": 44,
+                  "layout": "horizontal",
+                  "alignItems": "center",
+                  "gap": 8,
+                  "fill": "#FFFFFF",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "mm-logun-accent",
+                      "width": 3,
+                      "height": 44,
+                      "fill": "#00000000"
+                    },
+                    {
+                      "type": "text",
+                      "id": "mm-logun-label",
+                      "content": "Logun-Edé",
+                      "textGrowth": "auto",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "400",
+                      "fill": "#111111"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mm-nana",
+                  "width": "fill_container",
+                  "height": 44,
+                  "layout": "horizontal",
+                  "alignItems": "center",
+                  "gap": 8,
+                  "fill": "#FFFFFF",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "mm-nana-accent",
+                      "width": 3,
+                      "height": 44,
+                      "fill": "#00000000"
+                    },
+                    {
+                      "type": "text",
+                      "id": "mm-nana-label",
+                      "content": "Nanã",
+                      "textGrowth": "auto",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "400",
+                      "fill": "#111111"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mm-oba",
+                  "width": "fill_container",
+                  "height": 44,
+                  "layout": "horizontal",
+                  "alignItems": "center",
+                  "gap": 8,
+                  "fill": "#FFFFFF",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "mm-oba-accent",
+                      "width": 3,
+                      "height": 44,
+                      "fill": "#00000000"
+                    },
+                    {
+                      "type": "text",
+                      "id": "mm-oba-label",
+                      "content": "Obá",
+                      "textGrowth": "auto",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "400",
+                      "fill": "#111111"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mm-spacer-guia",
+                  "width": "fill_container",
+                  "height": 12
+                },
+                {
+                  "type": "text",
+                  "id": "mm-cat-guia",
+                  "content": "GUIA",
+                  "textGrowth": "auto",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 13,
+                  "fontWeight": "700",
+                  "fill": "#7B1506",
+                  "letterSpacing": 0.6
+                },
+                {
+                  "type": "frame",
+                  "id": "mm-baianos",
+                  "width": "fill_container",
+                  "height": 44,
+                  "layout": "horizontal",
+                  "alignItems": "center",
+                  "gap": 8,
+                  "fill": "#FFFFFF",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "mm-baianos-accent",
+                      "width": 3,
+                      "height": 44,
+                      "fill": "#00000000"
+                    },
+                    {
+                      "type": "text",
+                      "id": "mm-baianos-label",
+                      "content": "Baianos",
+                      "textGrowth": "auto",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "400",
+                      "fill": "#111111"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mm-caboclos",
+                  "width": "fill_container",
+                  "height": 44,
+                  "layout": "horizontal",
+                  "alignItems": "center",
+                  "gap": 8,
+                  "fill": "#FFFFFF",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "mm-caboclos-accent",
+                      "width": 3,
+                      "height": 44,
+                      "fill": "#00000000"
+                    },
+                    {
+                      "type": "text",
+                      "id": "mm-caboclos-label",
+                      "content": "Caboclos",
+                      "textGrowth": "auto",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "400",
+                      "fill": "#111111"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mm-exu",
+                  "width": "fill_container",
+                  "height": 44,
+                  "layout": "horizontal",
+                  "alignItems": "center",
+                  "gap": 8,
+                  "fill": "#FFFFFF",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "mm-exu-accent",
+                      "width": 3,
+                      "height": 44,
+                      "fill": "#00000000"
+                    },
+                    {
+                      "type": "text",
+                      "id": "mm-exu-label",
+                      "content": "Exu",
+                      "textGrowth": "auto",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "400",
+                      "fill": "#111111"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "linhaMobileV2",
+      "x": 2500,
+      "y": -1265,
+      "name": "linha_mobile_v2",
+      "clip": true,
+      "width": 390,
+      "height": 844,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "lm-header",
+          "name": "header",
+          "width": "fill_container",
+          "height": 60,
+          "fill": "#7B1506",
+          "padding": [
+            0,
+            12
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "ellipse",
+              "id": "lm-logo",
+              "fill": "#F4F4F4",
+              "width": 40,
+              "height": 40
+            },
+            {
+              "type": "frame",
+              "id": "lm-menu-btn",
+              "width": 44,
+              "height": 44,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "lm-menu-icon",
+                  "width": 24,
+                  "height": 24,
+                  "icon": "menu",
+                  "library": "feather",
+                  "fill": "#F4F4F4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "lm-sticky-wrap",
+          "width": "fill_container",
+          "height": 49,
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "lm-sticky",
+              "width": "fill_container",
+              "height": 48,
+              "fill": "#FFFFFF",
+              "gap": 8,
+              "padding": [
+                0,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "lm-sticky-name",
+                  "fill": "#7B1506",
+                  "content": "Iansã",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "lm-chips",
+                  "width": "fill_container",
+                  "height": 44,
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "lm-chip-1",
+                      "height": 32,
+                      "fill": "#7B1506",
+                      "cornerRadius": 999,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "lm-chip-1-label",
+                          "fill": "#F4F4F4",
+                          "content": "1 Barravento",
+                          "fontFamily": "Source Sans 3",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "lm-chip-2",
+                      "height": 32,
+                      "fill": "#F7F7F7",
+                      "cornerRadius": 999,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "lm-chip-2-label",
+                          "fill": "#111111",
+                          "content": "2 Congo",
+                          "fontFamily": "Source Sans 3",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "lm-chip-3",
+                      "height": 32,
+                      "fill": "#F7F7F7",
+                      "cornerRadius": 999,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "lm-chip-3-label",
+                          "fill": "#111111",
+                          "content": "3 Caboclo",
+                          "fontFamily": "Source Sans 3",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "lm-sticky-border",
+              "fill": "#E0E0E0",
+              "width": "fill_container",
+              "height": 1
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "lm-content",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            16,
+            16,
+            24,
+            16
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "lm-h2-1",
+              "fill": "#111111",
+              "content": "1| Barravento",
+              "fontFamily": "Source Sans 3",
+              "fontSize": 18,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "lm-letra-1",
+              "fill": "#111111",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Aiê dindi, Aiê dindá\nA matamba de arulê\na matamba de arulá",
+              "lineHeight": 1.6,
+              "fontFamily": "Source Sans 3",
+              "fontSize": 19,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "rectangle",
+              "id": "lm-div-1",
+              "fill": "#E0E0E0",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "text",
+              "id": "lm-h2-2",
+              "fill": "#111111",
+              "content": "2| Congo",
+              "fontFamily": "Source Sans 3",
+              "fontSize": 18,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "lm-letra-2",
+              "fill": "#111111",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Quando Oyá me chamou eu fui\natender tava sentada Iansã na palha\ndo dendê o guerreou guerreou relampejou\nou pelo cálice pela hóstia relampejo!!!\n\nTibere bere ooo Iansã tiberere\nooo tibere bere ooo Iansã tiberere",
+              "lineHeight": 1.6,
+              "fontFamily": "Source Sans 3",
+              "fontSize": 19,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "lm-video",
+              "width": "fill_container",
+              "height": 201,
+              "fill": "#1A1A1A",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "gap": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "lm-video-play",
+                  "fill": "#E53935",
+                  "width": 56,
+                  "height": 56
+                },
+                {
+                  "type": "text",
+                  "id": "lm-video-label",
+                  "fill": "#F4F4F4",
+                  "content": "Assistir no YouTube",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "linhaModoLetraV2",
+      "x": 2950,
+      "y": -1265,
+      "name": "linha_mobile_modo_letra_v2",
+      "clip": true,
+      "width": 390,
+      "height": 844,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "ll-header",
+          "name": "header",
+          "width": "fill_container",
+          "height": 60,
+          "fill": "#7B1506",
+          "padding": [
+            0,
+            12
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "ellipse",
+              "id": "ll-logo",
+              "fill": "#F4F4F4",
+              "width": 40,
+              "height": 40
+            },
+            {
+              "type": "frame",
+              "id": "ll-menu-btn",
+              "width": 44,
+              "height": 44,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "ll-menu-icon",
+                  "width": 24,
+                  "height": 24,
+                  "icon": "menu",
+                  "library": "feather",
+                  "fill": "#F4F4F4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ll-sticky-wrap",
+          "width": "fill_container",
+          "height": 41,
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "ll-sticky",
+              "width": "fill_container",
+              "height": 40,
+              "fill": "#FFFFFF",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ll-crumb",
+                  "fill": "#111111",
+                  "content": "Iansã · Barravento",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "ll-sticky-border",
+              "fill": "#E0E0E0",
+              "width": "fill_container",
+              "height": 1
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ll-content",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "padding": 20,
+          "children": [
+            {
+              "type": "text",
+              "id": "ll-letra",
+              "fill": "#111111",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Aiê dindi, Aiê dindá\nA matamba de arulê\na matamba de arulá\n\nQuando Oyá me chamou eu fui\natender tava sentada Iansã na palha\ndo dendê o guerreou guerreou relampejou\nou pelo cálice pela hóstia relampejo!!!\n\nTibere bere ooo Iansã tiberere\nooo tibere bere ooo Iansã tiberere",
+              "lineHeight": 1.65,
+              "fontFamily": "Source Sans 3",
+              "fontSize": 20,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "linhaWebV2",
+      "x": 2000,
+      "y": 0,
+      "name": "linha_web_v2",
+      "clip": true,
+      "width": 1280,
+      "height": 800,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "lw-header",
+          "width": "fill_container",
+          "height": 64,
+          "fill": "#7B1506",
+          "gap": 16,
+          "padding": [
+            0,
+            32
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "ellipse",
+              "id": "lw-logo",
+              "fill": "#F4F4F4",
+              "width": 48,
+              "height": 48
+            },
+            {
+              "type": "text",
+              "id": "lw-title",
+              "fill": "#F4F4F4",
+              "content": "Pontos de Umbanda",
+              "fontFamily": "Source Sans 3",
+              "fontSize": 22,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "lw-body",
+          "width": "fill_container",
+          "height": "fill_container",
+          "children": [
+            {
+              "type": "frame",
+              "id": "lw-sidebar",
+              "width": 240,
+              "height": "fill_container",
+              "fill": "#FFFFFF",
+              "layout": "vertical",
+              "gap": 4,
+              "padding": [
+                24,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "lw-cat-orixa",
+                  "fill": "#7B1506",
+                  "content": "ORIXÁ",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 13,
+                  "fontWeight": "700",
+                  "letterSpacing": 0.6
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-ayra",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#FFFFFF",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "lw-ayra-accent",
+                      "fill": "#00000000",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "lw-ayra-label",
+                      "fill": "#111111",
+                      "content": "Ayrá",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-iansa",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#F3E8E6",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "lw-iansa-accent",
+                      "fill": "#7B1506",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "lw-iansa-label",
+                      "fill": "#7B1506",
+                      "content": "Iansã",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-iroko",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#FFFFFF",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "lw-iroko-accent",
+                      "fill": "#00000000",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "lw-iroko-label",
+                      "fill": "#111111",
+                      "content": "Iroko",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-logun",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#FFFFFF",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "lw-logun-accent",
+                      "fill": "#00000000",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "lw-logun-label",
+                      "fill": "#111111",
+                      "content": "Logun-Edé",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-nana",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#FFFFFF",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "lw-nana-accent",
+                      "fill": "#00000000",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "lw-nana-label",
+                      "fill": "#111111",
+                      "content": "Nanã",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-oba",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#FFFFFF",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "lw-oba-accent",
+                      "fill": "#00000000",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "lw-oba-label",
+                      "fill": "#111111",
+                      "content": "Obá",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-spacer-guia",
+                  "width": "fill_container",
+                  "height": 16
+                },
+                {
+                  "type": "text",
+                  "id": "lw-cat-guia",
+                  "fill": "#7B1506",
+                  "content": "GUIA",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 13,
+                  "fontWeight": "700",
+                  "letterSpacing": 0.6
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-baianos",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#FFFFFF",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "lw-baianos-accent",
+                      "fill": "#00000000",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "lw-baianos-label",
+                      "fill": "#111111",
+                      "content": "Baianos",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-caboclos",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#FFFFFF",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "lw-caboclos-accent",
+                      "fill": "#00000000",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "lw-caboclos-label",
+                      "fill": "#111111",
+                      "content": "Caboclos",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-exu",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#FFFFFF",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "lw-exu-accent",
+                      "fill": "#00000000",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "lw-exu-label",
+                      "fill": "#111111",
+                      "content": "Exu",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-spacer-outros",
+                  "width": "fill_container",
+                  "height": 16
+                },
+                {
+                  "type": "text",
+                  "id": "lw-cat-outros",
+                  "fill": "#7B1506",
+                  "content": "OUTROS",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 13,
+                  "fontWeight": "700",
+                  "letterSpacing": 0.6
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-abertura",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#FFFFFF",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "lw-abertura-accent",
+                      "fill": "#00000000",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "lw-abertura-label",
+                      "fill": "#111111",
+                      "content": "Abertura",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "lw-sidebar-border",
+              "fill": "#E0E0E0",
+              "width": 1,
+              "height": "fill_container"
+            },
+            {
+              "type": "frame",
+              "id": "lw-main",
+              "width": "fill_container",
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "padding": [
+                32,
+                40
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "lw-page-title",
+                  "fill": "#111111",
+                  "content": "Iansã",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 32,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-chips",
+                  "width": "fill_container",
+                  "height": 36,
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "lw-chip-1",
+                      "height": 32,
+                      "fill": "#7B1506",
+                      "cornerRadius": 999,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "lw-chip-1-label",
+                          "fill": "#F4F4F4",
+                          "content": "1 Barravento",
+                          "fontFamily": "Source Sans 3",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "lw-chip-2",
+                      "height": 32,
+                      "fill": "#F7F7F7",
+                      "cornerRadius": 999,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "lw-chip-2-label",
+                          "fill": "#111111",
+                          "content": "2 Congo",
+                          "fontFamily": "Source Sans 3",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "lw-chip-3",
+                      "height": 32,
+                      "fill": "#F7F7F7",
+                      "cornerRadius": 999,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "lw-chip-3-label",
+                          "fill": "#111111",
+                          "content": "3 Caboclo",
+                          "fontFamily": "Source Sans 3",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "lw-h2-1",
+                  "fill": "#111111",
+                  "content": "1| Barravento",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "lw-letra-1",
+                  "fill": "#111111",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Aiê dindi, Aiê dindá\nA matamba de arulê\na matamba de arulá",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 19,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "lw-div-1",
+                  "fill": "#E0E0E0",
+                  "width": "fill_container",
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "lw-h2-2",
+                  "fill": "#111111",
+                  "content": "2| Congo",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "lw-letra-2",
+                  "fill": "#111111",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Quando Oyá me chamou eu fui\natender tava sentada Iansã na palha\ndo dendê o guerreou guerreou relampejou\nou pelo cálice pela hóstia relampejo!!!\n\nTibere bere ooo Iansã tiberere\nooo tibere bere ooo Iansã tiberere",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 19,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-video",
+                  "width": 640,
+                  "height": 360,
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "lw-video-play",
+                      "fill": "#E53935",
+                      "width": 56,
+                      "height": 56
+                    },
+                    {
+                      "type": "text",
+                      "id": "lw-video-label",
+                      "fill": "#F4F4F4",
+                      "content": "Assistir no YouTube",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "color.brand": {
+      "type": "color",
+      "value": "#7B1506"
+    },
+    "color.brandContrast": {
+      "type": "color",
+      "value": "#F4F4F4"
+    },
+    "color.bg": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "color.text": {
+      "type": "color",
+      "value": "#111111"
+    },
+    "color.muted": {
+      "type": "color",
+      "value": "#4A4A4A"
+    },
+    "color.border": {
+      "type": "color",
+      "value": "#E0E0E0"
+    },
+    "color.surfaceMuted": {
+      "type": "color",
+      "value": "#F7F7F7"
+    },
+    "color.activeTint": {
+      "type": "color",
+      "value": "#F3E8E6"
+    },
+    "color.videoBg": {
+      "type": "color",
+      "value": "#1A1A1A"
+    },
+    "font.family": {
+      "type": "string",
+      "value": "Source Sans 3"
+    },
+    "space.headerMobile": {
+      "type": "number",
+      "value": 60
+    },
+    "space.headerWeb": {
+      "type": "number",
+      "value": 64
+    },
+    "font.size.letra": {
+      "type": "number",
+      "value": 19
+    }
+  },
+  "fileToken": "4cf51434-d457-4af7-b933-9a7ed3e738e8"
+}
