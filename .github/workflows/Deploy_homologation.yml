@@ -1,6 +1,8 @@
 on:
   push:
-    branches: 'develop'
+    branches:
+      - 'develop'
+      - 'refact/*'
 name: Publish Website
 jobs:
   FTP-Deploy-Action:
