@@ -1,14 +1,18 @@
 :root {
-  --brand: #7b1506;
-  --brand-contrast: #f4f4f4;
+  --brand: #77927b;
+  --brand-contrast: #ffffff;
   --bg: #ffffff;
   --text: #111111;
   --text-muted: #4a4a4a;
-  --border: #e0e0e0;
-  --surface-muted: #f7f7f7;
-  --active-tint: #f3e8e6;
+  --border: #dde2de;
+  --surface-muted: #f5f7f6;
+  --active-tint: #eef2ef;
+  --chip-inactive: #eef1ef;
+  --chip-label: #333333;
+  --handle: #cdd2cd;
   --scrim: rgba(0, 0, 0, 0.45);
   --video-bg: #1a1a1a;
+  --youtube: #e53935;
   --header-height: 64px;
   --font: "Source Sans 3", "Segoe UI", sans-serif;
   --letra-size: 1.1875rem;
@@ -344,7 +348,7 @@ a:focus-visible {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: #e53935;
+  background: var(--youtube);
   position: relative;
 }
 

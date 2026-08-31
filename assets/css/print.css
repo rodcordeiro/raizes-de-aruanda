@@ -7,8 +7,8 @@
   }
 
   #header {
-    background: #7b1506 !important;
-    color: #fff;
+    background: var(--brand) !important;
+    color: var(--brand-contrast);
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
