@@ -70,22 +70,20 @@ class Pontos{
     
     public function filter($linha){
         $query = "SELECT
-                IP.id,
-                IP.ponto,
-                IP.tipo,
-                IP.audio_link,
-                IP.title,
-                IR.ritmo
-            FROM
-                `icnt_pontos` IP
-            JOIN `icnt_linha` IL ON
-                IP.linha = IL.id
-            JOIN `icnt_ritmos` IR ON
-                IR.id = IP.ritmo
-            WHERE
-                IL.linha LIKE '".$linha."'
-            ORDER BY
-                IR.ritmo ASC;";
+                      A.id,
+                      A.letra,
+                      A.tipo,
+                      A.audio_url,
+                      C.nome as ritmo,
+                      null as title
+                    FROM
+                      `tb_pontos` A
+                      JOIN `tb_linhas` B ON A.linha = B.id
+                      JOIN `tb_ritmos` C ON C.id = A.ritmo
+                    WHERE
+                      B.nome LIKE '".$linha."'
+                    ORDER BY
+                      C.nome ASC;";
         $stmt = $this->connection->prepare($query);
 
         
@@ -98,10 +96,10 @@ class Pontos{
           $p = array(
             "id"=>$id,
             "ritmo"=>$ritmo,
-            "ponto"=>$ponto,
+            "ponto"=>$letra,
             "linha"=>$linha,
             "tipo"=>$tipo,
-            "audio_link"=>$audio_link,
+            "audio_link"=>$audio_url,
             "title"=>$title
           );
           array_push($pontos,$p);

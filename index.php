@@ -7,138 +7,203 @@
         include_once './db/db.class.php';
         include_once './controllers/linhas.controller.php';
         include_once './controllers/pontos.controller.php';
+
         $db = new DBClass();
         $connection = $db->getConnection();
         $Linhas = new Linhas($connection);
         $Pontos = new Pontos($connection);
         $categorias = $Linhas->getCategories();
-        if(isset($_GET['buscar'])){
+
+        $canalYoutube = '';
+        $busca = '';
+        $pontos = [];
+        $hasLinha = isset($_GET['buscar']) && $_GET['buscar'] !== '';
+
+        if ($hasLinha) {
             $buscar = $_GET['buscar'];
-            $pontos = $Pontos->filter($buscar);
-        if(isset($_GET['show'])){
-            $busca = $_GET['show'];
-        }else{
-            $busca = $buscar;
-        };} else{
-            $busca = "";
-        };
-        
-    ?>
-    <style type="text/css">
-	<?php if(isset($_GET['buscar'])){
-        echo "
-            #apresentacao{
-                display: none;
+            $pontos = $Pontos->filter($buscar) ?: [];
+            $linhaData = $Linhas->findByName($buscar);
+
+            if ($linhaData && !empty($linhaData['canal_youtube'])) {
+                $canalYoutube = $linhaData['canal_youtube'];
             }
-            #pontos{
-                display: block;
-            }";
-        } else {
-            echo "
-            #apresentacao{
-                display: block;
-            }
-            #pontos{
-                display: none;
-            }";
+
+            $busca = isset($_GET['show']) ? $_GET['show'] : $buscar;
         }
 
+        $linhaAtual = htmlspecialchars($busca, ENT_QUOTES, 'UTF-8');
     ?>
-</style>
-<script src="https://unpkg.com/feather-icons"></script>
-<script src="./assets/js/main.js"></script>
+    <script src="https://unpkg.com/feather-icons" defer></script>
+    <script src="./assets/js/main.js" defer></script>
 </head>
-<body>
+<body class="<?php echo $hasLinha ? 'page-linha' : 'page-home'; ?>">
 	<div id="conteudo">
 		<header id="header">
-            <img src="HTTPS://rodcordeiro.github.io/shares/favicons/favicon-raizes/android-icon-192x192.png">
-            <span>Pontos de Umbanda</span>
-            <div class="mobile-menu" onClick="handleMobileMenu()">
+            <a class="brand" href="index.php" aria-label="Raízes de Aruanda — início">
+                <img src="./assets/favicon/android-icon-192x192.png" alt="Raízes de Aruanda" width="48" height="48">
+            </a>
+            <span class="header-title">Pontos de Umbanda</span>
+            <button type="button" class="mobile-menu" id="menu-open" aria-label="Abrir menu de linhas" aria-controls="nav-sheet" aria-expanded="false">
                 <i data-feather="menu"></i>
-            </div>
+            </button>
 		</header>
-		<aside class='hide'>
-			<nav>
-				<ul>
+
+		<main id="main">
+            <section id="apresentacao" <?php echo $hasLinha ? 'hidden' : ''; ?>>
+                <h1>Apresentação</h1>
+                <p>
+                    Pontos de Umbanda utilizados durante as giras pela curimba do terreiro Raízes de Aruanda, bem como para o compartilhamento de conhecimentos.
+                </p>
+                <br/>
+                <hr/>
+                <p>
+                    Regência de 2026: <a href="index.php?buscar=Omulu" class="brand">Omulu</a> e <a href="index.php?buscar=Oxum" class="brand">Oxum</a>.
+                </p>
+                <br/>
+                <hr/>
+                <p>
+                    <a href="./ordem-ritualistica.php" class="brand">Ordem ritualística de abertura da casa.</a>
+                </p>
+                <p>
+                    Neste link você encontrará o passo a passo, o procedimento ritualístico, executado para a abertura de cada gira.
+                </p>
+            </section>
+
+            <section id="busca" <?php echo $hasLinha ? '' : 'hidden'; ?>>
+                <?php if ($hasLinha) { ?>
+                <?php /* Nome da linha (hero no mobile) + chips sticky — separados para o sticky não limitar ao bloco curto */ ?>
+                <div class="linha-nome" id="linha-nome">
+                    <?php if (!empty($canalYoutube)) { ?>
+                        <a href="<?php echo htmlspecialchars($canalYoutube, ENT_QUOTES, 'UTF-8'); ?>" target="_blank" rel="noopener noreferrer">
+                            <?php echo $linhaAtual; ?>
+                        </a>
+                    <?php } else { ?>
+                        <?php echo $linhaAtual; ?>
+                    <?php } ?>
+                </div>
+                <nav class="ritmo-chips" id="ritmo-chips" aria-label="Índice de ritmos">
                     <?php
-                    foreach($categorias as $categoria){
+                    $ritmoChips = [];
+                    foreach ($pontos as $ponto) {
+                        $ritmoNome = (string) ($ponto['ritmo'] ?? '');
+                        $ritmoKey = function_exists('mb_strtolower')
+                            ? mb_strtolower($ritmoNome, 'UTF-8')
+                            : strtolower($ritmoNome);
+                        if (!isset($ritmoChips[$ritmoKey])) {
+                            $ritmoChips[$ritmoKey] = [
+                                'nome' => $ritmoNome,
+                                'count' => 0,
+                                'firstId' => 'ponto-' . (int) $ponto['id'],
+                            ];
+                        }
+                        $ritmoChips[$ritmoKey]['count']++;
+                    }
+                    $chipIndex = 0;
+                    foreach ($ritmoChips as $ritmoKey => $chip) {
+                        $chipLabel = $chip['count'] . ' ' . $chip['nome'];
+                        $chipIndex++;
                     ?>
-                    <li id="linha_title">
-					<?php echo $categoria; ?>
-					</li>
-					<li id="linha_lista">
-						<ul>
-						<?php
-                         $linhas = $Linhas->filterByCategory($categoria);
-                         foreach($linhas as $linha){
-                        ?>
+                    <a
+                        class="ritmo-chip<?php echo $chipIndex === 1 ? ' is-active' : ''; ?>"
+                        href="#<?php echo htmlspecialchars($chip['firstId'], ENT_QUOTES, 'UTF-8'); ?>"
+                        data-ponto-id="<?php echo htmlspecialchars($chip['firstId'], ENT_QUOTES, 'UTF-8'); ?>"
+                        data-ritmo="<?php echo htmlspecialchars($ritmoKey, ENT_QUOTES, 'UTF-8'); ?>"
+                    >
+                        <?php echo htmlspecialchars($chipLabel, ENT_QUOTES, 'UTF-8'); ?>
+                    </a>
+                    <?php } ?>
+                </nav>
 
-                          <a href="index.php?buscar=<?php echo $linha['linha']; ?>"><li><?php echo $linha['linha']; ?></li></a>
-                          <?php
-                         }
+                <h1 class="linha-title visually-hidden"><?php echo $linhaAtual; ?></h1>
+
+                <div id="pontos">
+                    <?php if (count($pontos) === 0) { ?>
+                        <p class="empty-state">Nenhum ponto encontrado para esta linha.</p>
+                    <?php } else {
+                        $i = 1;
+                        foreach ($pontos as $ponto) {
+                            $pontoId = $ponto['id'];
+                            $ritmoNome = (string) ($ponto['ritmo'] ?? '');
+                            $ritmoKey = function_exists('mb_strtolower')
+                                ? mb_strtolower($ritmoNome, 'UTF-8')
+                                : strtolower($ritmoNome);
+                            $videoId = null;
+                            if (!empty($ponto['audio_link']) && preg_match('#youtu\.be/([a-zA-Z0-9_-]+)#i', $ponto['audio_link'], $matches)) {
+                                $videoId = $matches[1];
+                            }
+                    ?>
+                    <article class="ponto" id="<?php echo $pontoId; ?>" data-ritmo="<?php echo htmlspecialchars($ritmoKey, ENT_QUOTES, 'UTF-8'); ?>">
+                        <h2 class="ponto-ritmo">
+                            <span><?php echo $i; ?></span>| <?php echo htmlspecialchars($ritmoNome, ENT_QUOTES, 'UTF-8'); ?>
+                            <?php if (strcasecmp((string) ($ponto['tipo'] ?? ''), 'subida') === 0): ?>
+                                <span> (Subida)</span>
+                            <?php endif; ?>
+                        </h2>
+                        <div class="ponto-letra"><?php echo htmlspecialchars($ponto['ponto'], ENT_QUOTES, 'UTF-8'); ?></div>
+                        <?php if ($videoId): ?>
+                        <iframe
+                            class="yt-embed"
+                            src="https://www.youtube.com/embed/<?php echo htmlspecialchars($videoId, ENT_QUOTES, 'UTF-8'); ?>"
+                            title="YouTube video player"
+                            allowfullscreen
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                        ></iframe>
+                        <?php endif; ?>
+                        <?php
+                        if (!empty($ponto['audio_link']) && preg_match('/\.(mp3|mp4|m4a|ogg|wma)$/i', $ponto['audio_link'])) {
+                            echo '<audio controls preload="none"><source src="pontos/' . htmlspecialchars($ponto['audio_link'], ENT_QUOTES, 'UTF-8') . '" type="audio/mpeg"></audio>';
+                        }
                         ?>
-						</ul>
-					</li>
+                    </article>
                     <?php
-                         }
-                        ?>
-				</ul>
-			</nav>
-		</aside>
-		<div id="apresentacao">
-			<h1>Apresentação</h1>
-			<p>
-				Pontos de Umbanda utilizados durante as giras pela curimba do terreiro Raízes de Aruanda, bem como para o compartilhamento de conhecimentos.
-			</p>
-		</div>
-		<div id="busca">
-			<h1><?php echo $busca; ?></h1>
-			<div id="pontos">
-				<?php 
-                    $i=1; 
-                    foreach($pontos as $ponto) { ?>
-                    <div id="ponto">
-						<h4 id="<?php echo $ponto['id'];?>"><span><?php echo $i;?></span>| <?php echo $ponto['ritmo'];?>
-<?php if (strcasecmp($ponto['tipo'], 'subida') === 0): ?>
-    <span> (Subida)</span>
-<?php endif; ?>
-</h4>
-						<pre>
-<?php echo $ponto['ponto'];?>
-						</pre>
-						<?php 
-						// Se for link do tipo youtu.be/xxxxxxx
-						if (preg_match("#youtu\.be/([a-zA-Z0-9_-]+)#i", $ponto['audio_link'], $matches)): 
-						    $videoId = $matches[1];
-						?>
-						    <iframe 
-						        src="https://www.youtube.com/embed/<?php echo $videoId; ?>" 
-						        title="YouTube video player" 
-						        frameborder="0" 
-						        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-						        referrerpolicy="strict-origin-when-cross-origin" 
-						        allowfullscreen
-						    ></iframe>
-						<?php endif; ?>
-						<?php if (preg_match("/.mp3/", $ponto['audio_link']) || preg_match("/.mp4/", $ponto['audio_link']) || preg_match("/.m4a/", $ponto['audio_link']) || preg_match("/.ogg/", $ponto['audio_link']) || preg_match("/.wma/", $ponto['audio_link'])){
-							echo '
-								<audio controls>
-									<source src="pontos/'.$ponto['audio_link'].'" type="audio/mp3">
-								</audio>
-							';} ?>
-							<hr>
-						</div>
-					
-					<?php $i++; } ?>
-
-				</div>
-			</div>
-		</div>
-
+                            $i++;
+                        }
+                    } ?>
+                </div>
+                <?php } ?>
+            </section>
+        </main>
 	</div>
 
-    <script>
-      feather.replace()
-    </script>
+    <div class="nav-scrim" id="nav-scrim" hidden></div>
+    <aside id="nav-sheet" class="nav-sheet" aria-label="Navegação por linhas">
+        <div class="nav-sheet-handle" aria-hidden="true"></div>
+        <div class="nav-sheet-header">
+            <h2 id="nav-sheet-title">Linhas</h2>
+            <button type="button" class="nav-close" id="menu-close" aria-label="Fechar menu">
+                <i data-feather="x"></i>
+            </button>
+        </div>
+        <label class="nav-filter-label" for="nav-filter">Buscar linha</label>
+        <input type="search" id="nav-filter" class="nav-filter" placeholder="Buscar linha…" autocomplete="off">
+        <nav>
+            <ul class="nav-categories">
+                <?php foreach ($categorias as $categoria) { ?>
+                <li class="nav-category">
+                    <span class="nav-category-title"><?php echo htmlspecialchars($categoria, ENT_QUOTES, 'UTF-8'); ?></span>
+                    <ul class="nav-lines">
+                    <?php
+                     $linhas = $Linhas->filterByCategory($categoria);
+                     foreach ($linhas as $linha) {
+                        $nomeLinha = $linha['linha'];
+                        $isActive = $hasLinha && strcasecmp($busca, $nomeLinha) === 0;
+                        $href = 'index.php?buscar=' . rawurlencode($nomeLinha);
+                    ?>
+                      <li>
+                        <a
+                            class="nav-line<?php echo $isActive ? ' is-active' : ''; ?>"
+                            href="<?php echo htmlspecialchars($href, ENT_QUOTES, 'UTF-8'); ?>"
+                            data-linha="<?php echo htmlspecialchars(function_exists('mb_strtolower') ? mb_strtolower($nomeLinha, 'UTF-8') : strtolower($nomeLinha), ENT_QUOTES, 'UTF-8'); ?>"
+                            <?php echo $isActive ? 'aria-current="page"' : ''; ?>
+                        ><?php echo htmlspecialchars($nomeLinha, ENT_QUOTES, 'UTF-8'); ?></a>
+                      </li>
+                    <?php } ?>
+                    </ul>
+                </li>
+                <?php } ?>
+            </ul>
+        </nav>
+    </aside>
 </body>
 </html>

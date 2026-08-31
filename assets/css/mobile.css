@@ -1,98 +1,261 @@
 @media screen and (max-width: 768px) {
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+  :root {
+    --header-height: 60px;
   }
+
   #conteudo {
-    height: 100vh;
-    display: grid;
     grid-template-areas:
       "header"
       "content";
-    grid-template-columns: auto;
-    gap: 5px;
-    grid-template-rows: 150px auto;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: var(--header-height) minmax(0, 1fr);
+    padding-left: 0;
   }
 
   #header {
-    height: 150px;
+    padding: 0 0.75rem;
+    justify-content: space-between;
+    margin-left: 0;
     width: 100%;
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
   }
-  #header i{
-    position: relative;
-    top: 30px;
+
+  #header .brand img {
+    width: 40px;
+    height: 40px;
   }
-  #header > img {
-    height: 30px;
-    width: 30px;
-    border-radius: 0;
-  }
-  #header > span {
+
+  #header .header-title {
     display: none;
   }
 
   #header .mobile-menu {
-    display: block !important;
-    color: var(--primary-contrast-color);
+    display: inline-flex;
   }
 
-  .hide {
+  .nav-scrim {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    background: var(--scrim);
+  }
+
+  .nav-scrim[hidden] {
     display: none;
   }
 
-  aside {
-    position: absolute;
-    background-color: aliceblue;
-    z-index: 999;
-    padding: 5px 10px;
-  }
-  aside ul {
-    padding: 5px 10px;
-  }
-
-  #busca {
-    max-width: 70vw;
-    margin: 0px;
-    padding: 0px;
-  }
-  /* 
-  #busca h1 {
-    margin-left: 30%;
-  } */
-
-  /* #pontos {
+  .nav-sheet {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+    z-index: 60;
     width: 100%;
-
-    margin: 0 auto;
+    max-height: min(80vh, 680px);
+    padding: 0 0 1rem;
+    border-right: 0;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.2);
+    transform: translateY(105%);
+    transition: transform 0.22s ease;
+    visibility: hidden;
   }
 
-  #ponto h4 {
-    margin-left: 15px;
+  body.nav-open .nav-sheet {
+    transform: translateY(0);
+    visibility: visible;
   }
 
-  #ponto pre {
-    font-weight: 400;
+  .nav-sheet-handle {
+    display: block;
+    width: 36px;
+    height: 4px;
+    margin: 0.5rem auto;
+    border-radius: 2px;
+    background: var(--handle);
+  }
 
-    font-size: 13px;
+  .nav-sheet-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 52px;
+    padding: 0 1rem;
+  }
+
+  .nav-sheet-header h2 {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+  .nav-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--touch);
+    height: var(--touch);
+    border: 0;
+    background: transparent;
+    color: var(--text);
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .nav-close svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .nav-filter-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .nav-filter {
+    width: calc(100% - 2rem);
+    margin: 0 1rem 0.75rem;
+  }
+
+  .nav-sheet nav {
+    padding: 0 1rem;
+    overflow: auto;
+    max-height: calc(min(80vh, 680px) - 140px);
+  }
+
+  .nav-line {
+    min-height: var(--touch);
   }
 
   #apresentacao {
-    position: absolute;
-
-    top: 55vh;
-
-    left: 50%;
-
-    transform: translate(-50%, -50%);
+    padding: 1.5rem 1rem;
   }
 
-  audio {
-    margin-left: 10px;
-  } */
+  #apresentacao h1 {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  .doc-page {
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .doc-page h1 {
+    font-size: 1.5rem;
+  }
+
+  #busca {
+    display: block;
+    padding: 0;
+  }
+
+  /* Nome da linha: hero abaixo do header; rola embora (não sticky) */
+  .linha-nome {
+    max-width: none;
+    padding: 20px 16px 12px;
+    font-size: 2.25rem; /* 36px */
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--brand);
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+  }
+
+  /*
+   * Chips sticky sob o header.
+   * #main é o scrollport (já abaixo do header) → top: 0 equivale a Iris top: 60px
+   * no modelo de body-scroll + header fixo.
+   */
+  .ritmo-chips {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin: 0;
+    padding: 12px 16px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .ritmo-chips::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ritmo-chip {
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    height: 44px;
+    min-height: 44px;
+    padding: 0 16px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--chip-inactive);
+    color: var(--chip-label);
+    font-size: 0.875rem; /* 14px */
+    font-weight: 600;
+  }
+
+  .ritmo-chip.is-active {
+    background: var(--brand);
+    color: var(--brand-contrast);
+    border-color: transparent;
+  }
+
+  /*
+   * Altura da barra de chips: 12 + 44 + 12 = 68px.
+   * scroll-padding / scroll-margin evitam que h2.ponto-ritmo fique sob o sticky.
+   */
+  #main {
+    scroll-padding-top: 68px;
+  }
+
+  #pontos {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0;
+    padding: 20px 16px 32px;
+  }
+
+  .ponto + .ponto {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+
+  .ponto {
+    scroll-margin-top: 68px;
+  }
+
+  .ponto-ritmo {
+    font-size: 1.0625rem; /* 17px */
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .ponto-letra {
+    font-size: 1.125rem; /* 18px */
+    font-weight: 400;
+    line-height: 1.55;
+    color: var(--text);
+  }
+
+  .yt-placeholder,
+  .yt-embed,
+  .ponto audio {
+    width: 100%;
+  }
 }

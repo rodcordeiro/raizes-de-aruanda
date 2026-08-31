@@ -1,0 +1,1729 @@
+{
+  "version": "2.17",
+  "children": [
+    {
+      "type": "text",
+      "id": "v2SectionLabel",
+      "x": 2000,
+      "y": -1265,
+      "name": "v2_label",
+      "fill": "$color.brand",
+      "content": "v2 — mobile-first (leitura em movimento)",
+      "fontFamily": "Source Sans 3",
+      "fontSize": 28,
+      "fontWeight": "700"
+    },
+    {
+      "type": "frame",
+      "id": "homeMobileV2",
+      "x": 2000,
+      "y": -1089,
+      "name": "home_mobile_v2",
+      "clip": true,
+      "width": 390,
+      "height": 844,
+      "fill": "$color.bg",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "hm-header",
+          "name": "header",
+          "width": "fill_container",
+          "height": 60,
+          "fill": "$color.brand",
+          "padding": [
+            0,
+            12
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "ellipse",
+              "id": "hm-logo",
+              "fill": "$color.brandContrast",
+              "width": 40,
+              "height": 40
+            },
+            {
+              "type": "frame",
+              "id": "hm-menu-btn",
+              "width": 44,
+              "height": 44,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "hm-menu-icon",
+                  "width": 24,
+                  "height": 24,
+                  "icon": "menu",
+                  "library": "feather",
+                  "fill": "$color.brandContrast"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "hm-main",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            24,
+            16,
+            16,
+            16
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "hm-h1",
+              "fill": "$color.text",
+              "content": "Apresentação",
+              "fontFamily": "Source Sans 3",
+              "fontSize": 24,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "hm-p",
+              "fill": "$color.text",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Pontos de Umbanda utilizados durante as giras pela curimba do terreiro Raízes de Aruanda, bem como para o compartilhamento de conhecimentos.",
+              "lineHeight": 1.6,
+              "fontFamily": "Source Sans 3",
+              "fontSize": 19,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "menuMobileV2",
+      "x": 2450,
+      "y": -1089,
+      "name": "menu_mobile_v2",
+      "clip": true,
+      "width": 390,
+      "height": 844,
+      "fill": "$color.bg",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "mm-base",
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "fill": "$color.bg",
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "mm-header",
+              "name": "header",
+              "width": "fill_container",
+              "height": 60,
+              "fill": "$color.brand",
+              "padding": [
+                0,
+                12
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "mm-logo",
+                  "fill": "$color.brandContrast",
+                  "width": 40,
+                  "height": 40
+                },
+                {
+                  "type": "frame",
+                  "id": "mm-menu-btn",
+                  "width": 44,
+                  "height": 44,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "mm-menu-icon",
+                      "width": 24,
+                      "height": 24,
+                      "icon": "menu",
+                      "library": "feather",
+                      "fill": "$color.brandContrast"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "mm-main",
+              "width": "fill_container",
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "padding": [
+                24,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "mm-h1",
+                  "fill": "$color.text",
+                  "content": "Apresentação",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 24,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "mm-p",
+                  "fill": "$color.text",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Pontos de Umbanda utilizados durante as giras pela curimba do terreiro Raízes de Aruanda, bem como para o compartilhamento de conhecimentos.",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 19
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "mm-scrim",
+          "x": 0,
+          "y": 0,
+          "fill": "$color.scrim",
+          "width": 390,
+          "height": 844
+        },
+        {
+          "type": "frame",
+          "id": "mm-sheet",
+          "x": 0,
+          "y": 164,
+          "clip": true,
+          "width": 390,
+          "height": 680,
+          "fill": "$color.bg",
+          "cornerRadius": 16,
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "$color.shadow",
+            "offset": {
+              "x": 0,
+              "y": -4
+            },
+            "blur": 24
+          },
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "mm-handle-row",
+              "width": "fill_container",
+              "height": 20,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 2,
+                  "id": "mm-handle",
+                  "fill": "$color.handle",
+                  "width": 36,
+                  "height": 4
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "mm-sheet-header",
+              "width": "fill_container",
+              "height": 52,
+              "padding": [
+                0,
+                16
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "mm-sheet-title",
+                  "fill": "$color.text",
+                  "content": "Linhas",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "mm-close-btn",
+                  "width": 44,
+                  "height": 44,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "mm-close-icon",
+                      "width": 20,
+                      "height": 20,
+                      "icon": "x",
+                      "library": "feather",
+                      "fill": "$color.text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "mm-filter-wrap",
+              "width": "fill_container",
+              "height": 56,
+              "layout": "vertical",
+              "padding": [
+                0,
+                16,
+                12,
+                16
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "mm-filter",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.bg",
+                  "cornerRadius": 8,
+                  "padding": [
+                    0,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "mm-filter-text",
+                      "fill": "$color.muted",
+                      "content": "Buscar linha…",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 16
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "mm-list",
+              "width": "fill_container",
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 4,
+              "padding": [
+                4,
+                16,
+                16,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "mm-cat-orixa",
+                  "fill": "$color.brand",
+                  "content": "ORIXÁ",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 13,
+                  "fontWeight": "700",
+                  "letterSpacing": 0.6
+                },
+                {
+                  "type": "frame",
+                  "id": "mm-ayra",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.bg",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "mm-ayra-accent",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "mm-ayra-label",
+                      "fill": "$color.text",
+                      "content": "Ayrá",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mm-iansa",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.activeTint",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "mm-iansa-accent",
+                      "fill": "$color.brand",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "mm-iansa-label",
+                      "fill": "$color.brand",
+                      "content": "Iansã",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mm-iroko",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.bg",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "mm-iroko-accent",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "mm-iroko-label",
+                      "fill": "$color.text",
+                      "content": "Iroko",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mm-logun",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.bg",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "mm-logun-accent",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "mm-logun-label",
+                      "fill": "$color.text",
+                      "content": "Logun-Edé",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mm-nana",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.bg",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "mm-nana-accent",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "mm-nana-label",
+                      "fill": "$color.text",
+                      "content": "Nanã",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mm-oba",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.bg",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "mm-oba-accent",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "mm-oba-label",
+                      "fill": "$color.text",
+                      "content": "Obá",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mm-spacer-guia",
+                  "width": "fill_container",
+                  "height": 12
+                },
+                {
+                  "type": "text",
+                  "id": "mm-cat-guia",
+                  "fill": "$color.brand",
+                  "content": "GUIA",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 13,
+                  "fontWeight": "700",
+                  "letterSpacing": 0.6
+                },
+                {
+                  "type": "frame",
+                  "id": "mm-baianos",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.bg",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "mm-baianos-accent",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "mm-baianos-label",
+                      "fill": "$color.text",
+                      "content": "Baianos",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mm-caboclos",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.bg",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "mm-caboclos-accent",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "mm-caboclos-label",
+                      "fill": "$color.text",
+                      "content": "Caboclos",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mm-exu",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.bg",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "mm-exu-accent",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "mm-exu-label",
+                      "fill": "$color.text",
+                      "content": "Exu",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "linhaMobileV2",
+      "x": 2900,
+      "y": -1089,
+      "name": "linha_mobile_v2",
+      "clip": true,
+      "width": 390,
+      "fill": "$color.bg",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "lm-header",
+          "name": "header",
+          "width": "fill_container",
+          "height": 60,
+          "fill": "$color.brand",
+          "padding": [
+            0,
+            12
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "ellipse",
+              "id": "lm-logo",
+              "name": "logo",
+              "fill": "$color.brandContrast",
+              "width": 40,
+              "height": 40
+            },
+            {
+              "type": "frame",
+              "id": "lm-menu-btn",
+              "name": "menu_button",
+              "width": 44,
+              "height": 44,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "lm-menu-icon",
+                  "name": "menu_icon",
+                  "width": 24,
+                  "height": 24,
+                  "icon": "menu",
+                  "library": "feather",
+                  "fill": "$color.brandContrast"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "WBNuu",
+          "name": "linha_hero_and_chips",
+          "width": "fill_container",
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "J0cow",
+              "name": "linha_hero",
+              "width": "fill_container",
+              "layout": "vertical",
+              "padding": [
+                20,
+                16,
+                12,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "xJf3z",
+                  "name": "linha_nome",
+                  "fill": "$color.brand",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Iansã",
+                  "lineHeight": 1.15,
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 36,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "DXpPy",
+              "name": "chips_sticky",
+              "width": "fill_container",
+              "fill": "$color.bg",
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "rYWlX",
+                  "name": "chips_row",
+                  "width": "fill_container",
+                  "gap": 10,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "c8pGM",
+                      "name": "chip_active",
+                      "height": 44,
+                      "fill": "$color.brand",
+                      "cornerRadius": 999,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dA4vg",
+                          "name": "chip_active_label",
+                          "fill": "$color.bg",
+                          "content": "1 Barravento",
+                          "fontFamily": "Source Sans 3",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Z8sao",
+                      "name": "chip_inactive_congo",
+                      "height": 44,
+                      "fill": "$color.chipInactive",
+                      "cornerRadius": 999,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "REViu",
+                          "name": "chip_congo_label",
+                          "fill": "$color.chipLabel",
+                          "content": "2 Congo",
+                          "fontFamily": "Source Sans 3",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "lMAo1",
+                      "name": "chip_inactive_caboclo",
+                      "height": 44,
+                      "fill": "$color.chipInactive",
+                      "cornerRadius": 999,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "R16MgD",
+                          "name": "chip_caboclo_label",
+                          "fill": "$color.chipLabel",
+                          "content": "3 Caboclo",
+                          "fontFamily": "Source Sans 3",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "rectangle",
+                  "id": "DMfgZ",
+                  "name": "chips_sticky_border",
+                  "fill": "$color.border",
+                  "width": "fill_container",
+                  "height": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "lm-content",
+          "name": "content",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            20,
+            16,
+            32,
+            16
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "lm-h2-1",
+              "name": "ritmo_heading_1",
+              "fill": "$color.text",
+              "content": "1| Barravento",
+              "fontFamily": "Source Sans 3",
+              "fontSize": 17,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "lm-letra-1",
+              "name": "letra_1",
+              "fill": "$color.text",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Aiê dindi, Aiê dindá\nA matamba de arulê\na matamba de arulá",
+              "lineHeight": 1.55,
+              "fontFamily": "Source Sans 3",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "rectangle",
+              "id": "lm-div-1",
+              "name": "divider_1",
+              "fill": "$color.border",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "text",
+              "id": "lm-h2-2",
+              "name": "ritmo_heading_2",
+              "fill": "$color.text",
+              "content": "2| Congo",
+              "fontFamily": "Source Sans 3",
+              "fontSize": 17,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "lm-letra-2",
+              "name": "letra_2",
+              "fill": "$color.text",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Quando Oyá me chamou eu fui\natender tava sentada Iansã na palha\ndo dendê o guerreou guerreou relampejou\nou pelo cálice pela hóstia relampejo!!!\n\nTibere bere ooo Iansã tiberere\nooo tibere bere ooo Iansã tiberere",
+              "lineHeight": 1.55,
+              "fontFamily": "Source Sans 3",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "lm-video",
+              "name": "video_block",
+              "width": "fill_container",
+              "height": 201,
+              "fill": "$color.videoBg",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "gap": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "lm-video-play",
+                  "name": "video_play",
+                  "fill": "$color.youtube",
+                  "width": 56,
+                  "height": 56
+                },
+                {
+                  "type": "text",
+                  "id": "lm-video-label",
+                  "name": "video_label",
+                  "fill": "$color.brandContrast",
+                  "content": "Assistir no YouTube",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "linhaWebV2",
+      "x": 2000,
+      "y": 0,
+      "name": "linha_web_v2",
+      "clip": true,
+      "width": 1280,
+      "height": 800,
+      "fill": "$color.bg",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "lw-header",
+          "width": "fill_container",
+          "height": 64,
+          "fill": "$color.brand",
+          "gap": 16,
+          "padding": [
+            0,
+            32
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "ellipse",
+              "id": "lw-logo",
+              "fill": "$color.brandContrast",
+              "width": 48,
+              "height": 48
+            },
+            {
+              "type": "text",
+              "id": "lw-title",
+              "fill": "$color.brandContrast",
+              "content": "Pontos de Umbanda",
+              "fontFamily": "Source Sans 3",
+              "fontSize": 22,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "lw-body",
+          "width": "fill_container",
+          "height": "fill_container",
+          "children": [
+            {
+              "type": "frame",
+              "id": "lw-sidebar",
+              "width": 240,
+              "height": "fill_container",
+              "fill": "$color.bg",
+              "layout": "vertical",
+              "gap": 4,
+              "padding": [
+                24,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "lw-cat-orixa",
+                  "fill": "$color.brand",
+                  "content": "ORIXÁ",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 13,
+                  "fontWeight": "700",
+                  "letterSpacing": 0.6
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-ayra",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.bg",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "lw-ayra-accent",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "lw-ayra-label",
+                      "fill": "$color.text",
+                      "content": "Ayrá",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-iansa",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.activeTint",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "lw-iansa-accent",
+                      "fill": "$color.brand",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "lw-iansa-label",
+                      "fill": "$color.brand",
+                      "content": "Iansã",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-iroko",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.bg",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "lw-iroko-accent",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "lw-iroko-label",
+                      "fill": "$color.text",
+                      "content": "Iroko",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-logun",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.bg",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "lw-logun-accent",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "lw-logun-label",
+                      "fill": "$color.text",
+                      "content": "Logun-Edé",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-nana",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.bg",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "lw-nana-accent",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "lw-nana-label",
+                      "fill": "$color.text",
+                      "content": "Nanã",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-oba",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.bg",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "lw-oba-accent",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "lw-oba-label",
+                      "fill": "$color.text",
+                      "content": "Obá",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-spacer-guia",
+                  "width": "fill_container",
+                  "height": 16
+                },
+                {
+                  "type": "text",
+                  "id": "lw-cat-guia",
+                  "fill": "$color.brand",
+                  "content": "GUIA",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 13,
+                  "fontWeight": "700",
+                  "letterSpacing": 0.6
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-baianos",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.bg",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "lw-baianos-accent",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "lw-baianos-label",
+                      "fill": "$color.text",
+                      "content": "Baianos",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-caboclos",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.bg",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "lw-caboclos-accent",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "lw-caboclos-label",
+                      "fill": "$color.text",
+                      "content": "Caboclos",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-exu",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.bg",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "lw-exu-accent",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "lw-exu-label",
+                      "fill": "$color.text",
+                      "content": "Exu",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-spacer-outros",
+                  "width": "fill_container",
+                  "height": 16
+                },
+                {
+                  "type": "text",
+                  "id": "lw-cat-outros",
+                  "fill": "$color.brand",
+                  "content": "OUTROS",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 13,
+                  "fontWeight": "700",
+                  "letterSpacing": 0.6
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-abertura",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.bg",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "lw-abertura-accent",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 44
+                    },
+                    {
+                      "type": "text",
+                      "id": "lw-abertura-label",
+                      "fill": "$color.text",
+                      "content": "Abertura",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "lw-sidebar-border",
+              "fill": "$color.border",
+              "width": 1,
+              "height": "fill_container"
+            },
+            {
+              "type": "frame",
+              "id": "lw-main",
+              "width": "fill_container",
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "padding": [
+                32,
+                40
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "lw-page-title",
+                  "fill": "$color.text",
+                  "content": "Iansã",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 32,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-chips",
+                  "width": "fill_container",
+                  "height": 36,
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "lw-chip-1",
+                      "height": 32,
+                      "fill": "$color.brand",
+                      "cornerRadius": 999,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "lw-chip-1-label",
+                          "fill": "$color.brandContrast",
+                          "content": "1 Barravento",
+                          "fontFamily": "Source Sans 3",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "lw-chip-2",
+                      "height": 32,
+                      "fill": "$color.surfaceMuted",
+                      "cornerRadius": 999,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "lw-chip-2-label",
+                          "fill": "$color.text",
+                          "content": "2 Congo",
+                          "fontFamily": "Source Sans 3",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "lw-chip-3",
+                      "height": 32,
+                      "fill": "$color.surfaceMuted",
+                      "cornerRadius": 999,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "lw-chip-3-label",
+                          "fill": "$color.text",
+                          "content": "3 Caboclo",
+                          "fontFamily": "Source Sans 3",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "lw-h2-1",
+                  "fill": "$color.text",
+                  "content": "1| Barravento",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "lw-letra-1",
+                  "fill": "$color.text",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Aiê dindi, Aiê dindá\nA matamba de arulê\na matamba de arulá",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 19,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "lw-div-1",
+                  "fill": "$color.border",
+                  "width": "fill_container",
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "lw-h2-2",
+                  "fill": "$color.text",
+                  "content": "2| Congo",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "lw-letra-2",
+                  "fill": "$color.text",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Quando Oyá me chamou eu fui\natender tava sentada Iansã na palha\ndo dendê o guerreou guerreou relampejou\nou pelo cálice pela hóstia relampejo!!!\n\nTibere bere ooo Iansã tiberere\nooo tibere bere ooo Iansã tiberere",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 19,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-video",
+                  "width": 640,
+                  "height": 360,
+                  "fill": "$color.videoBg",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "lw-video-play",
+                      "fill": "$color.youtube",
+                      "width": 56,
+                      "height": 56
+                    },
+                    {
+                      "type": "text",
+                      "id": "lw-video-label",
+                      "fill": "$color.brandContrast",
+                      "content": "Assistir no YouTube",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "id": "v8Sii",
+      "x": 3350,
+      "y": -1649,
+      "name": "sticky_behavior_note",
+      "width": 320,
+      "height": 280,
+      "content": "STICKY (linha mobile v2)\n\nHeader brand: 60px (fix)\nChips sticky top: 60px (sob o header)\nTitulo da linha: NAO sticky — rola embora\n\nHero (titulo): pad 20/16/12/16; nome 36/700 lh 1.15\nChips bar: 69px (12+44+12+1)\nChip: h 44, pad-x 16, gap 10\nActive $color.brand / $color.brandContrast\nInactive $color.chipInactive / $color.chipLabel\n\nAlternativa sticky titulo+chips (~142px) — rejeitada: comprime viewport; titulo hero deve respirar."
+    },
+    {
+      "type": "group",
+      "id": "LABKm",
+      "x": -2184,
+      "y": -2085,
+      "name": "v1",
+      "children": [
+        {
+          "type": "group",
+          "id": "u3vvYW",
+          "x": 148,
+          "y": 1449,
+          "name": "v1-visualizacao-web",
+          "children": [
+            {
+              "type": "rectangle",
+              "id": "jbSbM",
+              "x": 0,
+              "y": 0,
+              "name": "home_web",
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "home_web.png",
+                "mode": "fill"
+              },
+              "width": 1881,
+              "height": 900
+            },
+            {
+              "type": "rectangle",
+              "id": "fJrwe",
+              "x": 0,
+              "y": 966,
+              "name": "visualizacao-de-linha-com-e-sem-video-yt",
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "visualizacao-de-linha-com-e-sem-video-yt.png",
+                "mode": "fill"
+              },
+              "width": 1873,
+              "height": 891
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "D2tRWD",
+          "x": 179,
+          "y": 109,
+          "name": "v1-visualizacao-mobile",
+          "children": [
+            {
+              "type": "rectangle",
+              "id": "xm6Uj",
+              "x": 0,
+              "y": 75,
+              "name": "home_mobile_menu_fechado",
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "home_mobile_menu_fechado.png",
+                "mode": "fill"
+              },
+              "width": 401,
+              "height": 616
+            },
+            {
+              "type": "rectangle",
+              "id": "r5h0lk",
+              "x": 497,
+              "y": 75,
+              "name": "home_mobile_menu_aberto",
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "home_mobile_menu_aberto.png",
+                "mode": "fill"
+              },
+              "width": 388,
+              "height": 711
+            },
+            {
+              "type": "rectangle",
+              "id": "tDEkg",
+              "x": 994,
+              "y": 75,
+              "name": "visualizacao-mobile-de-linha-com-e-sem-video-yt",
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "visualizacao-mobile-de-linha-com-e-sem-video-yt.png",
+                "mode": "fill"
+              },
+              "width": 392,
+              "height": 776
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "t1I9r",
+          "x": 0,
+          "y": 0,
+          "width": 2278,
+          "height": 3520,
+          "stroke": "#000000ff",
+          "strokeWidth": 4,
+          "strokeAlignment": "inner"
+        },
+        {
+          "type": "text",
+          "id": "kIR9s",
+          "x": 15,
+          "y": 0,
+          "name": "v1_label",
+          "fill": "$color.muted",
+          "content": "v1 — baseline atual (screenshots)",
+          "fontFamily": "Source Sans 3",
+          "fontSize": 28,
+          "fontWeight": "700"
+        }
+      ]
+    },
+    {
+      "type": "rectangle",
+      "id": "KyKCx",
+      "x": 204,
+      "y": -2085,
+      "name": "logo-raizes",
+      "fill": {
+        "type": "image",
+        "enabled": true,
+        "url": "logo-raizes.png",
+        "mode": "fill"
+      },
+      "width": 640,
+      "height": 640
+    }
+  ],
+  "variables": {
+    "color.brand": {
+      "type": "color",
+      "value": "#77927B"
+    },
+    "color.brandContrast": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "color.bg": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "color.text": {
+      "type": "color",
+      "value": "#111111"
+    },
+    "color.muted": {
+      "type": "color",
+      "value": "#4A4A4A"
+    },
+    "color.border": {
+      "type": "color",
+      "value": "#DDE2DE"
+    },
+    "color.surfaceMuted": {
+      "type": "color",
+      "value": "#F5F7F6"
+    },
+    "color.activeTint": {
+      "type": "color",
+      "value": "#EEF2EF"
+    },
+    "color.videoBg": {
+      "type": "color",
+      "value": "#1A1A1A"
+    },
+    "font.family": {
+      "type": "string",
+      "value": "Source Sans 3"
+    },
+    "space.headerMobile": {
+      "type": "number",
+      "value": 60
+    },
+    "space.headerWeb": {
+      "type": "number",
+      "value": 64
+    },
+    "font.size.letra": {
+      "type": "number",
+      "value": 19
+    },
+    "color.scrim": {
+      "type": "color",
+      "value": "#00000073"
+    },
+    "color.shadow": {
+      "type": "color",
+      "value": "#00000033"
+    },
+    "color.transparent": {
+      "type": "color",
+      "value": "#00000000"
+    },
+    "color.handle": {
+      "type": "color",
+      "value": "#CDD2CD"
+    },
+    "color.youtube": {
+      "type": "color",
+      "value": "#E53935"
+    },
+    "color.chipInactive": {
+      "type": "color",
+      "value": "#EEF1EF"
+    },
+    "color.chipLabel": {
+      "type": "color",
+      "value": "#333333"
+    }
+  },
+  "fileToken": "4cf51434-d457-4af7-b933-9a7ed3e738e8"
+}

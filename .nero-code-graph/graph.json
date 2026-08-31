@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "target": {
+    "repoKey": "raizes-de-aruanda",
+    "rootLabel": "raizes-de-aruanda"
+  },
+  "builtAt": "2026-08-31T20:55:00.237Z",
+  "sourceFingerprint": "e3b0c44298fc1c14",
+  "extractorId": "typescript-ast",
+  "extractorVersion": "0.1.0",
+  "nodes": [],
+  "edges": [],
+  "stats": {
+    "nodeCount": 0,
+    "edgeCount": 0
+  },
+  "gitCommit": "a2acf7c7bc21e140ad530af91ec4157b9609afc0"
+}

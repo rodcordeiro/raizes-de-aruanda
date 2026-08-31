@@ -1,133 +1,148 @@
 <?php
 class Linhas{
     private $connection;
-    private $table_name = 'icnt_linha';
+    private $table_name = 'tb_linhas';
 
     public $id;
     public $categoria;
     public $id_categoria;
     public $linha;
-    
+    public $canal_youtube;
+    public $saudacao;
 
     public function __construct($connection){
         $this->connection = $connection;
     }
 
-    
     public function create(){
-        $query = "INSERT INTO `" . $this->table_name . "`(categoria, linha) VALUES ('". $this->categoria ."','".$this->linha."')";
+        $query = "INSERT INTO `{$this->table_name}` (categoria, nome) VALUES (:categoria, :nome)";
         $stmt = $this->connection->prepare($query);
+
         try{
-            $stmt->execute();
+            $stmt->execute([
+                ':categoria' => $this->categoria,
+                ':nome'      => $this->linha
+            ]);
         }catch(PDOException $exception){
             echo "Error: " . $exception->getMessage();
         }
         return $stmt;
     }
+
     public function list(){
         $query = "SELECT
                 IL.id,
-                IL.linha,
-                CL.categoria,
+                IL.nome as linha,
+                CL.nome as categoria,
                 CL.id AS id_categoria
-            FROM
-                `icnt_linha` IL
-            JOIN `icnt_categoria_linha` CL ON
-                CL.id = IL.categoria
-            ORDER BY
-                IL.linha ASC;";
+            FROM `tb_linhas` IL
+            JOIN `tb_categorias` CL ON CL.id = IL.categoria
+            ORDER BY CL.id asc, IL.nome ASC
+        ";
+
         $stmt = $this->connection->prepare($query);
-
         $stmt->execute();
-        $count = $stmt->rowCount();
-        
-        $linhas = array();
-        
-        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-          extract($row);
 
-          $p = array(
-            "id" => $id,
-            "categoria" => $categoria,
-            "id_categoria" => $id_categoria,
-            "linha" => $linha
-          );
-          array_push($linhas,$p);
+        $linhas = [];
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+            $linhas[] = [
+                "id" => $row["id"],
+                "categoria" => $row["categoria"],
+                "id_categoria" => $row["id_categoria"],
+                "linha" => $row["linha"]
+            ];
         }
         return $linhas;
     }
-    
-    public function filterByCategory($type){
+
+    public function findByName($linha){
         $query = "SELECT
                 IL.id,
-                IL.linha,
-                CL.categoria,
+                IL.nome as linha,
+                IL.canal_youtube,
+                CL.nome as categoria,
                 CL.id AS id_categoria
             FROM
-                `icnt_linha` IL
-            JOIN `icnt_categoria_linha` CL ON
+                `tb_linhas` IL
+            JOIN `tb_categorias` CL ON
                 CL.id = IL.categoria
             WHERE
-                CL.categoria LIKE '".$type."'
-            ORDER BY
-                IL.linha ASC;";
+                IL.linha LIKE :linha
+            LIMIT 1;";
         $stmt = $this->connection->prepare($query);
 
-        $stmt->execute();
-        $count = $stmt->rowCount();
-        
-        $linhas = array();
-        
+        try{
+            $stmt->bindParam(':linha', $linha);
+            $stmt->execute();
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            if(!$row){
+                return null;
+            }
+            return $row;
+        }catch(PDOException $exception){
+            return null;
+        }
+    }
+    
+    // (Recomendado) tornar o seu filterByCategory seguro também
+    public function filterByCategory($type){
+        $type = trim((string)$type);
+        if ($type === '') return [];
+
+        $query = "SELECT
+                IL.id,
+                IL.nome as linha,
+                CL.nome as categoria,
+                CL.id AS id_categoria
+            FROM `tb_linhas` IL
+            JOIN `tb_categorias` CL ON CL.id = IL.categoria
+            WHERE CL.nome LIKE :type
+            ORDER BY CL.id asc, IL.nome ASC
+        ";
+
+        $stmt = $this->connection->prepare($query);
+        $stmt->execute([':type' => "%{$type}%"]);
+
+        $linhas = [];
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-            extract($row);
-          $p = array(
-            "id" => $id,
-            "categoria" => $categoria,
-            "linha" => $linha
-          );
-          array_push($linhas,$p);
+            $linhas[] = [
+                "id" => $row["id"],
+                "categoria" => $row["categoria"],
+                "id_categoria" => $row["id_categoria"],
+                "linha" => $row["linha"]
+            ];
         }
         return $linhas;
     }
 
     public function getCategoriesIDs(){
-        $query = "SELECT DISTINCT categoria FROM `" . $this->table_name . "`;";
+        $query = "SELECT DISTINCT categoria FROM `{$this->table_name}`;";
         $stmt = $this->connection->prepare($query);
-
         $stmt->execute();
-        $count = $stmt->rowCount();
-        
-        $linhas = array();
-        
+
+        $cats = [];
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-            extract($row);
-          
-            array_push($linhas,$categoria);
+            $cats[] = $row["categoria"];
         }
-        return $linhas;
+        return $cats;
     }
+
     public function getCategories(){
-        $query = "SELECT DISTINCT * FROM `icnt_categoria_linha`;";
+        $query = "SELECT DISTINCT a.id, a.nome as categoria
+                  FROM tb_categorias a
+                  ORDER BY a.id asc;";
+
         $stmt = $this->connection->prepare($query);
-
         $stmt->execute();
-        $count = $stmt->rowCount();
-        
-        $linhas = array();
-        
+
+        $cats = [];
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-            extract($row);
-          
-            array_push($linhas,$categoria);
+            $cats[] = $row["categoria"];
         }
-        return $linhas;
+        return $cats;
     }
-    
-    //U
+
     public function update(){}
-    //D
     public function delete(){}
-
 }
-
 ?>
