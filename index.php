@@ -122,7 +122,7 @@
                     <?php } else {
                         $i = 1;
                         foreach ($pontos as $ponto) {
-                            $pontoId = 'ponto-' . (int) $ponto['id'];
+                            $pontoId = $ponto['id'];
                             $ritmoNome = (string) ($ponto['ritmo'] ?? '');
                             $ritmoKey = function_exists('mb_strtolower')
                                 ? mb_strtolower($ritmoNome, 'UTF-8')
