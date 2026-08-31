@@ -1,6 +1,6 @@
 # Raízes de Aruanda — AGENTS
 
-PHP procedural + MySQL (PDO). Home pública: `index.php`. Foco atual: catálogo de Pontos (admin/dashboard adiados).
+PHP procedural + MySQL (PDO). Home pública: `index.php`. Foco atual: catálogo público de Pontos; **admin auth** (login/sessão/RBAC) em `admin/` — CRUD de catálogo e dashboard adiados.
 
 ## Como usar este contexto
 

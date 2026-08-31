@@ -1,0 +1,117 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  background: var(--bg);
+}
+
+.login-form {
+  width: min(100%, 25rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 769px) {
+  .login-form {
+    padding: 2.5rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+}
+
+.login-brand {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.login-title {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .login-title {
+    font-size: 1.625rem;
+  }
+}
+
+.login-error {
+  margin: 0;
+  padding: 0.75rem 0.875rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-muted);
+  color: var(--text);
+  font-size: 0.9375rem;
+}
+
+.login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.login-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.login-input {
+  width: 100%;
+  min-height: var(--touch);
+  padding: 0 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.login-input::placeholder {
+  color: var(--text-muted);
+}
+
+.login-input:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+  border-color: var(--brand);
+}
+
+.login-submit {
+  width: 100%;
+  min-height: var(--touch);
+  padding: 0 1rem;
+  border: 0;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--brand-contrast);
+  background: var(--brand);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .login-submit {
+    min-height: 48px;
+  }
+}
+
+.login-submit:hover,
+.login-submit:focus-visible {
+  filter: brightness(0.95);
+}
+
+.login-submit:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}

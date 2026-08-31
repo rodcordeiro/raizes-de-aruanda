@@ -15,8 +15,9 @@ Termos-chave: Terreiro, Gira, Curimba, Assistência, Orixá, Guia, Linha, Catego
 | Superfície | Status |
 | --- | --- |
 | Home pública (`index.php`) | **Ativa** — prioridade |
+| Admin auth (`admin/` login/sessão/RBAC) | **Ativa** (lote auth; sem CRUD) |
+| Admin CRUD catálogo / dash | **Adiados** |
 | `bot.php` (anúncio) | Secundário |
-| Admin / dash | **Adiados** (decisão Nero) |
 
 ## Fluxo home
 
@@ -26,7 +27,7 @@ Termos-chave: Terreiro, Gira, Curimba, Assistência, Orixá, Guia, Linha, Catego
 
 ## Decisões ativas (Nero)
 
-- Priorizar home; adiar admin
+- Reabrir admin de catálogo (spec); dashboard continua adiado — auth PHP/`tb_user` neste lote
 - YouTube embed imediato
 - Layout mobile stacked + chips por ritmo
 - Brand sage `#77927B` (pen + CSS)

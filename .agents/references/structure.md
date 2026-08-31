@@ -20,14 +20,24 @@
 | `compose.yml` / `Dockerfile` | PHP 8.2 Apache + `pdo_mysql` |
 | `.env.example` | Nomes de variáveis (sem segredos) |
 
+## Presente — admin (auth mínimo)
+
+| Path | Nota |
+| --- | --- |
+| `admin/login/` | Login UI (`tb_user` + sessão PHP) |
+| `admin/index.php` | Placeholder protegido por `requireAuth` (sem CRUD) |
+| `admin/logout.php` | Logout |
+| `admin/_bootstrap.php` | Boot PDO + sessão/RBAC/audit |
+| `controllers/session.controller.php` | Sessão, CSRF, `attemptLogin` |
+| `controllers/rbac.controller.php` | Roles/perms na sessão |
+| `controllers/audit.controller.php` | Audit best-effort de login |
+
 ## Presente — fora do foco atual
 
 | Path | Nota |
 | --- | --- |
-| `admin/` | Login + ritmos; adiado por decisão Nero |
 | `dash/` | Dashboard; adiado |
 | `bot.php` | Anúncio Discord + saudação; fora do foco home |
-| `controllers/session.controller.php` | Sessão admin |
 | `config/bootstrap.php` | Loader `.env` (home atual não inclui explicitamente) |
 | `config/database/` | Scripts SQL |
 | `.github/workflows/` | Deploy FTP / homologação |
