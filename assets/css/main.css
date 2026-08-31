@@ -39,6 +39,10 @@ a {
   text-decoration: none;
 }
 
+#main a.brand {
+  color: var(--brand);
+}
+
 a:hover,
 a:focus-visible {
   text-decoration: underline;

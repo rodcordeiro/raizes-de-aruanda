@@ -54,6 +54,19 @@
                 <p>
                     Pontos de Umbanda utilizados durante as giras pela curimba do terreiro Raízes de Aruanda, bem como para o compartilhamento de conhecimentos.
                 </p>
+                <br/>
+                <hr/>
+                <p>
+                    Regência de 2026: <a href="index.php?buscar=Omulu" class="brand">Omulu</a> e <a href="index.php?buscar=Oxum" class="brand">Oxum</a>.
+                </p>
+                <br/>
+                <hr/>
+                <p>
+                    <a href="./ordem-ritualistica.php" class="brand">Ordem ritualística de abertura dacasa.</a>
+                </p>
+                <p>
+                    Neste link você encontrará o passo a passo, o procedimento ritualístico, executado para a abertura de cada gira. 
+                </p>
             </section>
 
             <section id="busca" <?php echo $hasLinha ? '' : 'hidden'; ?>>
