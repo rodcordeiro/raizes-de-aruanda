@@ -33,16 +33,10 @@
     padding: 1rem 0;
   }
 
-  .linha-sticky {
-    position: static;
-    border: 0;
-    padding: 0;
-    margin-bottom: 1rem;
-  }
-
-  .linha-sticky-name {
+  .linha-nome {
     font-size: 1.5rem;
     color: #000;
+    margin-bottom: 1rem;
   }
 
   .ponto-letra {

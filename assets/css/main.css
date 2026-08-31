@@ -236,30 +236,26 @@ a:focus-visible {
 }
 
 #busca {
-  padding: 2rem 2.5rem 3rem;
-}
-
-.linha-sticky {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 0.75rem 1rem;
-  margin-bottom: 1.5rem;
+  padding: 2rem 2.5rem 3rem;
 }
 
-.linha-sticky-name {
+.linha-nome {
   font-size: 2rem;
   font-weight: 700;
   color: var(--text);
 }
 
-.linha-sticky-name a {
+.linha-nome a {
   color: var(--brand);
   text-decoration: none;
 }
 
-.linha-sticky-name a:hover,
-.linha-sticky-name a:focus-visible {
+.linha-nome a:hover,
+.linha-nome a:focus-visible {
   text-decoration: underline;
 }
 
@@ -267,6 +263,15 @@ a:focus-visible {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+}
+
+#pontos,
+.linha-title {
+  flex: 1 1 100%;
+}
+
+#pontos {
+  margin-top: 0.75rem;
 }
 
 .ritmo-chip {

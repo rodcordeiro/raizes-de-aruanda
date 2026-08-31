@@ -16,4 +16,4 @@ jobs:
         server: ftp.rodrigocordeiro.com.br
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: ./raizes/
+        server-dir: ./

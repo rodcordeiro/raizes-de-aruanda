@@ -145,39 +145,39 @@
   }
 
   #busca {
-    padding: 0 0 2rem;
+    display: block;
+    padding: 0;
   }
 
-  /* #main is the scrollport (below #header); sticky top must be 0, not header-height */
-  .linha-sticky {
+  /* Nome da linha: hero abaixo do header; rola embora (não sticky) */
+  .linha-nome {
+    max-width: none;
+    padding: 20px 16px 12px;
+    font-size: 2.25rem; /* 36px */
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--brand);
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+  }
+
+  /*
+   * Chips sticky sob o header.
+   * #main é o scrollport (já abaixo do header) → top: 0 equivale a Iris top: 60px
+   * no modelo de body-scroll + header fixo.
+   */
+  .ritmo-chips {
     position: sticky;
     top: 0;
     z-index: 30;
     flex-wrap: nowrap;
-    gap: 0.5rem;
+    gap: 10px;
     margin: 0;
-    padding: 0.5rem 1rem;
-    background: var(--bg);
+    padding: 12px 16px;
+    background: #ffffff;
     border-bottom: 1px solid var(--border);
-  }
-
-  .linha-sticky-name {
-    flex: 0 0 auto;
-    max-width: 30%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--brand);
-  }
-
-  .ritmo-chips {
-    flex: 1 1 auto;
-    flex-wrap: nowrap;
     overflow-x: auto;
-    gap: 0.5rem;
-    padding-bottom: 2px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }
@@ -188,25 +188,61 @@
 
   .ritmo-chip {
     flex: 0 0 auto;
-    min-height: var(--touch);
-    padding-top: 0;
-    padding-bottom: 0;
+    box-sizing: border-box;
+    height: 44px;
+    min-height: 44px;
+    padding: 0 16px;
+    border: 0;
+    border-radius: 999px;
+    background: #f0f0f0;
+    color: #333333;
+    font-size: 0.875rem; /* 14px */
+    font-weight: 600;
   }
 
+  .ritmo-chip.is-active {
+    background: var(--brand);
+    color: var(--brand-contrast);
+    border-color: transparent;
+  }
+
+  /*
+   * Altura da barra de chips: 12 + 44 + 12 = 68px.
+   * scroll-padding / scroll-margin evitam que h2.ponto-ritmo fique sob o sticky.
+   */
   #main {
-    scroll-padding-top: 4.5rem;
+    scroll-padding-top: 68px;
   }
 
   #pontos {
-    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 0;
+    padding: 20px 16px 32px;
+  }
+
+  .ponto + .ponto {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
   }
 
   .ponto {
-    scroll-margin-top: 4.5rem;
+    scroll-margin-top: 68px;
   }
 
   .ponto-ritmo {
-    font-size: 1.125rem;
+    font-size: 1.0625rem; /* 17px */
+    font-weight: 700;
+    color: #111111;
+  }
+
+  .ponto-letra {
+    font-size: 1.125rem; /* 18px */
+    font-weight: 400;
+    line-height: 1.55;
+    color: #111111;
   }
 
   .yt-placeholder,

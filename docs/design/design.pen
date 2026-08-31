@@ -729,7 +729,6 @@
       "name": "linha_mobile_v2",
       "clip": true,
       "width": 390,
-      "height": 844,
       "fill": "#FFFFFF",
       "layout": "vertical",
       "children": [
@@ -750,6 +749,7 @@
             {
               "type": "ellipse",
               "id": "lm-logo",
+              "name": "logo",
               "fill": "#F4F4F4",
               "width": 40,
               "height": 40
@@ -757,6 +757,7 @@
             {
               "type": "frame",
               "id": "lm-menu-btn",
+              "name": "menu_button",
               "width": 44,
               "height": 44,
               "justifyContent": "center",
@@ -765,6 +766,7 @@
                 {
                   "type": "icon",
                   "id": "lm-menu-icon",
+                  "name": "menu_icon",
                   "width": 24,
                   "height": 24,
                   "icon": "menu",
@@ -777,57 +779,78 @@
         },
         {
           "type": "frame",
-          "id": "lm-sticky-wrap",
+          "id": "WBNuu",
+          "name": "linha_hero_and_chips",
           "width": "fill_container",
-          "height": 49,
           "layout": "vertical",
           "children": [
             {
               "type": "frame",
-              "id": "lm-sticky",
+              "id": "J0cow",
+              "name": "linha_hero",
               "width": "fill_container",
-              "height": 48,
-              "fill": "#FFFFFF",
-              "gap": 8,
+              "layout": "vertical",
               "padding": [
-                0,
+                20,
+                16,
+                12,
                 16
               ],
-              "alignItems": "center",
               "children": [
                 {
                   "type": "text",
-                  "id": "lm-sticky-name",
+                  "id": "xJf3z",
+                  "name": "linha_nome",
                   "fill": "#7B1506",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
                   "content": "Iansã",
+                  "lineHeight": 1.15,
                   "fontFamily": "Source Sans 3",
-                  "fontSize": 16,
+                  "fontSize": 36,
                   "fontWeight": "700"
-                },
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "DXpPy",
+              "name": "chips_sticky",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "layout": "vertical",
+              "children": [
                 {
                   "type": "frame",
-                  "id": "lm-chips",
+                  "id": "rYWlX",
+                  "name": "chips_row",
                   "width": "fill_container",
-                  "height": 44,
-                  "gap": 8,
+                  "gap": 10,
+                  "padding": [
+                    12,
+                    16
+                  ],
                   "alignItems": "center",
                   "children": [
                     {
                       "type": "frame",
-                      "id": "lm-chip-1",
-                      "height": 32,
+                      "id": "c8pGM",
+                      "name": "chip_active",
+                      "height": 44,
                       "fill": "#7B1506",
                       "cornerRadius": 999,
                       "padding": [
                         0,
-                        12
+                        16
                       ],
+                      "justifyContent": "center",
                       "alignItems": "center",
                       "children": [
                         {
                           "type": "text",
-                          "id": "lm-chip-1-label",
-                          "fill": "#F4F4F4",
+                          "id": "dA4vg",
+                          "name": "chip_active_label",
+                          "fill": "#FFFFFF",
                           "content": "1 Barravento",
                           "fontFamily": "Source Sans 3",
                           "fontSize": 14,
@@ -837,101 +860,111 @@
                     },
                     {
                       "type": "frame",
-                      "id": "lm-chip-2",
-                      "height": 32,
-                      "fill": "#F7F7F7",
+                      "id": "Z8sao",
+                      "name": "chip_inactive_congo",
+                      "height": 44,
+                      "fill": "#F0F0F0",
                       "cornerRadius": 999,
                       "padding": [
                         0,
-                        12
+                        16
                       ],
+                      "justifyContent": "center",
                       "alignItems": "center",
                       "children": [
                         {
                           "type": "text",
-                          "id": "lm-chip-2-label",
-                          "fill": "#111111",
+                          "id": "REViu",
+                          "name": "chip_congo_label",
+                          "fill": "#333333",
                           "content": "2 Congo",
                           "fontFamily": "Source Sans 3",
                           "fontSize": 14,
-                          "fontWeight": "normal"
+                          "fontWeight": "600"
                         }
                       ]
                     },
                     {
                       "type": "frame",
-                      "id": "lm-chip-3",
-                      "height": 32,
-                      "fill": "#F7F7F7",
+                      "id": "lMAo1",
+                      "name": "chip_inactive_caboclo",
+                      "height": 44,
+                      "fill": "#F0F0F0",
                       "cornerRadius": 999,
                       "padding": [
                         0,
-                        12
+                        16
                       ],
+                      "justifyContent": "center",
                       "alignItems": "center",
                       "children": [
                         {
                           "type": "text",
-                          "id": "lm-chip-3-label",
-                          "fill": "#111111",
+                          "id": "R16MgD",
+                          "name": "chip_caboclo_label",
+                          "fill": "#333333",
                           "content": "3 Caboclo",
                           "fontFamily": "Source Sans 3",
                           "fontSize": 14,
-                          "fontWeight": "normal"
+                          "fontWeight": "600"
                         }
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "rectangle",
+                  "id": "DMfgZ",
+                  "name": "chips_sticky_border",
+                  "fill": "#E0E0E0",
+                  "width": "fill_container",
+                  "height": 1
                 }
               ]
-            },
-            {
-              "type": "rectangle",
-              "id": "lm-sticky-border",
-              "fill": "#E0E0E0",
-              "width": "fill_container",
-              "height": 1
             }
           ]
         },
         {
           "type": "frame",
           "id": "lm-content",
+          "name": "content",
           "width": "fill_container",
-          "height": "fill_container",
           "layout": "vertical",
-          "gap": 16,
+          "gap": 20,
           "padding": [
+            20,
             16,
-            16,
-            24,
+            32,
             16
           ],
           "children": [
             {
               "type": "text",
               "id": "lm-h2-1",
+              "name": "ritmo_heading_1",
               "fill": "#111111",
               "content": "1| Barravento",
               "fontFamily": "Source Sans 3",
-              "fontSize": 18,
+              "fontSize": 17,
               "fontWeight": "700"
             },
             {
               "type": "text",
               "id": "lm-letra-1",
+              "name": "letra_1",
               "fill": "#111111",
               "textGrowth": "fixed-width",
               "width": "fill_container",
               "content": "Aiê dindi, Aiê dindá\nA matamba de arulê\na matamba de arulá",
-              "lineHeight": 1.6,
+              "lineHeight": 1.55,
               "fontFamily": "Source Sans 3",
-              "fontSize": 19,
+              "fontSize": 18,
               "fontWeight": "normal"
             },
             {
               "type": "rectangle",
               "id": "lm-div-1",
+              "name": "divider_1",
               "fill": "#E0E0E0",
               "width": "fill_container",
               "height": 1
@@ -939,27 +972,30 @@
             {
               "type": "text",
               "id": "lm-h2-2",
+              "name": "ritmo_heading_2",
               "fill": "#111111",
               "content": "2| Congo",
               "fontFamily": "Source Sans 3",
-              "fontSize": 18,
+              "fontSize": 17,
               "fontWeight": "700"
             },
             {
               "type": "text",
               "id": "lm-letra-2",
+              "name": "letra_2",
               "fill": "#111111",
               "textGrowth": "fixed-width",
               "width": "fill_container",
               "content": "Quando Oyá me chamou eu fui\natender tava sentada Iansã na palha\ndo dendê o guerreou guerreou relampejou\nou pelo cálice pela hóstia relampejo!!!\n\nTibere bere ooo Iansã tiberere\nooo tibere bere ooo Iansã tiberere",
-              "lineHeight": 1.6,
+              "lineHeight": 1.55,
               "fontFamily": "Source Sans 3",
-              "fontSize": 19,
+              "fontSize": 18,
               "fontWeight": "normal"
             },
             {
               "type": "frame",
               "id": "lm-video",
+              "name": "video_block",
               "width": "fill_container",
               "height": 201,
               "fill": "#1A1A1A",
@@ -972,6 +1008,7 @@
                 {
                   "type": "ellipse",
                   "id": "lm-video-play",
+                  "name": "video_play",
                   "fill": "#E53935",
                   "width": 56,
                   "height": 56
@@ -979,6 +1016,7 @@
                 {
                   "type": "text",
                   "id": "lm-video-label",
+                  "name": "video_label",
                   "fill": "#F4F4F4",
                   "content": "Assistir no YouTube",
                   "fontFamily": "Source Sans 3",
@@ -999,7 +1037,6 @@
       "name": "linha_mobile_modo_letra_v2",
       "clip": true,
       "width": 390,
-      "height": 844,
       "fill": "#FFFFFF",
       "layout": "vertical",
       "children": [
@@ -1020,6 +1057,7 @@
             {
               "type": "ellipse",
               "id": "ll-logo",
+              "name": "logo",
               "fill": "#F4F4F4",
               "width": 40,
               "height": 40
@@ -1027,6 +1065,7 @@
             {
               "type": "frame",
               "id": "ll-menu-btn",
+              "name": "menu_button",
               "width": 44,
               "height": 44,
               "justifyContent": "center",
@@ -1035,6 +1074,7 @@
                 {
                   "type": "icon",
                   "id": "ll-menu-icon",
+                  "name": "menu_icon",
                   "width": 24,
                   "height": 24,
                   "icon": "menu",
@@ -1047,58 +1087,176 @@
         },
         {
           "type": "frame",
-          "id": "ll-sticky-wrap",
+          "id": "YwdQz",
+          "name": "modo_letra_top",
           "width": "fill_container",
-          "height": 41,
           "layout": "vertical",
           "children": [
             {
               "type": "frame",
-              "id": "ll-sticky",
+              "id": "vGbbI",
+              "name": "linha_hero",
               "width": "fill_container",
-              "height": 40,
-              "fill": "#FFFFFF",
-              "justifyContent": "center",
-              "alignItems": "center",
+              "layout": "vertical",
+              "padding": [
+                20,
+                16,
+                12,
+                16
+              ],
               "children": [
                 {
                   "type": "text",
-                  "id": "ll-crumb",
-                  "fill": "#111111",
-                  "content": "Iansã · Barravento",
+                  "id": "Qtedf",
+                  "name": "linha_nome",
+                  "fill": "#7B1506",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Iansã",
+                  "lineHeight": 1.15,
                   "fontFamily": "Source Sans 3",
-                  "fontSize": 15,
-                  "fontWeight": "600"
+                  "fontSize": 36,
+                  "fontWeight": "700"
                 }
               ]
             },
             {
-              "type": "rectangle",
-              "id": "ll-sticky-border",
-              "fill": "#E0E0E0",
+              "type": "frame",
+              "id": "GuG39",
+              "name": "chips_sticky",
               "width": "fill_container",
-              "height": 1
+              "fill": "#FFFFFF",
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "dzDQR",
+                  "name": "chips_row",
+                  "width": "fill_container",
+                  "gap": 10,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "RwoQO",
+                      "name": "chip_active",
+                      "height": 44,
+                      "fill": "#7B1506",
+                      "cornerRadius": 999,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "OisBs",
+                          "name": "chip_active_label",
+                          "fill": "#FFFFFF",
+                          "content": "1 Barravento",
+                          "fontFamily": "Source Sans 3",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "R3lBi",
+                      "name": "chip_inactive_congo",
+                      "height": 44,
+                      "fill": "#F0F0F0",
+                      "cornerRadius": 999,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "BcCgy",
+                          "name": "chip_congo_label",
+                          "fill": "#333333",
+                          "content": "2 Congo",
+                          "fontFamily": "Source Sans 3",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "FHJFe",
+                      "name": "chip_inactive_caboclo",
+                      "height": 44,
+                      "fill": "#F0F0F0",
+                      "cornerRadius": 999,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "NEsMw",
+                          "name": "chip_caboclo_label",
+                          "fill": "#333333",
+                          "content": "3 Caboclo",
+                          "fontFamily": "Source Sans 3",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "rectangle",
+                  "id": "M26pN2",
+                  "name": "chips_sticky_border",
+                  "fill": "#E0E0E0",
+                  "width": "fill_container",
+                  "height": 1
+                }
+              ]
             }
           ]
         },
         {
           "type": "frame",
           "id": "ll-content",
+          "name": "content",
           "width": "fill_container",
-          "height": "fill_container",
           "layout": "vertical",
-          "padding": 20,
+          "gap": 20,
+          "padding": [
+            20,
+            16,
+            32,
+            16
+          ],
           "children": [
             {
               "type": "text",
               "id": "ll-letra",
+              "name": "letra",
               "fill": "#111111",
               "textGrowth": "fixed-width",
               "width": "fill_container",
               "content": "Aiê dindi, Aiê dindá\nA matamba de arulê\na matamba de arulá\n\nQuando Oyá me chamou eu fui\natender tava sentada Iansã na palha\ndo dendê o guerreou guerreou relampejou\nou pelo cálice pela hóstia relampejo!!!\n\nTibere bere ooo Iansã tiberere\nooo tibere bere ooo Iansã tiberere",
-              "lineHeight": 1.65,
+              "lineHeight": 1.55,
               "fontFamily": "Source Sans 3",
-              "fontSize": 20,
+              "fontSize": 18,
               "fontWeight": "normal"
             }
           ]
@@ -1122,7 +1280,7 @@
           "id": "lw-header",
           "width": "fill_container",
           "height": 64,
-          "fill": "#7B1506",
+          "fill": "$color.brand",
           "gap": 16,
           "padding": [
             0,
@@ -1209,21 +1367,21 @@
                   "id": "lw-iansa",
                   "width": "fill_container",
                   "height": 44,
-                  "fill": "#F3E8E6",
+                  "fill": "$color.activeTint",
                   "gap": 8,
                   "alignItems": "center",
                   "children": [
                     {
                       "type": "rectangle",
                       "id": "lw-iansa-accent",
-                      "fill": "#7B1506",
+                      "fill": "$color.brand",
                       "width": 3,
                       "height": 44
                     },
                     {
                       "type": "text",
                       "id": "lw-iansa-label",
-                      "fill": "#7B1506",
+                      "fill": "$color.brand",
                       "content": "Iansã",
                       "fontFamily": "Source Sans 3",
                       "fontSize": 17,
@@ -1672,6 +1830,16 @@
           ]
         }
       ]
+    },
+    {
+      "type": "note",
+      "id": "v8Sii",
+      "x": 3350,
+      "y": -1649,
+      "name": "sticky_behavior_note",
+      "width": 320,
+      "height": 280,
+      "content": "STICKY (linha mobile v2)\n\nHeader brand: 60px (fix)\nChips sticky top: 60px (sob o header)\nTitulo da linha: NAO sticky — rola embora\n\nHero (titulo): pad 20/16/12/16; nome 36/700 lh 1.15\nChips bar: 69px (12+44+12+1)\nChip: h 44, pad-x 16, gap 10\nActive #7B1506 / #FFF\nInactive #F0F0F0 / #333\n\nAlternativa sticky titulo+chips (~142px) — rejeitada: comprime viewport; titulo hero deve respirar."
     }
   ],
   "variables": {

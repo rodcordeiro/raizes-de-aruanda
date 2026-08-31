@@ -58,49 +58,48 @@
 
             <section id="busca" <?php echo $hasLinha ? '' : 'hidden'; ?>>
                 <?php if ($hasLinha) { ?>
-                <div class="linha-sticky" id="linha-sticky">
-                    <div class="linha-sticky-name">
-                        <?php if (!empty($canalYoutube)) { ?>
-                            <a href="<?php echo htmlspecialchars($canalYoutube, ENT_QUOTES, 'UTF-8'); ?>" target="_blank" rel="noopener noreferrer">
-                                <?php echo $linhaAtual; ?>
-                            </a>
-                        <?php } else { ?>
+                <?php /* Nome da linha (hero no mobile) + chips sticky — separados para o sticky não limitar ao bloco curto */ ?>
+                <div class="linha-nome" id="linha-nome">
+                    <?php if (!empty($canalYoutube)) { ?>
+                        <a href="<?php echo htmlspecialchars($canalYoutube, ENT_QUOTES, 'UTF-8'); ?>" target="_blank" rel="noopener noreferrer">
                             <?php echo $linhaAtual; ?>
-                        <?php } ?>
-                    </div>
-                    <nav class="ritmo-chips" aria-label="Índice de ritmos">
-                        <?php
-                        $ritmoChips = [];
-                        foreach ($pontos as $ponto) {
-                            $ritmoNome = (string) ($ponto['ritmo'] ?? '');
-                            $ritmoKey = function_exists('mb_strtolower')
-                                ? mb_strtolower($ritmoNome, 'UTF-8')
-                                : strtolower($ritmoNome);
-                            if (!isset($ritmoChips[$ritmoKey])) {
-                                $ritmoChips[$ritmoKey] = [
-                                    'nome' => $ritmoNome,
-                                    'count' => 0,
-                                    'firstId' => 'ponto-' . (int) $ponto['id'],
-                                ];
-                            }
-                            $ritmoChips[$ritmoKey]['count']++;
-                        }
-                        $chipIndex = 0;
-                        foreach ($ritmoChips as $ritmoKey => $chip) {
-                            $chipLabel = $chip['count'] . ' ' . $chip['nome'];
-                            $chipIndex++;
-                        ?>
-                        <a
-                            class="ritmo-chip<?php echo $chipIndex === 1 ? ' is-active' : ''; ?>"
-                            href="#<?php echo htmlspecialchars($chip['firstId'], ENT_QUOTES, 'UTF-8'); ?>"
-                            data-ponto-id="<?php echo htmlspecialchars($chip['firstId'], ENT_QUOTES, 'UTF-8'); ?>"
-                            data-ritmo="<?php echo htmlspecialchars($ritmoKey, ENT_QUOTES, 'UTF-8'); ?>"
-                        >
-                            <?php echo htmlspecialchars($chipLabel, ENT_QUOTES, 'UTF-8'); ?>
                         </a>
-                        <?php } ?>
-                    </nav>
+                    <?php } else { ?>
+                        <?php echo $linhaAtual; ?>
+                    <?php } ?>
                 </div>
+                <nav class="ritmo-chips" id="ritmo-chips" aria-label="Índice de ritmos">
+                    <?php
+                    $ritmoChips = [];
+                    foreach ($pontos as $ponto) {
+                        $ritmoNome = (string) ($ponto['ritmo'] ?? '');
+                        $ritmoKey = function_exists('mb_strtolower')
+                            ? mb_strtolower($ritmoNome, 'UTF-8')
+                            : strtolower($ritmoNome);
+                        if (!isset($ritmoChips[$ritmoKey])) {
+                            $ritmoChips[$ritmoKey] = [
+                                'nome' => $ritmoNome,
+                                'count' => 0,
+                                'firstId' => 'ponto-' . (int) $ponto['id'],
+                            ];
+                        }
+                        $ritmoChips[$ritmoKey]['count']++;
+                    }
+                    $chipIndex = 0;
+                    foreach ($ritmoChips as $ritmoKey => $chip) {
+                        $chipLabel = $chip['count'] . ' ' . $chip['nome'];
+                        $chipIndex++;
+                    ?>
+                    <a
+                        class="ritmo-chip<?php echo $chipIndex === 1 ? ' is-active' : ''; ?>"
+                        href="#<?php echo htmlspecialchars($chip['firstId'], ENT_QUOTES, 'UTF-8'); ?>"
+                        data-ponto-id="<?php echo htmlspecialchars($chip['firstId'], ENT_QUOTES, 'UTF-8'); ?>"
+                        data-ritmo="<?php echo htmlspecialchars($ritmoKey, ENT_QUOTES, 'UTF-8'); ?>"
+                    >
+                        <?php echo htmlspecialchars($chipLabel, ENT_QUOTES, 'UTF-8'); ?>
+                    </a>
+                    <?php } ?>
+                </nav>
 
                 <h1 class="linha-title visually-hidden"><?php echo $linhaAtual; ?></h1>
 
