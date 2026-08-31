@@ -243,6 +243,51 @@ a:focus-visible {
   line-height: var(--letra-lh);
 }
 
+.doc-page {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2rem 2.5rem 3rem;
+}
+
+.doc-page h1 {
+  margin: 0 0 1rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.doc-page p {
+  margin: 0 0 1rem;
+  font-size: var(--letra-size);
+  font-weight: 400;
+  line-height: var(--letra-lh);
+  color: var(--text);
+}
+
+.doc-page .ordem-passos {
+  margin: 0 0 1rem;
+  padding-left: 1.5rem;
+  font-size: var(--letra-size);
+  font-weight: 400;
+  line-height: var(--letra-lh);
+  color: var(--text);
+}
+
+.doc-page .ordem-passos > li + li {
+  margin-top: 0.5rem;
+}
+
+.doc-page .ordem-passos ul,
+.doc-page .ordem-passos ol {
+  margin: 0.35rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.doc-page .ordem-passos ul li + li,
+.doc-page .ordem-passos ol li + li {
+  margin-top: 0.15rem;
+}
+
 #busca {
   display: flex;
   flex-wrap: wrap;

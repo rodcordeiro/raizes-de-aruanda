@@ -62,10 +62,10 @@
                 <br/>
                 <hr/>
                 <p>
-                    <a href="./ordem-ritualistica.php" class="brand">Ordem ritualística de abertura dacasa.</a>
+                    <a href="./ordem-ritualistica.php" class="brand">Ordem ritualística de abertura da casa.</a>
                 </p>
                 <p>
-                    Neste link você encontrará o passo a passo, o procedimento ritualístico, executado para a abertura de cada gira. 
+                    Neste link você encontrará o passo a passo, o procedimento ritualístico, executado para a abertura de cada gira.
                 </p>
             </section>
 

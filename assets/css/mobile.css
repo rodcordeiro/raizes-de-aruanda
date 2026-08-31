@@ -144,6 +144,14 @@
     text-align: left;
   }
 
+  .doc-page {
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .doc-page h1 {
+    font-size: 1.5rem;
+  }
+
   #busca {
     display: block;
     padding: 0;
