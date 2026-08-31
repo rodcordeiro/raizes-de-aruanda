@@ -148,9 +148,10 @@
     padding: 0 0 2rem;
   }
 
+  /* #main is the scrollport (below #header); sticky top must be 0, not header-height */
   .linha-sticky {
     position: sticky;
-    top: var(--header-height);
+    top: 0;
     z-index: 30;
     flex-wrap: nowrap;
     gap: 0.5rem;
@@ -192,8 +193,16 @@
     padding-bottom: 0;
   }
 
+  #main {
+    scroll-padding-top: 4.5rem;
+  }
+
   #pontos {
     padding: 1rem;
+  }
+
+  .ponto {
+    scroll-margin-top: 4.5rem;
   }
 
   .ponto-ritmo {

@@ -70,21 +70,35 @@
                     </div>
                     <nav class="ritmo-chips" aria-label="Índice de ritmos">
                         <?php
-                        $i = 1;
+                        $ritmoChips = [];
                         foreach ($pontos as $ponto) {
-                            $chipId = 'ponto-' . (int) $ponto['id'];
-                            $chipLabel = $i . ' ' . $ponto['ritmo'];
-                            if (strcasecmp($ponto['tipo'], 'subida') === 0) {
-                                $chipLabel .= ' (Subida)';
+                            $ritmoNome = (string) ($ponto['ritmo'] ?? '');
+                            $ritmoKey = function_exists('mb_strtolower')
+                                ? mb_strtolower($ritmoNome, 'UTF-8')
+                                : strtolower($ritmoNome);
+                            if (!isset($ritmoChips[$ritmoKey])) {
+                                $ritmoChips[$ritmoKey] = [
+                                    'nome' => $ritmoNome,
+                                    'count' => 0,
+                                    'firstId' => 'ponto-' . (int) $ponto['id'],
+                                ];
                             }
+                            $ritmoChips[$ritmoKey]['count']++;
+                        }
+                        $chipIndex = 0;
+                        foreach ($ritmoChips as $ritmoKey => $chip) {
+                            $chipLabel = $chip['count'] . ' ' . $chip['nome'];
+                            $chipIndex++;
                         ?>
-                        <a class="ritmo-chip<?php echo $i === 1 ? ' is-active' : ''; ?>" href="#<?php echo $chipId; ?>">
+                        <a
+                            class="ritmo-chip<?php echo $chipIndex === 1 ? ' is-active' : ''; ?>"
+                            href="#<?php echo htmlspecialchars($chip['firstId'], ENT_QUOTES, 'UTF-8'); ?>"
+                            data-ponto-id="<?php echo htmlspecialchars($chip['firstId'], ENT_QUOTES, 'UTF-8'); ?>"
+                            data-ritmo="<?php echo htmlspecialchars($ritmoKey, ENT_QUOTES, 'UTF-8'); ?>"
+                        >
                             <?php echo htmlspecialchars($chipLabel, ENT_QUOTES, 'UTF-8'); ?>
                         </a>
-                        <?php
-                            $i++;
-                        }
-                        ?>
+                        <?php } ?>
                     </nav>
                 </div>
 
@@ -97,29 +111,32 @@
                         $i = 1;
                         foreach ($pontos as $ponto) {
                             $pontoId = 'ponto-' . (int) $ponto['id'];
+                            $ritmoNome = (string) ($ponto['ritmo'] ?? '');
+                            $ritmoKey = function_exists('mb_strtolower')
+                                ? mb_strtolower($ritmoNome, 'UTF-8')
+                                : strtolower($ritmoNome);
                             $videoId = null;
                             if (!empty($ponto['audio_link']) && preg_match('#youtu\.be/([a-zA-Z0-9_-]+)#i', $ponto['audio_link'], $matches)) {
                                 $videoId = $matches[1];
                             }
                     ?>
-                    <article class="ponto" id="<?php echo $pontoId; ?>">
+                    <article class="ponto" id="<?php echo $pontoId; ?>" data-ritmo="<?php echo htmlspecialchars($ritmoKey, ENT_QUOTES, 'UTF-8'); ?>">
                         <h2 class="ponto-ritmo">
-                            <span><?php echo $i; ?></span>| <?php echo htmlspecialchars($ponto['ritmo'], ENT_QUOTES, 'UTF-8'); ?>
-                            <?php if (strcasecmp($ponto['tipo'], 'subida') === 0): ?>
+                            <span><?php echo $i; ?></span>| <?php echo htmlspecialchars($ritmoNome, ENT_QUOTES, 'UTF-8'); ?>
+                            <?php if (strcasecmp((string) ($ponto['tipo'] ?? ''), 'subida') === 0): ?>
                                 <span> (Subida)</span>
                             <?php endif; ?>
                         </h2>
-                        <div class="ponto-letra"><?php echo nl2br(htmlspecialchars($ponto['ponto'], ENT_QUOTES, 'UTF-8')); ?></div>
+                        <div class="ponto-letra"><?php echo htmlspecialchars($ponto['ponto'], ENT_QUOTES, 'UTF-8'); ?></div>
                         <?php if ($videoId): ?>
-                        <button
-                            type="button"
-                            class="yt-placeholder"
-                            data-youtube-id="<?php echo htmlspecialchars($videoId, ENT_QUOTES, 'UTF-8'); ?>"
-                            aria-label="Assistir no YouTube"
-                        >
-                            <span class="yt-placeholder-play" aria-hidden="true"></span>
-                            <span class="yt-placeholder-label">Assistir no YouTube</span>
-                        </button>
+                        <iframe
+                            class="yt-embed"
+                            src="https://www.youtube.com/embed/<?php echo htmlspecialchars($videoId, ENT_QUOTES, 'UTF-8'); ?>"
+                            title="YouTube video player"
+                            allowfullscreen
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                        ></iframe>
                         <?php endif; ?>
                         <?php
                         if (!empty($ponto['audio_link']) && preg_match('/\.(mp3|mp4|m4a|ogg|wma)$/i', $ponto['audio_link'])) {

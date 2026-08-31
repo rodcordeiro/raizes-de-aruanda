@@ -22,6 +22,6 @@
 
 
 	<!-- LINKS -->
-	<link rel="stylesheet" type="text/css" href="./assets/css/mobile.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/mobile.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/print.css" media="print">

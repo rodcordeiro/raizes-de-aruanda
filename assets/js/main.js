@@ -117,33 +117,6 @@
     });
   }
 
-  function initYoutubePlaceholders() {
-    document.addEventListener("click", function (event) {
-      const target = event.target;
-      if (!(target instanceof Element)) return;
-
-      const btn = target.closest(".yt-placeholder");
-      if (!btn) return;
-
-      const id = btn.getAttribute("data-youtube-id");
-      if (!id) return;
-
-      const iframe = document.createElement("iframe");
-      iframe.className = "yt-embed";
-      iframe.src =
-        "https://www.youtube.com/embed/" +
-        encodeURIComponent(id) +
-        "?autoplay=1";
-      iframe.title = "YouTube video player";
-      iframe.setAttribute("allowfullscreen", "");
-      iframe.allow =
-        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-      iframe.referrerPolicy = "strict-origin-when-cross-origin";
-
-      btn.replaceWith(iframe);
-    });
-  }
-
   function initRitmoChips() {
     const chips = Array.prototype.slice.call(
       document.querySelectorAll(".ritmo-chip")
@@ -153,36 +126,83 @@
     );
     if (!chips.length || !pontos.length) return;
 
+    const main = document.getElementById("main");
+
+    /**
+     * @param {string} pontoId
+     */
+    function scrollToPonto(pontoId) {
+      const target = document.getElementById(pontoId);
+      if (!target) return;
+
+      target.scrollIntoView({ block: "start", behavior: "smooth" });
+    }
+
+    /**
+     * @param {string} ritmoKey
+     */
+    function setActiveChipByRitmo(ritmoKey) {
+      chips.forEach(function (chip) {
+        chip.classList.toggle(
+          "is-active",
+          (chip.getAttribute("data-ritmo") || "") === ritmoKey
+        );
+      });
+    }
+
+    /**
+     * @param {string} pontoId
+     */
+    function setActiveChipFromPonto(pontoId) {
+      const ponto = document.getElementById(pontoId);
+      if (!ponto) return;
+      const ritmoKey = ponto.getAttribute("data-ritmo") || "";
+      if (ritmoKey) setActiveChipByRitmo(ritmoKey);
+    }
+
     chips.forEach(function (chip) {
-      chip.addEventListener("click", function () {
-        chips.forEach(function (c) {
-          c.classList.remove("is-active");
-        });
-        chip.classList.add("is-active");
+      chip.addEventListener("click", function (event) {
+        const href = chip.getAttribute("href") || "";
+        const pontoId =
+          chip.getAttribute("data-ponto-id") ||
+          (href.charAt(0) === "#" ? href.slice(1) : "");
+        const ritmoKey = chip.getAttribute("data-ritmo") || "";
+        if (!pontoId || !document.getElementById(pontoId)) return;
+
+        event.preventDefault();
+        if (ritmoKey) setActiveChipByRitmo(ritmoKey);
+        scrollToPonto(pontoId);
+
+        if (history.replaceState) {
+          history.replaceState(null, "", "#" + pontoId);
+        }
       });
     });
 
-    if (!("IntersectionObserver" in window)) return;
+    if (location.hash) {
+      const hashId = location.hash.slice(1);
+      if (document.getElementById(hashId)) {
+        setActiveChipFromPonto(hashId);
+        requestAnimationFrame(function () {
+          scrollToPonto(hashId);
+        });
+      }
+    }
 
-    const byId = {};
-    pontos.forEach(function (ponto) {
-      byId[ponto.id] = ponto;
-    });
+    if (!("IntersectionObserver" in window)) return;
 
     const observer = new IntersectionObserver(
       function (entries) {
+        let visibleRitmo = null;
         entries.forEach(function (entry) {
           if (!entry.isIntersecting) return;
-          const id = entry.target.id;
-          chips.forEach(function (chip) {
-            const href = chip.getAttribute("href") || "";
-            chip.classList.toggle("is-active", href === "#" + id);
-          });
+          visibleRitmo = entry.target.getAttribute("data-ritmo") || null;
         });
+        if (visibleRitmo) setActiveChipByRitmo(visibleRitmo);
       },
       {
-        root: null,
-        rootMargin: "-40% 0px -50% 0px",
+        root: main,
+        rootMargin: "-20% 0px -55% 0px",
         threshold: 0,
       }
     );
@@ -202,7 +222,6 @@
     initIcons();
     initMenu();
     initNavFilter();
-    initYoutubePlaceholders();
     initRitmoChips();
   });
 })();
