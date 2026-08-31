@@ -2,97 +2,115 @@
   "version": "2.17",
   "children": [
     {
-      "type": "rectangle",
-      "id": "jbSbM",
+      "type": "group",
+      "id": "u3vvYW",
       "x": 0,
       "y": 0,
-      "name": "home_web",
-      "fill": {
-        "type": "image",
-        "enabled": true,
-        "url": "home_web.png",
-        "mode": "fill"
-      },
-      "width": 1881,
-      "height": 900
+      "name": "v1-visualizacao-web",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "jbSbM",
+          "x": 0,
+          "y": 0,
+          "name": "home_web",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "home_web.png",
+            "mode": "fill"
+          },
+          "width": 1881,
+          "height": 900
+        },
+        {
+          "type": "rectangle",
+          "id": "fJrwe",
+          "x": 0,
+          "y": 966,
+          "name": "visualizacao-de-linha-com-e-sem-video-yt",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "visualizacao-de-linha-com-e-sem-video-yt.png",
+            "mode": "fill"
+          },
+          "width": 1873,
+          "height": 891
+        }
+      ]
     },
     {
-      "type": "rectangle",
-      "id": "fJrwe",
-      "x": 0,
-      "y": 966,
-      "name": "visualizacao-de-linha-com-e-sem-video-yt",
-      "fill": {
-        "type": "image",
-        "enabled": true,
-        "url": "visualizacao-de-linha-com-e-sem-video-yt.png",
-        "mode": "fill"
-      },
-      "width": 1873,
-      "height": 891
-    },
-    {
-      "type": "rectangle",
-      "id": "xm6Uj",
-      "x": 31,
-      "y": -1265,
-      "name": "home_mobile_menu_fechado",
-      "fill": {
-        "type": "image",
-        "enabled": true,
-        "url": "home_mobile_menu_fechado.png",
-        "mode": "fill"
-      },
-      "width": 401,
-      "height": 616
-    },
-    {
-      "type": "rectangle",
-      "id": "r5h0lk",
-      "x": 528,
-      "y": -1265,
-      "name": "home_mobile_menu_aberto",
-      "fill": {
-        "type": "image",
-        "enabled": true,
-        "url": "home_mobile_menu_aberto.png",
-        "mode": "fill"
-      },
-      "width": 388,
-      "height": 711
-    },
-    {
-      "type": "rectangle",
-      "id": "tDEkg",
-      "x": 1025,
-      "y": -1265,
-      "name": "visualizacao-mobile-de-linha-com-e-sem-video-yt",
-      "fill": {
-        "type": "image",
-        "enabled": true,
-        "url": "visualizacao-mobile-de-linha-com-e-sem-video-yt.png",
-        "mode": "fill"
-      },
-      "width": 392,
-      "height": 776
-    },
-    {
-      "type": "text",
-      "id": "v1SectionLabel",
+      "type": "group",
+      "id": "D2tRWD",
       "x": 31,
       "y": -1340,
-      "name": "v1_label",
-      "fill": "#4A4A4A",
-      "content": "v1 — baseline atual (screenshots)",
-      "fontFamily": "Source Sans 3",
-      "fontSize": 28,
-      "fontWeight": "700"
+      "name": "v1-visualizacao-mobile",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "xm6Uj",
+          "x": 0,
+          "y": 75,
+          "name": "home_mobile_menu_fechado",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "home_mobile_menu_fechado.png",
+            "mode": "fill"
+          },
+          "width": 401,
+          "height": 616
+        },
+        {
+          "type": "rectangle",
+          "id": "r5h0lk",
+          "x": 497,
+          "y": 75,
+          "name": "home_mobile_menu_aberto",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "home_mobile_menu_aberto.png",
+            "mode": "fill"
+          },
+          "width": 388,
+          "height": 711
+        },
+        {
+          "type": "rectangle",
+          "id": "tDEkg",
+          "x": 994,
+          "y": 75,
+          "name": "visualizacao-mobile-de-linha-com-e-sem-video-yt",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "visualizacao-mobile-de-linha-com-e-sem-video-yt.png",
+            "mode": "fill"
+          },
+          "width": 392,
+          "height": 776
+        },
+        {
+          "type": "text",
+          "id": "v1SectionLabel",
+          "x": 0,
+          "y": 0,
+          "name": "v1_label",
+          "fill": "#4A4A4A",
+          "content": "v1 — baseline atual (screenshots)",
+          "fontFamily": "Source Sans 3",
+          "fontSize": 28,
+          "fontWeight": "700"
+        }
+      ]
     },
     {
       "type": "text",
       "id": "v2SectionLabel",
-      "x": 1600,
-      "y": -1340,
+      "x": 2000,
+      "y": -1265,
       "name": "v2_label",
       "fill": "#7B1506",
       "content": "v2 — mobile-first (leitura em movimento)",
@@ -103,8 +121,8 @@
     {
       "type": "frame",
       "id": "homeMobileV2",
-      "x": 1600,
-      "y": -1265,
+      "x": 2000,
+      "y": -1089,
       "name": "home_mobile_v2",
       "clip": true,
       "width": 390,
@@ -196,13 +214,13 @@
     {
       "type": "frame",
       "id": "menuMobileV2",
+      "x": 2450,
+      "y": -1089,
       "name": "menu_mobile_v2",
-      "x": 2050,
-      "y": -1265,
+      "clip": true,
       "width": 390,
       "height": 844,
       "fill": "#FFFFFF",
-      "clip": true,
       "layout": "none",
       "children": [
         {
@@ -212,8 +230,8 @@
           "y": 0,
           "width": 390,
           "height": 844,
-          "layout": "vertical",
           "fill": "#FFFFFF",
+          "layout": "vertical",
           "children": [
             {
               "type": "frame",
@@ -221,38 +239,36 @@
               "name": "header",
               "width": "fill_container",
               "height": 60,
-              "layout": "horizontal",
-              "justifyContent": "space_between",
-              "alignItems": "center",
+              "fill": "#7B1506",
               "padding": [
                 0,
                 12
               ],
-              "fill": "#7B1506",
+              "justifyContent": "space_between",
+              "alignItems": "center",
               "children": [
                 {
                   "type": "ellipse",
                   "id": "mm-logo",
+                  "fill": "#F4F4F4",
                   "width": 40,
-                  "height": 40,
-                  "fill": "#F4F4F4"
+                  "height": 40
                 },
                 {
                   "type": "frame",
                   "id": "mm-menu-btn",
                   "width": 44,
                   "height": 44,
-                  "layout": "horizontal",
                   "justifyContent": "center",
                   "alignItems": "center",
                   "children": [
                     {
                       "type": "icon",
                       "id": "mm-menu-icon",
-                      "library": "feather",
-                      "icon": "menu",
                       "width": 24,
                       "height": 24,
+                      "icon": "menu",
+                      "library": "feather",
                       "fill": "#F4F4F4"
                     }
                   ]
@@ -274,24 +290,22 @@
                 {
                   "type": "text",
                   "id": "mm-h1",
+                  "fill": "#111111",
                   "content": "Apresentação",
-                  "textGrowth": "auto",
                   "fontFamily": "Source Sans 3",
                   "fontSize": 24,
-                  "fontWeight": "700",
-                  "fill": "#111111"
+                  "fontWeight": "700"
                 },
                 {
                   "type": "text",
                   "id": "mm-p",
-                  "content": "Pontos de Umbanda utilizados durante as giras pela curimba do terreiro Raízes de Aruanda, bem como para o compartilhamento de conhecimentos.",
-                  "textGrowth": "fixed-width",
-                  "fontFamily": "Source Sans 3",
-                  "fontSize": 19,
-                  "fontWeight": "400",
                   "fill": "#111111",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Pontos de Umbanda utilizados durante as giras pela curimba do terreiro Raízes de Aruanda, bem como para o compartilhamento de conhecimentos.",
                   "lineHeight": 1.6,
-                  "width": "fill_container"
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 19
                 }
               ]
             }
@@ -302,49 +316,47 @@
           "id": "mm-scrim",
           "x": 0,
           "y": 0,
+          "fill": "#00000073",
           "width": 390,
-          "height": 844,
-          "fill": "#00000073"
+          "height": 844
         },
         {
           "type": "frame",
           "id": "mm-sheet",
           "x": 0,
           "y": 164,
+          "clip": true,
           "width": 390,
           "height": 680,
-          "layout": "vertical",
           "fill": "#FFFFFF",
           "cornerRadius": 16,
-          "clip": true,
           "effect": {
             "type": "shadow",
             "shadowType": "outer",
+            "color": "#00000033",
             "offset": {
               "x": 0,
               "y": -4
             },
-            "blur": 24,
-            "spread": 0,
-            "color": "#00000033"
+            "blur": 24
           },
+          "layout": "vertical",
           "children": [
             {
               "type": "frame",
               "id": "mm-handle-row",
               "width": "fill_container",
               "height": 20,
-              "layout": "horizontal",
               "justifyContent": "center",
               "alignItems": "center",
               "children": [
                 {
                   "type": "rectangle",
-                  "id": "mm-handle",
-                  "width": 36,
-                  "height": 4,
                   "cornerRadius": 2,
-                  "fill": "#D0D0D0"
+                  "id": "mm-handle",
+                  "fill": "#D0D0D0",
+                  "width": 36,
+                  "height": 4
                 }
               ]
             },
@@ -353,40 +365,37 @@
               "id": "mm-sheet-header",
               "width": "fill_container",
               "height": 52,
-              "layout": "horizontal",
-              "justifyContent": "space_between",
-              "alignItems": "center",
               "padding": [
                 0,
                 16
               ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
               "children": [
                 {
                   "type": "text",
                   "id": "mm-sheet-title",
+                  "fill": "#111111",
                   "content": "Linhas",
-                  "textGrowth": "auto",
                   "fontFamily": "Source Sans 3",
                   "fontSize": 18,
-                  "fontWeight": "700",
-                  "fill": "#111111"
+                  "fontWeight": "700"
                 },
                 {
                   "type": "frame",
                   "id": "mm-close-btn",
                   "width": 44,
                   "height": 44,
-                  "layout": "horizontal",
                   "justifyContent": "center",
                   "alignItems": "center",
                   "children": [
                     {
                       "type": "icon",
                       "id": "mm-close-icon",
-                      "library": "feather",
-                      "icon": "x",
                       "width": 20,
                       "height": 20,
+                      "icon": "x",
+                      "library": "feather",
                       "fill": "#111111"
                     }
                   ]
@@ -411,29 +420,21 @@
                   "id": "mm-filter",
                   "width": "fill_container",
                   "height": 44,
-                  "layout": "horizontal",
-                  "alignItems": "center",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 8,
                   "padding": [
                     0,
                     12
                   ],
-                  "cornerRadius": 8,
-                  "fill": "#FFFFFF",
-                  "stroke": {
-                    "align": "inside",
-                    "thickness": 1,
-                    "fill": "#E0E0E0"
-                  },
+                  "alignItems": "center",
                   "children": [
                     {
                       "type": "text",
                       "id": "mm-filter-text",
+                      "fill": "#4A4A4A",
                       "content": "Buscar linha…",
-                      "textGrowth": "auto",
                       "fontFamily": "Source Sans 3",
-                      "fontSize": 16,
-                      "fontWeight": "400",
-                      "fill": "#4A4A4A"
+                      "fontSize": 16
                     }
                   ]
                 }
@@ -456,12 +457,11 @@
                 {
                   "type": "text",
                   "id": "mm-cat-orixa",
+                  "fill": "#7B1506",
                   "content": "ORIXÁ",
-                  "textGrowth": "auto",
                   "fontFamily": "Source Sans 3",
                   "fontSize": 13,
                   "fontWeight": "700",
-                  "fill": "#7B1506",
                   "letterSpacing": 0.6
                 },
                 {
@@ -469,27 +469,24 @@
                   "id": "mm-ayra",
                   "width": "fill_container",
                   "height": 44,
-                  "layout": "horizontal",
-                  "alignItems": "center",
-                  "gap": 8,
                   "fill": "#FFFFFF",
+                  "gap": 8,
+                  "alignItems": "center",
                   "children": [
                     {
                       "type": "rectangle",
                       "id": "mm-ayra-accent",
+                      "fill": "#00000000",
                       "width": 3,
-                      "height": 44,
-                      "fill": "#00000000"
+                      "height": 44
                     },
                     {
                       "type": "text",
                       "id": "mm-ayra-label",
+                      "fill": "#111111",
                       "content": "Ayrá",
-                      "textGrowth": "auto",
                       "fontFamily": "Source Sans 3",
-                      "fontSize": 17,
-                      "fontWeight": "400",
-                      "fill": "#111111"
+                      "fontSize": 17
                     }
                   ]
                 },
@@ -498,27 +495,25 @@
                   "id": "mm-iansa",
                   "width": "fill_container",
                   "height": 44,
-                  "layout": "horizontal",
-                  "alignItems": "center",
-                  "gap": 8,
                   "fill": "#F3E8E6",
+                  "gap": 8,
+                  "alignItems": "center",
                   "children": [
                     {
                       "type": "rectangle",
                       "id": "mm-iansa-accent",
+                      "fill": "#7B1506",
                       "width": 3,
-                      "height": 44,
-                      "fill": "#7B1506"
+                      "height": 44
                     },
                     {
                       "type": "text",
                       "id": "mm-iansa-label",
+                      "fill": "#7B1506",
                       "content": "Iansã",
-                      "textGrowth": "auto",
                       "fontFamily": "Source Sans 3",
                       "fontSize": 17,
-                      "fontWeight": "600",
-                      "fill": "#7B1506"
+                      "fontWeight": "600"
                     }
                   ]
                 },
@@ -527,27 +522,24 @@
                   "id": "mm-iroko",
                   "width": "fill_container",
                   "height": 44,
-                  "layout": "horizontal",
-                  "alignItems": "center",
-                  "gap": 8,
                   "fill": "#FFFFFF",
+                  "gap": 8,
+                  "alignItems": "center",
                   "children": [
                     {
                       "type": "rectangle",
                       "id": "mm-iroko-accent",
+                      "fill": "#00000000",
                       "width": 3,
-                      "height": 44,
-                      "fill": "#00000000"
+                      "height": 44
                     },
                     {
                       "type": "text",
                       "id": "mm-iroko-label",
+                      "fill": "#111111",
                       "content": "Iroko",
-                      "textGrowth": "auto",
                       "fontFamily": "Source Sans 3",
-                      "fontSize": 17,
-                      "fontWeight": "400",
-                      "fill": "#111111"
+                      "fontSize": 17
                     }
                   ]
                 },
@@ -556,27 +548,24 @@
                   "id": "mm-logun",
                   "width": "fill_container",
                   "height": 44,
-                  "layout": "horizontal",
-                  "alignItems": "center",
-                  "gap": 8,
                   "fill": "#FFFFFF",
+                  "gap": 8,
+                  "alignItems": "center",
                   "children": [
                     {
                       "type": "rectangle",
                       "id": "mm-logun-accent",
+                      "fill": "#00000000",
                       "width": 3,
-                      "height": 44,
-                      "fill": "#00000000"
+                      "height": 44
                     },
                     {
                       "type": "text",
                       "id": "mm-logun-label",
+                      "fill": "#111111",
                       "content": "Logun-Edé",
-                      "textGrowth": "auto",
                       "fontFamily": "Source Sans 3",
-                      "fontSize": 17,
-                      "fontWeight": "400",
-                      "fill": "#111111"
+                      "fontSize": 17
                     }
                   ]
                 },
@@ -585,27 +574,24 @@
                   "id": "mm-nana",
                   "width": "fill_container",
                   "height": 44,
-                  "layout": "horizontal",
-                  "alignItems": "center",
-                  "gap": 8,
                   "fill": "#FFFFFF",
+                  "gap": 8,
+                  "alignItems": "center",
                   "children": [
                     {
                       "type": "rectangle",
                       "id": "mm-nana-accent",
+                      "fill": "#00000000",
                       "width": 3,
-                      "height": 44,
-                      "fill": "#00000000"
+                      "height": 44
                     },
                     {
                       "type": "text",
                       "id": "mm-nana-label",
+                      "fill": "#111111",
                       "content": "Nanã",
-                      "textGrowth": "auto",
                       "fontFamily": "Source Sans 3",
-                      "fontSize": 17,
-                      "fontWeight": "400",
-                      "fill": "#111111"
+                      "fontSize": 17
                     }
                   ]
                 },
@@ -614,27 +600,24 @@
                   "id": "mm-oba",
                   "width": "fill_container",
                   "height": 44,
-                  "layout": "horizontal",
-                  "alignItems": "center",
-                  "gap": 8,
                   "fill": "#FFFFFF",
+                  "gap": 8,
+                  "alignItems": "center",
                   "children": [
                     {
                       "type": "rectangle",
                       "id": "mm-oba-accent",
+                      "fill": "#00000000",
                       "width": 3,
-                      "height": 44,
-                      "fill": "#00000000"
+                      "height": 44
                     },
                     {
                       "type": "text",
                       "id": "mm-oba-label",
+                      "fill": "#111111",
                       "content": "Obá",
-                      "textGrowth": "auto",
                       "fontFamily": "Source Sans 3",
-                      "fontSize": 17,
-                      "fontWeight": "400",
-                      "fill": "#111111"
+                      "fontSize": 17
                     }
                   ]
                 },
@@ -647,12 +630,11 @@
                 {
                   "type": "text",
                   "id": "mm-cat-guia",
+                  "fill": "#7B1506",
                   "content": "GUIA",
-                  "textGrowth": "auto",
                   "fontFamily": "Source Sans 3",
                   "fontSize": 13,
                   "fontWeight": "700",
-                  "fill": "#7B1506",
                   "letterSpacing": 0.6
                 },
                 {
@@ -660,27 +642,24 @@
                   "id": "mm-baianos",
                   "width": "fill_container",
                   "height": 44,
-                  "layout": "horizontal",
-                  "alignItems": "center",
-                  "gap": 8,
                   "fill": "#FFFFFF",
+                  "gap": 8,
+                  "alignItems": "center",
                   "children": [
                     {
                       "type": "rectangle",
                       "id": "mm-baianos-accent",
+                      "fill": "#00000000",
                       "width": 3,
-                      "height": 44,
-                      "fill": "#00000000"
+                      "height": 44
                     },
                     {
                       "type": "text",
                       "id": "mm-baianos-label",
+                      "fill": "#111111",
                       "content": "Baianos",
-                      "textGrowth": "auto",
                       "fontFamily": "Source Sans 3",
-                      "fontSize": 17,
-                      "fontWeight": "400",
-                      "fill": "#111111"
+                      "fontSize": 17
                     }
                   ]
                 },
@@ -689,27 +668,24 @@
                   "id": "mm-caboclos",
                   "width": "fill_container",
                   "height": 44,
-                  "layout": "horizontal",
-                  "alignItems": "center",
-                  "gap": 8,
                   "fill": "#FFFFFF",
+                  "gap": 8,
+                  "alignItems": "center",
                   "children": [
                     {
                       "type": "rectangle",
                       "id": "mm-caboclos-accent",
+                      "fill": "#00000000",
                       "width": 3,
-                      "height": 44,
-                      "fill": "#00000000"
+                      "height": 44
                     },
                     {
                       "type": "text",
                       "id": "mm-caboclos-label",
+                      "fill": "#111111",
                       "content": "Caboclos",
-                      "textGrowth": "auto",
                       "fontFamily": "Source Sans 3",
-                      "fontSize": 17,
-                      "fontWeight": "400",
-                      "fill": "#111111"
+                      "fontSize": 17
                     }
                   ]
                 },
@@ -718,27 +694,24 @@
                   "id": "mm-exu",
                   "width": "fill_container",
                   "height": 44,
-                  "layout": "horizontal",
-                  "alignItems": "center",
-                  "gap": 8,
                   "fill": "#FFFFFF",
+                  "gap": 8,
+                  "alignItems": "center",
                   "children": [
                     {
                       "type": "rectangle",
                       "id": "mm-exu-accent",
+                      "fill": "#00000000",
                       "width": 3,
-                      "height": 44,
-                      "fill": "#00000000"
+                      "height": 44
                     },
                     {
                       "type": "text",
                       "id": "mm-exu-label",
+                      "fill": "#111111",
                       "content": "Exu",
-                      "textGrowth": "auto",
                       "fontFamily": "Source Sans 3",
-                      "fontSize": 17,
-                      "fontWeight": "400",
-                      "fill": "#111111"
+                      "fontSize": 17
                     }
                   ]
                 }
@@ -751,8 +724,8 @@
     {
       "type": "frame",
       "id": "linhaMobileV2",
-      "x": 2500,
-      "y": -1265,
+      "x": 2900,
+      "y": -1089,
       "name": "linha_mobile_v2",
       "clip": true,
       "width": 390,
@@ -1021,8 +994,8 @@
     {
       "type": "frame",
       "id": "linhaModoLetraV2",
-      "x": 2950,
-      "y": -1265,
+      "x": 3350,
+      "y": -1089,
       "name": "linha_mobile_modo_letra_v2",
       "clip": true,
       "width": 390,
