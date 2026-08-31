@@ -56,19 +56,19 @@
                         Saudamos a esquerda: as linhas de Exu, Pomba-gira e Exu-mirim, saudadas no início de cada trabalho, nesta ordem:
                         <ol>
                             <li>
-                                <a href="index.php?buscar=Exu#ponto-880" class="brand">Exu Arranca Toco</a> (Pai Edgar) — ponto 880
+                                <a href="index.php?buscar=Exu#880" class="brand">Exu Arranca Toco</a> (Pai Edgar) — ponto 880
                             </li>
                             <li>
-                                <a href="index.php?buscar=Exu#ponto-707" class="brand">Exu do Lodo</a> (Mãe Leonor e Pai Gilberto) — ponto 707
+                                <a href="index.php?buscar=Exu#707" class="brand">Exu do Lodo</a> (Mãe Leonor e Pai Gilberto) — ponto 707
                             </li>
                             <li>
                                 Pombagira Maria Mulambo (Mãe Leonor e Mãe Jaciara) — ponto não registrado
                             </li>
                             <li>
-                                <a href="index.php?buscar=Pomba-gira#ponto-887" class="brand">Pombagira Dona Pitombeira</a> (Pai Edgar) — ponto 887
+                                <a href="index.php?buscar=Pomba-gira#887" class="brand">Pombagira Dona Pitombeira</a> (Pai Edgar) — ponto 887
                             </li>
                             <li>
-                                <a href="index.php?buscar=Exu-mirim#ponto-718" class="brand">Exu Mirim</a> (Egbomi Anderson) — ponto 718
+                                <a href="index.php?buscar=Exu-mirim#718" class="brand">Exu Mirim</a> (Egbomi Anderson) — ponto 718
                             </li>
                         </ol>
                     </li>
