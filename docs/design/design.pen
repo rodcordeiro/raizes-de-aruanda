@@ -1507,7 +1507,7 @@
       "id": "LABKm",
       "x": -2184,
       "y": -2085,
-      "name": " ",
+      "name": "v1",
       "children": [
         {
           "type": "group",
@@ -1626,6 +1626,21 @@
           "fontWeight": "700"
         }
       ]
+    },
+    {
+      "type": "rectangle",
+      "id": "KyKCx",
+      "x": 204,
+      "y": -2085,
+      "name": "logo-raizes",
+      "fill": {
+        "type": "image",
+        "enabled": true,
+        "url": "logo-raizes.png",
+        "mode": "fill"
+      },
+      "width": 640,
+      "height": 640
     }
   ],
   "variables": {
