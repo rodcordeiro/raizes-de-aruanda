@@ -40,7 +40,7 @@
 	<div id="conteudo">
 		<header id="header">
             <a class="brand" href="index.php" aria-label="Raízes de Aruanda — início">
-                <img src="HTTPS://rodcordeiro.github.io/shares/favicons/favicon-raizes/android-icon-192x192.png" alt="Raízes de Aruanda" width="48" height="48">
+                <img src="./assets/favicon/android-icon-192x192.png" alt="Raízes de Aruanda" width="48" height="48">
             </a>
             <span class="header-title">Pontos de Umbanda</span>
             <button type="button" class="mobile-menu" id="menu-open" aria-label="Abrir menu de linhas" aria-controls="nav-sheet" aria-expanded="false">
