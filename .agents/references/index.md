@@ -8,6 +8,7 @@
 | `conventions.md` | Regras de mudança e validação |
 | `patterns.md` | Padrões já usados no código |
 | `tech-debt.md` | Gaps vs guideline `front` e dívidas conhecidas |
+| `../skills/db-schema/` | Tabelas `tb_*` (colunas + tipos); SQL/PDO/CRUD |
 
 ## Guideline Nero
 
