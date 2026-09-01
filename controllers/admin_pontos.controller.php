@@ -52,7 +52,7 @@ const ADMIN_PONTOS_PER_PAGE = 20;
  *
  * @return array{
  *   rows: list<array{
- *     id:int, letra:string, tipo:?string, audio_url:?string,
+ *     id:int, letra:string, tipo:?string, audio_url:?string, gravar_audio:bool,
  *     linha_id:int, ritmo_id:int, linha_nome:string, ritmo_nome:string
  *   }>,
  *   total: int,
@@ -100,6 +100,7 @@ function admin_pontos_list(PDO $connection, ?int $linhaId = null, int $page = 1,
                 p.`letra`,
                 p.`tipo`,
                 p.`audio_url`,
+                p.`gravar_audio`,
                 p.`linha` AS linha_id,
                 p.`ritmo` AS ritmo_id,
                 l.`nome` AS linha_nome,
@@ -136,7 +137,7 @@ function admin_pontos_list(PDO $connection, ?int $linhaId = null, int $page = 1,
 
 /**
  * @return array{
- *   id:int, letra:string, tipo:?string, audio_url:?string,
+ *   id:int, letra:string, tipo:?string, audio_url:?string, gravar_audio:bool,
  *   linha_id:int, ritmo_id:int, linha_nome:string, ritmo_nome:string
  * }|null
  */
@@ -151,6 +152,7 @@ function admin_pontos_find(PDO $connection, int $id): ?array
                 p.`letra`,
                 p.`tipo`,
                 p.`audio_url`,
+                p.`gravar_audio`,
                 p.`linha` AS linha_id,
                 p.`ritmo` AS ritmo_id,
                 l.`nome` AS linha_nome,
@@ -176,7 +178,7 @@ function admin_pontos_find(PDO $connection, int $id): ?array
 /**
  * Create a ponto inside a transaction; audit create must succeed or rollback.
  *
- * @param array{letra?:mixed,tipo?:mixed,audio_url?:mixed,linha?:mixed,ritmo?:mixed} $data
+ * @param array{letra?:mixed,tipo?:mixed,audio_url?:mixed,gravar_audio?:mixed,linha?:mixed,ritmo?:mixed} $data
  * @param array{user_id?:mixed,username?:mixed} $actor
  */
 function admin_pontos_create(PDO $connection, array $data, array $actor): int
@@ -193,8 +195,8 @@ function admin_pontos_create(PDO $connection, array $data, array $actor): int
     $connection->beginTransaction();
 
     try {
-        $sql = 'INSERT INTO `tb_pontos` (`letra`, `tipo`, `audio_url`, `linha`, `ritmo`)
-                VALUES (:letra, :tipo, :audio_url, :linha, :ritmo)';
+        $sql = 'INSERT INTO `tb_pontos` (`letra`, `tipo`, `audio_url`, `gravar_audio`, `linha`, `ritmo`)
+                VALUES (:letra, :tipo, :audio_url, :gravar_audio, :linha, :ritmo)';
 
         $stmt = $connection->prepare($sql);
         $stmt->bindValue(':letra', $clean['letra'], PDO::PARAM_STR);
@@ -204,6 +206,7 @@ function admin_pontos_create(PDO $connection, array $data, array $actor): int
         } else {
             $stmt->bindValue(':audio_url', $clean['audio_url'], PDO::PARAM_STR);
         }
+        $stmt->bindValue(':gravar_audio', $clean['gravar_audio'], PDO::PARAM_INT);
         $stmt->bindValue(':linha', $clean['linha'], PDO::PARAM_INT);
         $stmt->bindValue(':ritmo', $clean['ritmo'], PDO::PARAM_INT);
         $stmt->execute();
@@ -218,6 +221,7 @@ function admin_pontos_create(PDO $connection, array $data, array $actor): int
             'letra' => $clean['letra'],
             'tipo' => $clean['tipo'],
             'audio_url' => $clean['audio_url'],
+            'gravar_audio' => $clean['gravar_audio'],
             'linha' => $clean['linha'],
             'ritmo' => $clean['ritmo'],
         ]);
@@ -247,7 +251,7 @@ function admin_pontos_create(PDO $connection, array $data, array $actor): int
 /**
  * Update a ponto inside a transaction; audit update must succeed or rollback.
  *
- * @param array{letra?:mixed,tipo?:mixed,audio_url?:mixed,linha?:mixed,ritmo?:mixed} $data
+ * @param array{letra?:mixed,tipo?:mixed,audio_url?:mixed,gravar_audio?:mixed,linha?:mixed,ritmo?:mixed} $data
  * @param array{user_id?:mixed,username?:mixed} $actor
  */
 function admin_pontos_update(PDO $connection, int $id, array $data, array $actor): void
@@ -277,6 +281,7 @@ function admin_pontos_update(PDO $connection, int $id, array $data, array $actor
                 SET `letra` = :letra,
                     `tipo` = :tipo,
                     `audio_url` = :audio_url,
+                    `gravar_audio` = :gravar_audio,
                     `linha` = :linha,
                     `ritmo` = :ritmo
                 WHERE `id` = :id
@@ -290,6 +295,7 @@ function admin_pontos_update(PDO $connection, int $id, array $data, array $actor
         } else {
             $stmt->bindValue(':audio_url', $clean['audio_url'], PDO::PARAM_STR);
         }
+        $stmt->bindValue(':gravar_audio', $clean['gravar_audio'], PDO::PARAM_INT);
         $stmt->bindValue(':linha', $clean['linha'], PDO::PARAM_INT);
         $stmt->bindValue(':ritmo', $clean['ritmo'], PDO::PARAM_INT);
         $stmt->bindValue(':id', $id, PDO::PARAM_INT);
@@ -305,6 +311,7 @@ function admin_pontos_update(PDO $connection, int $id, array $data, array $actor
             'letra' => $clean['letra'],
             'tipo' => $clean['tipo'],
             'audio_url' => $clean['audio_url'],
+            'gravar_audio' => $clean['gravar_audio'],
             'linha' => $clean['linha'],
             'ritmo' => $clean['ritmo'],
         ]);
@@ -383,8 +390,8 @@ function admin_pontos_delete(PDO $connection, int $id, array $actor): void
 /**
  * Validate and normalize input for create/update.
  *
- * @param array{letra?:mixed,tipo?:mixed,audio_url?:mixed,linha?:mixed,ritmo?:mixed} $data
- * @return array{ok:bool, errors:string[], clean:array{letra?:string,tipo?:string,audio_url:?string,linha?:int,ritmo?:int}}
+ * @param array{letra?:mixed,tipo?:mixed,audio_url?:mixed,gravar_audio?:mixed,linha?:mixed,ritmo?:mixed} $data
+ * @return array{ok:bool, errors:string[], clean:array{letra?:string,tipo?:string,audio_url:?string,gravar_audio:int,linha?:int,ritmo?:int}}
  */
 function admin_pontos_validate(array $data): array
 {
@@ -432,6 +439,8 @@ function admin_pontos_validate(array $data): array
         }
     }
 
+    $clean['gravar_audio'] = admin_pontos_parse_gravar_audio($data['gravar_audio'] ?? null);
+
     return [
         'ok' => $errors === [],
         'errors' => $errors,
@@ -442,7 +451,7 @@ function admin_pontos_validate(array $data): array
 /**
  * Validate create/update fields including FK existence.
  *
- * @param array{letra?:mixed,tipo?:mixed,audio_url?:mixed,linha?:mixed,ritmo?:mixed} $data
+ * @param array{letra?:mixed,tipo?:mixed,audio_url?:mixed,gravar_audio?:mixed,linha?:mixed,ritmo?:mixed} $data
  * @return array{ok:bool, errors:string[], clean:array}
  */
 function admin_pontos_validate_with_fks(PDO $connection, array $data): array
@@ -512,7 +521,7 @@ function admin_list_ritmos_select(PDO $connection): array
 /**
  * @param array<string,mixed> $row
  * @return array{
- *   id:int, letra:string, tipo:?string, audio_url:?string,
+ *   id:int, letra:string, tipo:?string, audio_url:?string, gravar_audio:bool,
  *   linha_id:int, ritmo_id:int, linha_nome:string, ritmo_nome:string
  * }
  */
@@ -527,6 +536,7 @@ function admin_pontos_hydrate_row(array $row): array
         'audio_url' => isset($row['audio_url']) && $row['audio_url'] !== null && $row['audio_url'] !== ''
             ? (string) $row['audio_url']
             : null,
+        'gravar_audio' => admin_pontos_parse_gravar_audio($row['gravar_audio'] ?? null) === 1,
         'linha_id' => (int) $row['linha_id'],
         'ritmo_id' => (int) $row['ritmo_id'],
         'linha_nome' => (string) $row['linha_nome'],
@@ -537,11 +547,11 @@ function admin_pontos_hydrate_row(array $row): array
 /**
  * Load ponto columns needed for audit snapshot (no joins).
  *
- * @return array{id:int,letra:string,tipo:?string,audio_url:?string,linha:int,ritmo:int}|null
+ * @return array{id:int,letra:string,tipo:?string,audio_url:?string,gravar_audio:int,linha:int,ritmo:int}|null
  */
 function admin_pontos_find_for_audit(PDO $connection, int $id): ?array
 {
-    $sql = 'SELECT `id`, `letra`, `tipo`, `audio_url`, `linha`, `ritmo`
+    $sql = 'SELECT `id`, `letra`, `tipo`, `audio_url`, `gravar_audio`, `linha`, `ritmo`
             FROM `tb_pontos`
             WHERE `id` = :id
             LIMIT 1';
@@ -564,14 +574,15 @@ function admin_pontos_find_for_audit(PDO $connection, int $id): ?array
         'audio_url' => isset($row['audio_url']) && $row['audio_url'] !== null && $row['audio_url'] !== ''
             ? (string) $row['audio_url']
             : null,
+        'gravar_audio' => admin_pontos_parse_gravar_audio($row['gravar_audio'] ?? null),
         'linha' => (int) $row['linha'],
         'ritmo' => (int) $row['ritmo'],
     ];
 }
 
 /**
- * @param array{id:int,letra:string,tipo:?string,audio_url:?string,linha:int,ritmo:int} $row
- * @return array{id:int,letra:string,tipo:?string,audio_url:?string,linha:int,ritmo:int}
+ * @param array{id:int,letra:string,tipo:?string,audio_url:?string,gravar_audio?:int,linha:int,ritmo:int} $row
+ * @return array{id:int,letra:string,tipo:?string,audio_url:?string,gravar_audio:int,linha:int,ritmo:int}
  */
 function admin_pontos_audit_snapshot(array $row): array
 {
@@ -580,9 +591,22 @@ function admin_pontos_audit_snapshot(array $row): array
         'letra' => (string) $row['letra'],
         'tipo' => $row['tipo'] ?? null,
         'audio_url' => $row['audio_url'] ?? null,
+        'gravar_audio' => admin_pontos_parse_gravar_audio($row['gravar_audio'] ?? null),
         'linha' => (int) $row['linha'],
         'ritmo' => (int) $row['ritmo'],
     ];
+}
+
+/**
+ * Normalize gravar_audio to 0 or 1 (unchecked POST omits the field).
+ */
+function admin_pontos_parse_gravar_audio(mixed $value): int
+{
+    if ($value === true || $value === 1 || $value === '1' || $value === 'on') {
+        return 1;
+    }
+
+    return 0;
 }
 
 function admin_pontos_fk_exists(PDO $connection, string $table, int $id): bool

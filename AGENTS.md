@@ -30,6 +30,7 @@ PHP procedural + MySQL (PDO). Home pública: `index.php`. Foco atual: catálogo 
 | Condicao | Skill / pack |
 | --- | --- |
 | UI / tokens / layout | `docs/DESIGN.md` + Pencil MCP em `docs/design/design.pen` |
+| Schema / SQL / PDO / tabelas `tb_*` | `.agents/skills/db-schema/` |
 | Knowledge ops | `$nero` |
 | Who-calls / imports / path | Pack `nero-code-graph` (`cg_*`) se instalado |
 | Domain Skills de lib interna | omitido — sem evidência no checkout |

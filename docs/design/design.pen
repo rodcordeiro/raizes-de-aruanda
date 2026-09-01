@@ -3757,7 +3757,7 @@
                               "fill": "$color.muted",
                               "textGrowth": "fixed-width",
                               "width": "fill_container",
-                              "content": "Letra: texto cantado, com quebras de linha (pre-wrap). Sem markdown. Guia na letra não cria Linha.",
+                              "content": "Áudio: prefira URL do YouTube (youtu.be ou watch). Marque Gravar áudio quando precisamos gravar.",
                               "lineHeight": 1.4,
                               "fontFamily": "$font.family",
                               "fontSize": 13,
@@ -4095,6 +4095,81 @@
                               "fontWeight": "normal"
                             }
                           ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "b2LW5C",
+                      "name": "field_Gravar áudio",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "H2CUck",
+                          "name": "lbl",
+                          "fill": "$color.muted",
+                          "content": "Gravar áudio",
+                          "fontFamily": "$font.family",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "A0m6Hh",
+                          "name": "switchRow",
+                          "width": "fill_container",
+                          "gap": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "depmA",
+                              "name": "switchTrack",
+                              "width": 44,
+                              "height": 24,
+                              "fill": "$color.brand",
+                              "cornerRadius": 12,
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "ellipse",
+                                  "id": "RPPx4",
+                                  "x": 22,
+                                  "y": 2,
+                                  "name": "switchThumb",
+                                  "fill": "$color.bg",
+                                  "width": 20,
+                                  "height": 20
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "qTaLi",
+                              "name": "switchLbl",
+                              "fill": "$color.text",
+                              "content": "Precisamos gravar o áudio deste ponto",
+                              "fontFamily": "$font.family",
+                              "fontSize": 15,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "pNtGo",
+                          "name": "hint",
+                          "fill": "$color.muted",
+                          "textGrowth": "fixed-width",
+                          "width": 560,
+                          "content": "Marque quando não há referência no YouTube, a casa canta diferente ou o ponto é autoral.",
+                          "lineHeight": 1.35,
+                          "fontFamily": "$font.family",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
                         }
                       ]
                     },

@@ -41,6 +41,7 @@ $form = [
     'linha' => isset($ponto['linha_id']) ? (string) (int) $ponto['linha_id'] : '',
     'ritmo' => isset($ponto['ritmo_id']) ? (string) (int) $ponto['ritmo_id'] : '',
     'audio_url' => $ponto['audio_url'] ?? '',
+    'gravar_audio' => (bool) ($ponto['gravar_audio'] ?? false),
 ];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -55,6 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'linha' => isset($_POST['linha']) ? (string) $_POST['linha'] : '',
             'ritmo' => isset($_POST['ritmo']) ? (string) $_POST['ritmo'] : '',
             'audio_url' => isset($_POST['audio_url']) ? (string) $_POST['audio_url'] : '',
+            'gravar_audio' => isset($_POST['gravar_audio']) && (string) $_POST['gravar_audio'] === '1',
         ];
 
         $data = [
@@ -63,6 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'linha' => $form['linha'],
             'ritmo' => $form['ritmo'],
             'audio_url' => $form['audio_url'],
+            'gravar_audio' => $form['gravar_audio'],
         ];
 
         try {
@@ -101,7 +104,7 @@ admin_render_header($pageTitle, 'pontos');
             <h1 class="admin-page-title"><?php echo admin_h($pageTitle); ?></h1>
             <p class="admin-page-lead">
                 <?php echo $isEdit
-                    ? 'Atualize letra, função, linha, ritmo e áudio opcional deste ponto.'
+                    ? 'Atualize letra, função, linha, ritmo, áudio opcional e a marca de gravação deste ponto.'
                     : 'Cadastre um ponto no catálogo com letra, função, linha e ritmo.'; ?>
             </p>
         </div>
@@ -134,6 +137,10 @@ admin_render_header($pageTitle, 'pontos');
                     <li>
                         <strong>Playlist da Linha</strong> (<code>canal_youtube</code>) é aparte:
                         use o campo da Linha para a playlist da falange, não o áudio do Ponto.
+                    </li>
+                    <li>
+                        <strong>Gravar áudio:</strong> marque quando não há referência no YouTube,
+                        a casa canta diferente ou o ponto é autoral — precisamos gravar o áudio.
                     </li>
                     <li>Uploads ou MP3 ficam fora deste fluxo (MVP).</li>
                 </ul>
@@ -206,6 +213,28 @@ admin_render_header($pageTitle, 'pontos');
                 value="<?php echo admin_h((string) $form['audio_url']); ?>"
             >
             <p class="admin-hint">Preferir YouTube para embed na home. Ver ajuda acima.</p>
+        </div>
+
+        <div class="admin-field">
+            <span class="admin-label">Gravar áudio</span>
+            <label class="admin-switch">
+                <input
+                    class="admin-switch__input"
+                    id="gravar_audio"
+                    name="gravar_audio"
+                    type="checkbox"
+                    value="1"
+                    <?php echo $form['gravar_audio'] ? 'checked' : ''; ?>
+                >
+                <span class="admin-switch__track" aria-hidden="true">
+                    <span class="admin-switch__thumb"></span>
+                </span>
+                <span class="admin-switch__text">Precisamos gravar o áudio deste ponto</span>
+            </label>
+            <p class="admin-hint">
+                Marque quando não foi possível encontrar no YouTube, a casa canta de forma diferente
+                ou o ponto é autoral da casa.
+            </p>
         </div>
 
         <div class="admin-form__actions">
