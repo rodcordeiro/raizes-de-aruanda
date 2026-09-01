@@ -45,7 +45,7 @@ $errorHtml = $error !== '' ? htmlspecialchars($error, ENT_QUOTES, 'UTF-8') : '';
         <form method="post" action="./" class="login-form" autocomplete="on">
             <img
                 class="login-logo"
-                src="../../assets/favicon/android-icon-192x192.png"
+                src="../../assets/logo-raizes.png"
                 alt="Logotipo do Terreiro Raízes de Aruanda"
                 width="96"
                 height="96"

@@ -11,7 +11,17 @@
   width: min(100%, 25rem);
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.login-logo {
+  display: block;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto;
+  border-radius: 8px;
+  object-fit: contain;
 }
 
 @media (min-width: 769px) {
@@ -34,6 +44,7 @@
   font-size: 1.75rem;
   font-weight: 700;
   color: var(--text);
+  text-align: center;
 }
 
 @media (max-width: 768px) {

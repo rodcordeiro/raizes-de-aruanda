@@ -75,6 +75,85 @@ function admin_is_audit_failure(Throwable $e): bool
 const ADMIN_AUDIT_FAIL_MESSAGE = 'audit_write_failed: alteração não foi salva';
 
 /**
+ * Window + page-size fields from an admin_*_list() result.
+ *
+ * @param array{total?:int, page?:int, per_page?:int, total_pages?:int} $list
+ * @return array{from:int, to:int, total:int, page:int, per_page:int, total_pages:int}
+ */
+function admin_list_window(array $list): array
+{
+    $total = (int) ($list['total'] ?? 0);
+    $page = max(1, (int) ($list['page'] ?? 1));
+    $perPage = max(1, (int) ($list['per_page'] ?? 20));
+    $totalPages = max(1, (int) ($list['total_pages'] ?? 1));
+
+    if ($total < 1) {
+        return [
+            'from' => 0,
+            'to' => 0,
+            'total' => 0,
+            'page' => $page,
+            'per_page' => $perPage,
+            'total_pages' => $totalPages,
+        ];
+    }
+
+    $from = (($page - 1) * $perPage) + 1;
+    $to = min($page * $perPage, $total);
+
+    return [
+        'from' => $from,
+        'to' => $to,
+        'total' => $total,
+        'page' => $page,
+        'per_page' => $perPage,
+        'total_pages' => $totalPages,
+    ];
+}
+
+/**
+ * List meta: "42 pontos · exibindo 1–20 · 20 itens".
+ *
+ * @param array{total?:int, page?:int, per_page?:int, total_pages?:int} $list
+ */
+function admin_format_list_meta(string $singular, string $plural, array $list): string
+{
+    $w = admin_list_window($list);
+    $total = $w['total'];
+    $noun = $total === 1 ? $singular : $plural;
+
+    if ($total < 1) {
+        return '0 ' . $plural;
+    }
+
+    return sprintf(
+        '%d %s · exibindo %d–%d · %d itens',
+        $total,
+        $noun,
+        $w['from'],
+        $w['to'],
+        $w['per_page']
+    );
+}
+
+/**
+ * Pagination status: "Página 1 de 9 · 20 itens".
+ *
+ * @param array{total?:int, page?:int, per_page?:int, total_pages?:int} $list
+ */
+function admin_format_pagination_status(array $list): string
+{
+    $w = admin_list_window($list);
+
+    return sprintf(
+        'Página %d de %d · %d itens',
+        $w['page'],
+        $w['total_pages'],
+        $w['per_page']
+    );
+}
+
+/**
  * Truncate text for list previews (UTF-8 aware when mbstring is available).
  */
 function admin_truncate(string $text, int $max = 80): string

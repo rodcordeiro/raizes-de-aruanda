@@ -52,10 +52,7 @@ admin_render_header('Auditoria', 'auditoria');
         <p class="admin-empty">Nenhum evento de auditoria registrado ainda.</p>
     <?php else: ?>
         <p class="admin-list-meta" aria-live="polite">
-            <?php echo (int) $total; ?> evento<?php echo $total === 1 ? '' : 's'; ?>
-            <?php if ($totalPages > 1): ?>
-                · Página <?php echo (int) $currentPage; ?> de <?php echo (int) $totalPages; ?>
-            <?php endif; ?>
+            <?php echo admin_h(admin_format_list_meta('evento', 'eventos', $list)); ?>
         </p>
         <div class="admin-table-wrap">
             <table class="admin-table">
@@ -99,7 +96,7 @@ admin_render_header('Auditoria', 'auditoria');
                     <span class="admin-btn admin-btn--ghost is-disabled" aria-disabled="true">Anterior</span>
                 <?php endif; ?>
 
-                <span class="admin-pagination__status">Página <?php echo (int) $currentPage; ?> de <?php echo (int) $totalPages; ?></span>
+                <span class="admin-pagination__status"><?php echo admin_h(admin_format_pagination_status($list)); ?></span>
 
                 <?php if ($currentPage < $totalPages): ?>
                     <a class="admin-btn admin-btn--ghost" href="<?php echo admin_h($buildListUrl($currentPage + 1)); ?>">Próxima</a>

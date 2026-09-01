@@ -118,6 +118,28 @@ admin_render_header($pageTitle, 'pontos');
     <form class="admin-form" method="post" action="<?php echo admin_h($formAction); ?>">
         <input type="hidden" name="csrf" value="<?php echo admin_h($token); ?>">
 
+        <details class="admin-help">
+            <summary class="admin-help__summary">Como preencher letra e áudio?</summary>
+            <div class="admin-help__panel">
+                <p class="admin-help__title">Letra e áudio do Ponto</p>
+                <ul class="admin-help__list">
+                    <li>
+                        <strong>Letra:</strong> texto cantado, com quebras de linha.
+                        Sem markdown. Guia citado na letra não cria Linha.
+                    </li>
+                    <li>
+                        <strong>Áudio:</strong> prefira URL do YouTube (<code>youtu.be</code> ou <code>watch</code>).
+                        O site embeda o vídeo na home — a Curimba vê se o áudio está disponível.
+                    </li>
+                    <li>
+                        <strong>Playlist da Linha</strong> (<code>canal_youtube</code>) é aparte:
+                        use o campo da Linha para a playlist da falange, não o áudio do Ponto.
+                    </li>
+                    <li>Uploads ou MP3 ficam fora deste fluxo (MVP).</li>
+                </ul>
+            </div>
+        </details>
+
         <div class="admin-field">
             <label class="admin-label" for="letra">Letra</label>
             <textarea
@@ -172,7 +194,7 @@ admin_render_header($pageTitle, 'pontos');
         </div>
 
         <div class="admin-field">
-            <label class="admin-label" for="audio_url">Áudio / YouTube URL</label>
+            <label class="admin-label" for="audio_url">URL do áudio (opcional)</label>
             <input
                 class="admin-input"
                 id="audio_url"
@@ -183,7 +205,7 @@ admin_render_header($pageTitle, 'pontos');
                 placeholder="https://youtu.be/…"
                 value="<?php echo admin_h((string) $form['audio_url']); ?>"
             >
-            <p class="admin-hint">Opcional.</p>
+            <p class="admin-hint">Preferir YouTube para embed na home. Ver ajuda acima.</p>
         </div>
 
         <div class="admin-form__actions">

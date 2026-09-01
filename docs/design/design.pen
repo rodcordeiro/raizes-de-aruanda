@@ -780,14 +780,14 @@
               "id": "J0cow",
               "name": "linha_hero",
               "width": "fill_container",
-              "layout": "vertical",
-              "gap": 8,
+              "gap": 12,
               "padding": [
                 20,
                 16,
                 12,
                 16
               ],
+              "alignItems": "center",
               "children": [
                 {
                   "type": "text",
@@ -835,16 +835,6 @@
                       "fontFamily": "$font.family",
                       "fontSize": 14,
                       "fontWeight": "600"
-                    },
-                    {
-                      "type": "text",
-                      "id": "wQPpV",
-                      "name": "playlist_newtab_hint",
-                      "fill": "$color.muted",
-                      "content": "nova aba",
-                      "fontFamily": "$font.family",
-                      "fontSize": 12,
-                      "fontWeight": "normal"
                     }
                   ]
                 }
@@ -1467,8 +1457,8 @@
                   "id": "j20cEF",
                   "name": "page_title_block",
                   "width": "fill_container",
-                  "layout": "vertical",
-                  "gap": 8,
+                  "gap": 12,
+                  "alignItems": "center",
                   "children": [
                     {
                       "type": "text",
@@ -1506,16 +1496,6 @@
                           "fontFamily": "$font.family",
                           "fontSize": 14,
                           "fontWeight": "600"
-                        },
-                        {
-                          "type": "text",
-                          "id": "h1JA8",
-                          "name": "playlist_newtab_hint",
-                          "fill": "$color.muted",
-                          "content": "nova aba",
-                          "fontFamily": "$font.family",
-                          "fontSize": 12,
-                          "fontWeight": "normal"
                         }
                       ]
                     }
@@ -2374,7 +2354,7 @@
                               "id": "mqpXV",
                               "name": "metaCount",
                               "fill": "$color.muted",
-                              "content": "42 pontos",
+                              "content": "42 pontos · exibindo 1–20 · 20 itens",
                               "fontFamily": "$font.family",
                               "fontSize": 14,
                               "fontWeight": "normal"
@@ -3387,7 +3367,7 @@
                       "id": "Cogf7",
                       "name": "pageMeta",
                       "fill": "$color.muted",
-                      "content": "Página 1 de 9",
+                      "content": "Página 1 de 9 · 20 itens",
                       "fontFamily": "$font.family",
                       "fontSize": 14,
                       "fontWeight": "normal"
@@ -9556,7 +9536,7 @@
                       "id": "VI6aD",
                       "name": "metaCount",
                       "fill": "$color.muted",
-                      "content": "42 pontos",
+                      "content": "42 pontos · exibindo 1–20 · 20 itens",
                       "fontFamily": "$font.family",
                       "fontSize": 13,
                       "fontWeight": "normal"
@@ -9947,7 +9927,7 @@
                   "id": "dK4k9",
                   "name": "pageMeta",
                   "fill": "$color.muted",
-                  "content": "Página 1 de 9",
+                  "content": "Página 1 de 9 · 20 itens",
                   "fontFamily": "$font.family",
                   "fontSize": 13,
                   "fontWeight": "normal"
@@ -10047,7 +10027,7 @@
       "name": "admin_v1_note",
       "width": 360,
       "height": 420,
-      "content": "admin_v1 esboço (Iris + Nero grill)\n\nSpec: CRUD Pontos/Linhas/Ritmos\nRoles: editor (só Pontos) · admin (+Linhas/Ritmos/Auditoria)\nAuth: sessão PHP + tb_user\n\nTokens: $color.* + $color.danger (#B42318) só em Excluir/bloqueado\n\nRodada design 2026-08-31:\n• Pontos: filtro por Linha + meta “N pontos” + paginação Anterior/Página N de M/Próxima (desktop + mobile)\n• Form ponto: ajuda disclosure “Como preencher letra e áudio?” (painel surfaceMuted, sem tooltip)\n• Login: marca hero = logo-raizes.png ~96×96 r8 (não texto)\n\nNão desenhar: dashboard, users, giras, chips da home\n\nPróximo: implementar PHP PDO + migrations API"
+      "content": "admin_v1 esboço (Iris + Nero grill)\n\nSpec: CRUD Pontos/Linhas/Ritmos\nRoles: editor (só Pontos) · admin (+Linhas/Ritmos/Auditoria)\nAuth: sessão PHP + tb_user\n\nTokens: $color.* + $color.danger (#B42318) só em Excluir/bloqueado\n\nRodada design 2026-08-31:\n• Pontos: filtro por Linha + meta “N pontos” + paginação Anterior/Página N de M/Próxima (desktop + mobile)\n• Form ponto: ajuda disclosure “Como preencher letra e áudio?” (painel surfaceMuted, sem tooltip)\n• Login: marca hero = logo-raizes.png ~96×96 r8 (não texto)\n\nNão desenhar: dashboard, users, giras, chips da home\n\nPróximo: implementar PHP PDO + migrations API\n\nPaginação: status “Página N de M · X itens” (page size); meta “total · exibindo A–B · X itens”. Implementado PHP 2026-09-01."
     },
     {
       "type": "note",
