@@ -7,7 +7,7 @@
 | `index.php` | Entrypoint home: Linha → chips Ritmo → Pontos |
 | `components/metadata/header.php` | Meta + ordem CSS (`main` → `mobile` → `print`) |
 | `controllers/linhas.controller.php` | Categorias / linhas (leitura) |
-| `controllers/pontos.controller.php` | Pontos por linha (leitura) |
+| `controllers/pontos.controller.php` | Pontos por linha (leitura pública; `filter`) |
 | `db/db.class.php` | PDO MySQL via `getenv` |
 | `assets/css/main.css` | Tokens `:root` + layout desktop |
 | `assets/css/mobile.css` | ≤768px (sheet, hero, chips sticky) |
@@ -20,22 +20,27 @@
 | `compose.yml` / `Dockerfile` | PHP 8.2 Apache + `pdo_mysql` |
 | `.env.example` | Nomes de variáveis (sem segredos) |
 
-## Presente — admin (auth mínimo)
+## Ativo — admin (auth + CRUD Pontos)
 
 | Path | Nota |
 | --- | --- |
 | `admin/login/` | Login UI (`tb_user` + sessão PHP) |
-| `admin/index.php` | Placeholder protegido por `requireAuth` (sem CRUD) |
 | `admin/logout.php` | Logout |
-| `admin/_bootstrap.php` | Boot PDO + sessão/RBAC/audit |
+| `admin/_bootstrap.php` | Boot PDO + sessão/RBAC/audit + admin_pontos |
+| `admin/_shell.php` | Chrome admin (header/nav/flash) |
+| `admin/index.php` | Redirect para `/admin/pontos/` se `canReadCatalog` |
+| `admin/pontos/` | Listagem, form create/edit, delete POST + overlay |
+| `admin/styles.css` | Shell admin (tokens via CSS vars) |
 | `controllers/session.controller.php` | Sessão, CSRF, `attemptLogin` |
 | `controllers/rbac.controller.php` | Roles/perms na sessão |
-| `controllers/audit.controller.php` | Audit best-effort de login |
+| `controllers/audit.controller.php` | Login best-effort + `writeAuditMutation` (strict) |
+| `controllers/admin_pontos.controller.php` | CRUD PDO `tb_pontos` + selects linha/ritmo |
 
 ## Presente — fora do foco atual
 
 | Path | Nota |
 | --- | --- |
+| `admin/ritmos/` | Legado/placeholder — CRUD ritmo **não** neste lote |
 | `dash/` | Dashboard; adiado |
 | `bot.php` | Anúncio Discord + saudação; fora do foco home |
 | `config/bootstrap.php` | Loader `.env` (home atual não inclui explicitamente) |
