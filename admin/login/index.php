@@ -43,7 +43,13 @@ $errorHtml = $error !== '' ? htmlspecialchars($error, ENT_QUOTES, 'UTF-8') : '';
 <body class="login-page">
     <main>
         <form method="post" action="./" class="login-form" autocomplete="on">
-            <p class="login-brand">Raízes de Aruanda</p>
+            <img
+                class="login-logo"
+                src="../../assets/favicon/android-icon-192x192.png"
+                alt="Logotipo do Terreiro Raízes de Aruanda"
+                width="96"
+                height="96"
+            >
             <h1 class="login-title">Entrar no admin</h1>
 
             <?php if ($errorHtml !== ''): ?>

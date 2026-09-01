@@ -72,13 +72,19 @@
             <section id="busca" <?php echo $hasLinha ? '' : 'hidden'; ?>>
                 <?php if ($hasLinha) { ?>
                 <?php /* Nome da linha (hero no mobile) + chips sticky — separados para o sticky não limitar ao bloco curto */ ?>
-                <div class="linha-nome" id="linha-nome">
+                <div class="linha-hero" id="linha-hero">
+                    <div class="linha-nome" id="linha-nome"><?php echo $linhaAtual; ?></div>
                     <?php if (!empty($canalYoutube)) { ?>
-                        <a href="<?php echo htmlspecialchars($canalYoutube, ENT_QUOTES, 'UTF-8'); ?>" target="_blank" rel="noopener noreferrer">
-                            <?php echo $linhaAtual; ?>
+                        <a
+                            class="linha-playlist"
+                            href="<?php echo htmlspecialchars($canalYoutube, ENT_QUOTES, 'UTF-8'); ?>"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Abrir playlist no YouTube (abre em nova aba)"
+                        >
+                            <i data-feather="external-link" aria-hidden="true"></i>
+                            <span>Abrir playlist no YouTube</span>
                         </a>
-                    <?php } else { ?>
-                        <?php echo $linhaAtual; ?>
                     <?php } ?>
                 </div>
                 <nav class="ritmo-chips" id="ritmo-chips" aria-label="Índice de ritmos">
