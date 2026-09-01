@@ -29,7 +29,7 @@
 | `admin/_bootstrap.php` | Boot PDO + sessão/RBAC/audit + admin_pontos |
 | `admin/_shell.php` | Chrome admin (header/nav/flash) |
 | `admin/index.php` | Redirect para `/admin/pontos/` se `canReadCatalog` |
-| `admin/pontos/` | Listagem, form create/edit, delete POST + overlay |
+| `admin/pontos/` | `index.php` list; `form.php` create/edit; `delete.php` GET confirm + POST |
 | `admin/styles.css` | Shell admin (tokens via CSS vars) |
 | `controllers/session.controller.php` | Sessão, CSRF, `attemptLogin` |
 | `controllers/rbac.controller.php` | Roles/perms na sessão |

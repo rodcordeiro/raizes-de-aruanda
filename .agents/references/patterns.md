@@ -19,7 +19,7 @@
 | Shell UI | `admin/_shell.php` + `admin/styles.css` (`main` → `mobile` → admin) |
 | Auth `tb_user` + `password_verify` | `controllers/session.controller.php` |
 | RBAC em sessão pós-login | `hasPermission` / `requirePermission` / `canReadCatalog` |
-| Listagem / form / delete | `admin/pontos/` — CSRF em POST; CTAs gated por perm |
+| Listagem / form / delete | `admin/pontos/` — CSRF POST field `csrf` (aceita `csrf_token`); delete = GET confirm + POST; CTAs gated por perm |
 | CRUD PDO `tb_pontos` | `controllers/admin_pontos.controller.php` (não altera `Pontos::filter`) |
 | Audit login best-effort | `writeAuditLogin` (`login_success` \| `login_failure`) |
 | Audit mutação same-tx (strict) | `writeAuditMutation` — falha → rollback + `audit_write_failed` |

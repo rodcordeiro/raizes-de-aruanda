@@ -44,16 +44,57 @@ function admin_pontos_allowed_tipos(): array
     return ADMIN_PONTOS_TIPOS;
 }
 
+/** Default page size for admin pontos list. */
+const ADMIN_PONTOS_PER_PAGE = 20;
+
 /**
- * List rows for admin index (joined linha/ritmo names).
+ * List rows for admin index (joined linha/ritmo names), optional linha filter + pagination.
  *
- * @return list<array{
- *   id:int, letra:string, tipo:?string, audio_url:?string,
- *   linha_id:int, ritmo_id:int, linha_nome:string, ritmo_nome:string
- * }>
+ * @return array{
+ *   rows: list<array{
+ *     id:int, letra:string, tipo:?string, audio_url:?string,
+ *     linha_id:int, ritmo_id:int, linha_nome:string, ritmo_nome:string
+ *   }>,
+ *   total: int,
+ *   page: int,
+ *   per_page: int,
+ *   total_pages: int,
+ *   linha_id: int|null
+ * }
  */
-function admin_pontos_list(PDO $connection): array
+function admin_pontos_list(PDO $connection, ?int $linhaId = null, int $page = 1, int $perPage = ADMIN_PONTOS_PER_PAGE): array
 {
+    if ($perPage < 1) {
+        $perPage = ADMIN_PONTOS_PER_PAGE;
+    }
+    if ($page < 1) {
+        $page = 1;
+    }
+    if ($linhaId !== null && $linhaId <= 0) {
+        $linhaId = null;
+    }
+
+    $where = '';
+    $params = [];
+    if ($linhaId !== null) {
+        $where = ' WHERE p.`linha` = :linha_id';
+        $params['linha_id'] = $linhaId;
+    }
+
+    $countSql = 'SELECT COUNT(*) FROM `tb_pontos` p' . $where;
+    $countStmt = $connection->prepare($countSql);
+    foreach ($params as $key => $value) {
+        $countStmt->bindValue(':' . $key, $value, PDO::PARAM_INT);
+    }
+    $countStmt->execute();
+    $total = (int) $countStmt->fetchColumn();
+
+    $totalPages = $total > 0 ? (int) ceil($total / $perPage) : 1;
+    if ($page > $totalPages) {
+        $page = $totalPages;
+    }
+    $offset = ($page - 1) * $perPage;
+
     $sql = 'SELECT
                 p.`id`,
                 p.`letra`,
@@ -65,10 +106,17 @@ function admin_pontos_list(PDO $connection): array
                 r.`nome` AS ritmo_nome
             FROM `tb_pontos` p
             INNER JOIN `tb_linhas` l ON l.`id` = p.`linha`
-            INNER JOIN `tb_ritmos` r ON r.`id` = p.`ritmo`
-            ORDER BY l.`nome` ASC, r.`nome` ASC, p.`id` ASC';
+            INNER JOIN `tb_ritmos` r ON r.`id` = p.`ritmo`'
+            . $where . '
+            ORDER BY l.`nome` ASC, r.`nome` ASC, p.`id` ASC
+            LIMIT :limit OFFSET :offset';
 
     $stmt = $connection->prepare($sql);
+    foreach ($params as $key => $value) {
+        $stmt->bindValue(':' . $key, $value, PDO::PARAM_INT);
+    }
+    $stmt->bindValue(':limit', $perPage, PDO::PARAM_INT);
+    $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
     $stmt->execute();
 
     $rows = [];
@@ -76,7 +124,14 @@ function admin_pontos_list(PDO $connection): array
         $rows[] = admin_pontos_hydrate_row($row);
     }
 
-    return $rows;
+    return [
+        'rows' => $rows,
+        'total' => $total,
+        'page' => $page,
+        'per_page' => $perPage,
+        'total_pages' => $totalPages,
+        'linha_id' => $linhaId,
+    ];
 }
 
 /**

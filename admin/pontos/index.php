@@ -18,7 +18,29 @@ $canUpdate = hasPermission('ponto:update');
 $canDelete = hasPermission('ponto:delete');
 
 $flash = admin_flash_take();
-$rows = admin_pontos_list($connection);
+$linhas = admin_list_linhas_select($connection);
+
+$linhaFilter = isset($_GET['linha']) ? (int) $_GET['linha'] : 0;
+$linhaId = $linhaFilter > 0 ? $linhaFilter : null;
+$page = isset($_GET['page']) ? (int) $_GET['page'] : 1;
+
+$list = admin_pontos_list($connection, $linhaId, $page);
+$rows = $list['rows'];
+$total = $list['total'];
+$currentPage = $list['page'];
+$totalPages = $list['total_pages'];
+
+$buildListUrl = static function (?int $linha, int $pageNum): string {
+    $params = [];
+    if ($linha !== null && $linha > 0) {
+        $params['linha'] = $linha;
+    }
+    if ($pageNum > 1) {
+        $params['page'] = $pageNum;
+    }
+    $query = http_build_query($params);
+    return '/admin/pontos/' . ($query !== '' ? '?' . $query : '');
+};
 
 admin_render_header('Pontos', 'pontos');
 ?>
@@ -41,11 +63,39 @@ admin_render_header('Pontos', 'pontos');
         ><?php echo admin_h($flash['message']); ?></p>
     <?php endif; ?>
 
+    <form class="admin-toolbar" method="get" action="/admin/pontos/">
+        <div class="admin-field admin-toolbar__filter">
+            <label class="admin-label" for="filtro-linha">Filtrar por linha</label>
+            <select class="admin-select" id="filtro-linha" name="linha" onchange="this.form.submit()">
+                <option value="">Todas as linhas</option>
+                <?php foreach ($linhas as $linha): ?>
+                    <?php $lid = (int) $linha['id']; ?>
+                    <option value="<?php echo $lid; ?>"<?php echo $linhaId === $lid ? ' selected' : ''; ?>>
+                        <?php echo admin_h((string) $linha['nome']); ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+        <noscript>
+            <button class="admin-btn admin-btn--ghost" type="submit">Filtrar</button>
+        </noscript>
+    </form>
+
     <?php if ($rows === []): ?>
         <p class="admin-empty">
-            Nenhum ponto cadastrado ainda.<?php echo $canCreate ? ' Use “Novo ponto” para começar.' : ''; ?>
+            <?php if ($linhaId !== null): ?>
+                Nenhum ponto nesta linha.
+            <?php else: ?>
+                Nenhum ponto cadastrado ainda.<?php echo $canCreate ? ' Use “Novo ponto” para começar.' : ''; ?>
+            <?php endif; ?>
         </p>
     <?php else: ?>
+        <p class="admin-list-meta" aria-live="polite">
+            <?php echo (int) $total; ?> ponto<?php echo $total === 1 ? '' : 's'; ?>
+            <?php if ($totalPages > 1): ?>
+                · Página <?php echo (int) $currentPage; ?> de <?php echo (int) $totalPages; ?>
+            <?php endif; ?>
+        </p>
         <div class="admin-table-wrap">
             <table class="admin-table">
                 <thead>
@@ -87,6 +137,24 @@ admin_render_header('Pontos', 'pontos');
                 </tbody>
             </table>
         </div>
+
+        <?php if ($totalPages > 1): ?>
+            <nav class="admin-pagination" aria-label="Paginação do catálogo">
+                <?php if ($currentPage > 1): ?>
+                    <a class="admin-btn admin-btn--ghost" href="<?php echo admin_h($buildListUrl($linhaId, $currentPage - 1)); ?>">Anterior</a>
+                <?php else: ?>
+                    <span class="admin-btn admin-btn--ghost is-disabled" aria-disabled="true">Anterior</span>
+                <?php endif; ?>
+
+                <span class="admin-pagination__status">Página <?php echo (int) $currentPage; ?> de <?php echo (int) $totalPages; ?></span>
+
+                <?php if ($currentPage < $totalPages): ?>
+                    <a class="admin-btn admin-btn--ghost" href="<?php echo admin_h($buildListUrl($linhaId, $currentPage + 1)); ?>">Próxima</a>
+                <?php else: ?>
+                    <span class="admin-btn admin-btn--ghost is-disabled" aria-disabled="true">Próxima</span>
+                <?php endif; ?>
+            </nav>
+        <?php endif; ?>
     <?php endif; ?>
 <?php
 admin_render_footer();
