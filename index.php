@@ -93,7 +93,7 @@
                             $ritmoChips[$ritmoKey] = [
                                 'nome' => $ritmoNome,
                                 'count' => 0,
-                                'firstId' => 'ponto-' . (int) $ponto['id'],
+                                'firstId' => $ponto['id'],
                             ];
                         }
                         $ritmoChips[$ritmoKey]['count']++;
