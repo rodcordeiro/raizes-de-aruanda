@@ -11,20 +11,22 @@
 | Embed YT na carga | `iframe.yt-embed` em `index.php` |
 | Divisor pontos | `.ponto + .ponto { border-top }` |
 
-## Admin auth + CRUD Pontos (observado)
+## Admin auth + CRUD Pontos/Linhas/Ritmos + Auditoria (observado)
 
 | Padrão | Onde |
 | --- | --- |
-| Boot admin compartilhado | `admin/_bootstrap.php` → DB + session/RBAC/audit + admin_pontos |
+| Boot admin compartilhado | `admin/_bootstrap.php` → DB + session/RBAC/audit + admin_pontos/linhas/ritmos/audit |
 | Shell UI | `admin/_shell.php` + `admin/styles.css` (`main` → `mobile` → admin) |
 | Auth `tb_user` + `password_verify` | `controllers/session.controller.php` |
 | RBAC em sessão pós-login | `hasPermission` / `requirePermission` / `canReadCatalog` |
-| Listagem / form / delete | `admin/pontos/` — CSRF POST field `csrf` (aceita `csrf_token`); delete = GET confirm + POST; CTAs gated por perm |
+| Listagem / form / delete | `admin/pontos|linhas|ritmos/` — CSRF POST field `csrf` (aceita `csrf_token`); delete = GET confirm + POST; CTAs gated por perm |
 | CRUD PDO `tb_pontos` | `controllers/admin_pontos.controller.php` (não altera `Pontos::filter`) |
+| CRUD PDO `tb_linhas` / `tb_ritmos` | `admin_linhas` / `admin_ritmos` — delete recusa se `tb_pontos` ainda referencia a linha/ritmo |
+| Auditoria read-only | `admin/auditoria/` + `admin_audit_list` — exige `audit:read`; sem mutação |
 | Audit login best-effort | `writeAuditLogin` (`login_success` \| `login_failure`) |
 | Audit mutação same-tx (strict) | `writeAuditMutation` — falha → rollback + `audit_write_failed` |
 | Actor de audit | Só de `$_SESSION` via `admin_actor()` |
-| Redirects relativos ao host | `/admin/login/`, `/admin/`, `/admin/pontos/` |
+| Redirects relativos ao host | `/admin/login/`, `/admin/`, `/admin/pontos|linhas|ritmos|auditoria/` |
 
 ## Anti-padrões locais (evitar)
 

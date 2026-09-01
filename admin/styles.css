@@ -39,6 +39,7 @@
 .admin-nav {
   display: flex;
   flex: 1 1 auto;
+  flex-wrap: wrap;
   gap: 0.5rem;
   align-items: center;
 }
@@ -262,6 +263,11 @@
 
 .admin-table__actions {
   white-space: nowrap;
+}
+
+.admin-table__when {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
 }
 
 .admin-empty {

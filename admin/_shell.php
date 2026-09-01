@@ -126,7 +126,11 @@ function admin_render_header(string $title, string $activeNav = 'pontos'): void
     $pageTitle = admin_h($title) . ' — Raízes de Aruanda';
     $username = admin_h((string) ($_SESSION['username'] ?? ''));
     $showCatalogNav = function_exists('canReadCatalog') && canReadCatalog();
+    $showAuditNav = function_exists('hasPermission') && hasPermission('audit:read');
     $pontosActive = $activeNav === 'pontos' ? ' aria-current="page"' : '';
+    $linhasActive = $activeNav === 'linhas' ? ' aria-current="page"' : '';
+    $ritmosActive = $activeNav === 'ritmos' ? ' aria-current="page"' : '';
+    $auditoriaActive = $activeNav === 'auditoria' ? ' aria-current="page"' : '';
     ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -145,9 +149,16 @@ function admin_render_header(string $title, string $activeNav = 'pontos'): void
     <header class="admin-header">
         <div class="admin-header__inner">
             <a class="admin-brand" href="/admin/">Raízes de Aruanda</a>
-            <?php if ($showCatalogNav): ?>
-                <nav class="admin-nav" aria-label="Catálogo">
-                    <a class="admin-nav__link" href="/admin/pontos/"<?php echo $pontosActive; ?>>Pontos</a>
+            <?php if ($showCatalogNav || $showAuditNav): ?>
+                <nav class="admin-nav" aria-label="Administração">
+                    <?php if ($showCatalogNav): ?>
+                        <a class="admin-nav__link" href="/admin/pontos/"<?php echo $pontosActive; ?>>Pontos</a>
+                        <a class="admin-nav__link" href="/admin/linhas/"<?php echo $linhasActive; ?>>Linhas</a>
+                        <a class="admin-nav__link" href="/admin/ritmos/"<?php echo $ritmosActive; ?>>Ritmos</a>
+                    <?php endif; ?>
+                    <?php if ($showAuditNav): ?>
+                        <a class="admin-nav__link" href="/admin/auditoria/"<?php echo $auditoriaActive; ?>>Auditoria</a>
+                    <?php endif; ?>
                 </nav>
             <?php endif; ?>
             <div class="admin-header__user">

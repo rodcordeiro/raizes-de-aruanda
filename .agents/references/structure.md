@@ -20,27 +20,32 @@
 | `compose.yml` / `Dockerfile` | PHP 8.2 Apache + `pdo_mysql` |
 | `.env.example` | Nomes de variáveis (sem segredos) |
 
-## Ativo — admin (auth + CRUD Pontos)
+## Ativo — admin (auth + CRUD Pontos/Linhas/Ritmos + Auditoria)
 
 | Path | Nota |
 | --- | --- |
 | `admin/login/` | Login UI (`tb_user` + sessão PHP) |
 | `admin/logout.php` | Logout |
-| `admin/_bootstrap.php` | Boot PDO + sessão/RBAC/audit + admin_pontos |
+| `admin/_bootstrap.php` | Boot PDO + sessão/RBAC/audit + admin_pontos/linhas/ritmos/audit |
 | `admin/_shell.php` | Chrome admin (header/nav/flash) |
-| `admin/index.php` | Redirect para `/admin/pontos/` se `canReadCatalog` |
+| `admin/index.php` | Redirect `/admin/pontos/` se `canReadCatalog`; senão `/admin/auditoria/` se `audit:read` |
 | `admin/pontos/` | `index.php` list; `form.php` create/edit; `delete.php` GET confirm + POST |
+| `admin/linhas/` | `index.php` list; `form.php` create/edit; `delete.php` GET confirm + POST |
+| `admin/ritmos/` | `index.php` list; `form.php` create/edit; `delete.php` GET confirm + POST |
+| `admin/auditoria/` | `index.php` list read-only (`audit:read`) |
 | `admin/styles.css` | Shell admin (tokens via CSS vars) |
 | `controllers/session.controller.php` | Sessão, CSRF, `attemptLogin` |
 | `controllers/rbac.controller.php` | Roles/perms na sessão |
 | `controllers/audit.controller.php` | Login best-effort + `writeAuditMutation` (strict) |
 | `controllers/admin_pontos.controller.php` | CRUD PDO `tb_pontos` + selects linha/ritmo |
+| `controllers/admin_linhas.controller.php` | CRUD PDO `tb_linhas` |
+| `controllers/admin_ritmos.controller.php` | CRUD PDO `tb_ritmos` |
+| `controllers/admin_audit.controller.php` | Listagem read-only `tb_audit_logs` |
 
 ## Presente — fora do foco atual
 
 | Path | Nota |
 | --- | --- |
-| `admin/ritmos/` | Legado/placeholder — CRUD ritmo **não** neste lote |
 | `dash/` | Dashboard; adiado |
 | `bot.php` | Anúncio Discord + saudação; fora do foco home |
 | `config/bootstrap.php` | Loader `.env` (home atual não inclui explicitamente) |

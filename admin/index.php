@@ -9,6 +9,10 @@ if (canReadCatalog()) {
     redirect('/admin/pontos/');
 }
 
+if (hasPermission('audit:read')) {
+    redirect('/admin/auditoria/');
+}
+
 http_response_code(403);
 admin_render_header('Acesso negado', '');
 ?>

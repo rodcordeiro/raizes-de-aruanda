@@ -1,6 +1,6 @@
 # Raízes de Aruanda — AGENTS
 
-PHP procedural + MySQL (PDO). Home pública: `index.php`. Foco atual: catálogo público de Pontos; **admin** em `admin/` — auth/sessão/RBAC + **CRUD de Pontos**; CRUD linha/ritmo, dashboard e demais adiados.
+PHP procedural + MySQL (PDO). Home pública: `index.php`. Foco atual: catálogo público de Pontos; **admin** em `admin/` — auth/sessão/RBAC + **CRUD Pontos/Linhas/Ritmos** (+ **Auditoria** se `audit:read`); dashboard/giras/users e demais adiados.
 
 ## Como usar este contexto
 
@@ -21,9 +21,9 @@ PHP procedural + MySQL (PDO). Home pública: `index.php`. Foco atual: catálogo 
 
 ## Regras rápidas
 
-1. Mudanças na home: preferir `index.php`, `assets/css/*`, `assets/js/main.js`, controllers de leitura — **não** expandir admin (linha/ritmo/dash) sem pedido.
+1. Mudanças na home: preferir `index.php`, `assets/css/*`, `assets/js/main.js`, controllers de leitura — **não** expandir dashboard/giras/users sem pedido.
 2. CSS: carregar `main.css` **antes** de `mobile.css`; tokens em `:root` / `docs/DESIGN.md` — sem hex solto de brand.
-3. Validar: `docker compose up --build` → `http://localhost:${APP_PORT:-8080}`; smoke mobile ~370px (sheet, chips sticky, embed YT; admin pontos ~370px). Sem suite de testes automatizados no checkout.
+3. Validar: `docker compose up --build` → `http://localhost:${APP_PORT:-8080}`; smoke mobile ~370px (sheet, chips sticky, embed YT; admin pontos/linhas/ritmos ~370px). Sem suite de testes automatizados no checkout.
 
 ## Skills condicionais
 
