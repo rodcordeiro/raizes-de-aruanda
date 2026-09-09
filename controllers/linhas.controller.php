@@ -56,6 +56,11 @@ class Linhas{
     }
 
     public function findByName($linha){
+        $linha = trim((string) $linha);
+        if ($linha === '') {
+            return null;
+        }
+
         $query = "SELECT
                 IL.id,
                 IL.nome as linha,
@@ -67,12 +72,12 @@ class Linhas{
             JOIN `tb_categorias` CL ON
                 CL.id = IL.categoria
             WHERE
-                IL.linha LIKE :linha
-            LIMIT 1;";
+                IL.nome = :linha
+            LIMIT 1";
         $stmt = $this->connection->prepare($query);
 
         try{
-            $stmt->bindParam(':linha', $linha);
+            $stmt->bindValue(':linha', $linha, PDO::PARAM_STR);
             $stmt->execute();
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
             if(!$row){

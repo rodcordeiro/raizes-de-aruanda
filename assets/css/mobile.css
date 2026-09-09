@@ -158,9 +158,15 @@
   }
 
   /* Nome da linha: hero abaixo do header; rola embora (não sticky) */
+  .linha-hero {
+    padding: 20px 16px 12px;
+    gap: 0.5rem 0.75rem;
+    align-items: center;
+  }
+
   .linha-nome {
     max-width: none;
-    padding: 20px 16px 12px;
+    padding: 0;
     font-size: 2.25rem; /* 36px */
     font-weight: 700;
     line-height: 1.15;
@@ -168,6 +174,10 @@
     white-space: normal;
     overflow: visible;
     text-overflow: unset;
+  }
+
+  .linha-playlist {
+    min-height: 44px;
   }
 
   /*

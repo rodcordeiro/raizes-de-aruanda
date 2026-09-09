@@ -16,14 +16,18 @@
 
 ## Env (nomes apenas)
 
+`db/db.class.php` lê `CONN_URI`, `ICNT_MYSQL_USER`, `ICNT_MYSQL_PASSWORD`, `ICNT_MYSQL_DATABASE` via `getenv` (após `config/bootstrap.php`).
+
 | Variável | Uso |
 | --- | --- |
 | `APP_PORT` | Porta host Compose (default 8080) |
 | `CONN_URI` | Host MySQL |
-| `ICNT_MYSQL_USER` | Usuário |
+| `ICNT_MYSQL_USER` | Usuário MySQL |
 | `ICNT_MYSQL_PASSWORD` | Senha |
 | `ICNT_MYSQL_DATABASE` | Database |
 | `DISCORD_WEBHOOK` | Só `bot.php` |
+
+**Privilégios:** a home pública pode operar com conta só de leitura; o **admin** (CRUD pontos/linhas/ritmos + auditoria/users conforme permissões) precisa de usuário com **WRITE** nas `tb_*` usadas. Schema de colunas/tipos ≠ privileges — ver skill `db-schema` / `tables.md`.
 
 Nunca documentar valores reais. Fonte de nomes: `.env.example` + código.
 
