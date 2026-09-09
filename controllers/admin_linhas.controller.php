@@ -50,7 +50,7 @@ function admin_linhas_list(PDO $connection, int $page = 1, int $perPage = ADMIN_
                 l.`saudacao`
             FROM `tb_linhas` l
             INNER JOIN `tb_categorias` c ON c.`id` = l.`categoria`
-            ORDER BY l.`nome` ASC, l.`id` ASC
+            ORDER BY l.`categoria` ASC,l.`nome` ASC
             LIMIT :limit OFFSET :offset';
 
     $stmt = $connection->prepare($sql);

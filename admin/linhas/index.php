@@ -68,6 +68,7 @@ admin_render_header('Linhas', 'linhas');
             <table class="admin-table">
                 <thead>
                     <tr>
+                        <th scope="col">Id</th>
                         <th scope="col">Nome</th>
                         <th scope="col">Categoria</th>
                         <th scope="col">Saudação</th>
@@ -81,6 +82,7 @@ admin_render_header('Linhas', 'linhas');
                     <?php foreach ($rows as $row): ?>
                         <?php $id = (int) $row['id']; ?>
                         <tr>
+                            <td><?php echo admin_h((string) $row['id']); ?></td>
                             <td><?php echo admin_h((string) $row['nome']); ?></td>
                             <td><?php echo admin_h((string) ($row['categoria_nome'] ?? '')); ?></td>
                             <td><?php
