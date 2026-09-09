@@ -780,13 +780,14 @@
               "id": "J0cow",
               "name": "linha_hero",
               "width": "fill_container",
-              "layout": "vertical",
+              "gap": 12,
               "padding": [
                 20,
                 16,
                 12,
                 16
               ],
+              "alignItems": "center",
               "children": [
                 {
                   "type": "text",
@@ -800,6 +801,42 @@
                   "fontFamily": "Source Sans 3",
                   "fontSize": 36,
                   "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "M1PjQN",
+                  "name": "playlist_link",
+                  "height": 44,
+                  "gap": 8,
+                  "padding": [
+                    4,
+                    0,
+                    0,
+                    0
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "ua7h0",
+                      "name": "playlist_ext_icon",
+                      "width": 16,
+                      "height": 16,
+                      "icon": "external-link",
+                      "library": "lucide",
+                      "fill": "$color.brand"
+                    },
+                    {
+                      "type": "text",
+                      "id": "nk0dR",
+                      "name": "playlist_link_lbl",
+                      "fill": "$color.brand",
+                      "content": "Abrir playlist no YouTube",
+                      "fontFamily": "$font.family",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
                 }
               ]
             },
@@ -1028,7 +1065,7 @@
       "name": "linha_web_v2",
       "clip": true,
       "width": 1280,
-      "height": 800,
+      "height": 920,
       "fill": "$color.bg",
       "layout": "vertical",
       "children": [
@@ -1416,13 +1453,53 @@
               ],
               "children": [
                 {
-                  "type": "text",
-                  "id": "lw-page-title",
-                  "fill": "$color.text",
-                  "content": "Iansã",
-                  "fontFamily": "Source Sans 3",
-                  "fontSize": 32,
-                  "fontWeight": "700"
+                  "type": "frame",
+                  "id": "j20cEF",
+                  "name": "page_title_block",
+                  "width": "fill_container",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "lw-page-title",
+                      "fill": "$color.text",
+                      "content": "Iansã",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 32,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "efBWD",
+                      "name": "playlist_link",
+                      "height": 44,
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "N6sKF1",
+                          "name": "playlist_ext_icon",
+                          "width": 16,
+                          "height": 16,
+                          "icon": "external-link",
+                          "library": "lucide",
+                          "fill": "$color.brand"
+                        },
+                        {
+                          "type": "text",
+                          "id": "S6lwd",
+                          "name": "playlist_link_lbl",
+                          "fill": "$color.brand",
+                          "content": "Abrir playlist no YouTube",
+                          "fontFamily": "$font.family",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "frame",
@@ -1591,18 +1668,18 @@
     {
       "type": "note",
       "id": "v8Sii",
-      "x": 3350,
-      "y": -1649,
+      "x": 3341,
+      "y": -1089,
       "name": "sticky_behavior_note",
       "width": 320,
-      "height": 280,
-      "content": "STICKY (linha mobile v2)\n\nHeader brand: 60px (fix)\nChips sticky top: 60px (sob o header)\nTitulo da linha: NAO sticky — rola embora\n\nHero (titulo): pad 20/16/12/16; nome 36/700 lh 1.15\nChips bar: 69px (12+44+12+1)\nChip: h 44, pad-x 16, gap 10\nActive $color.brand / $color.brandContrast\nInactive $color.chipInactive / $color.chipLabel\n\nAlternativa sticky titulo+chips (~142px) — rejeitada: comprime viewport; titulo hero deve respirar."
+      "height": 628,
+      "content": "STICKY (linha mobile v2)\n\nHeader brand: 60px (fix)\nChips sticky top: 60px (sob o header)\nTitulo da linha: NAO sticky — rola embora\n\nHero (titulo): pad 20/16/12/16; nome 36/700 lh 1.15\nSe canal_youtube: link secundário sob o nome — “Abrir playlist no YouTube” + ícone external-link (brand, underline); stacked, touch ≥44; não compete com chips sticky. Sem playlist: só o nome.\nChips bar: 69px (12+44+12+1)\nChip: h 44, pad-x 16, gap 10\nActive $color.brand / $color.brandContrast\nInactive $color.chipInactive / $color.chipLabel\n\nAlternativa sticky titulo+chips (~142px) — rejeitada: comprime viewport; titulo hero deve respirar."
     },
     {
       "type": "group",
       "id": "LABKm",
-      "x": -2184,
-      "y": -2085,
+      "x": -3381,
+      "y": -2531,
       "name": "v1",
       "children": [
         {
@@ -1726,8 +1803,8 @@
     {
       "type": "rectangle",
       "id": "KyKCx",
-      "x": 204,
-      "y": -2085,
+      "x": -844,
+      "y": -2511,
       "name": "logo-raizes",
       "fill": {
         "type": "image",
@@ -1775,18 +1852,23 @@
           "stroke": "$color.border",
           "strokeWidth": 1,
           "layout": "vertical",
-          "gap": 24,
+          "gap": 20,
           "padding": 40,
+          "alignItems": "center",
           "children": [
             {
-              "type": "text",
-              "id": "mF9OZ",
-              "name": "brand",
-              "fill": "$color.brand",
-              "content": "Raízes de Aruanda",
-              "fontFamily": "$font.family",
-              "fontSize": 14,
-              "fontWeight": "600"
+              "type": "rectangle",
+              "cornerRadius": 8,
+              "id": "j8ARRx",
+              "name": "brandLogo",
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "logo-raizes.png",
+                "mode": "fit"
+              },
+              "width": 96,
+              "height": 96
             },
             {
               "type": "text",
@@ -1794,6 +1876,7 @@
               "name": "title",
               "fill": "$color.text",
               "content": "Entrar no admin",
+              "textAlign": "center",
               "fontFamily": "$font.family",
               "fontSize": 28,
               "fontWeight": "700"
@@ -2165,76 +2248,163 @@
                   "id": "tKnhl",
                   "name": "toolbar",
                   "width": "fill_container",
-                  "justifyContent": "space_between",
-                  "alignItems": "center",
+                  "layout": "vertical",
+                  "gap": 16,
                   "children": [
                     {
-                      "type": "text",
-                      "id": "Puc4S",
-                      "name": "h1",
-                      "fill": "$color.text",
-                      "content": "Pontos",
-                      "fontFamily": "$font.family",
-                      "fontSize": 28,
-                      "fontWeight": "700"
+                      "type": "frame",
+                      "id": "w4tt8",
+                      "name": "titleRow",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Puc4S",
+                          "name": "h1",
+                          "fill": "$color.text",
+                          "content": "Pontos",
+                          "fontFamily": "$font.family",
+                          "fontSize": 28,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "k8d86",
+                          "name": "tools",
+                          "gap": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "d1jiR9",
+                              "name": "search",
+                              "width": 240,
+                              "height": 40,
+                              "cornerRadius": 8,
+                              "stroke": "$color.border",
+                              "strokeWidth": 1,
+                              "padding": [
+                                0,
+                                12
+                              ],
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "tMV5S",
+                                  "name": "searchPh",
+                                  "fill": "$color.muted",
+                                  "content": "Buscar ponto…",
+                                  "fontFamily": "$font.family",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "PJ1sS",
+                              "name": "btnNovo",
+                              "height": 40,
+                              "fill": "$color.brand",
+                              "cornerRadius": 8,
+                              "padding": [
+                                0,
+                                16
+                              ],
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "P2Dk0X",
+                                  "name": "btnNovoLbl",
+                                  "fill": "$color.brandContrast",
+                                  "content": "Novo ponto",
+                                  "fontFamily": "$font.family",
+                                  "fontSize": 14,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
                     },
                     {
                       "type": "frame",
-                      "id": "k8d86",
-                      "name": "tools",
-                      "gap": 12,
+                      "id": "W8dNW",
+                      "name": "filtersRow",
+                      "width": "fill_container",
+                      "gap": 16,
+                      "justifyContent": "space_between",
                       "alignItems": "center",
                       "children": [
                         {
                           "type": "frame",
-                          "id": "d1jiR9",
-                          "name": "search",
-                          "width": 240,
-                          "height": 40,
-                          "cornerRadius": 8,
-                          "stroke": "$color.border",
-                          "strokeWidth": 1,
-                          "padding": [
-                            0,
-                            12
-                          ],
+                          "id": "L5DZe",
+                          "name": "metaAndFilter",
+                          "gap": 16,
                           "alignItems": "center",
                           "children": [
                             {
                               "type": "text",
-                              "id": "tMV5S",
-                              "name": "searchPh",
+                              "id": "mqpXV",
+                              "name": "metaCount",
                               "fill": "$color.muted",
-                              "content": "Buscar ponto…",
+                              "content": "42 pontos · exibindo 1–20 · 20 itens",
                               "fontFamily": "$font.family",
                               "fontSize": 14,
                               "fontWeight": "normal"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "frame",
-                          "id": "PJ1sS",
-                          "name": "btnNovo",
-                          "height": 40,
-                          "fill": "$color.brand",
-                          "cornerRadius": 8,
-                          "padding": [
-                            0,
-                            16
-                          ],
-                          "justifyContent": "center",
-                          "alignItems": "center",
-                          "children": [
+                            },
                             {
-                              "type": "text",
-                              "id": "P2Dk0X",
-                              "name": "btnNovoLbl",
-                              "fill": "$color.brandContrast",
-                              "content": "Novo ponto",
-                              "fontFamily": "$font.family",
-                              "fontSize": 14,
-                              "fontWeight": "600"
+                              "type": "frame",
+                              "id": "nIMNa",
+                              "name": "filterLinha",
+                              "height": 40,
+                              "cornerRadius": 8,
+                              "stroke": "$color.border",
+                              "strokeWidth": 1,
+                              "gap": 8,
+                              "padding": [
+                                0,
+                                12
+                              ],
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "D9zU2l",
+                                  "name": "filterLbl",
+                                  "fill": "$color.muted",
+                                  "content": "Linha",
+                                  "fontFamily": "$font.family",
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "sqTa7",
+                                  "name": "filterValue",
+                                  "fill": "$color.text",
+                                  "content": "Todas",
+                                  "fontFamily": "$font.family",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "S2P0LA",
+                                  "name": "filterChevron",
+                                  "width": 16,
+                                  "height": 16,
+                                  "icon": "chevron-down",
+                                  "library": "lucide",
+                                  "fill": "$color.muted"
+                                }
+                              ]
                             }
                           ]
                         }
@@ -3139,6 +3309,108 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "frame",
+                  "id": "G9r6zM",
+                  "name": "pagination",
+                  "width": "fill_container",
+                  "padding": [
+                    4,
+                    0,
+                    0,
+                    0
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ahQTn",
+                      "name": "btnAnterior",
+                      "height": 40,
+                      "cornerRadius": 8,
+                      "stroke": "$color.border",
+                      "strokeWidth": 1,
+                      "gap": 6,
+                      "padding": [
+                        0,
+                        14
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "ufwl6",
+                          "name": "prevIcon",
+                          "width": 16,
+                          "height": 16,
+                          "icon": "chevron-left",
+                          "library": "lucide",
+                          "fill": "$color.text"
+                        },
+                        {
+                          "type": "text",
+                          "id": "pPtQj",
+                          "name": "prevLbl",
+                          "fill": "$color.text",
+                          "content": "Anterior",
+                          "fontFamily": "$font.family",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "Cogf7",
+                      "name": "pageMeta",
+                      "fill": "$color.muted",
+                      "content": "Página 1 de 9 · 20 itens",
+                      "fontFamily": "$font.family",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "sL4BI",
+                      "name": "btnProxima",
+                      "height": 40,
+                      "cornerRadius": 8,
+                      "stroke": "$color.border",
+                      "strokeWidth": 1,
+                      "gap": 6,
+                      "padding": [
+                        0,
+                        14
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "RhLmr",
+                          "name": "nextLbl",
+                          "fill": "$color.text",
+                          "content": "Próxima",
+                          "fontFamily": "$font.family",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "icon",
+                          "id": "YkBYb",
+                          "name": "nextIcon",
+                          "width": 16,
+                          "height": 16,
+                          "icon": "chevron-right",
+                          "library": "lucide",
+                          "fill": "$color.text"
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             }
@@ -3154,7 +3426,7 @@
       "name": "Admin / Ponto — Form",
       "clip": true,
       "width": 1440,
-      "height": 900,
+      "height": 1100,
       "fill": "$color.bg",
       "layout": "vertical",
       "children": [
@@ -3404,6 +3676,195 @@
                   "children": [
                     {
                       "type": "frame",
+                      "id": "OTu11",
+                      "name": "helpTrigger",
+                      "height": 44,
+                      "gap": 8,
+                      "padding": [
+                        0,
+                        0,
+                        4,
+                        0
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "J4xzKQ",
+                          "name": "helpChevron",
+                          "width": 16,
+                          "height": 16,
+                          "icon": "chevron-down",
+                          "library": "lucide",
+                          "fill": "$color.brand"
+                        },
+                        {
+                          "type": "text",
+                          "id": "QAnpF",
+                          "name": "helpTriggerLbl",
+                          "fill": "$color.brand",
+                          "content": "Como preencher letra e áudio?",
+                          "fontFamily": "$font.family",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "pZ5wA",
+                      "name": "helpPanel",
+                      "width": "fill_container",
+                      "fill": "$color.surfaceMuted",
+                      "cornerRadius": 8,
+                      "stroke": "$color.border",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 14,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Q3iU6",
+                          "name": "helpTitle",
+                          "fill": "$color.text",
+                          "content": "Letra e áudio do Ponto",
+                          "fontFamily": "$font.family",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "pzl7P",
+                          "name": "helpBullet",
+                          "width": "fill_container",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "j8hEW",
+                              "name": "bulletMark",
+                              "fill": "$color.muted",
+                              "content": "•",
+                              "fontFamily": "$font.family",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "IuGZ4",
+                              "name": "bulletText",
+                              "fill": "$color.muted",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Áudio: prefira URL do YouTube (youtu.be ou watch). Marque Gravar áudio quando precisamos gravar.",
+                              "lineHeight": 1.4,
+                              "fontFamily": "$font.family",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "xtPcc",
+                          "name": "helpBullet",
+                          "width": "fill_container",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "D8rdW",
+                              "name": "bulletMark",
+                              "fill": "$color.muted",
+                              "content": "•",
+                              "fontFamily": "$font.family",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "GwttF",
+                              "name": "bulletText",
+                              "fill": "$color.muted",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Áudio: prefira URL do YouTube (youtu.be ou watch). O site embeda o vídeo na home — a Curimba vê se o áudio está disponível.",
+                              "lineHeight": 1.4,
+                              "fontFamily": "$font.family",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ln7jK",
+                          "name": "helpBullet",
+                          "width": "fill_container",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "C9Gmn",
+                              "name": "bulletMark",
+                              "fill": "$color.muted",
+                              "content": "•",
+                              "fontFamily": "$font.family",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "rtsSY",
+                              "name": "bulletText",
+                              "fill": "$color.muted",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Playlist da Linha (canal_youtube) é aparte: use o campo da Linha para a playlist da falange, não o áudio do Ponto.",
+                              "lineHeight": 1.4,
+                              "fontFamily": "$font.family",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "jbSr7",
+                          "name": "helpBullet",
+                          "width": "fill_container",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "BpuXZ",
+                              "name": "bulletMark",
+                              "fill": "$color.muted",
+                              "content": "•",
+                              "fontFamily": "$font.family",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "xMaUJ",
+                              "name": "bulletText",
+                              "fill": "$color.muted",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Uploads ou MP3 ficam fora deste fluxo (MVP).",
+                              "lineHeight": 1.4,
+                              "fontFamily": "$font.family",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
                       "id": "SLCU7",
                       "name": "field_Letra",
                       "width": "fill_container",
@@ -3634,6 +4095,81 @@
                               "fontWeight": "normal"
                             }
                           ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "b2LW5C",
+                      "name": "field_Gravar áudio",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "H2CUck",
+                          "name": "lbl",
+                          "fill": "$color.muted",
+                          "content": "Gravar áudio",
+                          "fontFamily": "$font.family",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "A0m6Hh",
+                          "name": "switchRow",
+                          "width": "fill_container",
+                          "gap": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "depmA",
+                              "name": "switchTrack",
+                              "width": 44,
+                              "height": 24,
+                              "fill": "$color.brand",
+                              "cornerRadius": 12,
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "ellipse",
+                                  "id": "RPPx4",
+                                  "x": 22,
+                                  "y": 2,
+                                  "name": "switchThumb",
+                                  "fill": "$color.bg",
+                                  "width": 20,
+                                  "height": 20
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "qTaLi",
+                              "name": "switchLbl",
+                              "fill": "$color.text",
+                              "content": "Precisamos gravar o áudio deste ponto",
+                              "fontFamily": "$font.family",
+                              "fontSize": 15,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "pNtGo",
+                          "name": "hint",
+                          "fill": "$color.muted",
+                          "textGrowth": "fixed-width",
+                          "width": 560,
+                          "content": "Marque quando não há referência no YouTube, a casa canta diferente ou o ponto é autoral.",
+                          "lineHeight": 1.35,
+                          "fontFamily": "$font.family",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
                         }
                       ]
                     },
@@ -6008,7 +6544,7 @@
       "type": "frame",
       "id": "KyIm7",
       "x": 2000,
-      "y": 3960,
+      "y": 4098,
       "name": "Admin / Auditoria",
       "clip": true,
       "width": 1440,
@@ -7119,7 +7655,7 @@
       "type": "frame",
       "id": "iJAat",
       "x": 3520,
-      "y": 3960,
+      "y": 4098,
       "name": "Admin / Overlay — Confirmar exclusão",
       "clip": true,
       "width": 1440,
@@ -8457,7 +8993,7 @@
       "type": "frame",
       "id": "G7XX4",
       "x": 5040,
-      "y": 3960,
+      "y": 4098,
       "name": "Admin / Estado — Negado / Bloqueado / Vazio",
       "clip": true,
       "width": 1440,
@@ -8688,16 +9224,21 @@
         24
       ],
       "justifyContent": "center",
+      "alignItems": "center",
       "children": [
         {
-          "type": "text",
-          "id": "qmorK",
-          "name": "brand",
-          "fill": "$color.brand",
-          "content": "Raízes de Aruanda",
-          "fontFamily": "$font.family",
-          "fontSize": 13,
-          "fontWeight": "600"
+          "type": "rectangle",
+          "cornerRadius": 8,
+          "id": "hwHmG",
+          "name": "brandLogo",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "logo-raizes.png",
+            "mode": "fit"
+          },
+          "width": 96,
+          "height": 96
         },
         {
           "type": "text",
@@ -8705,6 +9246,7 @@
           "name": "title",
           "fill": "$color.text",
           "content": "Entrar no admin",
+          "textAlign": "center",
           "fontFamily": "$font.family",
           "fontSize": 26,
           "fontWeight": "700"
@@ -9008,41 +9550,129 @@
               "id": "cFi9y",
               "name": "toolbar",
               "width": "fill_container",
-              "justifyContent": "space_between",
-              "alignItems": "center",
+              "layout": "vertical",
+              "gap": 12,
               "children": [
                 {
-                  "type": "text",
-                  "id": "NcY4x",
-                  "name": "h1",
-                  "fill": "$color.text",
-                  "content": "Pontos",
-                  "fontFamily": "$font.family",
-                  "fontSize": 24,
-                  "fontWeight": "700"
-                },
-                {
                   "type": "frame",
-                  "id": "ppqp8",
-                  "name": "btn",
-                  "height": 40,
-                  "fill": "$color.brand",
-                  "cornerRadius": 8,
-                  "padding": [
-                    0,
-                    12
-                  ],
+                  "id": "btr0Z",
+                  "name": "titleRow",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
                   "alignItems": "center",
                   "children": [
                     {
                       "type": "text",
-                      "id": "GsxX1",
-                      "name": "bl",
-                      "fill": "$color.brandContrast",
-                      "content": "Novo",
+                      "id": "NcY4x",
+                      "name": "h1",
+                      "fill": "$color.text",
+                      "content": "Pontos",
                       "fontFamily": "$font.family",
-                      "fontSize": 14,
-                      "fontWeight": "600"
+                      "fontSize": 24,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ppqp8",
+                      "name": "btn",
+                      "height": 40,
+                      "fill": "$color.brand",
+                      "cornerRadius": 8,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "GsxX1",
+                          "name": "bl",
+                          "fill": "$color.brandContrast",
+                          "content": "Novo",
+                          "fontFamily": "$font.family",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "qTPIW",
+                  "name": "filtersRow",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "VI6aD",
+                      "name": "metaCount",
+                      "fill": "$color.muted",
+                      "content": "42 pontos · exibindo 1–20 · 20 itens",
+                      "fontFamily": "$font.family",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "YZ6g6",
+                      "name": "filterLinha",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": "$color.border",
+                      "strokeWidth": 1,
+                      "gap": 8,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "D9Eff",
+                          "name": "filterLeft",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "lw0hM",
+                              "name": "filterLbl",
+                              "fill": "$color.muted",
+                              "content": "Linha",
+                              "fontFamily": "$font.family",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "uaqaF",
+                              "name": "filterValue",
+                              "fill": "$color.text",
+                              "content": "Todas",
+                              "fontFamily": "$font.family",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "icon",
+                          "id": "AhJfx",
+                          "name": "filterChevron",
+                          "width": 18,
+                          "height": 18,
+                          "icon": "chevron-down",
+                          "library": "lucide",
+                          "fill": "$color.muted"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -9351,6 +9981,114 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "frame",
+              "id": "f5TdE",
+              "name": "pagination",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "padding": [
+                8,
+                0,
+                0,
+                0
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "dK4k9",
+                  "name": "pageMeta",
+                  "fill": "$color.muted",
+                  "content": "Página 1 de 9 · 20 itens",
+                  "fontFamily": "$font.family",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "K1E7xD",
+                  "name": "pageBtns",
+                  "width": "fill_container",
+                  "gap": 8,
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "iI9mz",
+                      "name": "btnAnterior",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": "$color.border",
+                      "strokeWidth": 1,
+                      "gap": 4,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "yT6QK",
+                          "name": "prevIcon",
+                          "width": 16,
+                          "height": 16,
+                          "icon": "chevron-left",
+                          "library": "lucide",
+                          "fill": "$color.text"
+                        },
+                        {
+                          "type": "text",
+                          "id": "rAXU9",
+                          "name": "prevLbl",
+                          "fill": "$color.text",
+                          "content": "Anterior",
+                          "fontFamily": "$font.family",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "IPwGA",
+                      "name": "btnProxima",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": "$color.border",
+                      "strokeWidth": 1,
+                      "gap": 4,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "fVfar",
+                          "name": "nextLbl",
+                          "fill": "$color.text",
+                          "content": "Próxima",
+                          "fontFamily": "$font.family",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "icon",
+                          "id": "GUyuN",
+                          "name": "nextIcon",
+                          "width": 16,
+                          "height": 16,
+                          "icon": "chevron-right",
+                          "library": "lucide",
+                          "fill": "$color.text"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -9364,7 +10102,17 @@
       "name": "admin_v1_note",
       "width": 360,
       "height": 420,
-      "content": "admin_v1 esboço (Iris + Nero grill)\n\nSpec: CRUD Pontos/Linhas/Ritmos\nRoles: editor (só Pontos) · admin (+Linhas/Ritmos/Auditoria)\nAuth: sessão PHP + tb_user\n\nTokens: $color.* + $color.danger (#B42318) só em Excluir/bloqueado\n\nNão desenhar: dashboard, users, giras, chips da home\n\nPróximo: implementar PHP PDO + migrations API"
+      "content": "admin_v1 esboço (Iris + Nero grill)\n\nSpec: CRUD Pontos/Linhas/Ritmos\nRoles: editor (só Pontos) · admin (+Linhas/Ritmos/Auditoria)\nAuth: sessão PHP + tb_user\n\nTokens: $color.* + $color.danger (#B42318) só em Excluir/bloqueado\n\nRodada design 2026-08-31:\n• Pontos: filtro por Linha + meta “N pontos” + paginação Anterior/Página N de M/Próxima (desktop + mobile)\n• Form ponto: ajuda disclosure “Como preencher letra e áudio?” (painel surfaceMuted, sem tooltip)\n• Login: marca hero = logo-raizes.png ~96×96 r8 (não texto)\n\nNão desenhar: dashboard, users, giras, chips da home\n\nPróximo: implementar PHP PDO + migrations API\n\nPaginação: status “Página N de M · X itens” (page size); meta “total · exibindo A–B · X itens”. Implementado PHP 2026-09-01."
+    },
+    {
+      "type": "note",
+      "id": "uuhHV",
+      "x": 3320,
+      "y": 0,
+      "name": "linha_playlist_note",
+      "width": 320,
+      "height": 180,
+      "content": "Home · Linha + playlist (v2)\n\nCom canal_youtube: link “Abrir playlist no YouTube” sob o título (mobile stacked; web sob lw-page-title). Abre em nova aba.\nSem playlist: só o nome da Linha.\nNão chamar Linha de playlist."
     }
   ],
   "variables": {
