@@ -128,7 +128,8 @@ admin_render_header($pageTitle, 'pontos');
                 <ul class="admin-help__list">
                     <li>
                         <strong>Letra:</strong> texto cantado, com quebras de linha.
-                        Sem markdown. Guia citado na letra não cria Linha.
+                        Guia citado na letra não cria Linha.
+                        Tradução (opcional): envolva em <code>&lt;i&gt;…&lt;/i&gt;</code> — só essas tags são renderizadas.
                     </li>
                     <li>
                         <strong>Áudio:</strong> prefira URL do YouTube (<code>youtu.be</code> ou <code>watch</code>).

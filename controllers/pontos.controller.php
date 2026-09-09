@@ -1,4 +1,19 @@
 <?php
+
+/**
+ * Escape letra for the public page; allow only &lt;i&gt;…&lt;/i&gt; for translations.
+ */
+function format_ponto_letra(string $letra): string
+{
+    $escaped = htmlspecialchars($letra, ENT_QUOTES, 'UTF-8');
+
+    return str_ireplace(
+        ['&lt;i&gt;', '&lt;/i&gt;'],
+        ['<i>', '</i>'],
+        $escaped
+    );
+}
+
 class Pontos{
     private $connection;
 

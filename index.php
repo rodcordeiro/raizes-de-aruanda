@@ -145,7 +145,7 @@
                                 <span> (Subida)</span>
                             <?php endif; ?>
                         </h2>
-                        <div class="ponto-letra"><?php echo htmlspecialchars($ponto['ponto'], ENT_QUOTES, 'UTF-8'); ?></div>
+                        <div class="ponto-letra"><?php echo format_ponto_letra((string) ($ponto['ponto'] ?? '')); ?></div>
                         <?php if ($videoId): ?>
                         <iframe
                             class="yt-embed"

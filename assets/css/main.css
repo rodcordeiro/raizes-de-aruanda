@@ -408,6 +408,10 @@ a:focus-visible {
   word-break: break-word;
 }
 
+.ponto-letra i {
+  font-style: italic;
+}
+
 .yt-placeholder {
   display: flex;
   flex-direction: column;
