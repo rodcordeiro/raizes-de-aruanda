@@ -4,15 +4,2786 @@
     "repoKey": "raizes-de-aruanda",
     "rootLabel": "raizes-de-aruanda"
   },
-  "builtAt": "2026-08-31T20:55:00.237Z",
-  "sourceFingerprint": "e3b0c44298fc1c14",
-  "extractorId": "typescript-ast",
+  "builtAt": "2026-09-11T18:27:52.113Z",
+  "sourceFingerprint": "a8c446a433c23596",
+  "extractorId": "php-ast",
   "extractorVersion": "0.1.0",
-  "nodes": [],
-  "edges": [],
+  "nodes": [
+    {
+      "id": "file:admin/auditoria/index.php#index.php",
+      "kind": "file",
+      "name": "index.php",
+      "location": {
+        "file": "admin/auditoria/index.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:admin/index.php#index.php",
+      "kind": "file",
+      "name": "index.php",
+      "location": {
+        "file": "admin/index.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:admin/linhas/delete.php#delete.php",
+      "kind": "file",
+      "name": "delete.php",
+      "location": {
+        "file": "admin/linhas/delete.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:admin/linhas/form.php#form.php",
+      "kind": "file",
+      "name": "form.php",
+      "location": {
+        "file": "admin/linhas/form.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:admin/linhas/index.php#index.php",
+      "kind": "file",
+      "name": "index.php",
+      "location": {
+        "file": "admin/linhas/index.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:admin/login/index.php#index.php",
+      "kind": "file",
+      "name": "index.php",
+      "location": {
+        "file": "admin/login/index.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:admin/logout.php#logout.php",
+      "kind": "file",
+      "name": "logout.php",
+      "location": {
+        "file": "admin/logout.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:admin/pontos/delete.php#delete.php",
+      "kind": "file",
+      "name": "delete.php",
+      "location": {
+        "file": "admin/pontos/delete.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:admin/pontos/form.php#form.php",
+      "kind": "file",
+      "name": "form.php",
+      "location": {
+        "file": "admin/pontos/form.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:admin/pontos/index.php#index.php",
+      "kind": "file",
+      "name": "index.php",
+      "location": {
+        "file": "admin/pontos/index.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:admin/ritmos/delete.php#delete.php",
+      "kind": "file",
+      "name": "delete.php",
+      "location": {
+        "file": "admin/ritmos/delete.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:admin/ritmos/form.php#form.php",
+      "kind": "file",
+      "name": "form.php",
+      "location": {
+        "file": "admin/ritmos/form.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:admin/ritmos/index.php#index.php",
+      "kind": "file",
+      "name": "index.php",
+      "location": {
+        "file": "admin/ritmos/index.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:admin/_bootstrap.php#_bootstrap.php",
+      "kind": "file",
+      "name": "_bootstrap.php",
+      "location": {
+        "file": "admin/_bootstrap.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:admin/_shell.php#_shell.php",
+      "kind": "file",
+      "name": "_shell.php",
+      "location": {
+        "file": "admin/_shell.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:admin/_shell.php#admin_actor",
+      "kind": "method",
+      "name": "admin_actor",
+      "location": {
+        "file": "admin/_shell.php",
+        "line": 10
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:admin/_shell.php#admin_require_catalog_read",
+      "kind": "method",
+      "name": "admin_require_catalog_read",
+      "location": {
+        "file": "admin/_shell.php",
+        "line": 21
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:admin/_shell.php#admin_h",
+      "kind": "method",
+      "name": "admin_h",
+      "location": {
+        "file": "admin/_shell.php",
+        "line": 33
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:admin/_shell.php#admin_flash_set",
+      "kind": "method",
+      "name": "admin_flash_set",
+      "location": {
+        "file": "admin/_shell.php",
+        "line": 41
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:admin/_shell.php#admin_flash_take",
+      "kind": "method",
+      "name": "admin_flash_take",
+      "location": {
+        "file": "admin/_shell.php",
+        "line": 52
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:admin/_shell.php#admin_is_audit_failure",
+      "kind": "method",
+      "name": "admin_is_audit_failure",
+      "location": {
+        "file": "admin/_shell.php",
+        "line": 70
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:admin/_shell.php#admin_list_window",
+      "kind": "method",
+      "name": "admin_list_window",
+      "location": {
+        "file": "admin/_shell.php",
+        "line": 83
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:admin/_shell.php#admin_format_list_meta",
+      "kind": "method",
+      "name": "admin_format_list_meta",
+      "location": {
+        "file": "admin/_shell.php",
+        "line": 119
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:admin/_shell.php#admin_format_pagination_status",
+      "kind": "method",
+      "name": "admin_format_pagination_status",
+      "location": {
+        "file": "admin/_shell.php",
+        "line": 144
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:admin/_shell.php#admin_truncate",
+      "kind": "method",
+      "name": "admin_truncate",
+      "location": {
+        "file": "admin/_shell.php",
+        "line": 159
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:admin/_shell.php#admin_ponto_funcao_label",
+      "kind": "method",
+      "name": "admin_ponto_funcao_label",
+      "location": {
+        "file": "admin/_shell.php",
+        "line": 183
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:admin/_shell.php#admin_render_header",
+      "kind": "method",
+      "name": "admin_render_header",
+      "location": {
+        "file": "admin/_shell.php",
+        "line": 203
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:admin/_shell.php#admin_render_footer",
+      "kind": "method",
+      "name": "admin_render_footer",
+      "location": {
+        "file": "admin/_shell.php",
+        "line": 255
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:bot.php#bot.php",
+      "kind": "file",
+      "name": "bot.php",
+      "location": {
+        "file": "bot.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:bot.php#json_out",
+      "kind": "method",
+      "name": "json_out",
+      "location": {
+        "file": "bot.php",
+        "line": 11
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:bot.php#saudacao_por_hora",
+      "kind": "method",
+      "name": "saudacao_por_hora",
+      "location": {
+        "file": "bot.php",
+        "line": 18
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:bot.php#ids_de_linha_da_query",
+      "kind": "method",
+      "name": "ids_de_linha_da_query",
+      "location": {
+        "file": "bot.php",
+        "line": 27
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:bot.php#buscar_ponto_aleatorio",
+      "kind": "method",
+      "name": "buscar_ponto_aleatorio",
+      "location": {
+        "file": "bot.php",
+        "line": 37
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:bot.php#anunciar_ponto",
+      "kind": "method",
+      "name": "anunciar_ponto",
+      "location": {
+        "file": "bot.php",
+        "line": 95
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:bot.php#bloco_letra",
+      "kind": "method",
+      "name": "bloco_letra",
+      "location": {
+        "file": "bot.php",
+        "line": 105
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:bot.php#montar_mensagem",
+      "kind": "method",
+      "name": "montar_mensagem",
+      "location": {
+        "file": "bot.php",
+        "line": 120
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:components/metadata/header.php#header.php",
+      "kind": "file",
+      "name": "header.php",
+      "location": {
+        "file": "components/metadata/header.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:config/bootstrap.php#bootstrap.php",
+      "kind": "file",
+      "name": "bootstrap.php",
+      "location": {
+        "file": "config/bootstrap.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:config/install.php#install.php",
+      "kind": "file",
+      "name": "install.php",
+      "location": {
+        "file": "config/install.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:controllers/admin_audit.controller.php#admin_audit.controller.php",
+      "kind": "file",
+      "name": "admin_audit.controller.php",
+      "location": {
+        "file": "controllers/admin_audit.controller.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_audit.controller.php#admin_audit_list",
+      "kind": "method",
+      "name": "admin_audit_list",
+      "location": {
+        "file": "controllers/admin_audit.controller.php",
+        "line": 30
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:controllers/admin_linhas.controller.php#admin_linhas.controller.php",
+      "kind": "file",
+      "name": "admin_linhas.controller.php",
+      "location": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_linhas.controller.php#admin_linhas_list",
+      "kind": "method",
+      "name": "admin_linhas_list",
+      "location": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 25
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_linhas.controller.php#admin_linhas_find",
+      "kind": "method",
+      "name": "admin_linhas_find",
+      "location": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 81
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_linhas.controller.php#admin_linhas_create",
+      "kind": "method",
+      "name": "admin_linhas_create",
+      "location": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 117
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_linhas.controller.php#admin_linhas_update",
+      "kind": "method",
+      "name": "admin_linhas_update",
+      "location": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 190
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_linhas.controller.php#admin_linhas_delete",
+      "kind": "method",
+      "name": "admin_linhas_delete",
+      "location": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 275
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_linhas.controller.php#admin_linhas_validate",
+      "kind": "method",
+      "name": "admin_linhas_validate",
+      "location": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 336
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_linhas.controller.php#admin_linhas_validate_with_fks",
+      "kind": "method",
+      "name": "admin_linhas_validate_with_fks",
+      "location": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 399
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_linhas.controller.php#admin_list_categorias_select",
+      "kind": "method",
+      "name": "admin_list_categorias_select",
+      "location": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 423
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_linhas.controller.php#admin_linhas_count_pontos",
+      "kind": "method",
+      "name": "admin_linhas_count_pontos",
+      "location": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 443
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_linhas.controller.php#admin_linhas_hydrate_row",
+      "kind": "method",
+      "name": "admin_linhas_hydrate_row",
+      "location": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 464
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_linhas.controller.php#admin_linhas_find_for_audit",
+      "kind": "method",
+      "name": "admin_linhas_find_for_audit",
+      "location": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 485
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_linhas.controller.php#admin_linhas_audit_snapshot",
+      "kind": "method",
+      "name": "admin_linhas_audit_snapshot",
+      "location": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 518
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_linhas.controller.php#admin_linhas_categoria_exists",
+      "kind": "method",
+      "name": "admin_linhas_categoria_exists",
+      "location": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 529
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_linhas.controller.php#admin_linhas_is_valid_url",
+      "kind": "method",
+      "name": "admin_linhas_is_valid_url",
+      "location": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 543
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:controllers/admin_pontos.controller.php#admin_pontos.controller.php",
+      "kind": "file",
+      "name": "admin_pontos.controller.php",
+      "location": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_pontos.controller.php#admin_pontos_normalize_tipo",
+      "kind": "method",
+      "name": "admin_pontos_normalize_tipo",
+      "location": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 22
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_pontos.controller.php#admin_pontos_allowed_tipos",
+      "kind": "method",
+      "name": "admin_pontos_allowed_tipos",
+      "location": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 42
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_pontos.controller.php#admin_pontos_list",
+      "kind": "method",
+      "name": "admin_pontos_list",
+      "location": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 65
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_pontos.controller.php#admin_pontos_find",
+      "kind": "method",
+      "name": "admin_pontos_find",
+      "location": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 144
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_pontos.controller.php#admin_pontos_create",
+      "kind": "method",
+      "name": "admin_pontos_create",
+      "location": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 184
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_pontos.controller.php#admin_pontos_update",
+      "kind": "method",
+      "name": "admin_pontos_update",
+      "location": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 257
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_pontos.controller.php#admin_pontos_delete",
+      "kind": "method",
+      "name": "admin_pontos_delete",
+      "location": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 344
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_pontos.controller.php#admin_pontos_validate",
+      "kind": "method",
+      "name": "admin_pontos_validate",
+      "location": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 396
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_pontos.controller.php#admin_pontos_validate_with_fks",
+      "kind": "method",
+      "name": "admin_pontos_validate_with_fks",
+      "location": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 457
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_pontos.controller.php#admin_list_linhas_select",
+      "kind": "method",
+      "name": "admin_list_linhas_select",
+      "location": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 484
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_pontos.controller.php#admin_list_ritmos_select",
+      "kind": "method",
+      "name": "admin_list_ritmos_select",
+      "location": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 504
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_pontos.controller.php#admin_pontos_hydrate_row",
+      "kind": "method",
+      "name": "admin_pontos_hydrate_row",
+      "location": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 528
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_pontos.controller.php#admin_pontos_find_for_audit",
+      "kind": "method",
+      "name": "admin_pontos_find_for_audit",
+      "location": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 552
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_pontos.controller.php#admin_pontos_audit_snapshot",
+      "kind": "method",
+      "name": "admin_pontos_audit_snapshot",
+      "location": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 587
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_pontos.controller.php#admin_pontos_parse_gravar_audio",
+      "kind": "method",
+      "name": "admin_pontos_parse_gravar_audio",
+      "location": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 603
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_pontos.controller.php#admin_pontos_fk_exists",
+      "kind": "method",
+      "name": "admin_pontos_fk_exists",
+      "location": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 612
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_pontos.controller.php#admin_pontos_is_valid_audio_url",
+      "kind": "method",
+      "name": "admin_pontos_is_valid_audio_url",
+      "location": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 626
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:controllers/admin_ritmos.controller.php#admin_ritmos.controller.php",
+      "kind": "file",
+      "name": "admin_ritmos.controller.php",
+      "location": {
+        "file": "controllers/admin_ritmos.controller.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_ritmos.controller.php#admin_ritmos_list",
+      "kind": "method",
+      "name": "admin_ritmos_list",
+      "location": {
+        "file": "controllers/admin_ritmos.controller.php",
+        "line": 22
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_ritmos.controller.php#admin_ritmos_find",
+      "kind": "method",
+      "name": "admin_ritmos_find",
+      "location": {
+        "file": "controllers/admin_ritmos.controller.php",
+        "line": 71
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_ritmos.controller.php#admin_ritmos_create",
+      "kind": "method",
+      "name": "admin_ritmos_create",
+      "location": {
+        "file": "controllers/admin_ritmos.controller.php",
+        "line": 103
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_ritmos.controller.php#admin_ritmos_update",
+      "kind": "method",
+      "name": "admin_ritmos_update",
+      "location": {
+        "file": "controllers/admin_ritmos.controller.php",
+        "line": 161
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_ritmos.controller.php#admin_ritmos_delete",
+      "kind": "method",
+      "name": "admin_ritmos_delete",
+      "location": {
+        "file": "controllers/admin_ritmos.controller.php",
+        "line": 229
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_ritmos.controller.php#admin_ritmos_validate",
+      "kind": "method",
+      "name": "admin_ritmos_validate",
+      "location": {
+        "file": "controllers/admin_ritmos.controller.php",
+        "line": 290
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_ritmos.controller.php#admin_ritmos_count_pontos",
+      "kind": "method",
+      "name": "admin_ritmos_count_pontos",
+      "location": {
+        "file": "controllers/admin_ritmos.controller.php",
+        "line": 316
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/admin_ritmos.controller.php#admin_ritmos_audit_snapshot",
+      "kind": "method",
+      "name": "admin_ritmos_audit_snapshot",
+      "location": {
+        "file": "controllers/admin_ritmos.controller.php",
+        "line": 334
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:controllers/audit.controller.php#audit.controller.php",
+      "kind": "file",
+      "name": "audit.controller.php",
+      "location": {
+        "file": "controllers/audit.controller.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/audit.controller.php#writeAuditMutation",
+      "kind": "method",
+      "name": "writeAuditMutation",
+      "location": {
+        "file": "controllers/audit.controller.php",
+        "line": 14
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/audit.controller.php#audit_encode_json_payload",
+      "kind": "method",
+      "name": "audit_encode_json_payload",
+      "location": {
+        "file": "controllers/audit.controller.php",
+        "line": 125
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/audit.controller.php#writeAuditLogin",
+      "kind": "method",
+      "name": "writeAuditLogin",
+      "location": {
+        "file": "controllers/audit.controller.php",
+        "line": 154
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/audit.controller.php#audit_request_path",
+      "kind": "method",
+      "name": "audit_request_path",
+      "location": {
+        "file": "controllers/audit.controller.php",
+        "line": 229
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/audit.controller.php#audit_client_ip",
+      "kind": "method",
+      "name": "audit_client_ip",
+      "location": {
+        "file": "controllers/audit.controller.php",
+        "line": 236
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/audit.controller.php#audit_user_agent",
+      "kind": "method",
+      "name": "audit_user_agent",
+      "location": {
+        "file": "controllers/audit.controller.php",
+        "line": 245
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:controllers/linhas.controller.php#linhas.controller.php",
+      "kind": "file",
+      "name": "linhas.controller.php",
+      "location": {
+        "file": "controllers/linhas.controller.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "class:controllers/linhas.controller.php#Linhas",
+      "kind": "class",
+      "name": "Linhas",
+      "location": {
+        "file": "controllers/linhas.controller.php",
+        "line": 2
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/linhas.controller.php#create",
+      "kind": "method",
+      "name": "create",
+      "location": {
+        "file": "controllers/linhas.controller.php",
+        "line": 17
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/linhas.controller.php#list",
+      "kind": "method",
+      "name": "list",
+      "location": {
+        "file": "controllers/linhas.controller.php",
+        "line": 32
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/linhas.controller.php#findByName",
+      "kind": "method",
+      "name": "findByName",
+      "location": {
+        "file": "controllers/linhas.controller.php",
+        "line": 58
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/linhas.controller.php#filterByCategory",
+      "kind": "method",
+      "name": "filterByCategory",
+      "location": {
+        "file": "controllers/linhas.controller.php",
+        "line": 93
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/linhas.controller.php#getCategoriesIDs",
+      "kind": "method",
+      "name": "getCategoriesIDs",
+      "location": {
+        "file": "controllers/linhas.controller.php",
+        "line": 123
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/linhas.controller.php#getCategories",
+      "kind": "method",
+      "name": "getCategories",
+      "location": {
+        "file": "controllers/linhas.controller.php",
+        "line": 135
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/linhas.controller.php#update",
+      "kind": "method",
+      "name": "update",
+      "location": {
+        "file": "controllers/linhas.controller.php",
+        "line": 150
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/linhas.controller.php#delete",
+      "kind": "method",
+      "name": "delete",
+      "location": {
+        "file": "controllers/linhas.controller.php",
+        "line": 151
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:controllers/pontos.controller.php#pontos.controller.php",
+      "kind": "file",
+      "name": "pontos.controller.php",
+      "location": {
+        "file": "controllers/pontos.controller.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "class:controllers/pontos.controller.php#Pontos",
+      "kind": "class",
+      "name": "Pontos",
+      "location": {
+        "file": "controllers/pontos.controller.php",
+        "line": 17
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/pontos.controller.php#create",
+      "kind": "method",
+      "name": "create",
+      "location": {
+        "file": "controllers/pontos.controller.php",
+        "line": 38
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/pontos.controller.php#list",
+      "kind": "method",
+      "name": "list",
+      "location": {
+        "file": "controllers/pontos.controller.php",
+        "line": 48
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/pontos.controller.php#filter",
+      "kind": "method",
+      "name": "filter",
+      "location": {
+        "file": "controllers/pontos.controller.php",
+        "line": 86
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/pontos.controller.php#update",
+      "kind": "method",
+      "name": "update",
+      "location": {
+        "file": "controllers/pontos.controller.php",
+        "line": 126
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/pontos.controller.php#delete",
+      "kind": "method",
+      "name": "delete",
+      "location": {
+        "file": "controllers/pontos.controller.php",
+        "line": 128
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/pontos.controller.php#listRythms",
+      "kind": "method",
+      "name": "listRythms",
+      "location": {
+        "file": "controllers/pontos.controller.php",
+        "line": 129
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/pontos.controller.php#saveRythm",
+      "kind": "method",
+      "name": "saveRythm",
+      "location": {
+        "file": "controllers/pontos.controller.php",
+        "line": 153
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/pontos.controller.php#format_ponto_letra",
+      "kind": "method",
+      "name": "format_ponto_letra",
+      "location": {
+        "file": "controllers/pontos.controller.php",
+        "line": 6
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:controllers/rbac.controller.php#rbac.controller.php",
+      "kind": "file",
+      "name": "rbac.controller.php",
+      "location": {
+        "file": "controllers/rbac.controller.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/rbac.controller.php#fetchUserRbac",
+      "kind": "method",
+      "name": "fetchUserRbac",
+      "location": {
+        "file": "controllers/rbac.controller.php",
+        "line": 8
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/rbac.controller.php#loadUserRbac",
+      "kind": "method",
+      "name": "loadUserRbac",
+      "location": {
+        "file": "controllers/rbac.controller.php",
+        "line": 46
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/rbac.controller.php#hasRole",
+      "kind": "method",
+      "name": "hasRole",
+      "location": {
+        "file": "controllers/rbac.controller.php",
+        "line": 53
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/rbac.controller.php#hasPermission",
+      "kind": "method",
+      "name": "hasPermission",
+      "location": {
+        "file": "controllers/rbac.controller.php",
+        "line": 62
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/rbac.controller.php#canReadCatalog",
+      "kind": "method",
+      "name": "canReadCatalog",
+      "location": {
+        "file": "controllers/rbac.controller.php",
+        "line": 87
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/rbac.controller.php#requirePermission",
+      "kind": "method",
+      "name": "requirePermission",
+      "location": {
+        "file": "controllers/rbac.controller.php",
+        "line": 95
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:controllers/session.controller.php#session.controller.php",
+      "kind": "file",
+      "name": "session.controller.php",
+      "location": {
+        "file": "controllers/session.controller.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/session.controller.php#admin_session_start",
+      "kind": "method",
+      "name": "admin_session_start",
+      "location": {
+        "file": "controllers/session.controller.php",
+        "line": 12
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/session.controller.php#admin_session_touch_or_expire",
+      "kind": "method",
+      "name": "admin_session_touch_or_expire",
+      "location": {
+        "file": "controllers/session.controller.php",
+        "line": 37
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/session.controller.php#isAuthenticated",
+      "kind": "method",
+      "name": "isAuthenticated",
+      "location": {
+        "file": "controllers/session.controller.php",
+        "line": 52
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/session.controller.php#requireAuth",
+      "kind": "method",
+      "name": "requireAuth",
+      "location": {
+        "file": "controllers/session.controller.php",
+        "line": 61
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/session.controller.php#csrf_token",
+      "kind": "method",
+      "name": "csrf_token",
+      "location": {
+        "file": "controllers/session.controller.php",
+        "line": 71
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/session.controller.php#csrf_validate",
+      "kind": "method",
+      "name": "csrf_validate",
+      "location": {
+        "file": "controllers/session.controller.php",
+        "line": 80
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/session.controller.php#attemptLogin",
+      "kind": "method",
+      "name": "attemptLogin",
+      "location": {
+        "file": "controllers/session.controller.php",
+        "line": 94
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:controllers/session.controller.php#logout",
+      "kind": "method",
+      "name": "logout",
+      "location": {
+        "file": "controllers/session.controller.php",
+        "line": 174
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:db/db.class.php#db.class.php",
+      "kind": "file",
+      "name": "db.class.php",
+      "location": {
+        "file": "db/db.class.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "class:db/db.class.php#DBClass",
+      "kind": "class",
+      "name": "DBClass",
+      "location": {
+        "file": "db/db.class.php",
+        "line": 4
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:db/db.class.php#getConnection",
+      "kind": "method",
+      "name": "getConnection",
+      "location": {
+        "file": "db/db.class.php",
+        "line": 8
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:index.php#index.php",
+      "kind": "file",
+      "name": "index.php",
+      "location": {
+        "file": "index.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:ordem-ritualistica.php#ordem-ritualistica.php",
+      "kind": "file",
+      "name": "ordem-ritualistica.php",
+      "location": {
+        "file": "ordem-ritualistica.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "file:utils/functions.php#functions.php",
+      "kind": "file",
+      "name": "functions.php",
+      "location": {
+        "file": "utils/functions.php",
+        "line": 1
+      },
+      "language": "php"
+    },
+    {
+      "id": "method:utils/functions.php#redirect",
+      "kind": "method",
+      "name": "redirect",
+      "location": {
+        "file": "utils/functions.php",
+        "line": 2
+      },
+      "language": "php"
+    }
+  ],
+  "edges": [
+    {
+      "from": "file:admin/auditoria/index.php#index.php",
+      "to": "file:admin/_bootstrap.php#_bootstrap.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/auditoria/index.php",
+        "line": 3
+      }
+    },
+    {
+      "from": "file:admin/auditoria/index.php#index.php",
+      "to": "file:admin/_shell.php#_shell.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/auditoria/index.php",
+        "line": 4
+      }
+    },
+    {
+      "from": "file:admin/index.php#index.php",
+      "to": "file:admin/_bootstrap.php#_bootstrap.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/index.php",
+        "line": 3
+      }
+    },
+    {
+      "from": "file:admin/index.php#index.php",
+      "to": "file:admin/_shell.php#_shell.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/index.php",
+        "line": 4
+      }
+    },
+    {
+      "from": "file:admin/linhas/delete.php#delete.php",
+      "to": "file:admin/_bootstrap.php#_bootstrap.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/linhas/delete.php",
+        "line": 3
+      }
+    },
+    {
+      "from": "file:admin/linhas/delete.php#delete.php",
+      "to": "file:admin/_shell.php#_shell.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/linhas/delete.php",
+        "line": 4
+      }
+    },
+    {
+      "from": "file:admin/linhas/form.php#form.php",
+      "to": "file:admin/_bootstrap.php#_bootstrap.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/linhas/form.php",
+        "line": 3
+      }
+    },
+    {
+      "from": "file:admin/linhas/form.php#form.php",
+      "to": "file:admin/_shell.php#_shell.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/linhas/form.php",
+        "line": 4
+      }
+    },
+    {
+      "from": "file:admin/linhas/index.php#index.php",
+      "to": "file:admin/_bootstrap.php#_bootstrap.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/linhas/index.php",
+        "line": 3
+      }
+    },
+    {
+      "from": "file:admin/linhas/index.php#index.php",
+      "to": "file:admin/_shell.php#_shell.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/linhas/index.php",
+        "line": 4
+      }
+    },
+    {
+      "from": "file:admin/login/index.php#index.php",
+      "to": "file:admin/_bootstrap.php#_bootstrap.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/login/index.php",
+        "line": 3
+      }
+    },
+    {
+      "from": "file:admin/logout.php#logout.php",
+      "to": "file:admin/_bootstrap.php#_bootstrap.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/logout.php",
+        "line": 3
+      }
+    },
+    {
+      "from": "file:admin/pontos/delete.php#delete.php",
+      "to": "file:admin/_bootstrap.php#_bootstrap.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/pontos/delete.php",
+        "line": 3
+      }
+    },
+    {
+      "from": "file:admin/pontos/delete.php#delete.php",
+      "to": "file:admin/_shell.php#_shell.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/pontos/delete.php",
+        "line": 4
+      }
+    },
+    {
+      "from": "file:admin/pontos/form.php#form.php",
+      "to": "file:admin/_bootstrap.php#_bootstrap.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/pontos/form.php",
+        "line": 3
+      }
+    },
+    {
+      "from": "file:admin/pontos/form.php#form.php",
+      "to": "file:admin/_shell.php#_shell.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/pontos/form.php",
+        "line": 4
+      }
+    },
+    {
+      "from": "file:admin/pontos/index.php#index.php",
+      "to": "file:admin/_bootstrap.php#_bootstrap.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/pontos/index.php",
+        "line": 3
+      }
+    },
+    {
+      "from": "file:admin/pontos/index.php#index.php",
+      "to": "file:admin/_shell.php#_shell.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/pontos/index.php",
+        "line": 4
+      }
+    },
+    {
+      "from": "file:admin/ritmos/delete.php#delete.php",
+      "to": "file:admin/_bootstrap.php#_bootstrap.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/ritmos/delete.php",
+        "line": 3
+      }
+    },
+    {
+      "from": "file:admin/ritmos/delete.php#delete.php",
+      "to": "file:admin/_shell.php#_shell.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/ritmos/delete.php",
+        "line": 4
+      }
+    },
+    {
+      "from": "file:admin/ritmos/form.php#form.php",
+      "to": "file:admin/_bootstrap.php#_bootstrap.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/ritmos/form.php",
+        "line": 3
+      }
+    },
+    {
+      "from": "file:admin/ritmos/form.php#form.php",
+      "to": "file:admin/_shell.php#_shell.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/ritmos/form.php",
+        "line": 4
+      }
+    },
+    {
+      "from": "file:admin/ritmos/index.php#index.php",
+      "to": "file:admin/_bootstrap.php#_bootstrap.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/ritmos/index.php",
+        "line": 3
+      }
+    },
+    {
+      "from": "file:admin/ritmos/index.php#index.php",
+      "to": "file:admin/_shell.php#_shell.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/ritmos/index.php",
+        "line": 4
+      }
+    },
+    {
+      "from": "file:admin/_bootstrap.php#_bootstrap.php",
+      "to": "file:db/db.class.php#db.class.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/_bootstrap.php",
+        "line": 3
+      }
+    },
+    {
+      "from": "file:admin/_bootstrap.php#_bootstrap.php",
+      "to": "file:utils/functions.php#functions.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/_bootstrap.php",
+        "line": 4
+      }
+    },
+    {
+      "from": "file:admin/_bootstrap.php#_bootstrap.php",
+      "to": "file:controllers/audit.controller.php#audit.controller.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/_bootstrap.php",
+        "line": 5
+      }
+    },
+    {
+      "from": "file:admin/_bootstrap.php#_bootstrap.php",
+      "to": "file:controllers/rbac.controller.php#rbac.controller.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/_bootstrap.php",
+        "line": 6
+      }
+    },
+    {
+      "from": "file:admin/_bootstrap.php#_bootstrap.php",
+      "to": "file:controllers/session.controller.php#session.controller.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/_bootstrap.php",
+        "line": 7
+      }
+    },
+    {
+      "from": "file:admin/_bootstrap.php#_bootstrap.php",
+      "to": "file:controllers/admin_pontos.controller.php#admin_pontos.controller.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/_bootstrap.php",
+        "line": 8
+      }
+    },
+    {
+      "from": "file:admin/_bootstrap.php#_bootstrap.php",
+      "to": "file:controllers/admin_linhas.controller.php#admin_linhas.controller.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/_bootstrap.php",
+        "line": 9
+      }
+    },
+    {
+      "from": "file:admin/_bootstrap.php#_bootstrap.php",
+      "to": "file:controllers/admin_ritmos.controller.php#admin_ritmos.controller.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/_bootstrap.php",
+        "line": 10
+      }
+    },
+    {
+      "from": "file:admin/_bootstrap.php#_bootstrap.php",
+      "to": "file:controllers/admin_audit.controller.php#admin_audit.controller.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/_bootstrap.php",
+        "line": 11
+      }
+    },
+    {
+      "from": "file:admin/_shell.php#_shell.php",
+      "to": "method:admin/_shell.php#admin_actor",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/_shell.php",
+        "line": 10
+      }
+    },
+    {
+      "from": "file:admin/_shell.php#_shell.php",
+      "to": "method:admin/_shell.php#admin_require_catalog_read",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/_shell.php",
+        "line": 21
+      }
+    },
+    {
+      "from": "file:admin/_shell.php#_shell.php",
+      "to": "method:admin/_shell.php#admin_h",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/_shell.php",
+        "line": 33
+      }
+    },
+    {
+      "from": "file:admin/_shell.php#_shell.php",
+      "to": "method:admin/_shell.php#admin_flash_set",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/_shell.php",
+        "line": 41
+      }
+    },
+    {
+      "from": "file:admin/_shell.php#_shell.php",
+      "to": "method:admin/_shell.php#admin_flash_take",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/_shell.php",
+        "line": 52
+      }
+    },
+    {
+      "from": "file:admin/_shell.php#_shell.php",
+      "to": "method:admin/_shell.php#admin_is_audit_failure",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/_shell.php",
+        "line": 70
+      }
+    },
+    {
+      "from": "file:admin/_shell.php#_shell.php",
+      "to": "method:admin/_shell.php#admin_list_window",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/_shell.php",
+        "line": 83
+      }
+    },
+    {
+      "from": "file:admin/_shell.php#_shell.php",
+      "to": "method:admin/_shell.php#admin_format_list_meta",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/_shell.php",
+        "line": 119
+      }
+    },
+    {
+      "from": "file:admin/_shell.php#_shell.php",
+      "to": "method:admin/_shell.php#admin_format_pagination_status",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/_shell.php",
+        "line": 144
+      }
+    },
+    {
+      "from": "file:admin/_shell.php#_shell.php",
+      "to": "method:admin/_shell.php#admin_truncate",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/_shell.php",
+        "line": 159
+      }
+    },
+    {
+      "from": "file:admin/_shell.php#_shell.php",
+      "to": "method:admin/_shell.php#admin_ponto_funcao_label",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/_shell.php",
+        "line": 183
+      }
+    },
+    {
+      "from": "file:admin/_shell.php#_shell.php",
+      "to": "method:admin/_shell.php#admin_render_header",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/_shell.php",
+        "line": 203
+      }
+    },
+    {
+      "from": "file:admin/_shell.php#_shell.php",
+      "to": "method:admin/_shell.php#admin_render_footer",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "admin/_shell.php",
+        "line": 255
+      }
+    },
+    {
+      "from": "file:bot.php#bot.php",
+      "to": "method:bot.php#json_out",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "bot.php",
+        "line": 11
+      }
+    },
+    {
+      "from": "file:bot.php#bot.php",
+      "to": "method:bot.php#saudacao_por_hora",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "bot.php",
+        "line": 18
+      }
+    },
+    {
+      "from": "file:bot.php#bot.php",
+      "to": "method:bot.php#ids_de_linha_da_query",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "bot.php",
+        "line": 27
+      }
+    },
+    {
+      "from": "file:bot.php#bot.php",
+      "to": "method:bot.php#buscar_ponto_aleatorio",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "bot.php",
+        "line": 37
+      }
+    },
+    {
+      "from": "file:bot.php#bot.php",
+      "to": "method:bot.php#anunciar_ponto",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "bot.php",
+        "line": 95
+      }
+    },
+    {
+      "from": "file:bot.php#bot.php",
+      "to": "method:bot.php#bloco_letra",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "bot.php",
+        "line": 105
+      }
+    },
+    {
+      "from": "file:bot.php#bot.php",
+      "to": "method:bot.php#montar_mensagem",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "bot.php",
+        "line": 120
+      }
+    },
+    {
+      "from": "file:config/install.php#install.php",
+      "to": "file:db/db.class.php#db.class.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "config/install.php",
+        "line": 1
+      }
+    },
+    {
+      "from": "file:controllers/admin_audit.controller.php#admin_audit.controller.php",
+      "to": "method:controllers/admin_audit.controller.php#admin_audit_list",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_audit.controller.php",
+        "line": 30
+      }
+    },
+    {
+      "from": "file:controllers/admin_linhas.controller.php#admin_linhas.controller.php",
+      "to": "method:controllers/admin_linhas.controller.php#admin_linhas_list",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 25
+      }
+    },
+    {
+      "from": "file:controllers/admin_linhas.controller.php#admin_linhas.controller.php",
+      "to": "method:controllers/admin_linhas.controller.php#admin_linhas_find",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 81
+      }
+    },
+    {
+      "from": "file:controllers/admin_linhas.controller.php#admin_linhas.controller.php",
+      "to": "method:controllers/admin_linhas.controller.php#admin_linhas_create",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 117
+      }
+    },
+    {
+      "from": "file:controllers/admin_linhas.controller.php#admin_linhas.controller.php",
+      "to": "method:controllers/admin_linhas.controller.php#admin_linhas_update",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 190
+      }
+    },
+    {
+      "from": "file:controllers/admin_linhas.controller.php#admin_linhas.controller.php",
+      "to": "method:controllers/admin_linhas.controller.php#admin_linhas_delete",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 275
+      }
+    },
+    {
+      "from": "file:controllers/admin_linhas.controller.php#admin_linhas.controller.php",
+      "to": "method:controllers/admin_linhas.controller.php#admin_linhas_validate",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 336
+      }
+    },
+    {
+      "from": "file:controllers/admin_linhas.controller.php#admin_linhas.controller.php",
+      "to": "method:controllers/admin_linhas.controller.php#admin_linhas_validate_with_fks",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 399
+      }
+    },
+    {
+      "from": "file:controllers/admin_linhas.controller.php#admin_linhas.controller.php",
+      "to": "method:controllers/admin_linhas.controller.php#admin_list_categorias_select",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 423
+      }
+    },
+    {
+      "from": "file:controllers/admin_linhas.controller.php#admin_linhas.controller.php",
+      "to": "method:controllers/admin_linhas.controller.php#admin_linhas_count_pontos",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 443
+      }
+    },
+    {
+      "from": "file:controllers/admin_linhas.controller.php#admin_linhas.controller.php",
+      "to": "method:controllers/admin_linhas.controller.php#admin_linhas_hydrate_row",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 464
+      }
+    },
+    {
+      "from": "file:controllers/admin_linhas.controller.php#admin_linhas.controller.php",
+      "to": "method:controllers/admin_linhas.controller.php#admin_linhas_find_for_audit",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 485
+      }
+    },
+    {
+      "from": "file:controllers/admin_linhas.controller.php#admin_linhas.controller.php",
+      "to": "method:controllers/admin_linhas.controller.php#admin_linhas_audit_snapshot",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 518
+      }
+    },
+    {
+      "from": "file:controllers/admin_linhas.controller.php#admin_linhas.controller.php",
+      "to": "method:controllers/admin_linhas.controller.php#admin_linhas_categoria_exists",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 529
+      }
+    },
+    {
+      "from": "file:controllers/admin_linhas.controller.php#admin_linhas.controller.php",
+      "to": "method:controllers/admin_linhas.controller.php#admin_linhas_is_valid_url",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_linhas.controller.php",
+        "line": 543
+      }
+    },
+    {
+      "from": "file:controllers/admin_pontos.controller.php#admin_pontos.controller.php",
+      "to": "method:controllers/admin_pontos.controller.php#admin_pontos_normalize_tipo",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 22
+      }
+    },
+    {
+      "from": "file:controllers/admin_pontos.controller.php#admin_pontos.controller.php",
+      "to": "method:controllers/admin_pontos.controller.php#admin_pontos_allowed_tipos",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 42
+      }
+    },
+    {
+      "from": "file:controllers/admin_pontos.controller.php#admin_pontos.controller.php",
+      "to": "method:controllers/admin_pontos.controller.php#admin_pontos_list",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 65
+      }
+    },
+    {
+      "from": "file:controllers/admin_pontos.controller.php#admin_pontos.controller.php",
+      "to": "method:controllers/admin_pontos.controller.php#admin_pontos_find",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 144
+      }
+    },
+    {
+      "from": "file:controllers/admin_pontos.controller.php#admin_pontos.controller.php",
+      "to": "method:controllers/admin_pontos.controller.php#admin_pontos_create",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 184
+      }
+    },
+    {
+      "from": "file:controllers/admin_pontos.controller.php#admin_pontos.controller.php",
+      "to": "method:controllers/admin_pontos.controller.php#admin_pontos_update",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 257
+      }
+    },
+    {
+      "from": "file:controllers/admin_pontos.controller.php#admin_pontos.controller.php",
+      "to": "method:controllers/admin_pontos.controller.php#admin_pontos_delete",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 344
+      }
+    },
+    {
+      "from": "file:controllers/admin_pontos.controller.php#admin_pontos.controller.php",
+      "to": "method:controllers/admin_pontos.controller.php#admin_pontos_validate",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 396
+      }
+    },
+    {
+      "from": "file:controllers/admin_pontos.controller.php#admin_pontos.controller.php",
+      "to": "method:controllers/admin_pontos.controller.php#admin_pontos_validate_with_fks",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 457
+      }
+    },
+    {
+      "from": "file:controllers/admin_pontos.controller.php#admin_pontos.controller.php",
+      "to": "method:controllers/admin_pontos.controller.php#admin_list_linhas_select",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 484
+      }
+    },
+    {
+      "from": "file:controllers/admin_pontos.controller.php#admin_pontos.controller.php",
+      "to": "method:controllers/admin_pontos.controller.php#admin_list_ritmos_select",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 504
+      }
+    },
+    {
+      "from": "file:controllers/admin_pontos.controller.php#admin_pontos.controller.php",
+      "to": "method:controllers/admin_pontos.controller.php#admin_pontos_hydrate_row",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 528
+      }
+    },
+    {
+      "from": "file:controllers/admin_pontos.controller.php#admin_pontos.controller.php",
+      "to": "method:controllers/admin_pontos.controller.php#admin_pontos_find_for_audit",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 552
+      }
+    },
+    {
+      "from": "file:controllers/admin_pontos.controller.php#admin_pontos.controller.php",
+      "to": "method:controllers/admin_pontos.controller.php#admin_pontos_audit_snapshot",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 587
+      }
+    },
+    {
+      "from": "file:controllers/admin_pontos.controller.php#admin_pontos.controller.php",
+      "to": "method:controllers/admin_pontos.controller.php#admin_pontos_parse_gravar_audio",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 603
+      }
+    },
+    {
+      "from": "file:controllers/admin_pontos.controller.php#admin_pontos.controller.php",
+      "to": "method:controllers/admin_pontos.controller.php#admin_pontos_fk_exists",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 612
+      }
+    },
+    {
+      "from": "file:controllers/admin_pontos.controller.php#admin_pontos.controller.php",
+      "to": "method:controllers/admin_pontos.controller.php#admin_pontos_is_valid_audio_url",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_pontos.controller.php",
+        "line": 626
+      }
+    },
+    {
+      "from": "file:controllers/admin_ritmos.controller.php#admin_ritmos.controller.php",
+      "to": "method:controllers/admin_ritmos.controller.php#admin_ritmos_list",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_ritmos.controller.php",
+        "line": 22
+      }
+    },
+    {
+      "from": "file:controllers/admin_ritmos.controller.php#admin_ritmos.controller.php",
+      "to": "method:controllers/admin_ritmos.controller.php#admin_ritmos_find",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_ritmos.controller.php",
+        "line": 71
+      }
+    },
+    {
+      "from": "file:controllers/admin_ritmos.controller.php#admin_ritmos.controller.php",
+      "to": "method:controllers/admin_ritmos.controller.php#admin_ritmos_create",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_ritmos.controller.php",
+        "line": 103
+      }
+    },
+    {
+      "from": "file:controllers/admin_ritmos.controller.php#admin_ritmos.controller.php",
+      "to": "method:controllers/admin_ritmos.controller.php#admin_ritmos_update",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_ritmos.controller.php",
+        "line": 161
+      }
+    },
+    {
+      "from": "file:controllers/admin_ritmos.controller.php#admin_ritmos.controller.php",
+      "to": "method:controllers/admin_ritmos.controller.php#admin_ritmos_delete",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_ritmos.controller.php",
+        "line": 229
+      }
+    },
+    {
+      "from": "file:controllers/admin_ritmos.controller.php#admin_ritmos.controller.php",
+      "to": "method:controllers/admin_ritmos.controller.php#admin_ritmos_validate",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_ritmos.controller.php",
+        "line": 290
+      }
+    },
+    {
+      "from": "file:controllers/admin_ritmos.controller.php#admin_ritmos.controller.php",
+      "to": "method:controllers/admin_ritmos.controller.php#admin_ritmos_count_pontos",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_ritmos.controller.php",
+        "line": 316
+      }
+    },
+    {
+      "from": "file:controllers/admin_ritmos.controller.php#admin_ritmos.controller.php",
+      "to": "method:controllers/admin_ritmos.controller.php#admin_ritmos_audit_snapshot",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/admin_ritmos.controller.php",
+        "line": 334
+      }
+    },
+    {
+      "from": "file:controllers/audit.controller.php#audit.controller.php",
+      "to": "method:controllers/audit.controller.php#writeAuditMutation",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/audit.controller.php",
+        "line": 14
+      }
+    },
+    {
+      "from": "file:controllers/audit.controller.php#audit.controller.php",
+      "to": "method:controllers/audit.controller.php#audit_encode_json_payload",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/audit.controller.php",
+        "line": 125
+      }
+    },
+    {
+      "from": "file:controllers/audit.controller.php#audit.controller.php",
+      "to": "method:controllers/audit.controller.php#writeAuditLogin",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/audit.controller.php",
+        "line": 154
+      }
+    },
+    {
+      "from": "file:controllers/audit.controller.php#audit.controller.php",
+      "to": "method:controllers/audit.controller.php#audit_request_path",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/audit.controller.php",
+        "line": 229
+      }
+    },
+    {
+      "from": "file:controllers/audit.controller.php#audit.controller.php",
+      "to": "method:controllers/audit.controller.php#audit_client_ip",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/audit.controller.php",
+        "line": 236
+      }
+    },
+    {
+      "from": "file:controllers/audit.controller.php#audit.controller.php",
+      "to": "method:controllers/audit.controller.php#audit_user_agent",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/audit.controller.php",
+        "line": 245
+      }
+    },
+    {
+      "from": "file:controllers/linhas.controller.php#linhas.controller.php",
+      "to": "class:controllers/linhas.controller.php#Linhas",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/linhas.controller.php",
+        "line": 2
+      }
+    },
+    {
+      "from": "class:controllers/linhas.controller.php#Linhas",
+      "to": "method:controllers/linhas.controller.php#create",
+      "kind": "method",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/linhas.controller.php",
+        "line": 17
+      }
+    },
+    {
+      "from": "class:controllers/linhas.controller.php#Linhas",
+      "to": "method:controllers/linhas.controller.php#list",
+      "kind": "method",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/linhas.controller.php",
+        "line": 32
+      }
+    },
+    {
+      "from": "class:controllers/linhas.controller.php#Linhas",
+      "to": "method:controllers/linhas.controller.php#findByName",
+      "kind": "method",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/linhas.controller.php",
+        "line": 58
+      }
+    },
+    {
+      "from": "class:controllers/linhas.controller.php#Linhas",
+      "to": "method:controllers/linhas.controller.php#filterByCategory",
+      "kind": "method",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/linhas.controller.php",
+        "line": 93
+      }
+    },
+    {
+      "from": "class:controllers/linhas.controller.php#Linhas",
+      "to": "method:controllers/linhas.controller.php#getCategoriesIDs",
+      "kind": "method",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/linhas.controller.php",
+        "line": 123
+      }
+    },
+    {
+      "from": "class:controllers/linhas.controller.php#Linhas",
+      "to": "method:controllers/linhas.controller.php#getCategories",
+      "kind": "method",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/linhas.controller.php",
+        "line": 135
+      }
+    },
+    {
+      "from": "class:controllers/linhas.controller.php#Linhas",
+      "to": "method:controllers/linhas.controller.php#update",
+      "kind": "method",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/linhas.controller.php",
+        "line": 150
+      }
+    },
+    {
+      "from": "class:controllers/linhas.controller.php#Linhas",
+      "to": "method:controllers/linhas.controller.php#delete",
+      "kind": "method",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/linhas.controller.php",
+        "line": 151
+      }
+    },
+    {
+      "from": "file:controllers/pontos.controller.php#pontos.controller.php",
+      "to": "class:controllers/pontos.controller.php#Pontos",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/pontos.controller.php",
+        "line": 17
+      }
+    },
+    {
+      "from": "class:controllers/pontos.controller.php#Pontos",
+      "to": "method:controllers/pontos.controller.php#create",
+      "kind": "method",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/pontos.controller.php",
+        "line": 38
+      }
+    },
+    {
+      "from": "class:controllers/pontos.controller.php#Pontos",
+      "to": "method:controllers/pontos.controller.php#list",
+      "kind": "method",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/pontos.controller.php",
+        "line": 48
+      }
+    },
+    {
+      "from": "class:controllers/pontos.controller.php#Pontos",
+      "to": "method:controllers/pontos.controller.php#filter",
+      "kind": "method",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/pontos.controller.php",
+        "line": 86
+      }
+    },
+    {
+      "from": "class:controllers/pontos.controller.php#Pontos",
+      "to": "method:controllers/pontos.controller.php#update",
+      "kind": "method",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/pontos.controller.php",
+        "line": 126
+      }
+    },
+    {
+      "from": "class:controllers/pontos.controller.php#Pontos",
+      "to": "method:controllers/pontos.controller.php#delete",
+      "kind": "method",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/pontos.controller.php",
+        "line": 128
+      }
+    },
+    {
+      "from": "class:controllers/pontos.controller.php#Pontos",
+      "to": "method:controllers/pontos.controller.php#listRythms",
+      "kind": "method",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/pontos.controller.php",
+        "line": 129
+      }
+    },
+    {
+      "from": "class:controllers/pontos.controller.php#Pontos",
+      "to": "method:controllers/pontos.controller.php#saveRythm",
+      "kind": "method",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/pontos.controller.php",
+        "line": 153
+      }
+    },
+    {
+      "from": "file:controllers/pontos.controller.php#pontos.controller.php",
+      "to": "method:controllers/pontos.controller.php#format_ponto_letra",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/pontos.controller.php",
+        "line": 6
+      }
+    },
+    {
+      "from": "file:controllers/rbac.controller.php#rbac.controller.php",
+      "to": "method:controllers/rbac.controller.php#fetchUserRbac",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/rbac.controller.php",
+        "line": 8
+      }
+    },
+    {
+      "from": "file:controllers/rbac.controller.php#rbac.controller.php",
+      "to": "method:controllers/rbac.controller.php#loadUserRbac",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/rbac.controller.php",
+        "line": 46
+      }
+    },
+    {
+      "from": "file:controllers/rbac.controller.php#rbac.controller.php",
+      "to": "method:controllers/rbac.controller.php#hasRole",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/rbac.controller.php",
+        "line": 53
+      }
+    },
+    {
+      "from": "file:controllers/rbac.controller.php#rbac.controller.php",
+      "to": "method:controllers/rbac.controller.php#hasPermission",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/rbac.controller.php",
+        "line": 62
+      }
+    },
+    {
+      "from": "file:controllers/rbac.controller.php#rbac.controller.php",
+      "to": "method:controllers/rbac.controller.php#canReadCatalog",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/rbac.controller.php",
+        "line": 87
+      }
+    },
+    {
+      "from": "file:controllers/rbac.controller.php#rbac.controller.php",
+      "to": "method:controllers/rbac.controller.php#requirePermission",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/rbac.controller.php",
+        "line": 95
+      }
+    },
+    {
+      "from": "file:controllers/session.controller.php#session.controller.php",
+      "to": "file:utils/functions.php#functions.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/session.controller.php",
+        "line": 3
+      }
+    },
+    {
+      "from": "file:controllers/session.controller.php#session.controller.php",
+      "to": "method:controllers/session.controller.php#admin_session_start",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/session.controller.php",
+        "line": 12
+      }
+    },
+    {
+      "from": "file:controllers/session.controller.php#session.controller.php",
+      "to": "method:controllers/session.controller.php#admin_session_touch_or_expire",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/session.controller.php",
+        "line": 37
+      }
+    },
+    {
+      "from": "file:controllers/session.controller.php#session.controller.php",
+      "to": "method:controllers/session.controller.php#isAuthenticated",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/session.controller.php",
+        "line": 52
+      }
+    },
+    {
+      "from": "file:controllers/session.controller.php#session.controller.php",
+      "to": "method:controllers/session.controller.php#requireAuth",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/session.controller.php",
+        "line": 61
+      }
+    },
+    {
+      "from": "file:controllers/session.controller.php#session.controller.php",
+      "to": "method:controllers/session.controller.php#csrf_token",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/session.controller.php",
+        "line": 71
+      }
+    },
+    {
+      "from": "file:controllers/session.controller.php#session.controller.php",
+      "to": "method:controllers/session.controller.php#csrf_validate",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/session.controller.php",
+        "line": 80
+      }
+    },
+    {
+      "from": "file:controllers/session.controller.php#session.controller.php",
+      "to": "method:controllers/session.controller.php#attemptLogin",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/session.controller.php",
+        "line": 94
+      }
+    },
+    {
+      "from": "file:controllers/session.controller.php#session.controller.php",
+      "to": "method:controllers/session.controller.php#logout",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "controllers/session.controller.php",
+        "line": 174
+      }
+    },
+    {
+      "from": "file:db/db.class.php#db.class.php",
+      "to": "file:config/bootstrap.php#bootstrap.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "db/db.class.php",
+        "line": 2
+      }
+    },
+    {
+      "from": "file:db/db.class.php#db.class.php",
+      "to": "class:db/db.class.php#DBClass",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "db/db.class.php",
+        "line": 4
+      }
+    },
+    {
+      "from": "class:db/db.class.php#DBClass",
+      "to": "method:db/db.class.php#getConnection",
+      "kind": "method",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "db/db.class.php",
+        "line": 8
+      }
+    },
+    {
+      "from": "file:index.php#index.php",
+      "to": "file:components/metadata/header.php#header.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "index.php",
+        "line": 6
+      }
+    },
+    {
+      "from": "file:index.php#index.php",
+      "to": "file:db/db.class.php#db.class.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "index.php",
+        "line": 7
+      }
+    },
+    {
+      "from": "file:index.php#index.php",
+      "to": "file:controllers/linhas.controller.php#linhas.controller.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "index.php",
+        "line": 8
+      }
+    },
+    {
+      "from": "file:index.php#index.php",
+      "to": "file:controllers/pontos.controller.php#pontos.controller.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "index.php",
+        "line": 9
+      }
+    },
+    {
+      "from": "file:ordem-ritualistica.php#ordem-ritualistica.php",
+      "to": "file:components/metadata/header.php#header.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "ordem-ritualistica.php",
+        "line": 6
+      }
+    },
+    {
+      "from": "file:ordem-ritualistica.php#ordem-ritualistica.php",
+      "to": "file:db/db.class.php#db.class.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "ordem-ritualistica.php",
+        "line": 7
+      }
+    },
+    {
+      "from": "file:ordem-ritualistica.php#ordem-ritualistica.php",
+      "to": "file:controllers/linhas.controller.php#linhas.controller.php",
+      "kind": "imports",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "ordem-ritualistica.php",
+        "line": 8
+      }
+    },
+    {
+      "from": "file:utils/functions.php#functions.php",
+      "to": "method:utils/functions.php#redirect",
+      "kind": "contains",
+      "provenance": "EXTRACTED",
+      "evidence": {
+        "file": "utils/functions.php",
+        "line": 2
+      }
+    }
+  ],
   "stats": {
-    "nodeCount": 0,
-    "edgeCount": 0
-  },
-  "gitCommit": "a2acf7c7bc21e140ad530af91ec4157b9609afc0"
+    "nodeCount": 133,
+    "edgeCount": 144
+  }
 }
