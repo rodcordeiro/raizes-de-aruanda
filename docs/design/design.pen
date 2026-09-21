@@ -296,7 +296,8 @@
                   "content": "Pontos de Umbanda utilizados durante as giras pela curimba do terreiro Raízes de Aruanda, bem como para o compartilhamento de conhecimentos.",
                   "lineHeight": 1.6,
                   "fontFamily": "Source Sans 3",
-                  "fontSize": 19
+                  "fontSize": 19,
+                  "fontWeight": "normal"
                 }
               ]
             }
@@ -425,7 +426,8 @@
                       "fill": "$color.muted",
                       "content": "Buscar linha…",
                       "fontFamily": "Source Sans 3",
-                      "fontSize": 16
+                      "fontSize": 16,
+                      "fontWeight": "normal"
                     }
                   ]
                 }
@@ -477,7 +479,8 @@
                       "fill": "$color.text",
                       "content": "Ayrá",
                       "fontFamily": "Source Sans 3",
-                      "fontSize": 17
+                      "fontSize": 17,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -530,7 +533,8 @@
                       "fill": "$color.text",
                       "content": "Iroko",
                       "fontFamily": "Source Sans 3",
-                      "fontSize": 17
+                      "fontSize": 17,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -556,7 +560,8 @@
                       "fill": "$color.text",
                       "content": "Logun-Edé",
                       "fontFamily": "Source Sans 3",
-                      "fontSize": 17
+                      "fontSize": 17,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -582,7 +587,8 @@
                       "fill": "$color.text",
                       "content": "Nanã",
                       "fontFamily": "Source Sans 3",
-                      "fontSize": 17
+                      "fontSize": 17,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -608,7 +614,8 @@
                       "fill": "$color.text",
                       "content": "Obá",
                       "fontFamily": "Source Sans 3",
-                      "fontSize": 17
+                      "fontSize": 17,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -650,7 +657,8 @@
                       "fill": "$color.text",
                       "content": "Baianos",
                       "fontFamily": "Source Sans 3",
-                      "fontSize": 17
+                      "fontSize": 17,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -676,7 +684,8 @@
                       "fill": "$color.text",
                       "content": "Caboclos",
                       "fontFamily": "Source Sans 3",
-                      "fontSize": 17
+                      "fontSize": 17,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -702,7 +711,8 @@
                       "fill": "$color.text",
                       "content": "Exu",
                       "fontFamily": "Source Sans 3",
-                      "fontSize": 17
+                      "fontSize": 17,
+                      "fontWeight": "normal"
                     }
                   ]
                 }
@@ -2052,7 +2062,7 @@
                   "id": "z8JSvy",
                   "name": "hdrUser",
                   "fill": "$color.brandContrast",
-                  "content": "curimba.editor",
+                  "content": "Curimba Editor",
                   "fontFamily": "$font.family",
                   "fontSize": 14,
                   "fontWeight": "600"
@@ -2160,7 +2170,8 @@
                       "fill": "$color.text",
                       "content": "Linhas",
                       "fontFamily": "$font.family",
-                      "fontSize": 15
+                      "fontSize": 15,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -2193,7 +2204,8 @@
                       "fill": "$color.text",
                       "content": "Ritmos",
                       "fontFamily": "$font.family",
-                      "fontSize": 15
+                      "fontSize": 15,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -2226,7 +2238,8 @@
                       "fill": "$color.text",
                       "content": "Auditoria",
                       "fontFamily": "$font.family",
-                      "fontSize": 15
+                      "fontSize": 15,
+                      "fontWeight": "normal"
                     }
                   ]
                 }
@@ -2596,7 +2609,8 @@
                               "width": 396,
                               "content": "Oxalá criou a terra…",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -2621,7 +2635,8 @@
                               "width": 116,
                               "content": "Chamada",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -2646,7 +2661,8 @@
                               "width": 176,
                               "content": "Oxalá",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -2671,7 +2687,8 @@
                               "width": 136,
                               "content": "Ijexá",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -2745,7 +2762,8 @@
                               "width": 396,
                               "content": "Malandro te digo meu irmão…",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -2770,7 +2788,8 @@
                               "width": 116,
                               "content": "Sustentação",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -2795,7 +2814,8 @@
                               "width": 176,
                               "content": "Malandro",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -2820,7 +2840,8 @@
                               "width": 136,
                               "content": "Samba",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -2894,7 +2915,8 @@
                               "width": 396,
                               "content": "A lua lá no céu brilhou…",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -2919,7 +2941,8 @@
                               "width": 116,
                               "content": "Chamada",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -2944,7 +2967,8 @@
                               "width": 176,
                               "content": "Bater cabeça",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -2969,7 +2993,8 @@
                               "width": 136,
                               "content": "Congo",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -3043,7 +3068,8 @@
                               "width": 396,
                               "content": "Saravá NOME_DO_BAHIANO…",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -3068,7 +3094,8 @@
                               "width": 116,
                               "content": "Sustentação",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -3093,7 +3120,8 @@
                               "width": 176,
                               "content": "Bahianos",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -3118,7 +3146,8 @@
                               "width": 136,
                               "content": "Nagô",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -3192,7 +3221,8 @@
                               "width": 396,
                               "content": "Ele é pequinininho…",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -3217,7 +3247,8 @@
                               "width": 116,
                               "content": "Sustentação",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -3242,7 +3273,8 @@
                               "width": 176,
                               "content": "Ibeijada",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -3267,7 +3299,8 @@
                               "width": 136,
                               "content": "Ijexá",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -3466,7 +3499,7 @@
                   "id": "oShI7",
                   "name": "hdrUser",
                   "fill": "$color.brandContrast",
-                  "content": "curimba.editor",
+                  "content": "Curimba Editor",
                   "fontFamily": "$font.family",
                   "fontSize": 14,
                   "fontWeight": "600"
@@ -3573,7 +3606,8 @@
                       "fill": "$color.text",
                       "content": "Linhas",
                       "fontFamily": "$font.family",
-                      "fontSize": 15
+                      "fontSize": 15,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -3606,7 +3640,8 @@
                       "fill": "$color.text",
                       "content": "Ritmos",
                       "fontFamily": "$font.family",
-                      "fontSize": 15
+                      "fontSize": 15,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -3639,7 +3674,8 @@
                       "fill": "$color.text",
                       "content": "Auditoria",
                       "fontFamily": "$font.family",
-                      "fontSize": 15
+                      "fontSize": 15,
+                      "fontWeight": "normal"
                     }
                   ]
                 }
@@ -4295,7 +4331,7 @@
                   "id": "tNgQs",
                   "name": "hdrUser",
                   "fill": "$color.brandContrast",
-                  "content": "pai.admin",
+                  "content": "Pai Admin",
                   "fontFamily": "$font.family",
                   "fontSize": 14,
                   "fontWeight": "600"
@@ -4368,7 +4404,8 @@
                       "fill": "$color.text",
                       "content": "Pontos",
                       "fontFamily": "$font.family",
-                      "fontSize": 15
+                      "fontSize": 15,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -4435,7 +4472,8 @@
                       "fill": "$color.text",
                       "content": "Ritmos",
                       "fontFamily": "$font.family",
-                      "fontSize": 15
+                      "fontSize": 15,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -4468,7 +4506,8 @@
                       "fill": "$color.text",
                       "content": "Auditoria",
                       "fontFamily": "$font.family",
-                      "fontSize": 15
+                      "fontSize": 15,
+                      "fontWeight": "normal"
                     }
                   ]
                 }
@@ -4695,7 +4734,8 @@
                                   "width": 196,
                                   "content": "Oxalá",
                                   "fontFamily": "$font.family",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             },
@@ -4720,7 +4760,8 @@
                                   "width": 116,
                                   "content": "Orixá",
                                   "fontFamily": "$font.family",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             },
@@ -4745,7 +4786,8 @@
                                   "width": 176,
                                   "content": "—",
                                   "fontFamily": "$font.family",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             },
@@ -4819,7 +4861,8 @@
                                   "width": 196,
                                   "content": "Exu",
                                   "fontFamily": "$font.family",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             },
@@ -4844,7 +4887,8 @@
                                   "width": 116,
                                   "content": "Guia",
                                   "fontFamily": "$font.family",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             },
@@ -4869,7 +4913,8 @@
                                   "width": 176,
                                   "content": "playlist",
                                   "fontFamily": "$font.family",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             },
@@ -4943,7 +4988,8 @@
                                   "width": 196,
                                   "content": "Abertura",
                                   "fontFamily": "$font.family",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             },
@@ -4968,7 +5014,8 @@
                                   "width": 116,
                                   "content": "Outros",
                                   "fontFamily": "$font.family",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             },
@@ -4993,7 +5040,8 @@
                                   "width": 176,
                                   "content": "—",
                                   "fontFamily": "$font.family",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             },
@@ -5067,7 +5115,8 @@
                                   "width": 196,
                                   "content": "Pomba-gira",
                                   "fontFamily": "$font.family",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             },
@@ -5092,7 +5141,8 @@
                                   "width": 116,
                                   "content": "Guia",
                                   "fontFamily": "$font.family",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             },
@@ -5117,7 +5167,8 @@
                                   "width": 176,
                                   "content": "—",
                                   "fontFamily": "$font.family",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             },
@@ -5191,7 +5242,8 @@
                                   "width": 196,
                                   "content": "Catimbozeiros",
                                   "fontFamily": "$font.family",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             },
@@ -5216,7 +5268,8 @@
                                   "width": 116,
                                   "content": "Guia",
                                   "fontFamily": "$font.family",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             },
@@ -5241,7 +5294,8 @@
                                   "width": 176,
                                   "content": "—",
                                   "fontFamily": "$font.family",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             },
@@ -5566,7 +5620,7 @@
                   "id": "IcFWS",
                   "name": "hdrUser",
                   "fill": "$color.brandContrast",
-                  "content": "pai.admin",
+                  "content": "Pai Admin",
                   "fontFamily": "$font.family",
                   "fontSize": 14,
                   "fontWeight": "600"
@@ -5639,7 +5693,8 @@
                       "fill": "$color.text",
                       "content": "Pontos",
                       "fontFamily": "$font.family",
-                      "fontSize": 15
+                      "fontSize": 15,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -5672,7 +5727,8 @@
                       "fill": "$color.text",
                       "content": "Linhas",
                       "fontFamily": "$font.family",
-                      "fontSize": 15
+                      "fontSize": 15,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -5739,7 +5795,8 @@
                       "fill": "$color.text",
                       "content": "Auditoria",
                       "fontFamily": "$font.family",
-                      "fontSize": 15
+                      "fontSize": 15,
+                      "fontWeight": "normal"
                     }
                   ]
                 }
@@ -5914,7 +5971,8 @@
                                   "width": 456,
                                   "content": "Ijexá",
                                   "fontFamily": "$font.family",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             },
@@ -5988,7 +6046,8 @@
                                   "width": 456,
                                   "content": "Congo",
                                   "fontFamily": "$font.family",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             },
@@ -6062,7 +6121,8 @@
                                   "width": 456,
                                   "content": "Samba",
                                   "fontFamily": "$font.family",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             },
@@ -6136,7 +6196,8 @@
                                   "width": 456,
                                   "content": "Nagô",
                                   "fontFamily": "$font.family",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             },
@@ -6210,7 +6271,8 @@
                                   "width": 456,
                                   "content": "Barravento",
                                   "fontFamily": "$font.family",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             },
@@ -6284,7 +6346,8 @@
                                   "width": 456,
                                   "content": "Ijexá quebrado",
                                   "fontFamily": "$font.family",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             },
@@ -6358,7 +6421,8 @@
                                   "width": 456,
                                   "content": "Rufar",
                                   "fontFamily": "$font.family",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             },
@@ -6588,7 +6652,7 @@
                   "id": "d87Mld",
                   "name": "hdrUser",
                   "fill": "$color.brandContrast",
-                  "content": "pai.admin",
+                  "content": "Pai Admin",
                   "fontFamily": "$font.family",
                   "fontSize": 14,
                   "fontWeight": "600"
@@ -6661,7 +6725,8 @@
                       "fill": "$color.text",
                       "content": "Pontos",
                       "fontFamily": "$font.family",
-                      "fontSize": 15
+                      "fontSize": 15,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -6694,7 +6759,8 @@
                       "fill": "$color.text",
                       "content": "Linhas",
                       "fontFamily": "$font.family",
-                      "fontSize": 15
+                      "fontSize": 15,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -6727,7 +6793,8 @@
                       "fill": "$color.text",
                       "content": "Ritmos",
                       "fontFamily": "$font.family",
-                      "fontSize": 15
+                      "fontSize": 15,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -6981,7 +7048,8 @@
                               "width": 156,
                               "content": "31/08 18:12",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -7006,7 +7074,8 @@
                               "width": 116,
                               "content": "curimba.editor",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -7031,7 +7100,8 @@
                               "width": 96,
                               "content": "update",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -7056,7 +7126,8 @@
                               "width": 256,
                               "content": "ponto #142",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -7081,7 +7152,8 @@
                               "width": 256,
                               "content": "admin-web · PUT /pontos",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         }
@@ -7120,7 +7192,8 @@
                               "width": 156,
                               "content": "31/08 17:01",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -7145,7 +7218,8 @@
                               "width": 116,
                               "content": "pai.admin",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -7170,7 +7244,8 @@
                               "width": 96,
                               "content": "create",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -7195,7 +7270,8 @@
                               "width": 256,
                               "content": "linha #33",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -7220,7 +7296,8 @@
                               "width": 256,
                               "content": "admin-web · POST /linhas",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         }
@@ -7259,7 +7336,8 @@
                               "width": 156,
                               "content": "31/08 16:44",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -7284,7 +7362,8 @@
                               "width": 116,
                               "content": "pai.admin",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -7309,7 +7388,8 @@
                               "width": 96,
                               "content": "delete",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -7334,7 +7414,8 @@
                               "width": 256,
                               "content": "ritmo #8",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -7359,7 +7440,8 @@
                               "width": 256,
                               "content": "admin-web · DELETE /ritmos",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         }
@@ -7398,7 +7480,8 @@
                               "width": 156,
                               "content": "31/08 16:40",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -7423,7 +7506,8 @@
                               "width": 116,
                               "content": "curimba.editor",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -7448,7 +7532,8 @@
                               "width": 96,
                               "content": "login_success",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -7473,7 +7558,8 @@
                               "width": 256,
                               "content": "—",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -7498,7 +7584,8 @@
                               "width": 256,
                               "content": "admin-web · POST /login",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         }
@@ -7537,7 +7624,8 @@
                               "width": 156,
                               "content": "31/08 15:02",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -7562,7 +7650,8 @@
                               "width": 116,
                               "content": "desconhecido",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -7587,7 +7676,8 @@
                               "width": 96,
                               "content": "login_failure",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -7612,7 +7702,8 @@
                               "width": 256,
                               "content": "—",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -7637,7 +7728,8 @@
                               "width": 256,
                               "content": "admin-web · POST /login",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         }
@@ -7699,7 +7791,7 @@
                   "id": "idSFt",
                   "name": "hdrUser",
                   "fill": "$color.brandContrast",
-                  "content": "curimba.editor",
+                  "content": "Curimba Editor",
                   "fontFamily": "$font.family",
                   "fontSize": 14,
                   "fontWeight": "600"
@@ -7807,7 +7899,8 @@
                       "fill": "$color.text",
                       "content": "Linhas",
                       "fontFamily": "$font.family",
-                      "fontSize": 15
+                      "fontSize": 15,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -7840,7 +7933,8 @@
                       "fill": "$color.text",
                       "content": "Ritmos",
                       "fontFamily": "$font.family",
-                      "fontSize": 15
+                      "fontSize": 15,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -7873,7 +7967,8 @@
                       "fill": "$color.text",
                       "content": "Auditoria",
                       "fontFamily": "$font.family",
-                      "fontSize": 15
+                      "fontSize": 15,
+                      "fontWeight": "normal"
                     }
                   ]
                 }
@@ -8156,7 +8251,8 @@
                               "width": 396,
                               "content": "Oxalá criou a terra…",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -8181,7 +8277,8 @@
                               "width": 116,
                               "content": "Chamada",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -8206,7 +8303,8 @@
                               "width": 176,
                               "content": "Oxalá",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -8231,7 +8329,8 @@
                               "width": 136,
                               "content": "Ijexá",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -8305,7 +8404,8 @@
                               "width": 396,
                               "content": "Malandro te digo meu irmão…",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -8330,7 +8430,8 @@
                               "width": 116,
                               "content": "Sustentação",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -8355,7 +8456,8 @@
                               "width": 176,
                               "content": "Malandro",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -8380,7 +8482,8 @@
                               "width": 136,
                               "content": "Samba",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -8454,7 +8557,8 @@
                               "width": 396,
                               "content": "A lua lá no céu brilhou…",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -8479,7 +8583,8 @@
                               "width": 116,
                               "content": "Chamada",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -8504,7 +8609,8 @@
                               "width": 176,
                               "content": "Bater cabeça",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -8529,7 +8635,8 @@
                               "width": 136,
                               "content": "Congo",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -8603,7 +8710,8 @@
                               "width": 396,
                               "content": "Saravá NOME_DO_BAHIANO…",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -8628,7 +8736,8 @@
                               "width": 116,
                               "content": "Sustentação",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -8653,7 +8762,8 @@
                               "width": 176,
                               "content": "Bahianos",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -8678,7 +8788,8 @@
                               "width": 136,
                               "content": "Nagô",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -8752,7 +8863,8 @@
                               "width": 396,
                               "content": "Ele é pequinininho…",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -8777,7 +8889,8 @@
                               "width": 116,
                               "content": "Sustentação",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -8802,7 +8915,8 @@
                               "width": 176,
                               "content": "Ibeijada",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -8827,7 +8941,8 @@
                               "width": 136,
                               "content": "Ijexá",
                               "fontFamily": "$font.family",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -9407,14 +9522,57 @@
               "fontWeight": "700"
             },
             {
-              "type": "text",
-              "id": "w97JG",
-              "name": "hs",
-              "fill": "$color.brandContrast",
-              "content": "Sair",
-              "fontFamily": "$font.family",
-              "fontSize": 14,
-              "fontWeight": "600"
+              "type": "frame",
+              "id": "J2yj4",
+              "name": "hdrRight",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "zczEW",
+                  "name": "hdrUserBtn",
+                  "height": 44,
+                  "layout": "vertical",
+                  "gap": 2,
+                  "padding": [
+                    0,
+                    8
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "CJW2J",
+                      "name": "hdrUser",
+                      "fill": "$color.brandContrast",
+                      "content": "Curimba Editor",
+                      "fontFamily": "$font.family",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "iLQC7",
+                      "name": "hdrUserUnderline",
+                      "fill": "$color.brandContrast",
+                      "width": 90,
+                      "height": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "w97JG",
+                  "name": "hs",
+                  "fill": "$color.brandContrast",
+                  "content": "Sair",
+                  "fontFamily": "$font.family",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
             }
           ]
         },
@@ -9481,7 +9639,8 @@
                   "fill": "$color.muted",
                   "content": "Linhas",
                   "fontFamily": "$font.family",
-                  "fontSize": 13
+                  "fontSize": 13,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -9505,7 +9664,8 @@
                   "fill": "$color.muted",
                   "content": "Ritmos",
                   "fontFamily": "$font.family",
-                  "fontSize": 13
+                  "fontSize": 13,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -9529,7 +9689,8 @@
                   "fill": "$color.muted",
                   "content": "Audit.",
                   "fontFamily": "$font.family",
-                  "fontSize": 13
+                  "fontSize": 13,
+                  "fontWeight": "normal"
                 }
               ]
             }
@@ -10113,6 +10274,2873 @@
       "width": 320,
       "height": 180,
       "content": "Home · Linha + playlist (v2)\n\nCom canal_youtube: link “Abrir playlist no YouTube” sob o título (mobile stacked; web sob lw-page-title). Abre em nova aba.\nSem playlist: só o nome da Linha.\nNão chamar Linha de playlist."
+    },
+    {
+      "type": "frame",
+      "id": "u8K2x",
+      "x": 2000,
+      "y": 5311,
+      "name": "Admin / Perfil",
+      "clip": true,
+      "width": 1440,
+      "height": 900,
+      "fill": "$color.bg",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "Iltwl",
+          "name": "header",
+          "width": "fill_container",
+          "height": 64,
+          "fill": "$color.brand",
+          "padding": [
+            0,
+            24
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "qdScD",
+              "name": "hdrTitle",
+              "fill": "$color.brandContrast",
+              "content": "Raízes de Aruanda · Admin",
+              "fontFamily": "$font.family",
+              "fontSize": 18,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "bjU2F",
+              "name": "hdrRight",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "d5hlwR",
+                  "name": "hdrUserBtn",
+                  "layout": "vertical",
+                  "gap": 2,
+                  "padding": [
+                    4,
+                    0
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "X7mm7e",
+                      "name": "hdrUser",
+                      "fill": "$color.brandContrast",
+                      "content": "Curimba Editor",
+                      "fontFamily": "$font.family",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "NHPbO",
+                      "name": "hdrUserUnderline",
+                      "fill": "$color.brandContrast",
+                      "width": "fill_container",
+                      "height": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "jlq94",
+                  "name": "hdrLogout",
+                  "fill": "$color.brandContrast",
+                  "content": "Sair",
+                  "fontFamily": "$font.family",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "rwWYS",
+          "name": "body",
+          "width": "fill_container",
+          "height": "fill_container",
+          "children": [
+            {
+              "type": "frame",
+              "id": "sV2Qr",
+              "name": "nav",
+              "width": 220,
+              "height": "fill_container",
+              "fill": "$color.bg",
+              "stroke": "$color.border",
+              "strokeWidth": {
+                "right": 1
+              },
+              "layout": "vertical",
+              "gap": 4,
+              "padding": [
+                16,
+                12
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "RcXp4",
+                  "name": "nav_Pontos",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.transparent",
+                  "gap": 10,
+                  "padding": [
+                    0,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 1,
+                      "id": "lxmbk",
+                      "name": "bar",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 24
+                    },
+                    {
+                      "type": "text",
+                      "id": "q00fe",
+                      "name": "navLbl",
+                      "fill": "$color.text",
+                      "content": "Pontos",
+                      "fontFamily": "$font.family",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "kLcnc",
+                  "name": "nav_Linhas",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.transparent",
+                  "gap": 10,
+                  "padding": [
+                    0,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "ujYc9",
+                      "name": "barIdle",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 24
+                    },
+                    {
+                      "type": "text",
+                      "id": "ENSB4",
+                      "name": "navLbl",
+                      "fill": "$color.text",
+                      "content": "Linhas",
+                      "fontFamily": "$font.family",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "I6wUq",
+                  "name": "nav_Ritmos",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.transparent",
+                  "gap": 10,
+                  "padding": [
+                    0,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "lFzhR",
+                      "name": "barIdle",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 24
+                    },
+                    {
+                      "type": "text",
+                      "id": "CPQ4q",
+                      "name": "navLbl",
+                      "fill": "$color.text",
+                      "content": "Ritmos",
+                      "fontFamily": "$font.family",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "HG9Kc",
+                  "name": "nav_Auditoria",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.transparent",
+                  "gap": 10,
+                  "padding": [
+                    0,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "T6V3w",
+                      "name": "barIdle",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 24
+                    },
+                    {
+                      "type": "text",
+                      "id": "byYbv",
+                      "name": "navLbl",
+                      "fill": "$color.text",
+                      "content": "Auditoria",
+                      "fontFamily": "$font.family",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "tEKQ2",
+              "name": "main",
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": "$color.bg",
+              "layout": "vertical",
+              "gap": 20,
+              "padding": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "XvWre",
+                  "name": "h1",
+                  "fill": "$color.text",
+                  "content": "Meu perfil",
+                  "fontFamily": "$font.family",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "LTaCR",
+                  "name": "lead",
+                  "fill": "$color.muted",
+                  "textGrowth": "fixed-width",
+                  "width": 640,
+                  "content": "Altere somente o seu nome e a sua senha. Papéis e outros usuários não são editados aqui.",
+                  "lineHeight": 1.4,
+                  "fontFamily": "$font.family",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "jj7zB",
+                  "name": "form",
+                  "width": 640,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "MU0Rg",
+                      "name": "field_nome",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "tf85n",
+                          "name": "lbl_nome",
+                          "fill": "$color.muted",
+                          "content": "Nome",
+                          "fontFamily": "$font.family",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "EfGXn",
+                          "name": "input_nome",
+                          "width": "fill_container",
+                          "height": 44,
+                          "fill": "$color.bg",
+                          "cornerRadius": 8,
+                          "stroke": "$color.brand",
+                          "strokeWidth": 2,
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Ciyci",
+                              "name": "val_nome",
+                              "fill": "$color.text",
+                              "content": "Curimba Editor",
+                              "fontFamily": "$font.family",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "KQ29c",
+                      "name": "field_senhaAtual",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "TOpJO",
+                          "name": "lbl_senhaAtual",
+                          "fill": "$color.muted",
+                          "content": "Senha atual",
+                          "fontFamily": "$font.family",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "SUigT",
+                          "name": "input_senhaAtual",
+                          "width": "fill_container",
+                          "height": 44,
+                          "fill": "$color.bg",
+                          "cornerRadius": 8,
+                          "stroke": "$color.border",
+                          "strokeWidth": 1,
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "uecvw",
+                              "name": "val_senhaAtual",
+                              "fill": "$color.muted",
+                              "content": "Digite a senha atual",
+                              "fontFamily": "$font.family",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "I1lEK",
+                          "name": "hint_senhaAtual",
+                          "fill": "$color.muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Obrigatória para confirmar qualquer alteração.",
+                          "fontFamily": "$font.family",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "V4PWLp",
+                      "name": "field_novaSenha",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "WDYsF",
+                          "name": "lbl_novaSenha",
+                          "fill": "$color.muted",
+                          "content": "Nova senha",
+                          "fontFamily": "$font.family",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ojGRL",
+                          "name": "input_novaSenha",
+                          "width": "fill_container",
+                          "height": 44,
+                          "fill": "$color.bg",
+                          "cornerRadius": 8,
+                          "stroke": "$color.border",
+                          "strokeWidth": 1,
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "AEfKV",
+                              "name": "val_novaSenha",
+                              "fill": "$color.muted",
+                              "content": "Digite a nova senha",
+                              "fontFamily": "$font.family",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "kaiFD",
+                          "name": "hint_novaSenha",
+                          "fill": "$color.muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Preencha só se quiser trocar a senha.",
+                          "fontFamily": "$font.family",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "L766f9",
+                      "name": "field_confirmar",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "vmVRW",
+                          "name": "lbl_confirmar",
+                          "fill": "$color.muted",
+                          "content": "Confirmar nova senha",
+                          "fontFamily": "$font.family",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "xjWCd",
+                          "name": "input_confirmar",
+                          "width": "fill_container",
+                          "height": 44,
+                          "fill": "$color.bg",
+                          "cornerRadius": 8,
+                          "stroke": "$color.border",
+                          "strokeWidth": 1,
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "uWdA1",
+                              "name": "val_confirmar",
+                              "fill": "$color.muted",
+                              "content": "Repita a nova senha",
+                              "fontFamily": "$font.family",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Wc9xV",
+                      "name": "formActions",
+                      "gap": 12,
+                      "padding": [
+                        8,
+                        0,
+                        0,
+                        0
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "OxYvm",
+                          "name": "btnSave",
+                          "height": 44,
+                          "fill": "$color.brand",
+                          "cornerRadius": 8,
+                          "padding": [
+                            0,
+                            20
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "m7fFU",
+                              "name": "saveLbl",
+                              "fill": "$color.brandContrast",
+                              "content": "Salvar alterações",
+                              "fontFamily": "$font.family",
+                              "fontSize": 15,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "q0jRXx",
+      "x": 2000,
+      "y": 6291,
+      "name": "Admin / Perfil · Erro",
+      "clip": true,
+      "width": 1440,
+      "height": 900,
+      "fill": "$color.bg",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "dn2t9",
+          "name": "header",
+          "width": "fill_container",
+          "height": 64,
+          "fill": "$color.brand",
+          "padding": [
+            0,
+            24
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "jt2L5",
+              "name": "hdrTitle",
+              "fill": "$color.brandContrast",
+              "content": "Raízes de Aruanda · Admin",
+              "fontFamily": "$font.family",
+              "fontSize": 18,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "Y6hQy",
+              "name": "hdrRight",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "pVRRR",
+                  "name": "hdrUserBtn",
+                  "layout": "vertical",
+                  "gap": 2,
+                  "padding": [
+                    4,
+                    0
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "x2Ivw",
+                      "name": "hdrUser",
+                      "fill": "$color.brandContrast",
+                      "content": "Curimba Editor",
+                      "fontFamily": "$font.family",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "v02aKS",
+                      "name": "hdrUserUnderline",
+                      "fill": "$color.brandContrast",
+                      "width": "fill_container",
+                      "height": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "TCwk1",
+                  "name": "hdrLogout",
+                  "fill": "$color.brandContrast",
+                  "content": "Sair",
+                  "fontFamily": "$font.family",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "cn6q0",
+          "name": "body",
+          "width": "fill_container",
+          "height": "fill_container",
+          "children": [
+            {
+              "type": "frame",
+              "id": "J4fMTb",
+              "name": "nav",
+              "width": 220,
+              "height": "fill_container",
+              "fill": "$color.bg",
+              "stroke": "$color.border",
+              "strokeWidth": {
+                "right": 1
+              },
+              "layout": "vertical",
+              "gap": 4,
+              "padding": [
+                16,
+                12
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "kUZEs",
+                  "name": "nav_Pontos",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.transparent",
+                  "gap": 10,
+                  "padding": [
+                    0,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 1,
+                      "id": "k8kAEM",
+                      "name": "bar",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 24
+                    },
+                    {
+                      "type": "text",
+                      "id": "rtqCC",
+                      "name": "navLbl",
+                      "fill": "$color.text",
+                      "content": "Pontos",
+                      "fontFamily": "$font.family",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "KIVSa",
+                  "name": "nav_Linhas",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.transparent",
+                  "gap": 10,
+                  "padding": [
+                    0,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "gfJb5",
+                      "name": "barIdle",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 24
+                    },
+                    {
+                      "type": "text",
+                      "id": "ZDAEz",
+                      "name": "navLbl",
+                      "fill": "$color.text",
+                      "content": "Linhas",
+                      "fontFamily": "$font.family",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "J4ADqA",
+                  "name": "nav_Ritmos",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.transparent",
+                  "gap": 10,
+                  "padding": [
+                    0,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "cO4no",
+                      "name": "barIdle",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 24
+                    },
+                    {
+                      "type": "text",
+                      "id": "meTIC",
+                      "name": "navLbl",
+                      "fill": "$color.text",
+                      "content": "Ritmos",
+                      "fontFamily": "$font.family",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "aZOpR",
+                  "name": "nav_Auditoria",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.transparent",
+                  "gap": 10,
+                  "padding": [
+                    0,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "lAyTe",
+                      "name": "barIdle",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 24
+                    },
+                    {
+                      "type": "text",
+                      "id": "e2O7Pb",
+                      "name": "navLbl",
+                      "fill": "$color.text",
+                      "content": "Auditoria",
+                      "fontFamily": "$font.family",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "M1jPj",
+              "name": "main",
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": "$color.bg",
+              "layout": "vertical",
+              "gap": 20,
+              "padding": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "y5dM42",
+                  "name": "h1",
+                  "fill": "$color.text",
+                  "content": "Meu perfil",
+                  "fontFamily": "$font.family",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "yBfOU",
+                  "name": "lead",
+                  "fill": "$color.muted",
+                  "textGrowth": "fixed-width",
+                  "width": 640,
+                  "content": "Altere somente o seu nome e a sua senha. Papéis e outros usuários não são editados aqui.",
+                  "lineHeight": 1.4,
+                  "fontFamily": "$font.family",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "vNhyU",
+                  "name": "form",
+                  "width": 640,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "cFCGD",
+                      "name": "alertError",
+                      "width": "fill_container",
+                      "fill": "$color.surfaceMuted",
+                      "cornerRadius": 8,
+                      "stroke": "$color.danger",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": 14,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "cGpqs",
+                          "name": "alertErrorTitle",
+                          "fill": "$color.danger",
+                          "content": "Não foi possível salvar",
+                          "fontFamily": "$font.family",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "gCgjB",
+                          "name": "alertErrorBody",
+                          "fill": "$color.text",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Corrija os campos marcados. Nada foi alterado.",
+                          "fontFamily": "$font.family",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "s7H0p",
+                      "name": "field_nome",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "t9bZD9",
+                          "name": "lbl_nome",
+                          "fill": "$color.muted",
+                          "content": "Nome",
+                          "fontFamily": "$font.family",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "wm2XG",
+                          "name": "input_nome",
+                          "width": "fill_container",
+                          "height": 44,
+                          "fill": "$color.bg",
+                          "cornerRadius": 8,
+                          "stroke": "$color.border",
+                          "strokeWidth": 1,
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "G0adQS",
+                              "name": "val_nome",
+                              "fill": "$color.text",
+                              "content": "Curimba Editor",
+                              "fontFamily": "$font.family",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "sYYfK",
+                      "name": "field_senhaAtual",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "y47Bu",
+                          "name": "lbl_senhaAtual",
+                          "fill": "$color.muted",
+                          "content": "Senha atual",
+                          "fontFamily": "$font.family",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "AJjl1",
+                          "name": "input_senhaAtual",
+                          "width": "fill_container",
+                          "height": 44,
+                          "fill": "$color.bg",
+                          "cornerRadius": 8,
+                          "stroke": "$color.danger",
+                          "strokeWidth": 2,
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Wu1DA",
+                              "name": "val_senhaAtual",
+                              "fill": "$color.text",
+                              "content": "••••••••",
+                              "fontFamily": "$font.family",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "xrN56",
+                          "name": "hint_senhaAtual",
+                          "fill": "$color.muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Obrigatória para confirmar qualquer alteração.",
+                          "fontFamily": "$font.family",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "wefy1",
+                          "name": "err_senhaAtual",
+                          "fill": "$color.danger",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Senha atual incorreta.",
+                          "fontFamily": "$font.family",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "wK8gZ",
+                      "name": "field_novaSenha",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "rWdwO",
+                          "name": "lbl_novaSenha",
+                          "fill": "$color.muted",
+                          "content": "Nova senha",
+                          "fontFamily": "$font.family",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "L9uxHM",
+                          "name": "input_novaSenha",
+                          "width": "fill_container",
+                          "height": 44,
+                          "fill": "$color.bg",
+                          "cornerRadius": 8,
+                          "stroke": "$color.border",
+                          "strokeWidth": 1,
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "BG88w",
+                              "name": "val_novaSenha",
+                              "fill": "$color.text",
+                              "content": "••••••••",
+                              "fontFamily": "$font.family",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "XqTGv",
+                          "name": "hint_novaSenha",
+                          "fill": "$color.muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Preencha só se quiser trocar a senha.",
+                          "fontFamily": "$font.family",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "L6bQG",
+                      "name": "field_confirmar",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "EUXG6",
+                          "name": "lbl_confirmar",
+                          "fill": "$color.muted",
+                          "content": "Confirmar nova senha",
+                          "fontFamily": "$font.family",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "x4Xhhq",
+                          "name": "input_confirmar",
+                          "width": "fill_container",
+                          "height": 44,
+                          "fill": "$color.bg",
+                          "cornerRadius": 8,
+                          "stroke": "$color.danger",
+                          "strokeWidth": 2,
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "g51Rpj",
+                              "name": "val_confirmar",
+                              "fill": "$color.text",
+                              "content": "••••••••",
+                              "fontFamily": "$font.family",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "jzmHd",
+                          "name": "err_confirmar",
+                          "fill": "$color.danger",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "A confirmação não coincide com a nova senha.",
+                          "fontFamily": "$font.family",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "sxRaE",
+                      "name": "formActions",
+                      "gap": 12,
+                      "padding": [
+                        8,
+                        0,
+                        0,
+                        0
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "x88fMs",
+                          "name": "btnSave",
+                          "height": 44,
+                          "fill": "$color.brand",
+                          "cornerRadius": 8,
+                          "padding": [
+                            0,
+                            20
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Py5tK",
+                              "name": "saveLbl",
+                              "fill": "$color.brandContrast",
+                              "content": "Salvar alterações",
+                              "fontFamily": "$font.family",
+                              "fontSize": 15,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "C0IyeM",
+      "x": 3520,
+      "y": 6291,
+      "name": "Admin / Perfil · Sucesso",
+      "clip": true,
+      "width": 1440,
+      "height": 900,
+      "fill": "$color.bg",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "GXu7W",
+          "name": "header",
+          "width": "fill_container",
+          "height": 64,
+          "fill": "$color.brand",
+          "padding": [
+            0,
+            24
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "zSXmb",
+              "name": "hdrTitle",
+              "fill": "$color.brandContrast",
+              "content": "Raízes de Aruanda · Admin",
+              "fontFamily": "$font.family",
+              "fontSize": 18,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "UUTpE",
+              "name": "hdrRight",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "SpbCt",
+                  "name": "hdrUserBtn",
+                  "layout": "vertical",
+                  "gap": 2,
+                  "padding": [
+                    4,
+                    0
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "bNBxa",
+                      "name": "hdrUser",
+                      "fill": "$color.brandContrast",
+                      "content": "Curimba Editor",
+                      "fontFamily": "$font.family",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "KnPRQ",
+                      "name": "hdrUserUnderline",
+                      "fill": "$color.brandContrast",
+                      "width": "fill_container",
+                      "height": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "kG7gy",
+                  "name": "hdrLogout",
+                  "fill": "$color.brandContrast",
+                  "content": "Sair",
+                  "fontFamily": "$font.family",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "g22dn",
+          "name": "body",
+          "width": "fill_container",
+          "height": "fill_container",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Weusp",
+              "name": "nav",
+              "width": 220,
+              "height": "fill_container",
+              "fill": "$color.bg",
+              "stroke": "$color.border",
+              "strokeWidth": {
+                "right": 1
+              },
+              "layout": "vertical",
+              "gap": 4,
+              "padding": [
+                16,
+                12
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "M5ZFL3",
+                  "name": "nav_Pontos",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.transparent",
+                  "gap": 10,
+                  "padding": [
+                    0,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 1,
+                      "id": "ODLSu",
+                      "name": "bar",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 24
+                    },
+                    {
+                      "type": "text",
+                      "id": "uDN8Q",
+                      "name": "navLbl",
+                      "fill": "$color.text",
+                      "content": "Pontos",
+                      "fontFamily": "$font.family",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "B1ktk",
+                  "name": "nav_Linhas",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.transparent",
+                  "gap": 10,
+                  "padding": [
+                    0,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "TQvM0",
+                      "name": "barIdle",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 24
+                    },
+                    {
+                      "type": "text",
+                      "id": "w7HDq",
+                      "name": "navLbl",
+                      "fill": "$color.text",
+                      "content": "Linhas",
+                      "fontFamily": "$font.family",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Z6Fz9",
+                  "name": "nav_Ritmos",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.transparent",
+                  "gap": 10,
+                  "padding": [
+                    0,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "uL2jz",
+                      "name": "barIdle",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 24
+                    },
+                    {
+                      "type": "text",
+                      "id": "SZ6sW",
+                      "name": "navLbl",
+                      "fill": "$color.text",
+                      "content": "Ritmos",
+                      "fontFamily": "$font.family",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "DHJgh",
+                  "name": "nav_Auditoria",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$color.transparent",
+                  "gap": 10,
+                  "padding": [
+                    0,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "YzVHU",
+                      "name": "barIdle",
+                      "fill": "$color.transparent",
+                      "width": 3,
+                      "height": 24
+                    },
+                    {
+                      "type": "text",
+                      "id": "KVvKR",
+                      "name": "navLbl",
+                      "fill": "$color.text",
+                      "content": "Auditoria",
+                      "fontFamily": "$font.family",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "vwGBM",
+              "name": "main",
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": "$color.bg",
+              "layout": "vertical",
+              "gap": 20,
+              "padding": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "vGtrx",
+                  "name": "h1",
+                  "fill": "$color.text",
+                  "content": "Meu perfil",
+                  "fontFamily": "$font.family",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "fdY3H",
+                  "name": "lead",
+                  "fill": "$color.muted",
+                  "textGrowth": "fixed-width",
+                  "width": 640,
+                  "content": "Altere somente o seu nome e a sua senha. Papéis e outros usuários não são editados aqui.",
+                  "lineHeight": 1.4,
+                  "fontFamily": "$font.family",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "PGfiF",
+                  "name": "form",
+                  "width": 640,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "bd8Sg",
+                      "name": "alertOk",
+                      "width": "fill_container",
+                      "fill": "$color.activeTint",
+                      "cornerRadius": 8,
+                      "stroke": "$color.brand",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": 14,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Hn9D2",
+                          "name": "alertOkTitle",
+                          "fill": "$color.text",
+                          "content": "Perfil atualizado.",
+                          "fontFamily": "$font.family",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "jOhc6",
+                          "name": "alertOkBody",
+                          "fill": "$color.muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Suas alterações foram salvas.",
+                          "fontFamily": "$font.family",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "UCty3",
+                      "name": "field_nome",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "CzMvj",
+                          "name": "lbl_nome",
+                          "fill": "$color.muted",
+                          "content": "Nome",
+                          "fontFamily": "$font.family",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "vKD8Q",
+                          "name": "input_nome",
+                          "width": "fill_container",
+                          "height": 44,
+                          "fill": "$color.bg",
+                          "cornerRadius": 8,
+                          "stroke": "$color.border",
+                          "strokeWidth": 1,
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "hGTcN",
+                              "name": "val_nome",
+                              "fill": "$color.text",
+                              "content": "Curimba Editor",
+                              "fontFamily": "$font.family",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "bRGxe",
+                      "name": "field_senhaAtual",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "PNlsl",
+                          "name": "lbl_senhaAtual",
+                          "fill": "$color.muted",
+                          "content": "Senha atual",
+                          "fontFamily": "$font.family",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "pJkhv",
+                          "name": "input_senhaAtual",
+                          "width": "fill_container",
+                          "height": 44,
+                          "fill": "$color.bg",
+                          "cornerRadius": 8,
+                          "stroke": "$color.border",
+                          "strokeWidth": 1,
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "VHzBr",
+                              "name": "val_senhaAtual",
+                              "fill": "$color.muted",
+                              "content": "Digite a senha atual",
+                              "fontFamily": "$font.family",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "HGrSQ",
+                          "name": "hint_senhaAtual",
+                          "fill": "$color.muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Obrigatória para confirmar qualquer alteração.",
+                          "fontFamily": "$font.family",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "J0eG0",
+                      "name": "field_novaSenha",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "l7a90",
+                          "name": "lbl_novaSenha",
+                          "fill": "$color.muted",
+                          "content": "Nova senha",
+                          "fontFamily": "$font.family",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "J4Hqm",
+                          "name": "input_novaSenha",
+                          "width": "fill_container",
+                          "height": 44,
+                          "fill": "$color.bg",
+                          "cornerRadius": 8,
+                          "stroke": "$color.border",
+                          "strokeWidth": 1,
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "b1XJax",
+                              "name": "val_novaSenha",
+                              "fill": "$color.muted",
+                              "content": "Digite a nova senha",
+                              "fontFamily": "$font.family",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "Hn58B",
+                          "name": "hint_novaSenha",
+                          "fill": "$color.muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Preencha só se quiser trocar a senha.",
+                          "fontFamily": "$font.family",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "KdcKZ",
+                      "name": "field_confirmar",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "LwEXk",
+                          "name": "lbl_confirmar",
+                          "fill": "$color.muted",
+                          "content": "Confirmar nova senha",
+                          "fontFamily": "$font.family",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "LY1Ye",
+                          "name": "input_confirmar",
+                          "width": "fill_container",
+                          "height": 44,
+                          "fill": "$color.bg",
+                          "cornerRadius": 8,
+                          "stroke": "$color.border",
+                          "strokeWidth": 1,
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Z4qQ1",
+                              "name": "val_confirmar",
+                              "fill": "$color.muted",
+                              "content": "Repita a nova senha",
+                              "fontFamily": "$font.family",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "mycdy",
+                      "name": "formActions",
+                      "gap": 12,
+                      "padding": [
+                        8,
+                        0,
+                        0,
+                        0
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "XMbaf",
+                          "name": "btnSave",
+                          "height": 44,
+                          "fill": "$color.brand",
+                          "cornerRadius": 8,
+                          "padding": [
+                            0,
+                            20
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "pre4c",
+                              "name": "saveLbl",
+                              "fill": "$color.brandContrast",
+                              "content": "Salvar alterações",
+                              "fontFamily": "$font.family",
+                              "fontSize": 15,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "WDQyj",
+      "x": 3990,
+      "y": 1920,
+      "name": "Admin / Perfil · Mobile",
+      "clip": true,
+      "width": 390,
+      "height": 844,
+      "fill": "$color.bg",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "jmNgJ",
+          "name": "header",
+          "width": "fill_container",
+          "height": 60,
+          "fill": "$color.brand",
+          "gap": 8,
+          "padding": [
+            0,
+            16
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "F28NK",
+              "name": "ht",
+              "fill": "$color.brandContrast",
+              "content": "Admin",
+              "fontFamily": "$font.family",
+              "fontSize": 18,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "DQsNo",
+              "name": "hdrUserBtn",
+              "height": 44,
+              "layout": "vertical",
+              "gap": 2,
+              "padding": [
+                0,
+                8
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "APYTB",
+                  "name": "hdrUser",
+                  "fill": "$color.brandContrast",
+                  "content": "Curimba Editor",
+                  "fontFamily": "$font.family",
+                  "fontSize": 14,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "oYHEw",
+                  "name": "hdrUserUnderline",
+                  "fill": "$color.brandContrast",
+                  "width": 90,
+                  "height": 1
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "mjzFr",
+              "name": "hs",
+              "fill": "$color.brandContrast",
+              "content": "Sair",
+              "fontFamily": "$font.family",
+              "fontSize": 14,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "yv3SK",
+          "name": "tabs",
+          "width": "fill_container",
+          "height": 48,
+          "fill": "$color.bg",
+          "stroke": "$color.border",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "gap": 4,
+          "padding": [
+            0,
+            8
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "XpaVw",
+              "name": "tab_Pontos",
+              "height": 36,
+              "fill": "$color.transparent",
+              "cornerRadius": 8,
+              "padding": [
+                0,
+                10
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "x4t61",
+                  "name": "tl",
+                  "fill": "$color.muted",
+                  "content": "Pontos",
+                  "fontFamily": "$font.family",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "H5Slyq",
+              "name": "tab_Linhas",
+              "height": 36,
+              "fill": "$color.transparent",
+              "cornerRadius": 8,
+              "padding": [
+                0,
+                10
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "v8oJG3",
+                  "name": "tl",
+                  "fill": "$color.muted",
+                  "content": "Linhas",
+                  "fontFamily": "$font.family",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "yFVTB",
+              "name": "tab_Ritmos",
+              "height": 36,
+              "fill": "$color.transparent",
+              "cornerRadius": 8,
+              "padding": [
+                0,
+                10
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Ci8tv",
+                  "name": "tl",
+                  "fill": "$color.muted",
+                  "content": "Ritmos",
+                  "fontFamily": "$font.family",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "uHIOO",
+              "name": "tab_Audit.",
+              "height": 36,
+              "fill": "$color.transparent",
+              "cornerRadius": 8,
+              "padding": [
+                0,
+                10
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "WyonU",
+                  "name": "tl",
+                  "fill": "$color.muted",
+                  "content": "Audit.",
+                  "fontFamily": "$font.family",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "rWNrv",
+          "name": "main",
+          "width": "fill_container",
+          "height": "fill_container",
+          "fill": "$color.bg",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "HDb74",
+              "name": "h1",
+              "fill": "$color.text",
+              "content": "Meu perfil",
+              "fontFamily": "$font.family",
+              "fontSize": 24,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "s1vTKj",
+              "name": "lead",
+              "fill": "$color.muted",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Altere somente o seu nome e a sua senha. Papéis e outros usuários não são editados aqui.",
+              "lineHeight": 1.4,
+              "fontFamily": "$font.family",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "DjdAo",
+              "name": "form",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "YNPeG",
+                  "name": "field_nome",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Wwzlo",
+                      "name": "lbl_nome",
+                      "fill": "$color.muted",
+                      "content": "Nome",
+                      "fontFamily": "$font.family",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "LkE7R",
+                      "name": "input_nome",
+                      "width": "fill_container",
+                      "height": 44,
+                      "fill": "$color.bg",
+                      "cornerRadius": 8,
+                      "stroke": "$color.brand",
+                      "strokeWidth": 2,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Rg6P1",
+                          "name": "val_nome",
+                          "fill": "$color.text",
+                          "content": "Curimba Editor",
+                          "fontFamily": "$font.family",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "HTVL8",
+                  "name": "field_senhaAtual",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "kFxsQ",
+                      "name": "lbl_senhaAtual",
+                      "fill": "$color.muted",
+                      "content": "Senha atual",
+                      "fontFamily": "$font.family",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "S5DLT9",
+                      "name": "input_senhaAtual",
+                      "width": "fill_container",
+                      "height": 44,
+                      "fill": "$color.bg",
+                      "cornerRadius": 8,
+                      "stroke": "$color.border",
+                      "strokeWidth": 1,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Uw7dV",
+                          "name": "val_senhaAtual",
+                          "fill": "$color.muted",
+                          "content": "Digite a senha atual",
+                          "fontFamily": "$font.family",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "jRm4w",
+                      "name": "hint_senhaAtual",
+                      "fill": "$color.muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Obrigatória para confirmar qualquer alteração.",
+                      "fontFamily": "$font.family",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "BPrvF",
+                  "name": "field_novaSenha",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "x7JvgG",
+                      "name": "lbl_novaSenha",
+                      "fill": "$color.muted",
+                      "content": "Nova senha",
+                      "fontFamily": "$font.family",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "fIIhN",
+                      "name": "input_novaSenha",
+                      "width": "fill_container",
+                      "height": 44,
+                      "fill": "$color.bg",
+                      "cornerRadius": 8,
+                      "stroke": "$color.border",
+                      "strokeWidth": 1,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "oo9pv",
+                          "name": "val_novaSenha",
+                          "fill": "$color.muted",
+                          "content": "Digite a nova senha",
+                          "fontFamily": "$font.family",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "mNvUR",
+                      "name": "hint_novaSenha",
+                      "fill": "$color.muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Preencha só se quiser trocar a senha.",
+                      "fontFamily": "$font.family",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "U4JiS",
+                  "name": "field_confirmar",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "JX46k",
+                      "name": "lbl_confirmar",
+                      "fill": "$color.muted",
+                      "content": "Confirmar nova senha",
+                      "fontFamily": "$font.family",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "v8e4nA",
+                      "name": "input_confirmar",
+                      "width": "fill_container",
+                      "height": 44,
+                      "fill": "$color.bg",
+                      "cornerRadius": 8,
+                      "stroke": "$color.border",
+                      "strokeWidth": 1,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "AwUdO",
+                          "name": "val_confirmar",
+                          "fill": "$color.muted",
+                          "content": "Repita a nova senha",
+                          "fontFamily": "$font.family",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "JAba9",
+                  "name": "formActions",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "padding": [
+                    8,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "w4y6TP",
+                      "name": "btnSave",
+                      "width": "fill_container",
+                      "height": 48,
+                      "fill": "$color.brand",
+                      "cornerRadius": 8,
+                      "padding": [
+                        0,
+                        20
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "kjqJf",
+                          "name": "saveLbl",
+                          "fill": "$color.brandContrast",
+                          "content": "Salvar alterações",
+                          "fontFamily": "$font.family",
+                          "fontSize": 15,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "cRbmS",
+      "x": 4460,
+      "y": 1920,
+      "name": "Admin / Perfil · Erro · Mobile",
+      "clip": true,
+      "width": 390,
+      "height": 844,
+      "fill": "$color.bg",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "ZAjhQ",
+          "name": "header",
+          "width": "fill_container",
+          "height": 60,
+          "fill": "$color.brand",
+          "gap": 8,
+          "padding": [
+            0,
+            16
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "mKP8t",
+              "name": "ht",
+              "fill": "$color.brandContrast",
+              "content": "Admin",
+              "fontFamily": "$font.family",
+              "fontSize": 18,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "hwRCv",
+              "name": "hdrUserBtn",
+              "height": 44,
+              "layout": "vertical",
+              "gap": 2,
+              "padding": [
+                0,
+                8
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "JCNDU",
+                  "name": "hdrUser",
+                  "fill": "$color.brandContrast",
+                  "content": "Curimba Editor",
+                  "fontFamily": "$font.family",
+                  "fontSize": 14,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "AHB4C",
+                  "name": "hdrUserUnderline",
+                  "fill": "$color.brandContrast",
+                  "width": 90,
+                  "height": 1
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "oUpCK",
+              "name": "hs",
+              "fill": "$color.brandContrast",
+              "content": "Sair",
+              "fontFamily": "$font.family",
+              "fontSize": 14,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "mvsY5",
+          "name": "tabs",
+          "width": "fill_container",
+          "height": 48,
+          "fill": "$color.bg",
+          "stroke": "$color.border",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "gap": 4,
+          "padding": [
+            0,
+            8
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "YvVtu",
+              "name": "tab_Pontos",
+              "height": 36,
+              "fill": "$color.transparent",
+              "cornerRadius": 8,
+              "padding": [
+                0,
+                10
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "KpITi",
+                  "name": "tl",
+                  "fill": "$color.muted",
+                  "content": "Pontos",
+                  "fontFamily": "$font.family",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "bpPVQ",
+              "name": "tab_Linhas",
+              "height": 36,
+              "fill": "$color.transparent",
+              "cornerRadius": 8,
+              "padding": [
+                0,
+                10
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "FsiBw",
+                  "name": "tl",
+                  "fill": "$color.muted",
+                  "content": "Linhas",
+                  "fontFamily": "$font.family",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "UO5l4",
+              "name": "tab_Ritmos",
+              "height": 36,
+              "fill": "$color.transparent",
+              "cornerRadius": 8,
+              "padding": [
+                0,
+                10
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "AdWbP",
+                  "name": "tl",
+                  "fill": "$color.muted",
+                  "content": "Ritmos",
+                  "fontFamily": "$font.family",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "yjKV9",
+              "name": "tab_Audit.",
+              "height": 36,
+              "fill": "$color.transparent",
+              "cornerRadius": 8,
+              "padding": [
+                0,
+                10
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "hWjv8",
+                  "name": "tl",
+                  "fill": "$color.muted",
+                  "content": "Audit.",
+                  "fontFamily": "$font.family",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ezaOg",
+          "name": "main",
+          "width": "fill_container",
+          "height": "fill_container",
+          "fill": "$color.bg",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "MeU7Y",
+              "name": "h1",
+              "fill": "$color.text",
+              "content": "Meu perfil",
+              "fontFamily": "$font.family",
+              "fontSize": 24,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "N6kUlK",
+              "name": "lead",
+              "fill": "$color.muted",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Altere somente o seu nome e a sua senha. Papéis e outros usuários não são editados aqui.",
+              "lineHeight": 1.4,
+              "fontFamily": "$font.family",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "ndGcb",
+              "name": "form",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "w1VnMk",
+                  "name": "alertError",
+                  "width": "fill_container",
+                  "fill": "$color.surfaceMuted",
+                  "cornerRadius": 8,
+                  "stroke": "$color.danger",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "np1LP",
+                      "name": "alertErrorTitle",
+                      "fill": "$color.danger",
+                      "content": "Não foi possível salvar",
+                      "fontFamily": "$font.family",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "MaCxy",
+                      "name": "alertErrorBody",
+                      "fill": "$color.text",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Corrija os campos marcados. Nada foi alterado.",
+                      "fontFamily": "$font.family",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "j3tuJ9",
+                  "name": "field_nome",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "F1pJJG",
+                      "name": "lbl_nome",
+                      "fill": "$color.muted",
+                      "content": "Nome",
+                      "fontFamily": "$font.family",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "S2750I",
+                      "name": "input_nome",
+                      "width": "fill_container",
+                      "height": 44,
+                      "fill": "$color.bg",
+                      "cornerRadius": 8,
+                      "stroke": "$color.border",
+                      "strokeWidth": 1,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Tj4TS",
+                          "name": "val_nome",
+                          "fill": "$color.text",
+                          "content": "Curimba Editor",
+                          "fontFamily": "$font.family",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "BRBMf",
+                  "name": "field_senhaAtual",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "XNcSZ",
+                      "name": "lbl_senhaAtual",
+                      "fill": "$color.muted",
+                      "content": "Senha atual",
+                      "fontFamily": "$font.family",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "v9DIU",
+                      "name": "input_senhaAtual",
+                      "width": "fill_container",
+                      "height": 44,
+                      "fill": "$color.bg",
+                      "cornerRadius": 8,
+                      "stroke": "$color.danger",
+                      "strokeWidth": 2,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "x2INrr",
+                          "name": "val_senhaAtual",
+                          "fill": "$color.text",
+                          "content": "••••••••",
+                          "fontFamily": "$font.family",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "smbCR",
+                      "name": "hint_senhaAtual",
+                      "fill": "$color.muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Obrigatória para confirmar qualquer alteração.",
+                      "fontFamily": "$font.family",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "WjKyr",
+                      "name": "err_senhaAtual",
+                      "fill": "$color.danger",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Senha atual incorreta.",
+                      "fontFamily": "$font.family",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "K2aof",
+                  "name": "field_novaSenha",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "v2MHl",
+                      "name": "lbl_novaSenha",
+                      "fill": "$color.muted",
+                      "content": "Nova senha",
+                      "fontFamily": "$font.family",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Qf6Ed",
+                      "name": "input_novaSenha",
+                      "width": "fill_container",
+                      "height": 44,
+                      "fill": "$color.bg",
+                      "cornerRadius": 8,
+                      "stroke": "$color.border",
+                      "strokeWidth": 1,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dKjOC",
+                          "name": "val_novaSenha",
+                          "fill": "$color.text",
+                          "content": "••••••••",
+                          "fontFamily": "$font.family",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "r2FpQz",
+                      "name": "hint_novaSenha",
+                      "fill": "$color.muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Preencha só se quiser trocar a senha.",
+                      "fontFamily": "$font.family",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "YFRve",
+                  "name": "field_confirmar",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "sVIK9",
+                      "name": "lbl_confirmar",
+                      "fill": "$color.muted",
+                      "content": "Confirmar nova senha",
+                      "fontFamily": "$font.family",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "SM8VT",
+                      "name": "input_confirmar",
+                      "width": "fill_container",
+                      "height": 44,
+                      "fill": "$color.bg",
+                      "cornerRadius": 8,
+                      "stroke": "$color.danger",
+                      "strokeWidth": 2,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "vPcYX",
+                          "name": "val_confirmar",
+                          "fill": "$color.text",
+                          "content": "••••••••",
+                          "fontFamily": "$font.family",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "xBQJ0",
+                      "name": "err_confirmar",
+                      "fill": "$color.danger",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "A confirmação não coincide com a nova senha.",
+                      "fontFamily": "$font.family",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "pBxnM",
+                  "name": "formActions",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "padding": [
+                    8,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "AJ0PR",
+                      "name": "btnSave",
+                      "width": "fill_container",
+                      "height": 48,
+                      "fill": "$color.brand",
+                      "cornerRadius": 8,
+                      "padding": [
+                        0,
+                        20
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "lQfoR",
+                          "name": "saveLbl",
+                          "fill": "$color.brandContrast",
+                          "content": "Salvar alterações",
+                          "fontFamily": "$font.family",
+                          "fontSize": 15,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "id": "TCE0O",
+      "x": 3520,
+      "y": 5311,
+      "name": "admin_perfil_e_header_note",
+      "width": 360,
+      "height": 520,
+      "content": "Iris 2026-09-21 (atualizado após PHP)\n\nCANÓNICO WEB admin: Admin / Shell — Pontos (lQ4Te) 1440. Header 64 sage, título + usuário (link /admin/perfil/) + Sair. Nav NÃO vai no header — sidebar 220 à esquerda (Nav Rail). Sem hamburger.\n\nCANÓNICO MOBILE admin: Admin / Shell — Pontos · Mobile (ByiF9) 390. Header 60: Admin + usuário (link perfil) + Sair. Nav = tabs 48 abaixo do header. Sem hamburger.\n\nPHP (admin/_shell.php + admin/styles.css): chrome alinhado a estes frames. Home pública (linha_web_v2) independente: header 64 logo 48 + título, sidebar 240. Hamburger só em home_mobile_v2 / menu_mobile_v2.\n\nPerfil (u8K2x / WDQyj): clique no username no header. Campo Nome = tb_user.name (não o login). Senha atual obrigatória; nova senha opcional. Logout permanece Sair. Sem avatar, e-mail, papéis ou CRUD de outros usuários."
     }
   ],
   "variables": {

@@ -97,11 +97,11 @@ admin_render_header('Pontos', 'pontos');
             <table class="admin-table">
                 <thead>
                     <tr>
+                        <th scope="col">Letra</th>
+                        <th scope="col">Função</th>
                         <th scope="col">Linha</th>
                         <th scope="col">Ritmo</th>
-                        <th scope="col">Função</th>
                         <th scope="col">Gravar</th>
-                        <th scope="col">Letra</th>
                         <?php if ($canUpdate || $canDelete): ?>
                             <th scope="col">Ações</th>
                         <?php endif; ?>
@@ -114,11 +114,11 @@ admin_render_header('Pontos', 'pontos');
                         $preview = admin_truncate((string) $row['letra'], 80);
                         ?>
                         <tr>
+                            <td class="admin-table__letra"><?php echo admin_h($preview); ?></td>
+                            <td><?php echo admin_h(admin_ponto_funcao_label($row['tipo'] ?? null)); ?></td>
                             <td><?php echo admin_h((string) $row['linha_nome']); ?></td>
                             <td><?php echo admin_h((string) $row['ritmo_nome']); ?></td>
-                            <td><?php echo admin_h(admin_ponto_funcao_label($row['tipo'] ?? null)); ?></td>
                             <td><?php echo !empty($row['gravar_audio']) ? 'Sim' : '—'; ?></td>
-                            <td class="admin-table__letra"><?php echo admin_h($preview); ?></td>
                             <?php if ($canUpdate || $canDelete): ?>
                                 <td class="admin-table__actions">
                                     <div class="admin-actions">

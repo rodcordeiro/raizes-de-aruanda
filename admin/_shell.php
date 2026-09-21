@@ -203,13 +203,19 @@ function admin_ponto_funcao_label(?string $tipo): string
 function admin_render_header(string $title, string $activeNav = 'pontos'): void
 {
     $pageTitle = admin_h($title) . ' — Raízes de Aruanda';
-    $username = admin_h((string) ($_SESSION['username'] ?? ''));
+    $displayNameRaw = trim((string) ($_SESSION['name'] ?? ''));
+    if ($displayNameRaw === '') {
+        $displayNameRaw = trim((string) ($_SESSION['username'] ?? ''));
+    }
+    $displayName = admin_h($displayNameRaw);
     $showCatalogNav = function_exists('canReadCatalog') && canReadCatalog();
     $showAuditNav = function_exists('hasPermission') && hasPermission('audit:read');
     $pontosActive = $activeNav === 'pontos' ? ' aria-current="page"' : '';
     $linhasActive = $activeNav === 'linhas' ? ' aria-current="page"' : '';
     $ritmosActive = $activeNav === 'ritmos' ? ' aria-current="page"' : '';
     $auditoriaActive = $activeNav === 'auditoria' ? ' aria-current="page"' : '';
+    $perfilActive = $activeNav === 'perfil' ? ' aria-current="page"' : '';
+    $showSidebar = $showCatalogNav || $showAuditNav;
     ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -227,27 +233,33 @@ function admin_render_header(string $title, string $activeNav = 'pontos'): void
 <body class="admin-body">
     <header class="admin-header">
         <div class="admin-header__inner">
-            <a class="admin-brand" href="/admin/">Raízes de Aruanda</a>
-            <?php if ($showCatalogNav || $showAuditNav): ?>
-                <nav class="admin-nav" aria-label="Administração">
-                    <?php if ($showCatalogNav): ?>
-                        <a class="admin-nav__link" href="/admin/pontos/"<?php echo $pontosActive; ?>>Pontos</a>
-                        <a class="admin-nav__link" href="/admin/linhas/"<?php echo $linhasActive; ?>>Linhas</a>
-                        <a class="admin-nav__link" href="/admin/ritmos/"<?php echo $ritmosActive; ?>>Ritmos</a>
-                    <?php endif; ?>
-                    <?php if ($showAuditNav): ?>
-                        <a class="admin-nav__link" href="/admin/auditoria/"<?php echo $auditoriaActive; ?>>Auditoria</a>
-                    <?php endif; ?>
-                </nav>
-            <?php endif; ?>
+            <a class="admin-brand" href="/admin/">
+                <span class="admin-brand__full">Raízes de Aruanda · Admin</span>
+                <span class="admin-brand__short">Admin</span>
+            </a>
             <div class="admin-header__user">
-                <?php if ($username !== ''): ?>
-                    <span class="admin-header__name"><?php echo $username; ?></span>
+                <?php if ($displayName !== ''): ?>
+                    <a class="admin-header__name" href="/admin/perfil/" title="Meu perfil" aria-label="Meu perfil"<?php echo $perfilActive; ?>><?php echo $displayName; ?></a>
                 <?php endif; ?>
                 <a class="admin-header__logout" href="/admin/logout.php">Sair</a>
             </div>
         </div>
     </header>
+    <div class="admin-layout">
+            <?php if ($showSidebar): ?>
+                <aside class="admin-sidebar">
+                    <nav class="admin-nav" aria-label="Administração">
+                        <?php if ($showCatalogNav): ?>
+                            <a class="admin-nav__link" href="/admin/pontos/"<?php echo $pontosActive; ?>>Pontos</a>
+                            <a class="admin-nav__link" href="/admin/linhas/"<?php echo $linhasActive; ?>>Linhas</a>
+                            <a class="admin-nav__link" href="/admin/ritmos/"<?php echo $ritmosActive; ?>>Ritmos</a>
+                        <?php endif; ?>
+                        <?php if ($showAuditNav): ?>
+                            <a class="admin-nav__link" href="/admin/auditoria/"<?php echo $auditoriaActive; ?>>Auditoria</a>
+                        <?php endif; ?>
+                    </nav>
+                </aside>
+            <?php endif; ?>
     <main class="admin-main">
     <?php
 }
@@ -256,6 +268,7 @@ function admin_render_footer(): void
 {
     ?>
     </main>
+    </div>
 </body>
 </html>
     <?php

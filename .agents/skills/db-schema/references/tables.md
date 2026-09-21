@@ -1,7 +1,7 @@
 # Tables (MySQL)
 
-**Captured:** 2026-09-01 via `SHOW FULL COLUMNS` on the shared MySQL used by this checkout.  
-**Refresh:** when `raizes.api` migrations (or live DESCRIBE) change columns.
+**Captured:** 2026-09-01 via `SHOW FULL COLUMNS` on the shared DB used by this checkout.  
+**Engine context:** InnoDB-style app DB (`u766359255_raizes`). Refresh this file when migrations change columns.
 
 Notation: **Null** YES/NO · **Key** PRI / UNI / MUL · **Extra** as MySQL reports.
 
@@ -23,7 +23,7 @@ Catálogo de pontos (letra + FKs).
 | tipo | varchar(255) | YES |  | NULL |  |
 | gravar_audio | tinyint(1) | YES |  | 0 |  |
 
-**Notes:** `linha` / `ritmo` are FKs to `tb_linhas.id` / `tb_ritmos.id`. Admin CRUD writes `letra`, `tipo`, `audio_url`, `gravar_audio`, `linha`, `ritmo`.
+**Notes:** `linha` / `ritmo` are FKs to `tb_linhas.id` / `tb_ritmos.id`. Admin CRUD writes `letra`, `tipo`, `audio_url`, `linha`, `ritmo` — does not expose `gravar_audio` in current UI.
 
 ---
 
@@ -83,7 +83,7 @@ Auth for admin (bcrypt in `password`).
 | created_at | timestamp | NO |  | current_timestamp() |  |
 | updated_at | timestamp | NO |  | current_timestamp() | on update current_timestamp() |
 
-**Notes:** Session login uses `id`, `username`, `name`, `password` + `password_verify`. Audit payloads carry actor/resource metadata only.
+**Notes:** Session login uses `id`, `username`, `name`, `password` + `password_verify`. Do not audit password/token values.
 
 ---
 
@@ -108,7 +108,8 @@ Auth for admin (bcrypt in `password`).
 | created_at | timestamp | NO |  | current_timestamp() |  |
 | updated_at | timestamp | NO |  | current_timestamp() | on update current_timestamp() |
 
-**Notes:** Slugs like `ponto:create`, `linha:*`, `audit:read`.
+**Notes:** Concrete slugs include `ponto:create`, `linha:update`, `audit:read`.
+The API guard matches exact strings; `linha:*` does not grant `linha:update`.
 
 ---
 
