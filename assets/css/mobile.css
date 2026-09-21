@@ -160,8 +160,8 @@
   /* Nome da linha: hero abaixo do header; rola embora (não sticky) */
   .linha-hero {
     padding: 20px 16px 12px;
-    gap: 0.5rem 0.75rem;
-    align-items: center;
+    gap: 0.5rem;
+    align-items: flex-start;
   }
 
   .linha-nome {
@@ -174,6 +174,10 @@
     white-space: normal;
     overflow: visible;
     text-overflow: unset;
+  }
+
+  .linha-saudacao {
+    font-size: 1rem;
   }
 
   .linha-playlist {

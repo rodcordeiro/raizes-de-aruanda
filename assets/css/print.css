@@ -37,7 +37,16 @@
   .linha-nome {
     font-size: 1.5rem;
     color: #000;
-    margin-bottom: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .linha-saudacao {
+    color: #000;
+    margin: 0 0 1rem;
+  }
+
+  .linha-playlist {
+    display: none;
   }
 
   .ponto-letra {

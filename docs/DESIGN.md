@@ -192,6 +192,7 @@ Só o que existe no produto. Specs densas; frames Pencil + CSS são a prova.
 ### Linha nome
 - Desktop: 32/700 `text`; link canal YT em `brand`.
 - Mobile: pad 20/16/12/16; The Linha Hero Rule.
+- Hero stack (Opção B): nome → Saudação (`tb_linhas.saudacao`, `muted` 16/400) → playlist. Omitir o nó se `saudacao` for null (sem “—”).
 
 ### Ritmo chips
 - Desktop: wrap, H32, border, `surfaceMuted`, 14/400.

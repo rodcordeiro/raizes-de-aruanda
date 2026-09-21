@@ -65,6 +65,7 @@ class Linhas{
                 IL.id,
                 IL.nome as linha,
                 IL.canal_youtube,
+                IL.saudacao,
                 CL.nome as categoria,
                 CL.id AS id_categoria
             FROM

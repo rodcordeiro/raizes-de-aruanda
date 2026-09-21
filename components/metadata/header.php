@@ -22,6 +22,6 @@
 
 
 	<!-- LINKS -->
-	<link rel="stylesheet" type="text/css" href="./assets/css/main.css">
-	<link rel="stylesheet" type="text/css" href="./assets/css/mobile.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/main.css?v=20260921-saudacao">
+	<link rel="stylesheet" type="text/css" href="./assets/css/mobile.css?v=20260921-saudacao">
 	<link rel="stylesheet" type="text/css" href="./assets/css/print.css" media="print">

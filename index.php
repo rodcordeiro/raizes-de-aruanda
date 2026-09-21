@@ -15,6 +15,7 @@
         $categorias = $Linhas->getCategories();
 
         $canalYoutube = '';
+        $saudacao = '';
         $busca = '';
         $pontos = [];
         $hasLinha = isset($_GET['buscar']) && $_GET['buscar'] !== '';
@@ -28,10 +29,15 @@
                 $canalYoutube = $linhaData['canal_youtube'];
             }
 
+            if ($linhaData && !empty($linhaData['saudacao'])) {
+                $saudacao = trim((string) $linhaData['saudacao']);
+            }
+
             $busca = isset($_GET['show']) ? $_GET['show'] : $buscar;
         }
 
         $linhaAtual = htmlspecialchars($busca, ENT_QUOTES, 'UTF-8');
+        $saudacaoHtml = $saudacao !== '' ? htmlspecialchars($saudacao, ENT_QUOTES, 'UTF-8') : '';
     ?>
     <script src="https://unpkg.com/feather-icons" defer></script>
     <script src="./assets/js/main.js" defer></script>
@@ -73,7 +79,16 @@
                 <?php if ($hasLinha) { ?>
                 <?php /* Nome da linha (hero no mobile) + chips sticky — separados para o sticky não limitar ao bloco curto */ ?>
                 <div class="linha-hero" id="linha-hero">
-                    <div class="linha-nome" id="linha-nome"><?php echo $linhaAtual; ?></div>
+                    <div
+                        class="linha-nome"
+                        id="linha-nome"
+                        <?php if ($saudacaoHtml !== '') { ?>
+                            aria-describedby="linha-saudacao"
+                        <?php } ?>
+                    ><?php echo $linhaAtual; ?></div>
+                    <?php if ($saudacaoHtml !== '') { ?>
+                        <p class="linha-saudacao" id="linha-saudacao"><?php echo $saudacaoHtml; ?></p>
+                    <?php } ?>
                     <?php if (!empty($canalYoutube)) { ?>
                         <a
                             class="linha-playlist"

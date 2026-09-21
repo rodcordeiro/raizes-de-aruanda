@@ -4,8 +4,8 @@
     {
       "type": "text",
       "id": "v2SectionLabel",
-      "x": 2000,
-      "y": -1265,
+      "x": 1973,
+      "y": -1628,
       "name": "v2_label",
       "fill": "$color.brand",
       "content": "v2 — mobile-first (leitura em movimento)",
@@ -16,8 +16,8 @@
     {
       "type": "frame",
       "id": "homeMobileV2",
-      "x": 2000,
-      "y": -1089,
+      "x": 1973,
+      "y": -1452,
       "name": "home_mobile_v2",
       "clip": true,
       "width": 390,
@@ -205,8 +205,8 @@
     {
       "type": "frame",
       "id": "menuMobileV2",
-      "x": 2450,
-      "y": -1089,
+      "x": 2423,
+      "y": -1452,
       "name": "menu_mobile_v2",
       "clip": true,
       "width": 390,
@@ -725,8 +725,8 @@
     {
       "type": "frame",
       "id": "linhaMobileV2",
-      "x": 2900,
-      "y": -1089,
+      "x": 2873,
+      "y": -1452,
       "name": "linha_mobile_v2",
       "clip": true,
       "width": 390,
@@ -790,14 +790,14 @@
               "id": "J0cow",
               "name": "linha_hero",
               "width": "fill_container",
-              "gap": 12,
+              "layout": "vertical",
+              "gap": 8,
               "padding": [
                 20,
                 16,
                 12,
                 16
               ],
-              "alignItems": "center",
               "children": [
                 {
                   "type": "text",
@@ -811,6 +811,18 @@
                   "fontFamily": "Source Sans 3",
                   "fontSize": 36,
                   "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "o1j5AL",
+                  "name": "linha_saudacao",
+                  "fill": "$color.muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Eparrei!",
+                  "lineHeight": 1.35,
+                  "fontFamily": "$font.family",
+                  "fontSize": 16
                 },
                 {
                   "type": "frame",
@@ -1070,616 +1082,20 @@
     {
       "type": "frame",
       "id": "linhaWebV2",
-      "x": 2000,
-      "y": 0,
+      "x": 1973,
+      "y": -363,
       "name": "linha_web_v2",
       "clip": true,
       "width": 1280,
-      "height": 920,
+      "height": 1000,
       "fill": "$color.bg",
-      "layout": "vertical",
-      "children": [
-        {
-          "type": "frame",
-          "id": "lw-header",
-          "width": "fill_container",
-          "height": 64,
-          "fill": "$color.brand",
-          "gap": 16,
-          "padding": [
-            0,
-            32
-          ],
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "ellipse",
-              "id": "lw-logo",
-              "fill": "$color.brandContrast",
-              "width": 48,
-              "height": 48
-            },
-            {
-              "type": "text",
-              "id": "lw-title",
-              "fill": "$color.brandContrast",
-              "content": "Pontos de Umbanda",
-              "fontFamily": "Source Sans 3",
-              "fontSize": 22,
-              "fontWeight": "700"
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "lw-body",
-          "width": "fill_container",
-          "height": "fill_container",
-          "children": [
-            {
-              "type": "frame",
-              "id": "lw-sidebar",
-              "width": 240,
-              "height": "fill_container",
-              "fill": "$color.bg",
-              "layout": "vertical",
-              "gap": 4,
-              "padding": [
-                24,
-                16
-              ],
-              "children": [
-                {
-                  "type": "text",
-                  "id": "lw-cat-orixa",
-                  "fill": "$color.brand",
-                  "content": "ORIXÁ",
-                  "fontFamily": "Source Sans 3",
-                  "fontSize": 13,
-                  "fontWeight": "700",
-                  "letterSpacing": 0.6
-                },
-                {
-                  "type": "frame",
-                  "id": "lw-ayra",
-                  "width": "fill_container",
-                  "height": 44,
-                  "fill": "$color.bg",
-                  "gap": 8,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "rectangle",
-                      "id": "lw-ayra-accent",
-                      "fill": "$color.transparent",
-                      "width": 3,
-                      "height": 44
-                    },
-                    {
-                      "type": "text",
-                      "id": "lw-ayra-label",
-                      "fill": "$color.text",
-                      "content": "Ayrá",
-                      "fontFamily": "Source Sans 3",
-                      "fontSize": 17,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "lw-iansa",
-                  "width": "fill_container",
-                  "height": 44,
-                  "fill": "$color.activeTint",
-                  "gap": 8,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "rectangle",
-                      "id": "lw-iansa-accent",
-                      "fill": "$color.brand",
-                      "width": 3,
-                      "height": 44
-                    },
-                    {
-                      "type": "text",
-                      "id": "lw-iansa-label",
-                      "fill": "$color.brand",
-                      "content": "Iansã",
-                      "fontFamily": "Source Sans 3",
-                      "fontSize": 17,
-                      "fontWeight": "600"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "lw-iroko",
-                  "width": "fill_container",
-                  "height": 44,
-                  "fill": "$color.bg",
-                  "gap": 8,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "rectangle",
-                      "id": "lw-iroko-accent",
-                      "fill": "$color.transparent",
-                      "width": 3,
-                      "height": 44
-                    },
-                    {
-                      "type": "text",
-                      "id": "lw-iroko-label",
-                      "fill": "$color.text",
-                      "content": "Iroko",
-                      "fontFamily": "Source Sans 3",
-                      "fontSize": 17,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "lw-logun",
-                  "width": "fill_container",
-                  "height": 44,
-                  "fill": "$color.bg",
-                  "gap": 8,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "rectangle",
-                      "id": "lw-logun-accent",
-                      "fill": "$color.transparent",
-                      "width": 3,
-                      "height": 44
-                    },
-                    {
-                      "type": "text",
-                      "id": "lw-logun-label",
-                      "fill": "$color.text",
-                      "content": "Logun-Edé",
-                      "fontFamily": "Source Sans 3",
-                      "fontSize": 17,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "lw-nana",
-                  "width": "fill_container",
-                  "height": 44,
-                  "fill": "$color.bg",
-                  "gap": 8,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "rectangle",
-                      "id": "lw-nana-accent",
-                      "fill": "$color.transparent",
-                      "width": 3,
-                      "height": 44
-                    },
-                    {
-                      "type": "text",
-                      "id": "lw-nana-label",
-                      "fill": "$color.text",
-                      "content": "Nanã",
-                      "fontFamily": "Source Sans 3",
-                      "fontSize": 17,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "lw-oba",
-                  "width": "fill_container",
-                  "height": 44,
-                  "fill": "$color.bg",
-                  "gap": 8,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "rectangle",
-                      "id": "lw-oba-accent",
-                      "fill": "$color.transparent",
-                      "width": 3,
-                      "height": 44
-                    },
-                    {
-                      "type": "text",
-                      "id": "lw-oba-label",
-                      "fill": "$color.text",
-                      "content": "Obá",
-                      "fontFamily": "Source Sans 3",
-                      "fontSize": 17,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "lw-spacer-guia",
-                  "width": "fill_container",
-                  "height": 16
-                },
-                {
-                  "type": "text",
-                  "id": "lw-cat-guia",
-                  "fill": "$color.brand",
-                  "content": "GUIA",
-                  "fontFamily": "Source Sans 3",
-                  "fontSize": 13,
-                  "fontWeight": "700",
-                  "letterSpacing": 0.6
-                },
-                {
-                  "type": "frame",
-                  "id": "lw-baianos",
-                  "width": "fill_container",
-                  "height": 44,
-                  "fill": "$color.bg",
-                  "gap": 8,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "rectangle",
-                      "id": "lw-baianos-accent",
-                      "fill": "$color.transparent",
-                      "width": 3,
-                      "height": 44
-                    },
-                    {
-                      "type": "text",
-                      "id": "lw-baianos-label",
-                      "fill": "$color.text",
-                      "content": "Baianos",
-                      "fontFamily": "Source Sans 3",
-                      "fontSize": 17,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "lw-caboclos",
-                  "width": "fill_container",
-                  "height": 44,
-                  "fill": "$color.bg",
-                  "gap": 8,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "rectangle",
-                      "id": "lw-caboclos-accent",
-                      "fill": "$color.transparent",
-                      "width": 3,
-                      "height": 44
-                    },
-                    {
-                      "type": "text",
-                      "id": "lw-caboclos-label",
-                      "fill": "$color.text",
-                      "content": "Caboclos",
-                      "fontFamily": "Source Sans 3",
-                      "fontSize": 17,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "lw-exu",
-                  "width": "fill_container",
-                  "height": 44,
-                  "fill": "$color.bg",
-                  "gap": 8,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "rectangle",
-                      "id": "lw-exu-accent",
-                      "fill": "$color.transparent",
-                      "width": 3,
-                      "height": 44
-                    },
-                    {
-                      "type": "text",
-                      "id": "lw-exu-label",
-                      "fill": "$color.text",
-                      "content": "Exu",
-                      "fontFamily": "Source Sans 3",
-                      "fontSize": 17,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "lw-spacer-outros",
-                  "width": "fill_container",
-                  "height": 16
-                },
-                {
-                  "type": "text",
-                  "id": "lw-cat-outros",
-                  "fill": "$color.brand",
-                  "content": "OUTROS",
-                  "fontFamily": "Source Sans 3",
-                  "fontSize": 13,
-                  "fontWeight": "700",
-                  "letterSpacing": 0.6
-                },
-                {
-                  "type": "frame",
-                  "id": "lw-abertura",
-                  "width": "fill_container",
-                  "height": 44,
-                  "fill": "$color.bg",
-                  "gap": 8,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "rectangle",
-                      "id": "lw-abertura-accent",
-                      "fill": "$color.transparent",
-                      "width": 3,
-                      "height": 44
-                    },
-                    {
-                      "type": "text",
-                      "id": "lw-abertura-label",
-                      "fill": "$color.text",
-                      "content": "Abertura",
-                      "fontFamily": "Source Sans 3",
-                      "fontSize": 17,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "rectangle",
-              "id": "lw-sidebar-border",
-              "fill": "$color.border",
-              "width": 1,
-              "height": "fill_container"
-            },
-            {
-              "type": "frame",
-              "id": "lw-main",
-              "width": "fill_container",
-              "height": "fill_container",
-              "layout": "vertical",
-              "gap": 16,
-              "padding": [
-                32,
-                40
-              ],
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "j20cEF",
-                  "name": "page_title_block",
-                  "width": "fill_container",
-                  "gap": 12,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "lw-page-title",
-                      "fill": "$color.text",
-                      "content": "Iansã",
-                      "fontFamily": "Source Sans 3",
-                      "fontSize": 32,
-                      "fontWeight": "700"
-                    },
-                    {
-                      "type": "frame",
-                      "id": "efBWD",
-                      "name": "playlist_link",
-                      "height": 44,
-                      "gap": 8,
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "icon",
-                          "id": "N6sKF1",
-                          "name": "playlist_ext_icon",
-                          "width": 16,
-                          "height": 16,
-                          "icon": "external-link",
-                          "library": "lucide",
-                          "fill": "$color.brand"
-                        },
-                        {
-                          "type": "text",
-                          "id": "S6lwd",
-                          "name": "playlist_link_lbl",
-                          "fill": "$color.brand",
-                          "content": "Abrir playlist no YouTube",
-                          "fontFamily": "$font.family",
-                          "fontSize": 14,
-                          "fontWeight": "600"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "lw-chips",
-                  "width": "fill_container",
-                  "height": 36,
-                  "gap": 12,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "lw-chip-1",
-                      "height": 32,
-                      "fill": "$color.brand",
-                      "cornerRadius": 999,
-                      "padding": [
-                        0,
-                        12
-                      ],
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "lw-chip-1-label",
-                          "fill": "$color.brandContrast",
-                          "content": "1 Barravento",
-                          "fontFamily": "Source Sans 3",
-                          "fontSize": 14,
-                          "fontWeight": "600"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "lw-chip-2",
-                      "height": 32,
-                      "fill": "$color.surfaceMuted",
-                      "cornerRadius": 999,
-                      "padding": [
-                        0,
-                        12
-                      ],
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "lw-chip-2-label",
-                          "fill": "$color.text",
-                          "content": "2 Congo",
-                          "fontFamily": "Source Sans 3",
-                          "fontSize": 14,
-                          "fontWeight": "normal"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "lw-chip-3",
-                      "height": 32,
-                      "fill": "$color.surfaceMuted",
-                      "cornerRadius": 999,
-                      "padding": [
-                        0,
-                        12
-                      ],
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "lw-chip-3-label",
-                          "fill": "$color.text",
-                          "content": "3 Caboclo",
-                          "fontFamily": "Source Sans 3",
-                          "fontSize": 14,
-                          "fontWeight": "normal"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "id": "lw-h2-1",
-                  "fill": "$color.text",
-                  "content": "1| Barravento",
-                  "fontFamily": "Source Sans 3",
-                  "fontSize": 20,
-                  "fontWeight": "700"
-                },
-                {
-                  "type": "text",
-                  "id": "lw-letra-1",
-                  "fill": "$color.text",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "Aiê dindi, Aiê dindá\nA matamba de arulê\na matamba de arulá",
-                  "lineHeight": 1.6,
-                  "fontFamily": "Source Sans 3",
-                  "fontSize": 19,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "rectangle",
-                  "id": "lw-div-1",
-                  "fill": "$color.border",
-                  "width": "fill_container",
-                  "height": 1
-                },
-                {
-                  "type": "text",
-                  "id": "lw-h2-2",
-                  "fill": "$color.text",
-                  "content": "2| Congo",
-                  "fontFamily": "Source Sans 3",
-                  "fontSize": 20,
-                  "fontWeight": "700"
-                },
-                {
-                  "type": "text",
-                  "id": "lw-letra-2",
-                  "fill": "$color.text",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "Quando Oyá me chamou eu fui\natender tava sentada Iansã na palha\ndo dendê o guerreou guerreou relampejou\nou pelo cálice pela hóstia relampejo!!!\n\nTibere bere ooo Iansã tiberere\nooo tibere bere ooo Iansã tiberere",
-                  "lineHeight": 1.6,
-                  "fontFamily": "Source Sans 3",
-                  "fontSize": 19,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "frame",
-                  "id": "lw-video",
-                  "width": 640,
-                  "height": 360,
-                  "fill": "$color.videoBg",
-                  "cornerRadius": 8,
-                  "layout": "vertical",
-                  "gap": 8,
-                  "justifyContent": "center",
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "ellipse",
-                      "id": "lw-video-play",
-                      "fill": "$color.youtube",
-                      "width": 56,
-                      "height": 56
-                    },
-                    {
-                      "type": "text",
-                      "id": "lw-video-label",
-                      "fill": "$color.brandContrast",
-                      "content": "Assistir no YouTube",
-                      "fontFamily": "Source Sans 3",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
+      "layout": "vertical"
     },
     {
       "type": "note",
       "id": "v8Sii",
-      "x": 3341,
-      "y": -1089,
+      "x": 3314,
+      "y": -1452,
       "name": "sticky_behavior_note",
       "width": 320,
       "height": 628,
@@ -10268,12 +9684,12 @@
     {
       "type": "note",
       "id": "uuhHV",
-      "x": 3320,
-      "y": 0,
+      "x": 3293,
+      "y": -363,
       "name": "linha_playlist_note",
       "width": 320,
-      "height": 180,
-      "content": "Home · Linha + playlist (v2)\n\nCom canal_youtube: link “Abrir playlist no YouTube” sob o título (mobile stacked; web sob lw-page-title). Abre em nova aba.\nSem playlist: só o nome da Linha.\nNão chamar Linha de playlist."
+      "height": 280,
+      "content": "Home · Linha + saudação + playlist (Opção B)\n\nHierarquia no hero (#linha-hero / page_title_block):\n1) Nome da Linha\n2) Saudação (tb_linhas.saudacao) — muted 16/400, full-width sob o nome\n3) Playlist YouTube (se canal_youtube)\n\nSem saudacao: omitir o nó (sem “—”).\nSem playlist: só nome ± saudação.\nMobile: stack vertical; hero rola (não sticky).\nWeb: stack vertical no title block.\nNão chamar Linha de playlist. Saudação ≠ greeting/salve/título."
     },
     {
       "type": "frame",
@@ -13141,6 +12557,616 @@
       "width": 360,
       "height": 520,
       "content": "Iris 2026-09-21 (atualizado após PHP)\n\nCANÓNICO WEB admin: Admin / Shell — Pontos (lQ4Te) 1440. Header 64 sage, título + usuário (link /admin/perfil/) + Sair. Nav NÃO vai no header — sidebar 220 à esquerda (Nav Rail). Sem hamburger.\n\nCANÓNICO MOBILE admin: Admin / Shell — Pontos · Mobile (ByiF9) 390. Header 60: Admin + usuário (link perfil) + Sair. Nav = tabs 48 abaixo do header. Sem hamburger.\n\nPHP (admin/_shell.php + admin/styles.css): chrome alinhado a estes frames. Home pública (linha_web_v2) independente: header 64 logo 48 + título, sidebar 240. Hamburger só em home_mobile_v2 / menu_mobile_v2.\n\nPerfil (u8K2x / WDQyj): clique no username no header. Campo Nome = tb_user.name (não o login). Senha atual obrigatória; nova senha opcional. Logout permanece Sair. Sem avatar, e-mail, papéis ou CRUD de outros usuários."
+    },
+    {
+      "type": "frame",
+      "id": "lw-header",
+      "x": 1973,
+      "y": -363,
+      "width": "fill_container(1280)",
+      "height": 64,
+      "fill": "$color.brand",
+      "gap": 16,
+      "padding": [
+        0,
+        32
+      ],
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "ellipse",
+          "id": "lw-logo",
+          "fill": "$color.brandContrast",
+          "width": 48,
+          "height": 48
+        },
+        {
+          "type": "text",
+          "id": "lw-title",
+          "fill": "$color.brandContrast",
+          "content": "Pontos de Umbanda",
+          "fontFamily": "Source Sans 3",
+          "fontSize": 22,
+          "fontWeight": "700"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "lw-body",
+      "x": 1973,
+      "y": -299,
+      "width": "fill_container(1280)",
+      "height": "fill_container(936)",
+      "children": [
+        {
+          "type": "frame",
+          "id": "lw-sidebar",
+          "width": 240,
+          "height": "fill_container",
+          "fill": "$color.bg",
+          "layout": "vertical",
+          "gap": 4,
+          "padding": [
+            24,
+            16
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "lw-cat-orixa",
+              "fill": "$color.brand",
+              "content": "ORIXÁ",
+              "fontFamily": "Source Sans 3",
+              "fontSize": 13,
+              "fontWeight": "700",
+              "letterSpacing": 0.6
+            },
+            {
+              "type": "frame",
+              "id": "lw-ayra",
+              "width": "fill_container",
+              "height": 44,
+              "fill": "$color.bg",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "lw-ayra-accent",
+                  "fill": "$color.transparent",
+                  "width": 3,
+                  "height": 44
+                },
+                {
+                  "type": "text",
+                  "id": "lw-ayra-label",
+                  "fill": "$color.text",
+                  "content": "Ayrá",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lw-iansa",
+              "width": "fill_container",
+              "height": 44,
+              "fill": "$color.activeTint",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "lw-iansa-accent",
+                  "fill": "$color.brand",
+                  "width": 3,
+                  "height": 44
+                },
+                {
+                  "type": "text",
+                  "id": "lw-iansa-label",
+                  "fill": "$color.brand",
+                  "content": "Iansã",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 17,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lw-iroko",
+              "width": "fill_container",
+              "height": 44,
+              "fill": "$color.bg",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "lw-iroko-accent",
+                  "fill": "$color.transparent",
+                  "width": 3,
+                  "height": 44
+                },
+                {
+                  "type": "text",
+                  "id": "lw-iroko-label",
+                  "fill": "$color.text",
+                  "content": "Iroko",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lw-logun",
+              "width": "fill_container",
+              "height": 44,
+              "fill": "$color.bg",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "lw-logun-accent",
+                  "fill": "$color.transparent",
+                  "width": 3,
+                  "height": 44
+                },
+                {
+                  "type": "text",
+                  "id": "lw-logun-label",
+                  "fill": "$color.text",
+                  "content": "Logun-Edé",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lw-nana",
+              "width": "fill_container",
+              "height": 44,
+              "fill": "$color.bg",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "lw-nana-accent",
+                  "fill": "$color.transparent",
+                  "width": 3,
+                  "height": 44
+                },
+                {
+                  "type": "text",
+                  "id": "lw-nana-label",
+                  "fill": "$color.text",
+                  "content": "Nanã",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lw-oba",
+              "width": "fill_container",
+              "height": 44,
+              "fill": "$color.bg",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "lw-oba-accent",
+                  "fill": "$color.transparent",
+                  "width": 3,
+                  "height": 44
+                },
+                {
+                  "type": "text",
+                  "id": "lw-oba-label",
+                  "fill": "$color.text",
+                  "content": "Obá",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lw-spacer-guia",
+              "width": "fill_container",
+              "height": 16
+            },
+            {
+              "type": "text",
+              "id": "lw-cat-guia",
+              "fill": "$color.brand",
+              "content": "GUIA",
+              "fontFamily": "Source Sans 3",
+              "fontSize": 13,
+              "fontWeight": "700",
+              "letterSpacing": 0.6
+            },
+            {
+              "type": "frame",
+              "id": "lw-baianos",
+              "width": "fill_container",
+              "height": 44,
+              "fill": "$color.bg",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "lw-baianos-accent",
+                  "fill": "$color.transparent",
+                  "width": 3,
+                  "height": 44
+                },
+                {
+                  "type": "text",
+                  "id": "lw-baianos-label",
+                  "fill": "$color.text",
+                  "content": "Baianos",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lw-caboclos",
+              "width": "fill_container",
+              "height": 44,
+              "fill": "$color.bg",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "lw-caboclos-accent",
+                  "fill": "$color.transparent",
+                  "width": 3,
+                  "height": 44
+                },
+                {
+                  "type": "text",
+                  "id": "lw-caboclos-label",
+                  "fill": "$color.text",
+                  "content": "Caboclos",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lw-exu",
+              "width": "fill_container",
+              "height": 44,
+              "fill": "$color.bg",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "lw-exu-accent",
+                  "fill": "$color.transparent",
+                  "width": 3,
+                  "height": 44
+                },
+                {
+                  "type": "text",
+                  "id": "lw-exu-label",
+                  "fill": "$color.text",
+                  "content": "Exu",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lw-spacer-outros",
+              "width": "fill_container",
+              "height": 16
+            },
+            {
+              "type": "text",
+              "id": "lw-cat-outros",
+              "fill": "$color.brand",
+              "content": "OUTROS",
+              "fontFamily": "Source Sans 3",
+              "fontSize": 13,
+              "fontWeight": "700",
+              "letterSpacing": 0.6
+            },
+            {
+              "type": "frame",
+              "id": "lw-abertura",
+              "width": "fill_container",
+              "height": 44,
+              "fill": "$color.bg",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "lw-abertura-accent",
+                  "fill": "$color.transparent",
+                  "width": 3,
+                  "height": 44
+                },
+                {
+                  "type": "text",
+                  "id": "lw-abertura-label",
+                  "fill": "$color.text",
+                  "content": "Abertura",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "lw-sidebar-border",
+          "fill": "$color.border",
+          "width": 1,
+          "height": "fill_container"
+        },
+        {
+          "type": "frame",
+          "id": "lw-main",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            32,
+            40
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "j20cEF",
+              "name": "page_title_block",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "lw-page-title",
+                  "fill": "$color.text",
+                  "content": "Iansã",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 32,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "NeGU4",
+                  "name": "linha_saudacao",
+                  "fill": "$color.muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Eparrei!",
+                  "lineHeight": 1.35,
+                  "fontFamily": "$font.family",
+                  "fontSize": 16
+                },
+                {
+                  "type": "frame",
+                  "id": "efBWD",
+                  "name": "playlist_link",
+                  "height": 44,
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "N6sKF1",
+                      "name": "playlist_ext_icon",
+                      "width": 16,
+                      "height": 16,
+                      "icon": "external-link",
+                      "library": "lucide",
+                      "fill": "$color.brand"
+                    },
+                    {
+                      "type": "text",
+                      "id": "S6lwd",
+                      "name": "playlist_link_lbl",
+                      "fill": "$color.brand",
+                      "content": "Abrir playlist no YouTube",
+                      "fontFamily": "$font.family",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lw-chips",
+              "width": "fill_container",
+              "height": 36,
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "lw-chip-1",
+                  "height": 32,
+                  "fill": "$color.brand",
+                  "cornerRadius": 999,
+                  "padding": [
+                    0,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "lw-chip-1-label",
+                      "fill": "$color.brandContrast",
+                      "content": "1 Barravento",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-chip-2",
+                  "height": 32,
+                  "fill": "$color.surfaceMuted",
+                  "cornerRadius": 999,
+                  "padding": [
+                    0,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "lw-chip-2-label",
+                      "fill": "$color.text",
+                      "content": "2 Congo",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lw-chip-3",
+                  "height": 32,
+                  "fill": "$color.surfaceMuted",
+                  "cornerRadius": 999,
+                  "padding": [
+                    0,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "lw-chip-3-label",
+                      "fill": "$color.text",
+                      "content": "3 Caboclo",
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "lw-h2-1",
+              "fill": "$color.text",
+              "content": "1| Barravento",
+              "fontFamily": "Source Sans 3",
+              "fontSize": 20,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "lw-letra-1",
+              "fill": "$color.text",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Aiê dindi, Aiê dindá\nA matamba de arulê\na matamba de arulá",
+              "lineHeight": 1.6,
+              "fontFamily": "Source Sans 3",
+              "fontSize": 19,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "rectangle",
+              "id": "lw-div-1",
+              "fill": "$color.border",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "text",
+              "id": "lw-h2-2",
+              "fill": "$color.text",
+              "content": "2| Congo",
+              "fontFamily": "Source Sans 3",
+              "fontSize": 20,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "lw-letra-2",
+              "fill": "$color.text",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Quando Oyá me chamou eu fui\natender tava sentada Iansã na palha\ndo dendê o guerreou guerreou relampejou\nou pelo cálice pela hóstia relampejo!!!\n\nTibere bere ooo Iansã tiberere\nooo tibere bere ooo Iansã tiberere",
+              "lineHeight": 1.6,
+              "fontFamily": "Source Sans 3",
+              "fontSize": 19,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "lw-video",
+              "width": 640,
+              "height": 360,
+              "fill": "$color.videoBg",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "gap": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "lw-video-play",
+                  "fill": "$color.youtube",
+                  "width": 56,
+                  "height": 56
+                },
+                {
+                  "type": "text",
+                  "id": "lw-video-label",
+                  "fill": "$color.brandContrast",
+                  "content": "Assistir no YouTube",
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "variables": {
