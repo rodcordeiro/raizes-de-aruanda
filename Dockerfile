@@ -1,7 +1,9 @@
-FROM php:8.2-apache
-
-RUN docker-php-ext-install pdo_mysql
-
-WORKDIR /var/www/html
-
-COPY . /var/www/html
+FROM node:22-alpine
+WORKDIR /app
+COPY package.json package-lock.json* ./
+RUN npm install
+COPY . .
+RUN npm run build
+ENV PORT=3000
+EXPOSE 3000
+CMD ["npm", "start"]

@@ -2,3 +2,8 @@
 .env
 .htaccess
 /pontos/
+node_modules
+.next
+*.tsbuildinfo
+.tmp-pkgs
+tmp-install.js

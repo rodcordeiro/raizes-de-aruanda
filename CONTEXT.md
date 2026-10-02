@@ -55,7 +55,7 @@ _Avoid_: Greeting, salve, título
 ### Catálogo
 
 **Ponto**:
-Cântico ritualístico utilizado durante as giras de Umbanda. A entidade completa: letra, ritmo e função.
+Cântico ritualístico utilizado durante as giras de Umbanda. A entidade completa: letra, ritmo, função e áudio opcional.
 _Avoid_: Música, hino, canto, letra
 
 **Letra**:
@@ -67,7 +67,7 @@ Toque e compasso do atabaque daquele ponto.
 _Avoid_: Estilo, gênero, BPM
 
 **Função**:
-Papel do ponto na gira: chamada, sustentação ou subida.
+Papel do ponto na gira: chamada, sustentação, subida ou demanda.
 _Avoid_: Tipo, momento, papel, categoria do ponto
 
 **Chamada**:
@@ -81,3 +81,7 @@ _Avoid_: Tipo, meio, corpo
 **Subida**:
 Função do ponto que despede a linha na gira.
 _Avoid_: Tipo, encerramento, despedida
+
+**Demanda**:
+Função do ponto ligada ao feitiço (trabalho espiritual): contra-feitiço, ao quebrar a demanda, ou embasamento do feitiço, ao demandar.
+_Avoid_: Feitiço, trabalho, magia

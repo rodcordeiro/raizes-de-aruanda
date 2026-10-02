@@ -2,44 +2,35 @@
 
 ## Stack
 
-- PHP **8.2** + Apache (`Dockerfile`)
-- MySQL via **PDO** (`db/db.class.php`)
-- Front: CSS + JS leve (feather-icons CDN + `main.js`)
+- Next.js 15 App Router, React 19, TypeScript (`package.json`)
+- Dados só via HTTP (`src/lib/api.ts`). Sem PDO neste checkout.
+- CSS próprio (sem Tailwind). Fonte: `next/font` Source Sans 3.
 
-## Boot home
+## Boot
 
-1. Request → `index.php`
-2. Includes: `header.php`, `db.class.php`, `linhas.controller.php`, `pontos.controller.php`
-3. Query `?buscar=<Linha>` lista pontos; sem param → apresentação
-
-`config/bootstrap.php` carrega `.env` se legível; **a home não o inclui hoje** — em Docker as vars vêm do `env_file` / ambiente.
+1. `src/app/layout.tsx` (`dynamic = "force-dynamic"`)
+2. Home lê `searchParams.buscar` e chama a API
+3. Admin: cookie de sessão → `src/lib/session.ts`; 401 tenta refresh em `/api/session/refresh`
 
 ## Env (nomes apenas)
 
-`db/db.class.php` lê `CONN_URI`, `ICNT_MYSQL_USER`, `ICNT_MYSQL_PASSWORD`, `ICNT_MYSQL_DATABASE` via `getenv` (após `config/bootstrap.php`).
-
 | Variável | Uso |
 | --- | --- |
-| `APP_PORT` | Porta host Compose (default 8080) |
-| `CONN_URI` | Host MySQL |
-| `ICNT_MYSQL_USER` | Usuário MySQL |
-| `ICNT_MYSQL_PASSWORD` | Senha |
-| `ICNT_MYSQL_DATABASE` | Database |
-| `DISCORD_WEBHOOK` | Só `bot.php` |
+| `APP_PORT` | Porta host do Compose (default 8080) |
+| `API_BASE_URL` | Base da raizes.api |
 
-**Privilégios:** a home pública pode operar com conta só de leitura; o **admin** (CRUD pontos/linhas/ritmos + auditoria/users conforme permissões) precisa de usuário com **WRITE** nas `tb_*` usadas. Schema de colunas/tipos ≠ privileges — ver skill `db-schema` / `tables.md`.
+Nunca documentar valores reais. Fonte de nomes: `.env.example`.
 
-Nunca documentar valores reais. Fonte de nomes: `.env.example` + código.
+No Compose, o default de `API_BASE_URL` aponta para o host (`host.docker.internal`), não para um serviço no mesmo compose.
 
 ## Local
 
 ```bash
+npm run dev
+# http://localhost:3000
+
 docker compose up --build
 # http://localhost:${APP_PORT:-8080}
 ```
 
-Volume: `./` → `/var/www/html`.
-
-## Deploy
-
-GitHub Actions → FTP (prod / homolog). Detalhe nos workflows sob `.github/workflows/`.
+Scripts em `package.json`: `dev`, `build`, `start`. Sem `lint`, `typecheck` ou `test`. Sem lockfile; a imagem usa `npm install`.
