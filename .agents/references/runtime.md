@@ -33,4 +33,4 @@ docker compose up --build
 # http://localhost:${APP_PORT:-8080}
 ```
 
-Scripts em `package.json`: `dev`, `build`, `start`. Sem `lint`, `typecheck` ou `test`. Sem lockfile; a imagem usa `npm install`.
+Scripts em `package.json`: `dev`, `build`, `start`. Sem `lint`, `typecheck` ou `test`. A imagem usa `npm ci` com `package-lock.json`.

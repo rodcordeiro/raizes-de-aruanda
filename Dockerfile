@@ -1,9 +1,26 @@
-FROM node:22-alpine
+FROM node:24-alpine AS dependencies
 WORKDIR /app
-COPY package.json package-lock.json* ./
-RUN npm install
-COPY . .
+COPY package.json package-lock.json ./
+RUN npm ci --no-audit --no-fund
+
+FROM node:24-alpine AS builder
+WORKDIR /app
+COPY --from=dependencies /app/node_modules ./node_modules
+COPY package.json next.config.ts next-env.d.ts tsconfig.json ./
+COPY public ./public
+COPY src ./src
 RUN npm run build
+
+FROM node:24-alpine AS runner
+WORKDIR /app
+ENV NODE_ENV=production
+ENV HOSTNAME=0.0.0.0
 ENV PORT=3000
+
+COPY --from=builder --chown=node:node /app/public ./public
+COPY --from=builder --chown=node:node /app/.next/standalone ./
+COPY --from=builder --chown=node:node /app/.next/static ./.next/static
+
+USER node
 EXPOSE 3000
-CMD ["npm", "start"]
+CMD ["node", "server.js"]
