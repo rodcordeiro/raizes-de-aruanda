@@ -8,37 +8,36 @@ Site público de **Pontos** do terreiro **Raízes de Aruanda**: canhoto da **Cur
 
 Fonte canônica: `CONTEXT.md` (não duplicar aqui).
 
-Termos-chave: Terreiro, Gira, Curimba, Assistência, Orixá, Guia, Linha, Categoria, Outros, Saudação, Ponto, Letra, Ritmo, Função (Chamada / Sustentação / Subida).
+Termos-chave: Terreiro, Gira, Curimba, Assistência, Orixá, Guia, Linha, Categoria, Outros, Saudação, Ponto, Letra, Ritmo, Função (Chamada / Sustentação / Subida / Demanda).
 
 ## Superfícies
 
 | Superfície | Status |
 | --- | --- |
-| Home pública (`index.php`) | **Ativa** — prioridade |
-| Admin auth (`admin/` login/sessão/RBAC) | **Ativa** |
-| Admin CRUD **Pontos** (`admin/pontos/`) | **Ativa** |
-| Admin CRUD **Linha** (`admin/linhas/`) | **Ativa** |
-| Admin CRUD **Ritmo** (`admin/ritmos/`) | **Ativa** |
-| Admin **Auditoria** (`admin/auditoria/`, `audit:read`) | **Ativa** — listagem read-only |
-| Dashboard / giras / uploads / users | **Adiados** |
-| `bot.php` (anúncio) | Secundário |
+| Home (`/`) | **Ativa** |
+| Ordem ritualística (`/ordem-ritualistica`) | **Ativa** |
+| Admin login e sessão | **Ativa** |
+| CRUD Pontos, Linhas, Ritmos | **Ativa** |
+| Auditoria (`audit:read`) | **Ativa** — lista read-only |
+| Perfil (`/admin/perfil`) | **Ativa** |
+| Dashboard, giras, uploads, CRUD de users | **Adiados** |
 
 ## Fluxo home
 
 1. Escolher **Linha** (nav / sheet)
-2. Ver **chips de Ritmo** (quantidade + nome → primeiro ponto do ritmo)
-3. Ler **Pontos** (letra; embed YouTube se link)
+2. Ver **chips de Ritmo**
+3. Ler **Pontos** (letra; embed YouTube ou áudio direto)
 
-## Fluxo admin (catálogo)
+## Fluxo admin
 
-1. Login (`tb_user` + sessão)
-2. Listar pontos/linhas/ritmos (exige `canReadCatalog`); mutações com `ponto:*` / `linha:*` / `ritmo:*`
-3. Criar / editar / excluir com CSRF + perm + audit same-tx (linha/ritmo: delete recusa se pontos ligados)
-4. Auditoria: listagem paginada se `audit:read`
+1. Login na API; sessão em cookie httpOnly
+2. Listar e mutar catálogo conforme `permissions` (lista vazia ou ausente mostra as ações)
+3. Excluir linha ou ritmo falha se ainda houver pontos
+4. Auditoria paginada quando a lista de permissões incluir `audit:read`
 
 ## Decisões ativas (Nero)
 
-- Reabrir admin de catálogo (spec); dashboard continua adiado — auth + CRUD pontos/linhas/ritmos + auditoria neste checkout
+- Front Next.js cliente HTTP da raizes.api (2026-10-02). Dashboard e UI de giras continuam adiados.
 - YouTube embed imediato
 - Layout mobile stacked + chips por ritmo
-- Brand sage `#77927B` (pen + CSS)
+- Brand sage nos tokens (`docs/DESIGN.md`)

@@ -1,66 +1,62 @@
 # Structure (checkout factual)
 
-## Ativo — home pública
+Next.js App Router em `src/`. Cliente HTTP de raizes.api. Sem PHP no tree.
+
+## Ativo — público
 
 | Path | Papel |
 | --- | --- |
-| `index.php` | Entrypoint home: Linha → chips Ritmo → Pontos |
-| `components/metadata/header.php` | Meta + ordem CSS (`main` → `mobile` → `print`) |
-| `controllers/linhas.controller.php` | Categorias / linhas (leitura) |
-| `controllers/pontos.controller.php` | Pontos por linha (leitura pública; `filter`) |
-| `db/db.class.php` | PDO MySQL via `getenv` |
-| `assets/css/main.css` | Tokens `:root` + layout desktop |
-| `assets/css/mobile.css` | ≤768px (sheet, hero, chips sticky) |
-| `assets/css/print.css` | Impressão |
-| `assets/js/main.js` | Menu sheet, filtro nav, chips Ritmo |
-| `assets/favicon/` | Ícones / manifest |
+| `src/app/page.tsx` | Home: `?buscar=` → Linha, chips, Pontos |
+| `src/app/ordem-ritualistica/page.tsx` | Texto estático da ordem |
+| `src/app/layout.tsx` | Root layout, fonte, `force-dynamic` |
+| `src/components/public-shell.tsx` | Header + nav por categoria |
+| `src/components/catalog-client.tsx` | Menu, filtro, chips (client) |
+| `src/components/line-view.tsx` | Hero, saudação, letra, YouTube/áudio |
+| `src/styles/main.css` | Tokens `:root` + desktop |
+| `src/styles/mobile.css` | ≤768px |
+| `src/styles/print.css` | Impressão |
+| `src/app/globals.css` | Importa `main` → `mobile` → `print` |
+| `public/` | Favicons e logo |
 | `docs/DESIGN.md` | Design system |
-| `docs/design/` | `design.pen` + PNGs de referência |
+| `docs/design/` | `design.pen` |
 | `CONTEXT.md` | Glossário |
-| `compose.yml` / `Dockerfile` | PHP 8.2 Apache + `pdo_mysql` |
-| `.env.example` | Nomes de variáveis (sem segredos) |
 
-## Ativo — admin (auth + CRUD Pontos/Linhas/Ritmos + Auditoria)
+## Ativo — admin
+
+| Path | Papel |
+| --- | --- |
+| `src/app/admin/login/` | Login |
+| `src/app/admin/(panel)/layout.tsx` | Gate de sessão + chrome |
+| `src/app/admin/(panel)/pontos/` | Lista, novo, edição, exclusão |
+| `src/app/admin/(panel)/linhas/` | Idem |
+| `src/app/admin/(panel)/ritmos/` | Idem |
+| `src/app/admin/(panel)/auditoria/` | Lista read-only |
+| `src/app/admin/(panel)/perfil/` | Nome e senha |
+| `src/app/admin/actions.ts` | Server actions |
+| `src/app/api/session/refresh/route.ts` | Renova sessão |
+| `src/components/admin/` | Forms e lista |
+| `src/styles/admin.css` | Shell admin |
+| `src/styles/login.css` | Login |
+| `src/middleware.ts` | Header `x-pathname` para nav ativa |
+
+## Lib
+
+| Path | Papel |
+| --- | --- |
+| `src/lib/api.ts` | Cliente HTTP |
+| `src/lib/session.ts` | Cookies httpOnly |
+| `src/lib/permissions.ts` | `can` / `canReadCatalog` |
+| `src/lib/types.ts` | Tipos e Funções |
+| `src/lib/format.ts` | Paginação, YouTube, letra |
+
+## Presente — fora do foco
 
 | Path | Nota |
 | --- | --- |
-| `admin/login/` | Login UI (`tb_user` + sessão PHP) |
-| `admin/logout.php` | Logout |
-| `admin/_bootstrap.php` | Boot PDO + sessão/RBAC/audit + admin_pontos/linhas/ritmos/audit |
-| `admin/_shell.php` | Chrome admin (header/nav/flash) |
-| `admin/index.php` | Redirect `/admin/pontos/` se `canReadCatalog`; senão `/admin/auditoria/` se `audit:read` |
-| `admin/pontos/` | `index.php` list; `form.php` create/edit; `delete.php` GET confirm + POST |
-| `admin/linhas/` | `index.php` list; `form.php` create/edit; `delete.php` GET confirm + POST |
-| `admin/ritmos/` | `index.php` list; `form.php` create/edit; `delete.php` GET confirm + POST |
-| `admin/auditoria/` | `index.php` list read-only (`audit:read`) |
-| `admin/styles.css` | Shell admin (tokens via CSS vars) |
-| `controllers/session.controller.php` | Sessão, CSRF, `attemptLogin` |
-| `controllers/rbac.controller.php` | Roles/perms na sessão |
-| `controllers/audit.controller.php` | Login best-effort + `writeAuditMutation` (strict) |
-| `controllers/admin_pontos.controller.php` | CRUD PDO `tb_pontos` + selects linha/ritmo |
-| `controllers/admin_linhas.controller.php` | CRUD PDO `tb_linhas` |
-| `controllers/admin_ritmos.controller.php` | CRUD PDO `tb_ritmos` |
-| `controllers/admin_audit.controller.php` | Listagem read-only `tb_audit_logs` |
+| `src/styles/form.css` | Não importado |
+| `.github/workflows/` | Deploy legado; conferir antes de usar |
+| `config/database/` | SQL histórico; o app não migra |
 
-## Presente — fora do foco atual
+## Ausente vs guideline `front`
 
-| Path | Nota |
-| --- | --- |
-| `dash/` | Dashboard; adiado |
-| `bot.php` | Anúncio Discord + saudação; fora do foco home |
-| `config/bootstrap.php` | Loader `.env` (home atual não inclui explicitamente) |
-| `config/database/` | Scripts SQL |
-| `.github/workflows/` | Deploy FTP / homologação |
-
-## Legado / helper
-
-| Path | Nota |
-| --- | --- |
-| `.old/` | Código antigo — não estender |
-| `teste.php` | Sandbox — não tratar como produto |
-| `assets/css/form.css` | Formulários (uso residual) |
-| `utils/functions.php` | Helpers |
-
-## Ausente vs guideline `front` típico
-
-Sem `app/`/`pages` React, sem package manager JS de app, sem componentes compartilhados tipo design-system npm. Ver `tech-debt.md`.
+Sem `loading.tsx` / `error.tsx`, sem suíte de testes, sem ESLint. Ver `tech-debt.md`.

@@ -1,6 +1,6 @@
 # Raízes de Aruanda — AGENTS
 
-PHP procedural + MySQL (PDO). Home pública: `index.php`. Foco atual: catálogo público de Pontos; **admin** em `admin/` — auth/sessão/RBAC + **CRUD Pontos/Linhas/Ritmos** (+ **Auditoria** se `audit:read`); dashboard/giras/users e demais adiados.
+Next.js (App Router, `src/`) cliente HTTP de raizes.api. Home pública: `/`. Foco atual: catálogo público de Pontos; **admin** em `/admin` — sessão em cookie httpOnly + **CRUD Pontos/Linhas/Ritmos** (+ **Auditoria** quando a API permitir); dashboard/giras/users e demais adiados. API: `API_BASE_URL` (padrão `http://localhost:3333`).
 
 ## Como usar este contexto
 
@@ -21,16 +21,18 @@ PHP procedural + MySQL (PDO). Home pública: `index.php`. Foco atual: catálogo 
 
 ## Regras rápidas
 
-1. Mudanças na home: preferir `index.php`, `assets/css/*`, `assets/js/main.js`, controllers de leitura — **não** expandir dashboard/giras/users sem pedido.
-2. CSS: carregar `main.css` **antes** de `mobile.css`; tokens em `:root` / `docs/DESIGN.md` — sem hex solto de brand.
-3. Validar: `docker compose up --build` → `http://localhost:${APP_PORT:-8080}`; smoke mobile ~370px (sheet, chips sticky, embed YT; admin pontos/linhas/ritmos ~370px). Sem suite de testes automatizados no checkout.
+1. Mudanças na home: preferir `src/app/page.tsx`, `src/styles/*`, `src/components` — **não** expandir dashboard/giras/users sem pedido.
+2. CSS: `src/app/globals.css` carrega `main.css` **antes** de `mobile.css`; tokens em `:root` / `docs/DESIGN.md` — sem hex solto de brand.
+3. Validar: `npm run dev` → `http://localhost:3000`, ou `docker compose up --build` → `http://localhost:${APP_PORT:-8080}`; smoke mobile ~370px (sheet, chips sticky, embed YT; admin pontos/linhas/ritmos ~370px). Sem suite de testes automatizados no checkout.
+4. API: qualquer acionamento ou consulta à raizes.api carrega a skill `.agents/skills/api-endpoints/` antes de implementar. O catálogo vence o código se o path, o método, a auth ou o JSON divergirem.
 
-## Skills condicionais
+## Skills reconhecidas
 
-| Condicao | Skill / pack |
+| Condição | Skill / pack |
 | --- | --- |
 | UI / tokens / layout | `docs/DESIGN.md` + Pencil MCP em `docs/design/design.pen` |
-| Schema / SQL / PDO / tabelas `tb_*` | `.agents/skills/db-schema/` |
+| Acionamento ou consulta da API (`/api/v1`, auth, erros Nest) | `.agents/skills/api-endpoints/` — obrigatória |
+| Schema / SQL / tabelas `tb_*` | `.agents/skills/db-schema/` |
 | Knowledge ops | `$nero` |
 | Who-calls / imports / path | Pack `nero-code-graph` (`cg_*`) se instalado |
 | Domain Skills de lib interna | omitido — sem evidência no checkout |
