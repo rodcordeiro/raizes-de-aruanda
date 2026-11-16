@@ -125,3 +125,12 @@ _Avoid_: Feitiço, trabalho, magia
 - **Permissões**: nesta entrega, somente consulta e cadastro; renomeação e exclusão de slugs fora do escopo.
 
 **A definir na especificação final**: payload e versionamento do endpoint de substituição, tratamento de conflitos e granularidade da auditoria, catálogo de expansão de wildcards, fluxos de erro e critérios de aceitação.
+
+## RBAC — decisões aprovadas na issue #79, rodada 4
+
+- **Versionamento**: cada role possui versão monotônica, enviada no salvamento da matriz; conflito de versão retorna HTTP 409.
+- **Conflito na UI**: preservar edição local e oferecer recarregamento explícito, sem sobrescrever silenciosamente.
+- **Expansão de wildcard**: usar todos os slugs explícitos existentes do recurso no catálogo; novos slugs criados posteriormente não são concedidos automaticamente.
+- **Último administrador**: contar usuários com permissão efetiva exata `role:assign`, independentemente do slug da role.
+- **Auditoria**: registrar autor, recurso, operação e antes/depois, sem dados sensíveis, na mesma transação da mutação.
+- **Documentação**: especificações independentes por repositório: `docs/specs/SPEC-079-WEB.md` (frontend) e `rodcordeiro/raizes.api/docs/specs/SPEC-079-API.md` (backend). Nenhuma implementação foi iniciada.
