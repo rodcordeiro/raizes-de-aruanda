@@ -5,7 +5,19 @@
     ],
     "packageRules": [
         {
-            "updateTypes": "minor patch pin digest",
+            "updateTypes": "minor",
+            "automerge": true
+        },
+        {
+            "updateTypes": "patch",
+            "automerge": true
+        },
+        {
+            "updateTypes": "pin",
+            "automerge": true
+        },
+        {
+            "updateTypes": "digest",
             "automerge": true
         },
         {
