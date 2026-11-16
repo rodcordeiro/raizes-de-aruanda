@@ -113,3 +113,15 @@ _Avoid_: Feitiço, trabalho, magia
 - **Auditoria**: criação, edição, exclusão e mudanças de vínculos RBAC devem gerar registros auditáveis; confirmar cobertura e mudanças necessárias na API.
 
 **Pendências de arquitetura**: exclusão de role vinculada a usuários deve ser bloqueada (rodada 1); proteção do último administrador; salvamento em lote; semântica da expansão de wildcard; auditoria transacional. Estas são decisões de produto, não afirmações de implementação existente.
+
+## RBAC — decisões aprovadas na issue #79, rodada 3
+
+- **Substituição da matriz**: criar endpoint transacional na API para substituir integralmente as permissões vinculadas a uma role em uma única operação.
+- **Concorrência**: detectar edição concorrente; em conflito, rejeitar salvamento e exigir recarregamento antes de nova tentativa.
+- **Wildcard**: converter grants wildcard, como `ponto:*`, em permissões individuais explícitas ao salvar; definir catálogo de ações e tratamento de alterações futuras antes de implementar.
+- **Auditoria**: falha na gravação de auditoria deve reverter a alteração RBAC na mesma transação.
+- **Autoatribuição**: administrador pode alterar as próprias roles, desde que a proteção do último administrador continue satisfeita.
+- **Exclusão**: a API deve retornar HTTP 409 ao tentar excluir role vinculada a usuários, incluindo a quantidade de usuários afetados para exibição na UI.
+- **Permissões**: nesta entrega, somente consulta e cadastro; renomeação e exclusão de slugs fora do escopo.
+
+**A definir na especificação final**: payload e versionamento do endpoint de substituição, tratamento de conflitos e granularidade da auditoria, catálogo de expansão de wildcards, fluxos de erro e critérios de aceitação.
