@@ -101,3 +101,15 @@ _Avoid_: Feitiço, trabalho, magia
 **Superfícies previstas**: duas telas administrativas, Roles (incluindo matriz de permissões e atribuição a usuários) e Permissões. Fluxos detalhados, proteção contra perda de acesso e contratos adicionais permanecem em definição.
 
 **Regra ainda não implementada**: impedir no backend a exclusão de roles vinculadas a usuários. O contrato atual da API documenta exclusão em cascata dos vínculos; a divergência precisa ser resolvida antes da implementação.
+
+## RBAC — decisões aprovadas na issue #79, rodada 2
+
+- **Roles de usuário**: um usuário pode possuir múltiplas roles; as permissões efetivas são a união das permissões concedidas pelas roles.
+- **Último administrador**: operações não podem remover o último usuário efetivamente autorizado por `role:assign`; a regra precisa ser garantida no backend, inclusive sob concorrência.
+- **Matriz de permissões**: o operador edita múltiplos vínculos role-permissão e confirma em um único salvamento. A atomicidade e o contrato de persistência ainda serão definidos.
+- **Identidade de role**: slug e nome são editáveis, respeitando o contrato existente da API.
+- **Wildcard**: a interface deve expandir visualmente slugs como `ponto:*` em permissões individuais. Ainda não foi decidido se a expansão modifica os vínculos persistidos; não assumir sem aprovação.
+- **Atribuição de roles**: painel dedicado de busca de usuário, com consulta, atribuição e revogação de múltiplas roles; não implica uma terceira tela principal.
+- **Auditoria**: criação, edição, exclusão e mudanças de vínculos RBAC devem gerar registros auditáveis; confirmar cobertura e mudanças necessárias na API.
+
+**Pendências de arquitetura**: exclusão de role vinculada a usuários deve ser bloqueada (rodada 1); proteção do último administrador; salvamento em lote; semântica da expansão de wildcard; auditoria transacional. Estas são decisões de produto, não afirmações de implementação existente.
