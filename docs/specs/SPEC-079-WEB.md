@@ -2,8 +2,8 @@
 
 Status: escopo aprovado; implementação não iniciada.
 Issue: https://github.com/rodcordeiro/raizes-de-aruanda/issues/79
-Repositório: rodcordeiro/raizes-de-aruanda; base de análise: main.
-Contrato dependente: `rodcordeiro/raizes.api/docs/specs/SPEC-079-API.md` na branch `docs/issue-79-rbac-api-spec`.
+Repositório: rodcordeiro/raizes-de-aruanda; base de análise: develop.
+Contrato dependente: `rodcordeiro/raizes.api/docs/specs/SPEC-079-API.md` na branch `develop`.
 
 ## Objetivo
 Disponibilizar duas telas principais em /admin: Roles (CRUD, matriz de permissões e painel de busca/atribuição de roles a usuários) e Permissões (listar e cadastrar slugs). Autorização de administração por `role:assign`. Não criar tela principal independente para usuários, nem editar/excluir slugs de permissões.
@@ -53,3 +53,31 @@ WEB-05 — Catálogo e cadastro de permissões.
 WEB-06 — UX de erros/conflitos, acessibilidade, responsividade e testes.
 
 Dependências: WEB-01 antes das telas; WEB-02 depende API-02/API-04; WEB-03 depende API-01/API-03/API-04/API-05; WEB-04 depende API-04/API-05; WEB-05 pode começar com endpoints existentes; WEB-06 após integração.
+
+## Revisão to-spec — histórias de usuário e fronteiras (2026-11-16)
+
+### Histórias de usuário
+1. Como administrador RBAC, quero acessar Roles e Permissões pelo menu, para gerenciar acessos.
+2. Como usuário sem `role:assign`, quero não ter acesso às páginas e ações RBAC, para preservar a segregação.
+3. Como administrador RBAC, quero listar, criar e editar roles, para organizar responsabilidades.
+4. Como administrador RBAC, quero excluir uma role sem usuários e ver bloqueio quando em uso, para evitar revogação inesperada.
+5. Como administrador RBAC, quero editar permissões por recurso numa matriz, para entender o alcance de cada role.
+6. Como administrador RBAC, quero confirmar várias alterações de uma vez, para evitar estados intermediários.
+7. Como administrador RBAC, quero preservar minhas alterações diante de conflito e escolher recarregar, para não perder trabalho.
+8. Como administrador RBAC, quero visualizar a expansão de wildcards e confirmar sua conversão, para evitar concessões inesperadas.
+9. Como administrador RBAC, quero buscar um usuário e consultar suas roles e permissões efetivas, para compreender seu acesso.
+10. Como administrador RBAC, quero atribuir e revogar roles do usuário, para ajustar sua autorização.
+11. Como administrador RBAC, quero listar e cadastrar permissões, para disponibilizar ações.
+12. Como operador, quero receber erros compreensíveis e preservar dados de formulário quando possível, para corrigir problemas.
+13. Como operador em dispositivo móvel ou teclado, quero usar todas as funções com acessibilidade, para administrar sem barreiras.
+
+### Integração e UX fechadas
+- O fluxo novo consome `GET /rbac/roles/:id` com `version` e `catalogVersion`; o salvamento único envia `{version,catalogVersion,permissionIds}`. Conflitos `RBAC_VERSION_CONFLICT` e `RBAC_CATALOG_CONFLICT` preservam escolhas locais, exibem a diferença e exigem recarregamento explícito. Nunca reenviar automaticamente após 409.
+- Quando a role contém wildcard legado, a UI mostra o conjunto explícito correspondente, alerta que salvar substitui o wildcard e exige confirmação. Se não houver ações correspondentes, desabilitar salvamento da conversão e explicar o motivo.
+- O painel de usuários é parte da tela Roles; consultar `GET /users` e `GET /rbac/users/:id/authorization`; vínculos são gravados por operações existentes com feedback individual, sem prometer atomicidade entre atribuições independentes.
+- Em RBAC, `permissions` vazia/ausente significa **não autorizado**, independentemente do fallback geral de `can()`; o backend continua a fonte definitiva.
+- As Server Actions não podem confiar apenas na navegação; devem validar sessão e permissão antes de cada mutação e propagar 401/403/404/409/429 com mensagens apropriadas.
+- **Fronteira de testes**: validar páginas e Server Actions via integração HTTP e smoke de navegador desktop/mobile ~370px, teclado e foco; testes unitários complementares para expansão de wildcard e estados de conflito.
+
+### Fora de escopo explícito
+Tela principal separada de usuários, edição/exclusão de slugs de permissão, edição de dados cadastrais de usuários, novos grants diretos, persistência de tokens no browser, alteração da API no repositório frontend, dashboards e giras.
