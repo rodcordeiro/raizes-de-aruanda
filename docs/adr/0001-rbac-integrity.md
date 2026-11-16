@@ -28,3 +28,21 @@ O frontend Next.js consome a `raizes.api`. O contrato documentado expõe operaç
 - A validação exclusivamente no frontend é insuficiente para as invariantes de segurança.
 - O contrato atual da API provavelmente precisará ser estendido para cumprir atomicidade e proteção contra perda de acesso.
 - Nenhuma decisão sobre endpoints ou schema adicional deve ser tratada como aprovada antes da próxima rodada.
+
+## Rodada 3 — decisões técnicas aprovadas
+
+1. **Endpoint de substituição transacional**: substituir integralmente os vínculos role-permissão em uma operação de API, sem gravação parcial.
+2. **Controle de concorrência**: rejeitar atualização baseada em estado obsoleto; UI deve recarregar antes de tentar novamente. Estratégia de versão/ETag pendente.
+3. **Expansão de wildcard na persistência**: converter `recurso:*` em grants explícitos por ação no salvamento. Definir catálogo de ações, expansão de permissões existentes e impacto de futuras ações.
+4. **Auditoria atômica**: gravação de eventos auditáveis e mutação RBAC na mesma transação; falha de auditoria provoca rollback.
+5. **Autoalteração**: permitida apenas se não resultar na perda do último administrador efetivo.
+6. **Exclusão protegida**: HTTP 409 quando houver usuários vinculados, com contagem de usuários no erro.
+7. **Catálogo de permissões**: consulta e cadastro apenas nesta entrega; renomeação/exclusão excluídas.
+
+## Consequências e validações pendentes
+
+- A API precisa oferecer substituição atômica e proteção concorrente; o frontend não pode garantir essas invariantes isoladamente.
+- O serviço deve validar a proteção do último administrador no estado resultante e sob concorrência, inclusive ao remover vínculos ou grants.
+- A expansão de wildcard deve ser consistente com o catálogo efetivo de ações; a semântica de permissões futuras precisa de decisão explícita.
+- A API deve disponibilizar contagem de usuários vinculados para a mensagem de bloqueio de exclusão.
+- Definir status e payload de conflitos de versão, mecanismo de auditoria e compatibilidade dos endpoints atuais na especificação final.
