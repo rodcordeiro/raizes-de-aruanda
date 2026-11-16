@@ -2,37 +2,20 @@
 
 | Padrão | Onde |
 | --- | --- |
-| Página PHP inclui controllers + DB | `index.php` |
-| Controller class + `filter`/`getCategories` | `controllers/*.controller.php` |
-| PDO + `getenv` | `db/db.class.php` |
-| Tokens CSS + override mobile | `main.css` / `mobile.css` |
-| Chips Ritmo: um por ritmo, `data-ritmo`, scroll `#ponto-{id}` | `index.php` + `main.js` |
-| Nav sheet mobile + sidebar desktop | `#nav-sheet`, `main.js` `initMenu` |
-| Embed YT na carga | `iframe.yt-embed` em `index.php` |
-| Divisor pontos | `.ponto + .ponto { border-top }` |
+| Página servidor fina: busca + fetch + composição | `src/app/page.tsx` |
+| Cliente HTTP único, `cache: "no-store"` | `src/lib/api.ts` |
+| Mutação em server action + redirect com `?ok=` | `src/app/admin/actions.ts` |
+| Form client com `useActionState` | `src/components/admin/*-form.tsx` |
+| Sessão em cookie httpOnly; refresh em route handler | `src/lib/session.ts`, `src/app/api/session/refresh/route.ts` |
+| Permissão vazia ou ausente mostra a ação | `src/lib/permissions.ts` |
+| Tokens CSS + override mobile | `src/styles/main.css`, `mobile.css` |
+| Chips e sheet via DOM no client | `src/components/catalog-client.tsx` |
+| Embed YouTube na carga; áudio direto em `<audio>` | `src/components/line-view.tsx`, `src/lib/format.ts` |
+| Letra: escape e só `<i>` restaurado | `src/lib/format.ts` |
 
-## Admin auth + CRUD Pontos/Linhas/Ritmos + Auditoria (observado)
+## Anti-padrões locais
 
-| Padrão | Onde |
-| --- | --- |
-| Boot admin compartilhado | `admin/_bootstrap.php` → DB + session/RBAC/audit + admin_pontos/linhas/ritmos/audit |
-| Shell UI | `admin/_shell.php` + `admin/styles.css` (`main` → `mobile` → admin) |
-| Auth `tb_user` + `password_verify` | `controllers/session.controller.php` |
-| RBAC em sessão pós-login | `hasPermission` / `requirePermission` / `canReadCatalog` |
-| Listagem / form / delete | `admin/pontos|linhas|ritmos/` — CSRF POST field `csrf` (aceita `csrf_token`); delete = GET confirm + POST; CTAs gated por perm |
-| CRUD PDO `tb_pontos` | `controllers/admin_pontos.controller.php` (não altera `Pontos::filter`) |
-| CRUD PDO `tb_linhas` / `tb_ritmos` | `admin_linhas` / `admin_ritmos` — delete recusa se `tb_pontos` ainda referencia a linha/ritmo |
-| Auditoria read-only | `admin/auditoria/` + `admin_audit_list` — exige `audit:read`; sem mutação |
-| Audit login best-effort | `writeAuditLogin` (`login_success` \| `login_failure`) |
-| Audit mutação same-tx (strict) | `writeAuditMutation` — falha → rollback + `audit_write_failed` |
-| Actor de audit | Só de `$_SESSION` via `admin_actor()` |
-| Redirects relativos ao host | `/admin/login/`, `/admin/`, `/admin/pontos|linhas|ritmos|auditoria/` |
-
-## Anti-padrões locais (evitar)
-
-- Hex de brand solto (usar `var(--brand)` / tokens DESIGN)
-- `nl2br` na letra com `white-space: pre-wrap` (quebra duplicada)
-- `mobile.css` antes de `main.css` (mata media queries)
-- Expandir `.old/` ou `teste.php` como produto
-- Auth via `icnt_users` / MD5 / SQL concatenado (legado)
-- Mutar `tb_pontos` sem audit na mesma transação
+- Hex de brand solto (usar `var(--brand)` / tokens)
+- `mobile.css` antes de `main.css`
+- Abrir PDO ou SQL neste checkout
+- Guardar token no `localStorage`

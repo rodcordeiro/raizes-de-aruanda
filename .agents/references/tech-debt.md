@@ -1,18 +1,19 @@
 # Tech debt
 
-Gaps vs `$nero` → `references/guidelines/front-guidelines.md` e dívidas comprovadas.
+Gaps vs `$nero` → `references/guidelines/front-guidelines.md`. Revisão estática em 2026-10-02. Sem gap de severidade alta.
 
 | Item | Evidência | Prioridade |
 | --- | --- | --- |
-| Sem app React/Vite — PHP procedural monolítico | checkout | Aceito (stack real) |
-| Sem testes automatizados front | sem `package.json` / PHPUnit home | Média |
-| `index.php` não inclui `config/bootstrap.php` | includes da home | Baixa (Docker injeta env) |
-| CSS morto `.yt-placeholder*` após embed imediato | `main.css` | Baixa |
-| YouTube só `youtu.be` | regex em `index.php` | Média se links `watch?v=` existirem |
-| Contraste brand↔branco ~3.4:1 | `docs/DESIGN.md` Contrast Caution | Monitorar |
-| `$color.shadow` Pencil sem `--shadow` CSS nomeado | DESIGN / Iris | Baixa |
-| Admin/dash sem polish v2 | decisão adiar | Fora do foco |
-| `.old/`, `teste.php` no tree | paths | Não estender |
-| README só badges — onboarding fraco | `README.md` | Baixa (AGENTS cobre agentes) |
+| Sem testes, ESLint, `lint` / `typecheck` / `test` | `package.json` | Média — aceito (smoke manual) |
+| Contraste brand em texto pequeno sobre fundo claro | `docs/DESIGN.md` Contrast Caution; `.nav-category-title`, `.linha-playlist` | Média — monitorar; não repetir |
+| Listas admin (tabela, filtro, permissão) no arquivo da rota | `src/app/admin/(panel)/*/page.tsx` | Média — aceito; extrair seria reestruturação |
+| Sheet, filtro e chips via `getElementById` | `src/components/catalog-client.tsx` | Baixa — aceito |
+| Tipos da API entram na UI; só `User` é mapeado na borda | `src/lib/types.ts` | Baixa — aceito |
+| `.is-invalid` sem uso; forms sem `aria-invalid` | `src/styles/admin.css`, forms admin | Baixa |
+| Paginação com `20` literal em vez de `PAGE_SIZE` | `src/components/admin/list.tsx`, `src/lib/format.ts` | Baixa |
+| `form.css` não importado | `src/styles/form.css` | Baixa — não estender |
+| Sem `package-lock.json` | `Dockerfile` usa `npm install` | Baixa |
 
-Não reestruturar para “parecer” guideline React sem pedido explícito.
+Feito (2026-10-02): `loading.tsx` e `error.tsx` na raiz e em `src/app/admin/(panel)/`. No painel, espera e falha ficam dentro do chrome; na raiz, cobrem a página pública. O contrato HTTP não mudou.
+
+Não reestruturar listas nem reescrever o catálogo em estado React sem pedido.

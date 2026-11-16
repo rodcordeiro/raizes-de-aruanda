@@ -209,6 +209,14 @@ Só o que existe no produto. Specs densas; frames Pencil + CSS são a prova.
 ### Empty
 - “Nenhum ponto encontrado para esta linha.” — `muted` + letra size.
 
+### Loading
+- Público: “Carregando os pontos…” — `.empty-state` (`role="status"`), letra size + `muted`.
+- Admin: “Carregando…” — `.admin-empty` (`role="status"`), dentro do chrome do painel.
+
+### Error
+- Público: “Não foi possível carregar o catálogo.” — `.catalog-error` (`role="alert"`): borda 1px `border`, fundo `surfaceMuted`, texto `text`, radius 8. Botão “Tentar de novo” `.catalog-retry`: fill `brand`, texto `brandContrast`, alvo ≥ `--touch`.
+- Admin: “Não foi possível carregar esta página.” — `.admin-alert.admin-alert--error` + `.admin-btn`. Sem `error.message`, digest ou payload.
+
 ### Print (`print.css`)
 - Some nav/chips/vídeo/áudio; letra preta; header brand com `print-color-adjust: exact`.
 
@@ -239,6 +247,6 @@ Só o que existe no produto. Specs densas; frames Pencil + CSS são a prova.
 ## Pointers
 
 - Pencil: [`docs/design/design.pen`](design/design.pen) (frames `*_v2`)
-- CSS: [`assets/css/main.css`](../assets/css/main.css), [`mobile.css`](../assets/css/mobile.css), [`print.css`](../assets/css/print.css)
+- CSS: [`src/styles/main.css`](../src/styles/main.css), [`mobile.css`](../src/styles/mobile.css), [`print.css`](../src/styles/print.css)
 - Glossário: [`CONTEXT.md`](../CONTEXT.md)
-- Markup: `index.php`, `components/`
+- Markup: `src/app/page.tsx`, `src/components/`

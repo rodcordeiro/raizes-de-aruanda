@@ -2,30 +2,31 @@
 
 ## Escopo de mudança
 
-- Pedido de home/UI → `index.php`, `assets/css/*`, `assets/js/main.js`, controllers de leitura.
-- Admin/dash só com pedido explícito.
-- Segredos: nunca em docs, commits ou AGENTS; usar só nomes de env.
+- Home/UI pública → `src/app/page.tsx`, `src/components/*`, `src/styles/*`.
+- Admin só com pedido explícito. Não abrir dashboard, giras, uploads ou CRUD de users sem pedido.
+- Segredos: nunca em docs, commits ou AGENTS. Só nomes de env.
 
 ## Design / CSS
 
-1. Tokens em `assets/css/main.css` `:root` alinhados a `docs/DESIGN.md` / Pencil `$color.*`.
-2. Ordem de links: `main.css` → `mobile.css` → `print.css`.
+1. Tokens em `src/styles/main.css` `:root`, alinhados a `docs/DESIGN.md`.
+2. `src/app/globals.css` importa `main.css` antes de `mobile.css` e `print.css`.
 3. Mobile: The Linha Hero Rule + The Ritmo Chip Rule (`docs/DESIGN.md`).
-4. Glossário UI: `CONTEXT.md` (não “música/playlist”).
+4. Glossário de UI: `CONTEXT.md`.
 
 ## Dados
 
-- Controllers usam SQL string + PDO; mudanças de schema → `config/database/` com cuidado (produtivo).
-- Parser YouTube atual: `youtu.be/...` (não `watch?v=` sem evidência de suporte).
+- Leitura e escrita passam por `src/lib/api.ts` e server actions.
+- Antes de acionar ou consultar a API, ler a skill `.agents/skills/api-endpoints/` (linha do catálogo do recurso). Não inventar path, método, auth, status ou JSON.
+- Função gravável: Chamada, Sustentação, Subida, Demanda. Texto fora disso aparece no form e não pode ser salvo.
 
 ## Validação
 
 | Check | Como |
 | --- | --- |
-| Sobe | `docker compose up --build` |
-| Desktop | sidebar 240, chips wrap, letra legível |
-| Mobile ~370px | hamburger → sheet; hero Linha; chips sticky; salto ritmos; YT iframe |
-| Print | chrome/nav ocultos; letra preta |
-| Contraste | The Contrast Caution Rule — brand não em texto miúdo sobre branco |
+| Sobe | `npm run dev` ou `docker compose up --build` |
+| Desktop | sidebar, chips, letra |
+| Mobile ~370px | sheet, hero da Linha, chips sticky, embed |
+| Print | chrome oculto |
+| Contraste | brand não em texto miúdo sobre fundo claro |
 
-Sem `npm test` / PHPUnit no checkout — smoke manual é a barra.
+Sem suíte automatizada. Smoke manual é a barra.

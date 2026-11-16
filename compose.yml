@@ -4,9 +4,9 @@ services:
       context: .
     container_name: raizes-de-aruanda-app
     ports:
-      - "${APP_PORT:-8080}:80"
-    env_file:
-      - .env
-    volumes:
-      - ./:/var/www/html
+      - "${APP_PORT:-8080}:3000"
+    environment:
+      API_BASE_URL: ${API_BASE_URL:-http://host.docker.internal:3333}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     restart: unless-stopped
