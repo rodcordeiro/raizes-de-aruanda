@@ -48,7 +48,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: rodcordeiro/raizes-api:latest,rodcordeiro/raizes-api:${{ steps.version.outputs.PKG_VERSION }}
+          tags: rodcordeiro/raizes-web:latest,rodcordeiro/raizes-web:${{ steps.version.outputs.PKG_VERSION }}
           labels: ${{ steps.meta.outputs.labels }}
       
   
