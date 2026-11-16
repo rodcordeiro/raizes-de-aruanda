@@ -36,3 +36,14 @@ Next.js (App Router, `src/`) cliente HTTP de raizes.api. Home pública: `/`. Foc
 | Knowledge ops | `$nero` |
 | Who-calls / imports / path | Pack `nero-code-graph` (`cg_*`) se instalado |
 | Domain Skills de lib interna | omitido — sem evidência no checkout |
+
+## Agent skills — engineering workflow
+
+### Issue tracker
+Use GitHub Issues neste repositório, com issues pequenas, critérios verificáveis e dependências explícitas `Blocked by:`. Trabalhe a partir de `develop`; não feche a issue mãe ao decompor tickets. Consulte `docs/agents/issue-tracker.md` antes de publicar ou executar tickets.
+
+### Domain docs
+Adote contexto único em `CONTEXT.md` e decisões arquiteturais em `docs/adr/`; não crie `CONTEXT-MAP.md` sem sinais reais de monorepo. Consulte `docs/agents/domain.md` e as referências de domínio já existentes antes de alterar termos ou contratos.
+
+### Skills de planejamento
+Use `to-spec` para sintetizar requisitos aprovados, `to-tickets` para decompor entregas com critérios e dependências, e `triage` somente após verificar as labels existentes. Preserve instruções e skills locais específicas do repositório.
