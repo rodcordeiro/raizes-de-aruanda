@@ -85,3 +85,19 @@ _Avoid_: Tipo, encerramento, despedida
 **Demanda**:
 Função do ponto ligada ao feitiço (trabalho espiritual): contra-feitiço, ao quebrar a demanda, ou embasamento do feitiço, ao demandar.
 _Avoid_: Feitiço, trabalho, magia
+
+## Administração — RBAC (escopo aprovado na issue #79, rodada 1)
+
+**Role**: agrupamento nomeado de permissões atribuído a usuários. A gestão inclui criação, consulta, edição e exclusão; a exclusão deve ser bloqueada quando houver usuários vinculados.
+
+**Permissão**: slug de autorização no formato `recurso:ação`. A interface permite listar e cadastrar slugs; edição e exclusão dependem de suporte explícito da API, ainda não confirmado.
+
+**Atribuição de permissão**: vínculo entre role e permissão, administrado em matriz agrupada por recurso.
+
+**Atribuição de role**: vínculo entre usuário e role; a interface deve permitir atribuir e revogar roles.
+
+**Administrador de RBAC**: usuário autorizado pela permissão `role:assign` a gerenciar roles, permissões e vínculos.
+
+**Superfícies previstas**: duas telas administrativas, Roles (incluindo matriz de permissões e atribuição a usuários) e Permissões. Fluxos detalhados, proteção contra perda de acesso e contratos adicionais permanecem em definição.
+
+**Regra ainda não implementada**: impedir no backend a exclusão de roles vinculadas a usuários. O contrato atual da API documenta exclusão em cascata dos vínculos; a divergência precisa ser resolvida antes da implementação.
