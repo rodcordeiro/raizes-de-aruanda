@@ -1,6 +1,6 @@
 # ADR-0001 — Integridade das alterações de RBAC
 
-- **Status:** Proposta — decisões de produto aprovadas nas rodadas 1 e 2 da issue #79; mecanismo técnico pendente
+- **Status:** Aceito — decisões arquiteturais aprovadas nas rodadas 1–4; implementação pendente
 - **Data:** 2026-11-16
 - **Referência:** https://github.com/rodcordeiro/raizes-de-aruanda/issues/79
 
@@ -46,3 +46,14 @@ O frontend Next.js consome a `raizes.api`. O contrato documentado expõe operaç
 - A expansão de wildcard deve ser consistente com o catálogo efetivo de ações; a semântica de permissões futuras precisa de decisão explícita.
 - A API deve disponibilizar contagem de usuários vinculados para a mensagem de bloqueio de exclusão.
 - Definir status e payload de conflitos de versão, mecanismo de auditoria e compatibilidade dos endpoints atuais na especificação final.
+
+## Rodada 4 — resolução das decisões técnicas
+
+- Versionamento monotônico por role enviado no body de substituição; versão obsoleta => HTTP 409, sem gravação.
+- A UI preserva edição local em conflito e oferece recarregamento explícito.
+- Wildcard é expandido para todos os slugs explícitos existentes no catálogo daquele recurso e substituído por grants individuais; novas permissões não são concedidas automaticamente.
+- A proteção do último administrador considera permissão efetiva exata `role:assign`, independente do nome da role.
+- Auditoria registra autor, recurso, operação e estado anterior/posterior, excluindo dados sensíveis, atomicamente com a mutação.
+- A documentação é dividida em especificações autônomas por repositório. Referências: `docs/specs/SPEC-079-WEB.md` e `rodcordeiro/raizes.api/docs/specs/SPEC-079-API.md`.
+
+**Status final do ADR: Aceito (decisão arquitetural; não implementado).** O contrato técnico detalhado e os critérios de aceitação estão na SPEC-079-API. A estratégia concreta de locking e migração de versionamento será validada na implementação.
