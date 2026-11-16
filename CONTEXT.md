@@ -85,3 +85,52 @@ _Avoid_: Tipo, encerramento, despedida
 **Demanda**:
 Função do ponto ligada ao feitiço (trabalho espiritual): contra-feitiço, ao quebrar a demanda, ou embasamento do feitiço, ao demandar.
 _Avoid_: Feitiço, trabalho, magia
+
+## Administração — RBAC (escopo aprovado na issue #79, rodada 1)
+
+**Role**: agrupamento nomeado de permissões atribuído a usuários. A gestão inclui criação, consulta, edição e exclusão; a exclusão deve ser bloqueada quando houver usuários vinculados.
+
+**Permissão**: slug de autorização no formato `recurso:ação`. A interface permite listar e cadastrar slugs; edição e exclusão dependem de suporte explícito da API, ainda não confirmado.
+
+**Atribuição de permissão**: vínculo entre role e permissão, administrado em matriz agrupada por recurso.
+
+**Atribuição de role**: vínculo entre usuário e role; a interface deve permitir atribuir e revogar roles.
+
+**Administrador de RBAC**: usuário autorizado pela permissão `role:assign` a gerenciar roles, permissões e vínculos.
+
+**Superfícies previstas**: duas telas administrativas, Roles (incluindo matriz de permissões e atribuição a usuários) e Permissões. Fluxos detalhados, proteção contra perda de acesso e contratos adicionais permanecem em definição.
+
+**Regra ainda não implementada**: impedir no backend a exclusão de roles vinculadas a usuários. O contrato atual da API documenta exclusão em cascata dos vínculos; a divergência precisa ser resolvida antes da implementação.
+
+## RBAC — decisões aprovadas na issue #79, rodada 2
+
+- **Roles de usuário**: um usuário pode possuir múltiplas roles; as permissões efetivas são a união das permissões concedidas pelas roles.
+- **Último administrador**: operações não podem remover o último usuário efetivamente autorizado por `role:assign`; a regra precisa ser garantida no backend, inclusive sob concorrência.
+- **Matriz de permissões**: o operador edita múltiplos vínculos role-permissão e confirma em um único salvamento. A atomicidade e o contrato de persistência ainda serão definidos.
+- **Identidade de role**: slug e nome são editáveis, respeitando o contrato existente da API.
+- **Wildcard**: a interface deve expandir visualmente slugs como `ponto:*` em permissões individuais. Ainda não foi decidido se a expansão modifica os vínculos persistidos; não assumir sem aprovação.
+- **Atribuição de roles**: painel dedicado de busca de usuário, com consulta, atribuição e revogação de múltiplas roles; não implica uma terceira tela principal.
+- **Auditoria**: criação, edição, exclusão e mudanças de vínculos RBAC devem gerar registros auditáveis; confirmar cobertura e mudanças necessárias na API.
+
+**Pendências de arquitetura**: exclusão de role vinculada a usuários deve ser bloqueada (rodada 1); proteção do último administrador; salvamento em lote; semântica da expansão de wildcard; auditoria transacional. Estas são decisões de produto, não afirmações de implementação existente.
+
+## RBAC — decisões aprovadas na issue #79, rodada 3
+
+- **Substituição da matriz**: criar endpoint transacional na API para substituir integralmente as permissões vinculadas a uma role em uma única operação.
+- **Concorrência**: detectar edição concorrente; em conflito, rejeitar salvamento e exigir recarregamento antes de nova tentativa.
+- **Wildcard**: converter grants wildcard, como `ponto:*`, em permissões individuais explícitas ao salvar; definir catálogo de ações e tratamento de alterações futuras antes de implementar.
+- **Auditoria**: falha na gravação de auditoria deve reverter a alteração RBAC na mesma transação.
+- **Autoatribuição**: administrador pode alterar as próprias roles, desde que a proteção do último administrador continue satisfeita.
+- **Exclusão**: a API deve retornar HTTP 409 ao tentar excluir role vinculada a usuários, incluindo a quantidade de usuários afetados para exibição na UI.
+- **Permissões**: nesta entrega, somente consulta e cadastro; renomeação e exclusão de slugs fora do escopo.
+
+**A definir na especificação final**: payload e versionamento do endpoint de substituição, tratamento de conflitos e granularidade da auditoria, catálogo de expansão de wildcards, fluxos de erro e critérios de aceitação.
+
+## RBAC — decisões aprovadas na issue #79, rodada 4
+
+- **Versionamento**: cada role possui versão monotônica, enviada no salvamento da matriz; conflito de versão retorna HTTP 409.
+- **Conflito na UI**: preservar edição local e oferecer recarregamento explícito, sem sobrescrever silenciosamente.
+- **Expansão de wildcard**: usar todos os slugs explícitos existentes do recurso no catálogo; novos slugs criados posteriormente não são concedidos automaticamente.
+- **Último administrador**: contar usuários com permissão efetiva exata `role:assign`, independentemente do slug da role.
+- **Auditoria**: registrar autor, recurso, operação e antes/depois, sem dados sensíveis, na mesma transação da mutação.
+- **Documentação**: especificações independentes por repositório: `docs/specs/SPEC-079-WEB.md` (frontend) e `rodcordeiro/raizes.api/docs/specs/SPEC-079-API.md` (backend). Nenhuma implementação foi iniciada.
