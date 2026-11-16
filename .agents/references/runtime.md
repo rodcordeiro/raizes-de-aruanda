@@ -2,7 +2,7 @@
 
 ## Stack
 
-- Next.js 15 App Router, React 19, TypeScript (`package.json`)
+- Next.js 16 App Router, React 19, TypeScript (`package.json`; revisão estática 2026-11-16)
 - Dados só via HTTP (`src/lib/api.ts`). Sem PDO neste checkout.
 - CSS próprio (sem Tailwind). Fonte: `next/font` Source Sans 3.
 
