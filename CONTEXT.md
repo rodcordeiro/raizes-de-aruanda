@@ -13,7 +13,7 @@ Glossário do terreiro e do catálogo público de pontos usados nas giras.
 - **Cargo hierárquico**: progressão religiosa em Abiã, Yawo, Egbomi e Babalorixá/Yalorixá.
 - **Função ritualística**: atribuição como Ogã ou Axogun, que pode coexistir com cargo hierárquico.
 
-Efeitos sobre autenticação, permissões e interface permanecem em discussão; estas definições não alteram o contrato RBAC existente.
+Detalhes de contrato e interface permanecem em discussão; regras aprovadas de acesso e permissões estão nas seções seguintes; estas definições não alteram o contrato RBAC existente.
 
 ## Language
 
@@ -150,10 +150,10 @@ _Avoid_: Feitiço, trabalho, magia
 
 ## Filhos da casa — decisões complementares de 2026-11-17
 
-- Licença mantém acesso interno. Suspensão/afastamento e desligamento bloqueiam login e sessões já abertas. Ao tentar reativar filho, exibir modal de confirmação; cancelar mantém o estado atual. Reativação confirmada restabelece acesso se houver conta vinculada, removendo também bloqueios manuais. Bloqueio manual de login pode existir independentemente da situação religiosa.
+- Licença mantém acesso interno. Suspensão/afastamento e desligamento bloqueiam login e sessões já abertas. Ao tentar reativar filho, exibir modal de confirmação; cancelar mantém o estado atual. Reativação confirmada restabelece acesso se houver login habilitado no cadastro, removendo também bloqueios manuais. Bloqueio manual de login pode existir independentemente da situação religiosa.
 - Administração e comando da casa gerenciam operações por roles/permissões. Permissões separadas aprovadas: consultar filhos; editar e auditar; alterar situação; visualizar guias; exportar; gerenciar parâmetros. Editar cadastro não autoriza alterar situação ou parâmetros. Slugs, atribuição às roles e requisitos cumulativos ainda serão definidos.
 - Após nova aceitação de um desligado, preservar cadastro e registrar novo período de vínculo; todos os cargos hierárquicos e funções ritualísticas/administrativas devem ser reconfirmados.
-- Criar tabela de logs para auditar toda atualização de filho. Atualização e log são atômicos na mesma transação; falha no log cancela a atualização. Registrar filho, autor, data, operação e campos alterados com antes/depois; motivo de saúde apenas como categoria, sem diagnóstico. Integração com tb_audit_logs, retenção e consulta ainda em discussão; nenhuma tabela ou migration implementada nesta rodada.
+- Criar tabela de logs para auditar toda atualização de filho. Atualização e log são atômicos na mesma transação; falha no log cancela a atualização. Registrar filho, autor, data, operação e campos alterados com antes/depois; motivo de saúde apenas como categoria, sem diagnóstico. Integração com tb_audit_logs, retenção e detalhamento do contrato ainda em discussão; nenhuma tabela ou migration implementada nesta rodada.
 
 - Prazos de afastamento/desligamento contam da data efetiva, com lançamento administrativo retroativo permitido; data efetiva e data de registro são distintas.
 
@@ -185,7 +185,7 @@ _Avoid_: Feitiço, trabalho, magia
 
 - Manter tb_user e IDs; cadastro de membro é a função principal e credenciais são opcionais. Administração habilita login por username único e convite temporário para senha; sem cadastro duplicado.
 - Remover refreshToken de tb_user; armazenar estado de múltiplas sessões e hash do refresh no Redis em Docker. Renovação não atualiza cadastro.
-- Login concede 15 dias; cada renovação válida redefine expiração para 10 dias a partir da renovação, mesmo reduzindo o prazo anterior, sem limite absoluto. Validade do access token ainda será especificada.
+- Login concede 15 dias; cada renovação válida redefine expiração para 10 dias a partir da renovação, mesmo reduzindo o prazo anterior, sem limite absoluto. Access token tem validade aprovada de 1h.
 - Validar sessão Redis em cada acesso protegido. Redis indisponível bloqueia temporariamente login/refresh/acesso protegido, sem fallback MySQL; perda de sessões exige novo login.
 - Logout encerra sessão atual; troca/recuperação de senha e bloqueios revogam todas.
 - Migrar encerrando sessões existentes; recuperar senha do admin por comando no servidor, sem exibir senha, preservando ID/roles. Completar campos legados posteriormente sem dados fictícios.
@@ -196,7 +196,7 @@ _Avoid_: Feitiço, trabalho, magia
 - Em alteração sensível, aceito restringir temporariamente operações de sessão e manter restrição até reconciliação se houver falha parcial; protocolo ainda pendente. Se a resposta de uma rotação concluída se perder, exigir novo login apenas para a sessão afetada, sem reenvio do novo refresh e sem revogar outras sessões.
 
 - Aprovado: reinício Redis invalida sessões sem restaurar snapshots antigos. Convite de senha por UUID associado ao usuário no Redis, uso único e TTL 24h; reemissão invalida anterior. Nome completo exige permissão de editar filho.
-- Reconciliação automática por cron na API a cada minuto, para operações pendentes há mais de cinco minutos, preservando bloqueios manuais e vínculo. Tabela MySQL de operações pendentes permite recuperação após reinício, sem tokens nem versão de autenticação; estados e concorrência ainda pendentes. Planejamento, não implementação.
+- Reconciliação automática por cron na API a cada minuto, para operações pendentes há mais de cinco minutos sem progresso, preservando bloqueios manuais e vínculo. Tabela MySQL de operações pendentes permite recuperação após reinício, sem tokens nem versão de autenticação; estados e concorrência ainda pendentes. Planejamento, não implementação.
 
 - Rodada G1–G4 aprovada: reconciliação após mais de cinco minutos sem progresso, com execução exclusiva; retry a cada minuto e aviso após cinco falhas, sem liberar restrição. Canal do aviso e protocolo técnico pendentes.
 - Editar guias exige edição de filho e visualização de guias cumulativamente. Falha ao auditar exportação impede entrega de CSV/PDF, com erro e possibilidade de nova tentativa.
@@ -206,3 +206,21 @@ _Avoid_: Feitiço, trabalho, magia
 - Três giras para retorno de desligado começam após terminar o prazo mínimo; na reativação, operador autorizado atesta três giras e aceitação pelos búzios e informa data da aceitação, com auditoria sem detalhes do jogo.
 - Prazo geral em meses inteiros não negativos, padrão seis. Zero remove apenas a espera, preservando procedimento de ingresso completo.
 - Um telefone, um WhatsApp, um e-mail opcional, um contato de emergência e um responsável legal obrigatório para menor. Telefone e WhatsApp podem compartilhar número; ao menos um é obrigatório. Responsável pode ser também contato de emergência.
+
+## Datas, auditoria e listagem — rodada C1–C4 aprovada
+
+- Prazos de afastamento/desligamento em meses de calendário, ajustando para último dia quando necessário; elegibilidade na data resultante em America/Sao_Paulo, sem reativação automática.
+- Data efetiva de situação aceita hoje/passado, não futuro; previsão de retorno da licença pode ser futura.
+- Auditar também criação de filho e alteração de parâmetros na mesma transação; criação sem antes, parâmetros com antes/depois, autor e data.
+- Lista com busca por nome completo/apelido e filtros por situação/cargo hierárquico. CSV exporta todos os resultados filtrados, não só a página visível, respeitando permissões.
+
+## Catálogos e convite — rodada DQ1–DQ4 aprovada
+
+- Coroa/ajuntó reutilizam o catálogo existente de linhas classificadas como Orixá; guias usam nome individual e linha do catálogo existente.
+- Apenas atribuição de cargos/funções previamente cadastrados nesta entrega; CRUD do catálogo fica no draft de cargos.
+- Habilitar login e emitir convite exigem user:invite e consulta de filhos cumulativamente. Editar cadastro isoladamente não permite habilitar credenciais.
+- Identificação de categorias elegíveis e efeitos de exclusão/renomeação de itens vinculados ainda serão especificados.
+
+## Confirmação para análise de privacidade
+
+O mantenedor confirmou que o terreiro possui pessoa jurídica e menores também terão login. Natureza sem fins lucrativos, porte e dispensas ATPP não comprovados. No workspace, diagnóstico preliminar e gaps em ../.lgpd/STATUS.md e ../.lgpd/gaps.md; não constituem conformidade ou política aprovada. Regras do uso direto por menores e governança continuam em definição.
