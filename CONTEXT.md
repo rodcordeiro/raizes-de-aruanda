@@ -2,6 +2,19 @@
 
 Glossário do terreiro e do catálogo público de pontos usados nas giras.
 
+## Filhos da casa — domínio confirmado em 2026-11-17, ainda não implementado
+
+- **Filho da casa**: pessoa aceita na casa; o gerenciamento proposto abrange apenas filhos. Candidatos pertencem a uma especificação própria.
+- **Ingresso**: após solicitação, participação na abertura de três giras e permanência assistindo durante cada gira; ao final, o jogo de búzios consulta o chão sobre a aceitação. Não há ingresso automático por contagem de giras.
+- **Suspensão/afastamento**: período de seis meses sem possibilidade de retorno; ao término, a reativação depende de processo administrativo, sem automatismo nem solicitação de reativação pelo filho.
+- **Licença temporária**: por atividade profissional ou tratamento de saúde, distinta de afastamento; permite retorno antes do prazo previsto.
+- **Desligamento**: exige prazo mínimo definido em configuração geral, inicialmente de seis meses. O retorno exige o procedimento completo de ingresso, com três giras e jogo de búzios para aceitação.
+- **Parametrização**: tela administrativa prevista para configurar o prazo mínimo de retorno após desligamento; alterações aplicam-se também aos desligamentos anteriores.
+- **Cargo hierárquico**: progressão religiosa em Abiã, Yawo, Egbomi e Babalorixá/Yalorixá.
+- **Função ritualística**: atribuição como Ogã ou Axogun, que pode coexistir com cargo hierárquico.
+
+Efeitos sobre autenticação, permissões e interface permanecem em discussão; estas definições não alteram o contrato RBAC existente.
+
 ## Language
 
 ### Terreiro e gira
@@ -134,3 +147,62 @@ _Avoid_: Feitiço, trabalho, magia
 - **Último administrador**: contar usuários com permissão efetiva exata `role:assign`, independentemente do slug da role.
 - **Auditoria**: registrar autor, recurso, operação e antes/depois, sem dados sensíveis, na mesma transação da mutação.
 - **Documentação**: especificações independentes por repositório: `docs/specs/SPEC-079-WEB.md` (frontend) e `rodcordeiro/raizes.api/docs/specs/SPEC-079-API.md` (backend). Nenhuma implementação foi iniciada.
+
+## Filhos da casa — decisões complementares de 2026-11-17
+
+- Licença mantém acesso interno. Suspensão/afastamento e desligamento bloqueiam login e sessões já abertas. Ao tentar reativar filho, exibir modal de confirmação; cancelar mantém o estado atual. Reativação confirmada restabelece acesso se houver conta vinculada, removendo também bloqueios manuais. Bloqueio manual de login pode existir independentemente da situação religiosa.
+- Administração e comando da casa gerenciam operações por roles/permissões. Permissões separadas aprovadas: consultar filhos; editar e auditar; alterar situação; visualizar guias; exportar; gerenciar parâmetros. Editar cadastro não autoriza alterar situação ou parâmetros. Slugs, atribuição às roles e requisitos cumulativos ainda serão definidos.
+- Após nova aceitação de um desligado, preservar cadastro e registrar novo período de vínculo; todos os cargos hierárquicos e funções ritualísticas/administrativas devem ser reconfirmados.
+- Criar tabela de logs para auditar toda atualização de filho. Atualização e log são atômicos na mesma transação; falha no log cancela a atualização. Registrar filho, autor, data, operação e campos alterados com antes/depois; motivo de saúde apenas como categoria, sem diagnóstico. Integração com tb_audit_logs, retenção e consulta ainda em discussão; nenhuma tabela ou migration implementada nesta rodada.
+
+- Prazos de afastamento/desligamento contam da data efetiva, com lançamento administrativo retroativo permitido; data efetiva e data de registro são distintas.
+
+## Filhos da casa — cadastro confirmado em 2026-11-17
+
+- Obrigatórios: nome completo, data de nascimento, telefone e/ou WhatsApp e contato de emergência com nome, telefone/WhatsApp e parentesco. Idade calculada a partir da data de nascimento. E-mail e demais campos opcionais.
+- Coroa e ajuntó são campos distintos com seleção de múltiplos orixás. Guias são uma lista de nome e linha. Demais campos incluem apelido/nome social, data de ingresso, cargos e situação.
+- Filho pode existir sem conta de acesso.
+- Cargo hierárquico opcional, com no máximo um vigente por filho; múltiplas funções ritualísticas e administrativas podem coexistir.
+- Guias têm visualização restrita por permissão específica atribuída às roles administrativas autorizadas. Na auditoria, editores sem essa permissão veem apenas “lista de guias alterada”; antes/depois é restrito aos autorizados.
+- Quem pode editar filhos também pode consultar sua auditoria, respeitando as restrições de visibilidade dos dados.
+
+- Todo novo cadastro de filho inicia com situação ativa.
+
+## Filhos da casa — licença, exclusão e privacidade
+
+- Licença temporária exige data inicial; previsão de retorno opcional.
+- Prazo geral de desligamento pode ser inferior a seis meses; seis meses é o valor inicial.
+- No retorno após desligamento, cargos e funções anteriores permanecem no histórico e só voltam a vigorar após reconfirmação administrativa.
+- Não haverá soft delete. Desabilitar cadastro/login, mantendo consulta do cadastro e histórico para administradores.
+- Adequação à LGPD é requisito; desabilitação não substitui eliminação/anonimização quando aplicável. Base legal para dados sensíveis, retenção, direitos dos titulares e tratamento de menores e terceiros ainda precisam ser definidos. Nenhuma declaração de conformidade nesta etapa.
+
+- Há filhos menores; responsável legal obrigatório com nome, parentesco e telefone/WhatsApp, podendo ser também contato de emergência. Autorizações e comprovação de representação ainda serão definidas. Não existe aviso de privacidade ou documento de autorização para uso dos dados, conforme relato do mantenedor.
+- Responsável administrativo ou pelo site atende solicitações sobre dados pessoais; canal ainda em definição.
+- Exportação com permissão específica: lista simplificada em CSV (nome completo, apelido/nome social, idade calculada, cargo hierárquico, situação) e ficha individual em PDF (dados cadastrais autorizados, responsável legal, contato de emergência e histórico de vínculos; auditoria apenas na tela). Guias só constam no PDF com as permissões de exportação e visualização de guias cumulativamente.
+- Auditar exportações com autor, data e seleção exportada, sem copiar o arquivo gerado para o log.
+
+## Cadastro unificado e sessões — decisão aprovada, não implementada
+
+- Manter tb_user e IDs; cadastro de membro é a função principal e credenciais são opcionais. Administração habilita login por username único e convite temporário para senha; sem cadastro duplicado.
+- Remover refreshToken de tb_user; armazenar estado de múltiplas sessões e hash do refresh no Redis em Docker. Renovação não atualiza cadastro.
+- Login concede 15 dias; cada renovação válida redefine expiração para 10 dias a partir da renovação, mesmo reduzindo o prazo anterior, sem limite absoluto. Validade do access token ainda será especificada.
+- Validar sessão Redis em cada acesso protegido. Redis indisponível bloqueia temporariamente login/refresh/acesso protegido, sem fallback MySQL; perda de sessões exige novo login.
+- Logout encerra sessão atual; troca/recuperação de senha e bloqueios revogam todas.
+- Migrar encerrando sessões existentes; recuperar senha do admin por comando no servidor, sem exibir senha, preservando ID/roles. Completar campos legados posteriormente sem dados fictícios.
+- Atomicidade da rotação, falhas parciais MySQL/Redis, consumo do convite, contratos e configuração operacional permanecem pendentes. Nenhum Redis foi iniciado nem senha redefinida nesta discussão.
+
+- Rodada complementar aprovada: access token de 1h; refresh concorrente com troca atômica e um vencedor, conflito recuperável sem apagar sessão vencedora; indisponibilidade Redis preserva cookies. Não armazenar versão de autenticação/revogação no MySQL. Protocolo de coordenação de falhas parciais e replay ainda pendente; resposta perdida exige novo login apenas na sessão afetada.
+
+- Em alteração sensível, aceito restringir temporariamente operações de sessão e manter restrição até reconciliação se houver falha parcial; protocolo ainda pendente. Se a resposta de uma rotação concluída se perder, exigir novo login apenas para a sessão afetada, sem reenvio do novo refresh e sem revogar outras sessões.
+
+- Aprovado: reinício Redis invalida sessões sem restaurar snapshots antigos. Convite de senha por UUID associado ao usuário no Redis, uso único e TTL 24h; reemissão invalida anterior. Nome completo exige permissão de editar filho.
+- Reconciliação automática por cron na API a cada minuto, para operações pendentes há mais de cinco minutos, preservando bloqueios manuais e vínculo. Tabela MySQL de operações pendentes permite recuperação após reinício, sem tokens nem versão de autenticação; estados e concorrência ainda pendentes. Planejamento, não implementação.
+
+- Rodada G1–G4 aprovada: reconciliação após mais de cinco minutos sem progresso, com execução exclusiva; retry a cada minuto e aviso após cinco falhas, sem liberar restrição. Canal do aviso e protocolo técnico pendentes.
+- Editar guias exige edição de filho e visualização de guias cumulativamente. Falha ao auditar exportação impede entrega de CSV/PDF, com erro e possibilidade de nova tentativa.
+
+## Retorno e contatos — rodada B1–B4 aprovada
+
+- Três giras para retorno de desligado começam após terminar o prazo mínimo; na reativação, operador autorizado atesta três giras e aceitação pelos búzios e informa data da aceitação, com auditoria sem detalhes do jogo.
+- Prazo geral em meses inteiros não negativos, padrão seis. Zero remove apenas a espera, preservando procedimento de ingresso completo.
+- Um telefone, um WhatsApp, um e-mail opcional, um contato de emergência e um responsável legal obrigatório para menor. Telefone e WhatsApp podem compartilhar número; ao menos um é obrigatório. Responsável pode ser também contato de emergência.
