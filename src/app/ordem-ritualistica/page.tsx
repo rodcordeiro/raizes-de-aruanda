@@ -34,7 +34,7 @@ export default async function OrdemPage() {
             Saudamos a esquerda: as linhas de Exu, Pomba-gira e Exu-mirim, saudadas no início de cada trabalho, nesta ordem:
             <ol>
               <li>
-                <a href="/?buscar=Exu#887" className="brand">Exu Gira Mundo — ponto 887
+                <a href="/?buscar=Exu#887" className="brand">Exu Gira Mundo</a> — ponto 887
               </li>
               <li>
                 <a href="/?buscar=Exu#880" className="brand">Exu Arranca Toco</a> (Pai Edgar) — ponto 880
