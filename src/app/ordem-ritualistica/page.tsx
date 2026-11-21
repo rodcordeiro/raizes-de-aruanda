@@ -34,6 +34,9 @@ export default async function OrdemPage() {
             Saudamos a esquerda: as linhas de Exu, Pomba-gira e Exu-mirim, saudadas no início de cada trabalho, nesta ordem:
             <ol>
               <li>
+                <a href="/?buscar=Exu#887" className="brand">Exu Gira Mundo — ponto 887
+              </li>
+              <li>
                 <a href="/?buscar=Exu#880" className="brand">Exu Arranca Toco</a> (Pai Edgar) — ponto 880
               </li>
               <li>
@@ -54,8 +57,8 @@ export default async function OrdemPage() {
             Saudamos os orixás da casa:
             <ul>
               <li>Oxóssi;</li>
-              <li>Xangô;</li>
-              <li>Oyá.</li>
+              <li>Oyá;</li>
+              <li>Nanã.</li>
             </ul>
           </li>
           <li>Saudamos o orixá regente do ano em nossa casa.</li>
