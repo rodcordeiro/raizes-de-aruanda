@@ -84,7 +84,12 @@ export async function getPoints(linhaId?: number, pendenteGravar = false) {
   if (!response.ok) {
     throw new Error(await readError(response));
   }
-  return readJson<Point[]>(response);
+  const points = await readJson<Point[]>(response);
+  // Agrupa os pontos da linha por ritmo, independentemente da ordem da API.
+  // Usa o ID do ponto como desempate para manter a ordem determinística.
+  return linhaId
+    ? points.sort((a, b) => (a.ritmo?.id ?? Number.MAX_SAFE_INTEGER) - (b.ritmo?.id ?? Number.MAX_SAFE_INTEGER) || a.id - b.id)
+    : points;
 }
 
 export async function getPoint(id: number) {
