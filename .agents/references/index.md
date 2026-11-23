@@ -1,5 +1,7 @@
 # References — quando ler o quê
 
+Revisão estática: 2026-11-16. No workspace, leia `../AGENTS.md` a partir da raiz deste repositório. Issues e specs: `docs/agents/issue-tracker.md` e `docs/agents/domain.md`, também relativos à raiz do repositório.
+
 | Arquivo | Ler quando |
 | --- | --- |
 | `structure.md` | Onde fica o quê |

@@ -59,4 +59,4 @@ Next.js App Router em `src/`. Cliente HTTP de raizes.api. Sem PHP no tree.
 
 ## Ausente vs guideline `front`
 
-Sem `loading.tsx` / `error.tsx`, sem suíte de testes, sem ESLint. Ver `tech-debt.md`.
+`loading.tsx` e `error.tsx` existem na raiz de `src/app/` e em `src/app/admin/(panel)/`. Não há scripts de testes ou lint em `package.json`. Ver `tech-debt.md` para lacunas verificadas.
