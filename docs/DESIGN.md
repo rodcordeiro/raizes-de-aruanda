@@ -54,7 +54,7 @@ components:
 
 # Design System: Raízes de Aruanda
 
-Agente: este arquivo é **reference** (cache de convenção + Named Rules). SSOT de valores: `assets/css/main.css` `:root`, `assets/css/mobile.css`, Pencil `docs/design/design.pen`. Glossário de domínio: `CONTEXT.md`. Antes de inventar token/componente, checar a tabela CSS↔Pencil e as Named Rules abaixo.
+Este arquivo reúne as convenções locais e as Named Rules. No workspace `projeto-raizes`, consulte também `docs/design-system/Guidelines.md` a partir da raiz para composição, estados, acessibilidade e critérios de aceite. Use `src/styles/main.css` (`:root`) e `src/styles/mobile.css` para conferir os valores implementados e o [Pencil](design/design.pen) para conferir a intenção visual. Antes de adicionar um token ou componente, confira a tabela CSS↔Pencil, as Named Rules e a implementação atual.
 
 ## Overview
 

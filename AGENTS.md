@@ -9,7 +9,7 @@ Next.js (App Router, `src/`) cliente HTTP de raizes.api. Home pública: `/`. Foc
 | Quando | Onde |
 | --- | --- |
 | Glossário (Linha, Ritmo, Ponto…) | `CONTEXT.md` |
-| Design system (tokens, Named Rules) | `docs/DESIGN.md` |
+| Design system (tokens, componentes, layout, estados e aceite) | `../docs/design-system/Guidelines.md` no workspace. Em clone isolado, consulte [docs/DESIGN.md](docs/DESIGN.md). |
 | Visual / Pencil | `docs/design/design.pen` |
 | Estrutura do checkout | `.agents/references/structure.md` |
 | Boot, env, Docker | `.agents/references/runtime.md` |
@@ -32,7 +32,7 @@ Next.js (App Router, `src/`) cliente HTTP de raizes.api. Home pública: `/`. Foc
 
 | Condição | Skill / pack |
 | --- | --- |
-| UI / tokens / layout | `docs/DESIGN.md` + Pencil MCP em `docs/design/design.pen` |
+| UI / tokens / layout | Guideline do design system indicada acima e Pencil MCP em `docs/design/design.pen` |
 | Acionamento ou consulta da API (`/api/v1`, auth, erros Nest) | `.agents/skills/api-endpoints/` — obrigatória |
 | Schema / SQL / tabelas `tb_*` | `.agents/skills/db-schema/` |
 | Knowledge ops | `$nero` |
@@ -53,5 +53,5 @@ Use `to-spec` para requisitos aprovados e `to-tickets` para entregas com critér
 
 - [ ] Spec WEB e tickets estão neste repositório; dependências API têm links completos.
 - [ ] Contrato consumido foi verificado e catálogos afetados estão coerentes.
-- [ ] Validação visual e build pertinentes foram executados, ou impedimentos foram informados.
+- [ ] Mudanças de UI foram verificadas pelos critérios aplicáveis da guideline, incluindo desktop e mobile (~370 px). Registre resultados e impedimentos de validação visual e build.
 - [ ] Status e associação ao Project foram confirmados, ou a operação pendente foi explicitada.
